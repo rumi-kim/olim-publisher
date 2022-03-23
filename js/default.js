@@ -1,6 +1,22 @@
 $(function () {
 
-   
+    var params = getUrlParams();
+    // console.log(params);
+    if (params.cache == "true") {
+        $(".section_intro").css('display', 'none');
+        $('footer').css('display', 'none');
+    }
+
+    function getUrlParams() {
+        var params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+            params[key] = value;
+        });
+        return params;
+    }
+
+
+
 
 
     // var =============================================
@@ -18,6 +34,7 @@ $(function () {
     $(window).on("resize load", function () {
         resizeBg();
     });
+
     function resizeBg() {
         var windowWidth = $(window).width();
         $("body").css("width", windowWidth);
@@ -57,7 +74,7 @@ $(function () {
             endIntroVideo();
         });
 
-        function endIntroVideo(){
+        function endIntroVideo() {
             $('.section_intro').fadeOut(2000);
             $('.site_logo').addClass('active');
         }
@@ -72,10 +89,10 @@ $(function () {
         }
 
 
-        
+
     });
 
-    
+
 
     // 각 모달창 마우스오버시 노출, ============================================================================
     eachModal.on('mouseenter', function () {
@@ -83,72 +100,70 @@ $(function () {
     }).on('mouseleave', function () {
         $(this).find('.box_info').removeClass('active')
     });
-     // 안에 [들어가기]  버튼 필요할 경우 코드 
-        // $(".info_desc").append(
-        //   "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
-        // );
-        // 
+    // 안에 [들어가기]  버튼 필요할 경우 코드 
+    // $(".info_desc").append(
+    //   "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
+    // );
+    // 
 
 
-     // 진입영상 function ============================================================================
-     const videoAttr = $('[data-video]'); // data-video 속성을 가진 el 추출 
+    // 진입영상 function ============================================================================
+    const videoAttr = $('[data-video]'); // data-video 속성을 가진 el 추출 
 
-     videoAttr.each(function () { // 각 el 클릭시 해당 href, data-video 값 넘김 
-         $(this).on('click', function (e) {
-             e.preventDefault();
-             let videoUrl = $(this).attr('data-video');
-             let pageUrl = $(this).attr('href');
-             playMoveVideo(videoUrl, pageUrl);
-         });
-     });
-
-
-     function playMoveVideo(videoUrlParam, pageUrlParam) {
-
-         const MoveVideo = $('.video_move');
-         const skipBtn = $('.video_move').next('.btn_skip');
-
-         MoveVideo.attr('src', videoUrlParam);
-         MoveVideo.fadeIn(2000);
-         MoveVideo.prop("muted", false);
-         MoveVideo.trigger("play");
-
-            //  3초 후 스킵 버든 노츨
-          setTimeout(function () {
-            skipBtn.addClass("active");
-          }, 3000);
-
-        //   스킵 버튼 클릭 or 진입 영상 종료후 해당 url로 이동
-          skipBtn.on('click',function(){
-            location.href = pageUrlParam;
-          });
-         MoveVideo.on("ended", function () {
-             location.href = pageUrlParam;
-         });
-     }
-
-
-
-      // 오디오 컨트롤============================================================================
-    const soundBtn = $('.btn_sound');
-    const mainAudio = $('.audio_main')[0];
-
-    soundBtn.on('click',function(){
-
-        const innerText = $(this).find('.ir_text');
-
-        if($(this).hasClass('active')){
-            innerText.text('sound on');
-            mainAudio.pause();
-            $(this).removeClass('active');
-        }else{
-            innerText.text('sound off');
-            $(this).addClass('active');
-            mainAudio.play();
-        }
+    videoAttr.each(function () { // 각 el 클릭시 해당 href, data-video 값 넘김 
+        $(this).on('click', function (e) {
+            e.preventDefault();
+            let videoUrl = $(this).attr('data-video');
+            let pageUrl = $(this).attr('href');
+            playMoveVideo(videoUrl, pageUrl);
+        });
     });
 
 
+    function playMoveVideo(videoUrlParam, pageUrlParam) {
+
+        const MoveVideo = $('.video_move');
+        const skipBtn = $('.video_move').next('.btn_skip');
+
+        MoveVideo.attr('src', videoUrlParam);
+        MoveVideo.fadeIn(2000);
+        MoveVideo.prop("muted", false);
+        MoveVideo.trigger("play");
+
+        //  3초 후 스킵 버든 노츨
+        setTimeout(function () {
+            skipBtn.addClass("active");
+        }, 3000);
+
+        //   스킵 버튼 클릭 or 진입 영상 종료후 해당 url로 이동
+        skipBtn.on('click', function () {
+            location.href = pageUrlParam;
+        });
+        MoveVideo.on("ended", function () {
+            location.href = pageUrlParam;
+        });
+    }
+
+
+
+    // 오디오 컨트롤============================================================================
+    const soundBtn = $('.btn_sound');
+    const mainAudio = $('.audio_main')[0];
+
+    soundBtn.on('click', function () {
+
+        const innerText = $(this).find('.ir_text');
+
+        if ($(this).hasClass('active')) {
+            innerText.text('sound on');
+            // mainAudio.pause();
+            $(this).removeClass('active');
+        } else {
+            innerText.text('sound off');
+            $(this).addClass('active');
+            // mainAudio.play();
+        }
+    });
 
 
 
@@ -164,13 +179,13 @@ $(function () {
 
     if (isMobile || window.devicePixelRatio > 1) { //mobile or tablet device
 
-       
+
 
     } else { // general pc 
 
     }
 
-    function playAudio(){
+    function playAudio() {
 
     }
 
