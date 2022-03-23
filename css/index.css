@@ -63,9 +63,13 @@ common style
 
 /* button type */
 .btn_type1 {
+    position: relative;
     background: linear-gradient(147deg, #302e42 12%, #0a090d 112%);
     border-radius: 100%;
 }
+
+.ico { background-repeat: no-repeat; background-size: 50% auto; background-position: center;}
+.ico.help { background-image: url(../img/ico_help_pop.png);}
 
 
 .btn_type2 {
@@ -203,7 +207,7 @@ body.fixed {
     touch-action: none;
   }
 
-.btn_menu i {
+.btn_type1 i {
     width: 22px;
     height: 2px;
     background-color: #fff;
@@ -217,7 +221,7 @@ body.fixed {
     box-shadow: 0px 0px 31px -2px rgba(0, 0, 0, 0.22);
 }
 
-.btn_menu.is-active {
+.btn_type1.is-active {
     z-index: 2000;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -233,32 +237,32 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 ==================================================== */
 
 /* type1 ==================================== */
-.btn_menu.type1.is-active {
+.btn_type1.type1.is-active {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.btn_menu.type1.is-active i:nth-of-type(2) {
+.btn_type1.type1.is-active i:nth-of-type(2) {
     width: 0px;
 }
 
-.btn_menu.type1.is-active i:nth-of-type(1),
-.btn_menu.type1.is-active i:nth-of-type(3) {
+.btn_type1.type1.is-active i:nth-of-type(1),
+.btn_type1.type1.is-active i:nth-of-type(3) {
     -webkit-transition-delay: 0.3s;
     -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }
 
-.btn_menu.type1.is-active i:nth-of-type(1) {
+.btn_type1.type1.is-active i:nth-of-type(1) {
     -webkit-transform: translateY(9px);
     -ms-transform: translateY(9px);
     -o-transform: translateY(9px);
     transform: translateY(9px);
 }
 
-.btn_menu.type1.is-active i:nth-of-type(3) {
+.btn_type1.type1.is-active i:nth-of-type(3) {
     -webkit-transform: translateY(-13px) rotate(90deg);
     -ms-transform: translateY(-13px) rotate(90deg);
     -o-transform: translateY(-13px) rotate(90deg);
@@ -267,7 +271,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 /* type2 ==================================== */
 
-.btn_menu.type2.is-active i:nth-of-type(1) {
+.btn_type1.type2.is-active i:nth-of-type(1) {
     opacity: 0;
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
@@ -275,7 +279,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
     transform: translateX(-100%);
 }
 
-.btn_menu.type2.is-active i:nth-of-type(3) {
+.btn_type1.type2.is-active i:nth-of-type(3) {
     opacity: 0;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -285,14 +289,14 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 /* type3 ==================================== */
 
-.btn_menu.type3.is-active i:nth-of-type(1) {
+.btn_type1.type3.is-active i:nth-of-type(1) {
     -webkit-transform: translateY(12px);
     -ms-transform: translateY(12px);
     -o-transform: translateY(12px);
     transform: translateY(12px);
 }
 
-.btn_menu.type3.is-active i:nth-of-type(3) {
+.btn_type1.type3.is-active i:nth-of-type(3) {
     -webkit-transform: translateY(-11px);
     -ms-transform: translateY(-11px);
     -o-transform: translateY(-11px);
@@ -301,18 +305,18 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 /* type4 ==================================== */
 
-.btn_menu.type4.is-active i:nth-of-type(2) {
+.btn_type1.type4.is-active i:nth-of-type(2) {
     opacity: 0;
 }
 
-.btn_menu.type4.is-active i:nth-of-type(1) {
+.btn_type1.type4.is-active i:nth-of-type(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     -ms-transform: translateY(8px) rotate(45deg);
     -o-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
 }
 
-.btn_menu.type4.is-active i:nth-of-type(3) {
+.btn_type1.type4.is-active i:nth-of-type(3) {
     -webkit-transform: translateY(-6px) rotate(-45deg);
     -ms-transform: translateY(-6px) rotate(-45deg);
     -o-transform: translateY(-6px) rotate(-45deg);

@@ -1,4 +1,5 @@
 
+
 /* modal */
 .modal {
     position: fixed;
@@ -246,34 +247,34 @@
     background-image: url(../img/ico_check_activated.svg);
   }
   
-  .modal .modal_inner .modal_help-center .btn_wrap {
-    display: inline-block;
-    margin-top: 0;
-    vertical-align: middle;
-  }
+
   
   
-  .modal .modal_inner .modal_help-center .btn_wrap .btn:hover,
-  .modal .modal_inner .modal_help-center .btn_wrap .btn:focus {
-    opacity: 0.75;
-  }
   
-  .btn.btn_menu .top {
+
+  .btn_modal_close { width: 50px; height: 50px;}
+  .btn_modal_close .top {
     transform: translateY(2px) rotate(45deg);
   }
   
-  .btn.btn_menu .bottom {
+  .btn_modal_close .bottom {
     transform: translateY(-5px) rotate(-45deg);
   }
+
+  .btn_modal_close:hover,
+  .btn_modal_close:focus {
+    opacity: 0.75;
+  }
+
   
   @media screen and (max-width: 690px) {
   
-    .btn.btn_menu .top {
+    .btn_modal_close .top {
       width: 17px;
       transform: translateY(3px) rotate(45deg);
     }
   
-    .btn.btn_menu .bottom {
+    .btn_modal_close .bottom {
       width: 17px;
       transform: translateY(-4px) rotate(-45deg);
   
@@ -289,13 +290,13 @@
     position: absolute;
     top: 23px;
     left: 60px;
-    padding-top:70px;
+    padding-top:80px;
     padding-left: 40px;
   }
   
   .modal .modal_inner .modal_help-gnb:after {
     position: absolute;
-    top: 44px;
+    top: 50px;
     left: 0;
     width: 36px;
     height: 51px;
@@ -319,8 +320,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 45px;
+    width: 380px;
+    height: 50px;
     border: 2px solid #3496fa;
     border-radius: 36px;
     content: "";
@@ -331,20 +332,20 @@
     /* 헤더의 버튼과 동일한 위치로 세팅 */
     top: 23px;
     right: 60px;
-    padding-right: 150px;
+    padding-right: 60px;
     padding-top: 70px;
   }
   
   .modal .modal_inner .modal_help-tutorial:before {
     position: absolute;
-    top: 53px;
-    right: 100px;
+    top: 47px;
+    right: 10px;
     width: 36px;
     height: 51px;
     background: url(../img/help_arrow3.png) no-repeat 0 0;
     background-size: 100% auto;
     content: "";
-    transform: rotate(45deg);
+    transform: rotate(33deg);
   }
   
   
@@ -362,7 +363,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 135px;
+    width: 143px;
     height: 60px;
     border: 2px solid #3496fa;
     border-radius: 60px;
@@ -383,8 +384,8 @@
   
   @media screen and (max-width: 690px) {
     .modal .modal_inner .modal_help-tutorial {
-      padding-right: 80px;
-      padding-top: 80px;
+      padding-right: 0;
+      padding-top: 0;
   
     }
     .modal .modal_inner .ico_tutorial-btn::before { 
@@ -516,9 +517,309 @@
   .modal .modal_inner .modal_help-innav .help-innav-type.fullscreen:before {
     background-image: url(../img/ic_tourmenu_screen.png);
   }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 690px) {
+    .modal .help_desc {
+      font-size: 13px;
+    }
   
-  .modal .btn_wrap {
-    margin-top: 24px;
-    text-align: right;
+    .modal_inner-text>p {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  
+    .modal_inner-text>p h2 {
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+  
+    .modal .modal_inner .modal_help-center {
+      width: 90%;
+    }
+  
+    .modal .modal_inner .modal_help-center-desc {
+      padding: 30px 20px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item:not(:first-child) {
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_wrap {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc {
+      padding-left: 8px;
+      font-size: 13px;
+    }
+  
+    .modal .modal_inner .modal_help-center .chk_wrap-not_today {
+      margin-right: 20px;
+    }
+  
+    .modal .modal_inner .modal_help-center .inp_chk_wrap.inp_custom .inp_chk+label {
+      font-size: 13px;
+    }
+  
+    .modal .modal_inner .modal_help-center .btn_wrap .btn {
+      /* padding: 8px 48px; */
+      font-size: 14px;
+    }
+  
+    .modal .modal_inner .ico_gnb-btn:before {
+      width: 242px;
+      height: 35px;
+    }
+  
+  
+    .modal .modal_inner .modal_help-tutorial .tutorial_desc {
+      margin-right: -58px;
+    }
+  
+    .modal .modal_inner .modal_help-center.has_video {
+      width: 90%;
+      max-width: none;
+    }
+  
+    .modal .modal_inner .modal_help-gnb:before {
+      width: 183px;
+      height: 28px;
+    }
+  
+    .modal .modal_inner .modal_help-gnb:after { 
+      top:31px
+    }
+    .modal .modal_inner .modal_help-global:before {
+      width: 32px;
+      height: 40px;
+    }
+  
+    .modal .modal_inner .modal_help-global .global_desc {
+      margin-right: 20px;
+    }
+  
+    .modal .modal_inner .modal_help-innav:before {
+      width: 32px;
+      height: 34px;
+    }
+  
+    .modal .modal_inner .modal_help-innav .innav_desc {
+      margin-left: 58px;
+    }
   }
   
+  @media screen and (max-width: 480px) {
+    .modal .help_desc {
+      font-size: 13px;
+    }
+  
+    .modal_inner-text>p {
+      font-size: 13px;
+    }
+  
+    .modal .modal_inner .modal_help-center {
+      width: 90%;
+      top: 48%;
+    }
+  
+    .modal .modal_inner .modal_help-center-desc {
+      /* padding: 8px; */
+      max-height: 45vh;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item:not(:first-child) {
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_wrap {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc {
+      padding-left: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  
+    .modal .modal_inner .modal_help-center .btn_wrap .btn {
+      font-size: 14px;
+    }
+  
+    .modal .modal_inner .modal_help-tutorial .tutorial_desc {
+      max-width: 108px;
+    }
+  
+    .modal .modal_inner .modal_help-global:before {
+      width: 32px;
+      height: 40px;
+    }
+  
+    .modal .modal_inner .modal_help-global .global_desc {
+      margin-right: 20px;
+      margin-top: 18px;
+      max-width: 108px;
+    }
+  
+    .modal .modal_inner .modal_help-innav {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  
+    .modal .modal_inner .modal_help-innav:before {
+      width: 32px;
+      height: 34px;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 58px;
+      border: 0;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #3496fa;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      content: "";
+    }
+  
+    .modal .modal_inner .ico_gnb-btn:before {
+      width: 175px;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li {
+      padding-top: 1px;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(2),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(2)+li {
+      width: 100% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(3),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(3)~li {
+      width: 50% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(4),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(4)~li {
+      width: 33.33% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(5),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(5)~li {
+      width: 25% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(6),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(6)~li {
+      width: 20% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(7),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(7)~li {
+      width: 16.66% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(8),
+    .modal .modal_inner .modal_help-innav .help-innav li:first-child:nth-last-child(8)~li {
+      width: 14.285% !important;
+    }
+  
+    .modal .modal_inner .modal_help-innav .help-innav li.fullscreen {
+      display: none;
+    }
+  
+    .modal .modal_inner .modal_help-innav .innav_desc {
+      height: 2.6em;
+      padding-right: 5%;
+      margin-bottom: 2px;
+      margin-left: 58px;
+    }
+  }
+  
+  @media screen and (max-width: 340px) {
+    .modal .help_desc {
+      font-size: 10px;
+    }
+  
+    .modal_inner-text>p {
+      font-size: 12px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item:not(:first-child) {
+      margin-top: 4px;
+      padding-top: 4px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_wrap {
+      width: 34px;
+      height: 34px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc {
+      font-size: 10px;
+    }
+  
+    .modal .modal_inner .modal_help-center .modal_help-btn_unit {
+      margin-top: 8px;
+    }
+  
+    .modal .modal_inner .modal_help-center .chk_wrap-not_today {
+      margin-right: 10px;
+    }
+  
+    .modal .modal_inner .modal_help-center .btn_wrap .btn {
+      /* padding: 4px 48px; */
+      font-size: 11px;
+    }
+  
+    .modal .modal_inner .modal_help-global:before {
+      top: 26px;
+      width: 26px;
+      height: 32px;
+    }
+  
+    .modal .modal_inner .modal_help-global .global_desc {
+      margin-right: 16px;
+      margin-top: 16px;
+    }
+  
+    .modal .modal_inner .modal_help-innav:before {
+      width: 20px;
+      height: 24px;
+    }
+  
+    .modal .modal_inner .modal_help-innav .innav_desc {
+      margin-bottom: 8px;
+      margin-left: 46px;
+    }

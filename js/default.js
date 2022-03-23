@@ -147,23 +147,33 @@ $(function () {
 
 
     // 오디오 컨트롤============================================================================
+
+    // 오디오 파일이 있을 경우에만 실행
+    
+
     const soundBtn = $('.btn_sound');
     const mainAudio = $('.audio_main')[0];
 
-    soundBtn.on('click', function () {
+    if(mainAudio){
+        soundBtn.on('click', function () {
 
-        const innerText = $(this).find('.ir_text');
+            const innerText = $(this).find('.ir_text');
+    
+            if ($(this).hasClass('active')) {
+                innerText.text('sound on');
+                mainAudio.pause();
+                $(this).removeClass('active');
+            } else {
+                innerText.text('sound off');
+                $(this).addClass('active');
+                mainAudio.play();
+            }
+        });
+    }else{
+        soundBtn.css('display','none')
+    }
 
-        if ($(this).hasClass('active')) {
-            innerText.text('sound on');
-            // mainAudio.pause();
-            $(this).removeClass('active');
-        } else {
-            innerText.text('sound off');
-            $(this).addClass('active');
-            // mainAudio.play();
-        }
-    });
+    
 
 
 
@@ -188,6 +198,9 @@ $(function () {
     function playAudio() {
 
     }
+
+
+
 
 
 
