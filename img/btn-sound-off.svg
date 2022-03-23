@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="jh74ib2n6a" x1=".134" y1=".108" x2=".886" y2="1.266" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#302e42"/>
+            <stop offset="1" stop-color="#0a090d"/>
+        </linearGradient>
+    </defs>
+    <g data-name="패스 1" style="fill:url(#jh74ib2n6a)">
+        <path d="M24 47a22.925 22.925 0 0 1-16.263-6.737A22.925 22.925 0 0 1 1 24 22.925 22.925 0 0 1 7.737 7.737 22.925 22.925 0 0 1 24 1a22.925 22.925 0 0 1 16.263 6.737A22.925 22.925 0 0 1 47 24c0 4.344-1.221 8.569-3.531 12.217-2.262 3.572-5.493 6.49-9.343 8.44C31.104 46.19 27.602 47 24 47z" style="stroke:none"/>
+        <path d="M24 2A21.929 21.929 0 0 0 8.444 8.444 21.929 21.929 0 0 0 2 24a21.93 21.93 0 0 0 6.444 15.556A21.93 21.93 0 0 0 24 46c3.397 0 6.832-.793 9.674-2.235 3.69-1.868 6.785-4.663 8.95-8.083A21.8 21.8 0 0 0 46 24a21.93 21.93 0 0 0-6.444-15.556A21.93 21.93 0 0 0 24 2m0-2c13.255 0 24 10.745 24 24 0 9.358-5.356 17.465-13.423 21.55C31.577 47.07 27.897 48 24 48 10.745 48 0 37.255 0 24S10.745 0 24 0z" style="fill:#302e42;stroke:none"/>
+    </g>
+    <path data-name="패스 11" d="M13.73 21a2 2 0 0 1-3.46 0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" transform="translate(12 12.009)"/>
+    <path data-name="패스 12" d="M18.63 13A17.888 17.888 0 0 1 18 8" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" transform="translate(12 12.009)"/>
+    <path data-name="패스 13" d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" transform="translate(12 12.009)"/>
+    <path data-name="패스 14" d="M18 8a6 6 0 0 0-9.33-5" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" transform="translate(12 12.009)"/>
+    <path data-name="패스 15" d="m2 2 20 20" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" transform="translate(12 12.009)"/>
+</svg>
