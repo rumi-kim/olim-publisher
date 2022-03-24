@@ -1,0 +1,62 @@
+.vr-player {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  background: $color_black;
+  
+	.vr-iframe {
+		width: 100% !important;
+		height: 100% !important;
+		border: 0px;
+	}
+}
+
+.afterVr {
+	display: none;
+  
+  @include media('tablet'){
+    display: block;
+  }
+}
+
+.modal{
+	&.beforeVr{
+		max-width:600px;
+		height:auto;
+		padding: 40px 40px 42px;
+		text-align:left;
+		word-break:keep-all;
+	}
+
+	@include media('tablet'){
+		&.beforeVr{
+			max-width:90%;
+			max-height:80%;
+		}
+	}
+	
+	@include media('mobile'){
+		&_inner-text>p{
+			font-size:1.6rem;
+		}
+	}
+}
+
+.vr-btns {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	z-index: 300;
+	width: 100%;
+  text-align: center;
+  
+	.vr-btn {
+		position: fixed;
+		bottom: 12px;
+		right: 15px;
+
+		@extend %gradient_btn;
+  }
+}

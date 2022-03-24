@@ -1,0 +1,81 @@
+.cont_qr {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 40px 20px;
+  height: 90%;
+
+  &.tabpanel_wrap{
+    padding:0;
+  }
+
+  .qr_inner {
+    font-size: 0;
+
+    .qr_inner_qr,
+    .qr_inner_txt {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .qr_inner_qr {
+      width: 30%;
+    }
+
+    .qr_inner_txt {
+      width: 70%;
+      padding-left: 30px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .disclaimer-item {
+      position: relative;
+      padding-left: 18px;
+      color: $color_primary;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '※';
+      }
+    }
+
+    .qr_tutorial {
+      margin-top: 20px;
+
+      &-item:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  @include media('mobile') {
+    padding: 0 20px 40px;
+
+    .qr_inner {
+
+      .qr_inner_qr,
+      .qr_inner_txt {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .qr_inner_txt {
+        text-align: left;
+        padding: 30px 0 0;
+        font-size: 15px;
+      }
+
+      .qr_inner_qr {
+        img {
+          width: 100%;
+          max-width: 240px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.search_company{
+  .contents{
+    width:100%;
+    max-width:600px;
+    margin:48px auto 0;
+  }
+
+  &-title{
+    font-size:32px;
+    font-weight:700;
+    text-align:center;
+    letter-spacing:-.8px;
+    line-height:1.4;
+    color:#3D3935;
+  }
+
+  .inp_c_search-wrap{
+    height:50px;
+    margin-top:30px;
+    border-color:#aaa;
+    border-radius:50px;
+    transition:border .4s;
+    
+    &.is_focus{
+      border-color:$color_black;
+      
+      .inp_txt{
+        background-image:url(../img/ico_gnb_search-b.png);
+      }
+    }
+    
+    label, .inp_txt{
+      font-size:17px;
+      letter-spacing:-.7px;
+      outline-width:0;
+    }
+    label{
+      left:54px;
+    }
+    .inp_txt{
+      padding:0 10px 0 54px;
+      border-radius:50px;
+      background-image:url(../img/ico_gnb_search-g.png);
+      background-repeat:no-repeat;
+      background-position:20px 14px;
+      background-size:24px;
+      transition:background-image .4s;
+    }
+  }
+
+  &-wrap{
+    margin-top:30px;
+  }
+  &-list{
+    border-top:1px solid #333;
+    border-bottom:1px solid #d2d2d2;
+  }
+
+  &-item{
+    position:relative;
+    padding:24px 110px 24px 0;
+    border-bottom:1px solid #d2d2d2;
+    font-size:0;
+
+    &:last-child{
+      border-bottom:0;
+    }
+
+    .company_logo{
+      display:inline-block;
+      width:120px;
+      height:90px;
+      line-height: 90px;
+      border:1px solid #C4C4C4;
+      border-radius:5px;
+      vertical-align:middle;
+      overflow: hidden;
+      margin-right:16px;
+
+      img{
+        max-width:100%;
+        vertical-align: middle;
+      }
+    }
+
+    .btn_wrap{
+      position:absolute;
+      top:50%;
+      right:0;
+      transform:translateY(-50%);
+
+      .btn{
+        @extend %gradient_btn;
+      }
+    }
+
+    .company_info{
+      display:inline-block;
+      max-width:350px;
+      vertical-align:middle;
+      line-height:1.5;
+      word-break:keep-all;
+    }
+
+    .company_list-name{
+      display:block;
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:-.8px;
+    }
+
+    .company_desc{
+      display:block;
+      font-weight:500;
+      font-size:13px;
+    }
+    
+    .company_prof{
+      display:block;
+      margin-top:4px;
+      font-size:12px;
+      color:#888;
+    }
+
+    .company_tag{
+      display:block;
+      margin-top:4px;
+      font-size:12px;
+
+      .tag{
+        display:inline-block;
+        padding:3px 6px;
+        margin-bottom:4px;
+        border-radius:24px;
+        background:#E4E4E4;
+        font-size:12px;
+
+        &:not(:last-child){
+          margin-right:4px;
+        }
+      }
+    }
+  }
+
+  @include media('mobile'){
+    .contents{
+      width:90%;
+    }
+
+    &-title{
+      font-size:2.8rem;
+    }
+    .inp_c_search-wrap{
+      height:40px;
+      margin-top:24px;
+
+      label,.inp_txt{
+        font-size:1.5rem;
+      }
+      label{
+        left:36px;
+      }
+      .inp_txt{
+        padding:0 6px 0 36px;
+        background-position:12px 10px;
+        background-size:18px;
+      }
+    }
+
+    &-item{
+      padding:16px 0;
+
+      .company_logo{
+        display:block;
+        margin-right:0;
+      }
+      .company_info{
+        display:block;
+        width:100%;
+        max-width:none;
+        margin:10px 0 0;
+        padding-right:80px;
+      }
+      .company_list-name{
+        line-height:1.4;
+      }
+      .company_desc{
+        margin-top:6px;
+      }
+      .btn_wrap{
+        top:110px;
+        transform:none;
+      }
+    }
+  }
+}
