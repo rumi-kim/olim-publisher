@@ -68,9 +68,6 @@ common style
     border-radius: 100%;
 }
 
-.ico { background-repeat: no-repeat; background-size: 50% auto; background-position: center;}
-.ico.help { background-image: url(../img/ico_help_pop.png);}
-
 
 .btn_type2 {
     background: #ff0201;
@@ -90,6 +87,14 @@ common style
 .txt_shadow {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
+
+
+/* icon */
+.ico { background-repeat: no-repeat; background-size: 50% auto; background-position: center;}
+.ico.help { background-image: url(../img/ico_help_pop.png);}
+.ico.menu { background-image: url(../img/ico_menu_w.png);}
+.ico.close { background-image: url(../img/ico_x_w.png); }
+
 
 
 
@@ -325,3 +330,8 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 
 }
+
+
+
+
+

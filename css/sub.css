@@ -21,7 +21,7 @@
     color: #fff;
 }
 
-.modal_type1>.inner {
+.modal_type1 .inner {
     max-width: 90%;
     min-width: 30%;
     min-height: 50%;
@@ -35,13 +35,17 @@
 
 .scroll_type1 { padding-right: 10px; height: 100%; overflow: auto;}
 
-.modal_type1>.inner .wrap_txt {
+.modal_type1 .inner .wrap_txt {
     line-height: 1.7;
 }
 
-.modal_type1>.inner .wrap_txt>p~p {
+.modal_type1 .inner .wrap_txt>p~p {
     padding-top: 20px;
 }
+
+.modal_type1 .btn_close { display: block; margin: 0 auto 30px; width: 50px; height: 50px; transform: translateX(-50%); }
+.modal_type1 .btn_close .ico { background-size: 30% auto !important;}
+
 
 
 
@@ -55,6 +59,7 @@
 .title_type1 {
     position: relative;
     margin-bottom: 30px;
+    z-index: 10;
 }
 
 .title_type1 .title {
@@ -94,28 +99,26 @@
 
 }
 
-/* .modal_type1 .help_side { padding: 20px 60px;} */
-/* .modal_type1 .help_side .wrap_side { position: relative; height: 100% ; width: 100%;}
-.modal_type1 .help_side .wrap_side > * { position: absolute;}
-.modal_type1 .help_side .wrap_side .right { right: 0; }
-.modal_type1 .help_side .wrap_side .left { left: 0;}
-.modal_type1 .help_side .wrap_side .top { top: 0;}
-.modal_type1 .help_side .wrap_side .btm { bottom: 0;}
-.modal_type1 .help_side .btn_type1 { width: 50px; height: 50px;} */
-
-
 .modal_type1 .item_fixed.top { margin-top: -10px;}
 .modal_type1 .item_fixed.right { margin-right: -10px;}
 .modal_type1 .item_fixed.left { margin-left: -10px;}
 /* .modal_type1 .item_fixed.top { transform: translateY(-10px);} */
 
 .box_help { padding:8px; border: 2px solid #3496fa;; border-radius: 70px; position:relative}
-.box_help.after:after { content: ""; display: block; width: 50px; height: 50px; position: absolute; top:100%; right:0;
+.box_help.arrow:after { content: ""; display: block; width: 50px; height: 50px; position: absolute; top:100%; 
 background-position: center; background-repeat: no-repeat; background-size: auto 100%;
 }
 
-.right.top .box_help.after:after { background-image: url(../img/help_arrow3.png);}
+.right.top .box_help.arrow:after { right:0; background-image: url(../img/help_arrow3.png);}
+.left.top .box_help.arrow:after { left:0; background-image: url(../img/help_arrow2.png);}
 
-/* .box_help { content: ""; display: block; width: 80px; height: 40px; background-size:100% 100%; background-position:center;  background-repeat: no-repeat; } */
-/* .top.right .box_help { background-image: url(../img/help_arrow3.png);} */
+.box_help + .helptext { position: absolute; color: #fff; white-space: nowrap;}
+.right.top .box_help + .helptext { right: 40%; top: 135%; }
+.left.top .box_help + .helptext { left: 15%; top: 135%; }
 
+
+.vr-player .vr-iframe{
+  width: 100% !important;
+  height: 100% !important;
+  border: 0px;
+}
