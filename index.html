@@ -34,16 +34,71 @@
 <body>
   <div class="wrap">
     <header class="header">
+      <div class="sub_hover_bg"> </div>
       <!-- <div class="hd_bg"></div> -->
       <div class="logo">
         <img src="/img/logo_main.png" alt="Main Logo">
       </div>
       <div class="nav">
         <ul class="nav_list">
-          <li class="nav_each"><a href="#">전시관 1</a></li>
-          <li class="nav_each"><a href="#">전시관 2</a></li>
-          <li class="nav_each"><a href="#">전시관 3</a></li>
-          <li class="nav_each"><a href="#">전시관 4</a></li>
+          <li class="nav_each">
+            <a href="#">Brand</a>
+            <div class="sub_nav">
+              <ul>
+                <li class="nav_each sub"><a href="#">브랜드 스토리</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          <li class="nav_each">
+            <a href="#">입지환경</a>
+            <div class="sub_nav">
+              <ul>
+                <li class="nav_each sub">
+                  <a href="#">입지투어 바로가기</a>
+                  <a href="#">서브메뉴</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav_each">
+            <a href="#">단지투어</a>
+            <div class="sub_nav">
+              <ul>
+                <li class="nav_each sub">
+                  <a href="#">단지 둘러보기</a>
+                  <a href="#">서브메뉴</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav_each">
+            <a href="#">내부투어</a>
+            <div class="sub_nav">
+              <ul>
+                <li class="nav_each sub">
+                  <a href="#">내부투어-a</a>
+                  <a href="#">내부투어-b</a>
+                  <a href="#">내부투어-C</a>
+                  <a href="#">내부투어-D</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav_each">
+            <a href="#">커뮤니티</a>
+            <div class="sub_nav">
+              <ul>
+                <li class="nav_each sub">
+                  <a href="#">커뮤니티-a</a>
+                  <a href="#">커뮤니티-b</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </header>
@@ -52,6 +107,15 @@
         <div class="top_img">
           <img src="img/01.jpg" alt="">
         </div>
+        <div class="scroll">
+          <div class="line">
+            <div class="scroll_bg"></div>
+          </div>
+          <div class="scroll_text">
+            <p>Scroll</p>
+          </div>
+        </div>
+        
         <div class="main_title">
           <p>샤갈 특별전</p>
           <p>; Chagall and the Bible</p>
@@ -222,12 +286,26 @@
         var contents03 = $(".contents_bottom .cont_list ul li .list03");
         var contents04 = $(".contents_bottom .cont_list ul li .list04");
 
-
         
-        if (sct > 200) {
-          mainBanner.addClass('popup');
+        
+        if (sct > 1) {
+          header.addClass('hd_bg');
+          header.mouseover(function(){
+            $(".sub_hover_bg").addClass('on');
+            $(".sub").addClass('on');
+          }).mouseleave(function(){
+            $(".sub_hover_bg").removeClass('on');
+            $(".sub").removeClass('on');
+          });
         } else {
-          return false;
+          header.removeClass('hd_bg');
+          header.mouseover(function(){
+            $(".sub_hover_bg").addClass('on');
+            $(".sub").addClass('on');
+          }).mouseleave(function(){
+            $(".sub_hover_bg").removeClass('on');
+            $(".sub").removeClass('on');
+          });
         }
         
         if (sct > 1000){
