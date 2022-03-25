@@ -237,26 +237,12 @@ html body {
   padding: 100px 0 250px 0;
   position: relative;
 }
-.contents_top .top_bg {
-  position: absolute;
-  top: 0;
-  left: 28%;
-  width: 28vw;
-  transform: rotate(10deg);
-  z-index: 0;
-  animation: animate01 2s ease-in-out;
-}
+
 .contents_top .top_img {
   width: 25vw;
   height: 64vh;
-  border-top-left-radius: 250px;
-  border-top-right-radius: 250px;
-  overflow: hidden;
-  margin: auto;
   transform: translateY(0%);
   opacity: 0;
-  animation: animate02 2s 1s ease-in-out forwards,
-    animate03 3s 3s ease-in-out forwards infinite;
 }
 .contents_top .top_img img {
   width: 100%;
@@ -294,7 +280,7 @@ html body {
   padding-top: 12px;
 }
 
-@keyframes animate01 {
+/* @keyframes animate01 {
   0% {
     opacity: 0;
     left: 0%;
@@ -337,7 +323,7 @@ html body {
     opacity: 1;
     left: 54vw;
   }
-}
+} */
 
 /* contents main page media query style */
 
