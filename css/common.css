@@ -4,6 +4,7 @@ common style
 
 ::-webkit-scrollbar {
     height: 10px;
+    width: 10px;
     background: transparent;
 }
 
@@ -15,6 +16,8 @@ common style
     background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
 }
+
+
 
 /* layout */
 
@@ -276,6 +279,16 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 }
 
 
+
+
+/* ==========================================
+media query 
+
+==> 브래이크포인트 디폴트는 olim_general.css 를 따름
+==========================================*/
+
+
+
 @media screen and (max-width: 1024px) {
 
 
@@ -300,6 +313,11 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
         right: 20px;
     }
 
+    .item_fixed.top .btn_type1 { 
+        height:40px; 
+        line-height:40px; 
+        width:40px
+    }
 
     .wrap_scroll {
         overflow: overlay;
@@ -328,6 +346,23 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
         height: 50%
     }
 
+
+    .logo_main { 
+        height:35px
+    }
+
+
+}
+
+
+@media screen and (max-width: 690px) { 
+
+    .logo_main { 
+        height:25px;
+    }
+
+
+    
 
 }
 
