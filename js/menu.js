@@ -17,20 +17,20 @@ $(function () {
     }
   });
 
+  let menuListBtn = $(".modal_menu .slide_wrapper>li");
+
+
 
   $(window).on("load resize orientationchange", function () {
     let wapperWidth = $(window).width();
-    let menuBtn = $(".modal_menu .slide_wrapper>li");
-    let menuBtnTitle = $(".modal_menu .slide_wrapper>li > div > p");
 
     if (wapperWidth > 1024) {
       // 1025이상부터 슬라이드 형식
-
       const nextBtn = $(".btn_slide.next");
       const prevBtn = $(".btn_slide.prev");
 
       if ($(".swiper-container .swiper-slide").length > 3) {
-        const swiper1 = new Swiper(".slide_menu", {
+        const swiper1 = new Swiper(".swiper_menu", {
           loop: false,
           slidesPerView: 4,
           direction: getDirection(),
@@ -65,7 +65,6 @@ $(function () {
         nextBtn.addClass("none");
         prevBtn.addClass("none");
 
-        $(".slide_wrapper").css("justify-content", "center");
       }
 
       function getDirection() {
@@ -74,22 +73,33 @@ $(function () {
         return direction;
       }
 
-      menuBtn
-        .on("mouseenter click", function () {
-          $(this).addClass("active");
-          $(this).find("ul").stop().slideDown();
-        })
-        .on("mouseleave", function () {
-          $(this).removeClass("active");
-          $(this).find("ul").stop().slideUp();
+
+      menuListBtn
+        .on("click", function () {
+          $(this).toggleClass("active");
+          $(this).siblings().removeClass('active');
         });
+
     } else {
-      menuBtn.on("click", function () {
-        $(this).addClass("active");
-        $(this).siblings("li").removeClass("active");
-        $(this).find("ul").stop().slideDown();
-        $(this).siblings("li").find("ul").stop().slideUp();
-      });
+
+      menuListBtn
+        .on("click", function () {
+          $(this).toggleClass("active");
+          $(this).siblings().removeClass('active');
+          $(this).find('ul').stop().slideToggle();
+          $(this).siblings().find('ul').stop().slideUp();
+        });
+
+
+
     }
   });
-}); //end
+
+
+
+
+
+
+
+
+}); // jquery function end
