@@ -9,6 +9,7 @@ header {
   width: 100%;
   z-index: 1;
   padding: 30px 0;
+  background-color: #e5d4c2;
 }
 
 header .hd_bg {

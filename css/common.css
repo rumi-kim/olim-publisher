@@ -234,15 +234,14 @@ html body {
 /* Contents Top page */
 .contents_top {
   text-align: center;
-  padding: 100px 0 250px 0;
   position: relative;
 }
 
 .contents_top .top_img {
-  width: 25vw;
-  height: 64vh;
+  width: 100%;
+  /* height: 64vh; */
   transform: translateY(0%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 .contents_top .top_img img {
   width: 100%;

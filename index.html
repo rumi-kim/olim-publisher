@@ -34,7 +34,7 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <div class="hd_bg"></div>
+      <!-- <div class="hd_bg"></div> -->
       <div class="logo">
         <img src="/img/logo_main.png" alt="Main Logo">
       </div>
@@ -172,44 +172,44 @@
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script>
     $(function(){
-      $(document).ready(function(){
+      // $(document).ready(function(){
 
-        $('.main_banner').slick({
-          dots: false,
-          infinite: true,
-          speed: 1500,
-          fade: true,
-          cssEase: 'linear',
-          arrows: false,
-          autoplay: true,
-          // autoplaySpeed: 3000
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-        });
-      });
+      //   $('.main_banner').slick({
+      //     dots: false,
+      //     infinite: true,
+      //     speed: 1500,
+      //     fade: true,
+      //     cssEase: 'linear',
+      //     arrows: false,
+      //     autoplay: true,
+      //     // autoplaySpeed: 3000
+      //     responsive: [
+      //       {
+      //         breakpoint: 1024,
+      //         settings: {
+      //           slidesToShow: 1,
+      //           slidesToScroll: 1,
+      //           dots: false,
+      //           infinite: true,
+      //         }
+      //       },
+      //       {
+      //         breakpoint: 600,
+      //         settings: {
+      //           slidesToShow: 1,
+      //           slidesToScroll: 1
+      //         }
+      //       },
+      //       {
+      //         breakpoint: 480,
+      //         settings: {
+      //           slidesToShow: 1,
+      //           slidesToScroll: 1
+      //         }
+      //       }
+      //     ]
+      //   });
+      // });
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();
