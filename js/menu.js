@@ -1,12 +1,22 @@
 $(function () {
   // const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-  const menuBtn = $(".btn_menu.type4");
-  menuBtn.on("click", function () {
-    $(this).toggleClass("is-active");
-    $(".modal_menu").toggleClass("active");
-    $("body").toggleClass("fixed");
+  const menuBtn = $(".btn_menu"),
+    menuModal = $('.modal_menu');
+  menuBtn.on("click ", function () {
+    if ($(this).hasClass("is-active")) { // 메뉴닫을떄
+      $(this).removeClass('is-active');
+      $(this).find('.ir_text').text('메뉴열기');
+      menuModal.removeClass('active');
+      $('body').removeClass('fixed');
+    } else { // 메뉴 열때
+      $(this).addClass('is-active');
+      $(this).find('.ir_text').text('메뉴닫기');
+      menuModal.addClass('active');
+      $('body').addClass('fixed');
+    }
   });
+
 
   $(window).on("load resize orientationchange", function () {
     let wapperWidth = $(window).width();
@@ -22,7 +32,7 @@ $(function () {
       if ($(".swiper-container .swiper-slide").length > 3) {
         const swiper1 = new Swiper(".slide_menu", {
           loop: false,
-          slidesPerView: 5,
+          slidesPerView: 4,
           direction: getDirection(),
           spaceBetween: 30,
           breakpoints: {

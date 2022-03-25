@@ -173,10 +173,24 @@ $(function () {
         soundBtn.css('display','none')
     }
 
+
+
+
+
+
+
+    // 도움말 모달창 컨트롤 ============================================================================
+
+    // 모달창 닫기 공통 기능 -> 해당 버튼으로부터 가장 가까운 상위 모달 닫기
+    let closeModalBtn =  $('.btn_closemodal');
+    closeModalBtn.on('click',function(){
+        $(this).closest('.modal').fadeOut(300);
+    });
+
+
+
+
     
-
-
-
     // function archive =================================================================
 
     // mobile function 
