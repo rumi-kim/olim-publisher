@@ -2,26 +2,19 @@ $(function () {
   // gnb
   function gnb() {
     var windowWidth = $(window).width();
-    if (windowWidth > 1024) {
-      $(".gnb").removeClass("is_res");
-      $(".gnb").addClass("is_pc");
-      $(".gnb-list").stop().show();
+    if (windowWidth > 690) {
+      $(".mobile_nav").css("display", "none");
+      $(".nav").removeClass("mobile");
     } else {
-      $(".gnb").addClass("is_res");
-      $(".gnb").removeClass("is_pc");
-      $(".gnb-btn").click(function () {
+      $(".mobile_nav").css("display", "block");
+      $(".nav").addClass("mobile");
+      // $(".gnb-list").stop().show();
+      $(".mobile_nav").click(function () {
+        $(this).toggleClass("is_open");
         if ($(this).hasClass("is_open")) {
-          $(".gnb-list")
-            .stop()
-            .fadeOut(function () {
-              $(".gnb-btn").removeClass("is_open");
-            });
+          $(".nav.mobile .nav_list").css("transform", "translateX(0)");
         } else {
-          $(".gnb-list")
-            .stop()
-            .fadeIn(function () {
-              $(".gnb-btn").addClass("is_open");
-            });
+          $(".nav.mobile .nav_list").css("transform", "translateX(100%)");
         }
       });
     }

@@ -17,7 +17,7 @@
   <script src="https://vr.miceview.kr/path/assets/js/jquery-3.5.1.min.js"></script>
 
   <!-- library -->
-  <link href="css/slick.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
   <!-- general style -->
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
@@ -38,6 +38,9 @@
       <!-- <div class="hd_bg"></div> -->
       <div class="logo">
         <img src="/img/logo_main.png" alt="Main Logo">
+      </div>
+      <div class="mobile_nav">
+        <img src="img/ico_menu.png" alt="">
       </div>
       <div class="nav">
         <ul class="nav_list">
@@ -153,104 +156,50 @@
         </div>
       </div>
 
-      <div class="main_banner">
-        <div><img src="img/01.jpg" alt=""></div>
-        <div><img src="img/02.jpg" alt=""></div>
-        <div><img src="img/07.jpg" alt=""></div>
-      </div>
+      <div class="main_banner swiper">
 
-      <div class="contents_bottom">
-        <div class="right_scroll">
-          <div class="right_box">
-            <div class="box 01">
-              <div class="right_img">
-                <img src="img/art01.jpg" alt="">
-              </div>
-              <div class="right_desc">
-                <div class="right_desc_title">
-                  <p>Motifs of Chagall</p>
-                </div>
-                <div class="right_desc_sub">
-                  <p>첫 번째 섹션은 1956년경에 제작된 석판화를 통해 화가 샤갈의 상징적인 요소로 자리매김한 주요 모티프들을 살펴본다.<br>그가 파리를 배경으로 제작한 석판화에는 에펠 탑, 노트르담 성당, 콩코르드 광장 등 파리의 주요 명소를 배경으로 그의 모티프들이 화폭에 수놓아졌으며 낭만적인 파리의 광경이 펼쳐진다.</p>
-                </div>
-                <div class="right_vr_btn">
-                  <a href="#">▶ VR Play </a>
-                </div>
-              </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/01.jpg" alt="">
+            <div class="inner_cont">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <div class="swiper-scrollbar"></div>
             </div>
-            <div class="box 02">
-              <div class="right_img">
-                <img src="img/art02.jpg" alt="">
-              </div>
-              <div class="right_desc">
-                <div class="right_desc_title">
-                  <p>105 Scenes from the Bible</p>
-                </div>
-                <div class="right_desc_sub">
-                  <p>1922년 공산권 예술가들과 갈등을 빚고 러시아를 떠나 파리에 돌아온 샤갈은 이듬해 저명한 화상 앙브루아즈 볼라르(Ambroise Vollard)를 소개받고 그의 제안으로 고골의 『죽은 혼』, 『라 퐁텐 우화』의 삽화 작업을 이어온다.<br>그의 삶 속에서 마주했던 일상에 성서의 장면을 더해 한 장면씩 차근차근 완성해 갔다. 각 성서의 이야기 중에 샤갈이 어떤 장면을 선별했고 또 그 장면을 어떻게 생동감 있게 묘사했는지 주목해보며 이 작품 시리즈를 감상할 수 있다.</p>
-                </div>
-                <div class="right_vr_btn">
-                  <a href="#">▶ VR Play </a>
-                </div>
-              </div>
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="img/02.jpg" alt="">
+            <div class="inner_cont">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <div class="swiper-scrollbar"></div>
             </div>
-            <div class="box 03">
-              <div class="right_img">
-                <img src="img/art03.jpg" alt="">
-              </div>
-              <div class="right_desc">
-                <div class="right_desc_title">
-                  <p>Biblical Messages</p>
-                </div>
-                <div class="right_desc_sub">
-                  <p>세 번째 섹션은 샤갈이 주요하게 다루는 성서적 모티프들을 매체의 경계를 넘어 한 자리에 모아 본다. 샤갈은 1933년 독일에서 정권을 잡은 히틀러의 인민 사회주의 나치즘으로부터 러시아 계 유대인이라는 이유만으로 퇴폐미술가로 낙인이 찍혀 독일 미술관에서 작품이 철거되는 등의 탄압을 받았다.<br>샤갈이 동시대에 겪은 삶과 전하고 싶은 메시지들을 성서를 주제로 그림 속에 담은 부분과, 성서 안의 인물들의 희로애락을 자신만의 스타일로 재해석 한 부분을 주목할 만하다. 이러한 관점에서 작품들을 감상한다면 왜 샤갈의 작품들이 성서를 다룬 예술 중에서도 독보적인 위치에 올랐는지 알 수 있을 것이다.</p>
-                </div>
-                <div class="right_vr_btn">
-                  <a href="#">▶ VR Play </a>
-                </div>
-              </div>
-            </div>
-            <div class="box 04">
-              <div class="right_img">
-                <img src="img/art04.jpg" alt="">
-              </div>
-              <div class="right_desc">
-                <div class="right_desc_title">
-                  <p>Towards Another Light</p>
-                </div>
-                <div class="right_desc_sub">
-                  <p>네 번째 섹션은 전쟁이 끝난 후, 지중해의 햇빛에 매료되어 남프랑스에서 정착해 노년을 보내며 쉬지 않고 작업을 다방면으로 이어갔던 샤갈의 행보와 예술적 열정을 탐구한다.<br>마지막으로 아흔을 넘겼음에도 불구하고 예술적 창작욕을 엿볼 수 있는 말년 작품들을 만나본다.<br>특히 샤갈이 세상을 떠나기 전 마지막으로 남긴 작품으로 알려진 〈또 다른 빛을 향하여 (Vers l’autre Clarté)〉(1985)는 끝까지 생의 마지막까지 예술혼을 불태웠던 샤갈의 열정을 잘 보여준다. </p>
-                </div>
-                <div class="right_vr_btn">
-                  <a href="#">▶ VR Play </a>
-                </div>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/07.jpg" alt="">
+            <div class="inner_cont">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
-        <div class="sticky_box">
-          <div class="bottom_title">
-            <p>; Program list</p>
-          </div>
-          <div class="inner_cont">
-            <div class="left_sticky">
-              <div class="cont_list">
-                <ul>
-                  <li><button type="button" class="list01"><span></span><span>샤갈의 모티프</span></button></li>
-                  <li><button type="button" class="list02"><span></span><span>성서의 백다섯 가지 장면</span></button></li>
-                  <li><button type="button" class="list03"><span></span><span>성서적 메시지</span></button></li>
-                  <li><button type="button" class="list04"><span></span><span>또 다른 빛을 향하여</span></button></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24" width="40px" fill="#c2925f"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
         </div>
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24" width="40px" fill="#c2925f"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </div>
+
       </div>
 
     </div>
 
     <footer>
       <div class="footer_bg">
+        <div class="footer_img">
+          <img src="img/logo_main_c.png" alt="footer brand logo">
+        </div>
         <div class="footer_desc">
           <p>Copyrightⓒ 2022.Olim Planet, All rights reserved.</p>
         </div>
@@ -260,47 +209,9 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script>
     $(function(){
-      // $(document).ready(function(){
-
-      //   $('.main_banner').slick({
-      //     dots: false,
-      //     infinite: true,
-      //     speed: 1500,
-      //     fade: true,
-      //     cssEase: 'linear',
-      //     arrows: false,
-      //     autoplay: true,
-      //     // autoplaySpeed: 3000
-      //     responsive: [
-      //       {
-      //         breakpoint: 1024,
-      //         settings: {
-      //           slidesToShow: 1,
-      //           slidesToScroll: 1,
-      //           dots: false,
-      //           infinite: true,
-      //         }
-      //       },
-      //       {
-      //         breakpoint: 600,
-      //         settings: {
-      //           slidesToShow: 1,
-      //           slidesToScroll: 1
-      //         }
-      //       },
-      //       {
-      //         breakpoint: 480,
-      //         settings: {
-      //           slidesToShow: 1,
-      //           slidesToScroll: 1
-      //         }
-      //       }
-      //     ]
-      //   });
-      // });
 
       // $(window).scroll(function () {
       //   sct = $(window).scrollTop();
@@ -375,6 +286,18 @@
       //     return false;
       //   }
       // });
+    });
+
+    const swiper = new Swiper('.swiper', {
+      direction:'horizontal',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // autoplay: {
+      //   Delay:10000,
+      // }
     });
   </script>
 
