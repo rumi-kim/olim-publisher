@@ -5,6 +5,9 @@ $(function () {
     if (params.cache == "true") {
         $(".section_intro").css('display', 'none');
         $('footer').css('display', 'none');
+        $('.logo_h1').removeClass('active');
+
+
     }
 
     function getUrlParams() {
@@ -76,7 +79,6 @@ $(function () {
 
         function endIntroVideo() {
             $('.section_intro').fadeOut(2000);
-            $('.logo_h1').addClass('active');
         }
 
 
@@ -114,6 +116,7 @@ $(function () {
             let videoUrl = $(this).attr('data-video');
             let pageUrl = $(this).attr('href');
             playMoveVideo(videoUrl, pageUrl);
+            $('.logo_h1').addClass('active');
         });
     });
 
