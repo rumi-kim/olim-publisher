@@ -330,6 +330,10 @@ media query
         max-height:40vh
     }
 
+    .item_fixed.top.left .box_help+.helptext { 
+     left: 24%;   
+    }
+
     
 
 

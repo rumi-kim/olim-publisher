@@ -598,7 +598,7 @@ media query
         right: 20px;
     }
 
-    .item_fixed.top .btn_type1 {
+    .item_fixed.top.right ul li .btn_type1 {
         height: 40px;
         line-height: 40px;
         width: 40px
@@ -617,14 +617,9 @@ media query
 
 
     /* header */
-    header h1,
-    header .btn_type1 {
+    header h1,{
         height: 45px;
         line-height: 45px;
-    }
-
-    header .btn_type1 {
-        width: 45px;
     }
 
     header h1 img {
@@ -713,6 +708,8 @@ media query
     .logo_main {
         height: 25px;
     }
+
+   
 
 
 
