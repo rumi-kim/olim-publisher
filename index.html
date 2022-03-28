@@ -103,6 +103,7 @@
       </div>
     </header>
     <div class="contents">
+
       <div class="contents_top">
         <div class="top_img">
           <img src="img/01.jpg" alt="">
@@ -115,14 +116,40 @@
             <p>Scroll</p>
           </div>
         </div>
-        
-        <div class="main_title">
-          <p>샤갈 특별전</p>
-          <p>; Chagall and the Bible</p>
-          <div class="main_desc">
-            <p>마르크 샤갈은 러시아 태생의 화가로 프랑스에 정착한 화가로, 다채로운 색감과 몽환적인 화풍을 바탕으로 삶과 사랑에 대한 메시지를 전파해 많은 사랑을 받았다. 그는 성서를 주제로 한 작품을 그리는 시간 동안 전쟁과 학살로부터 고통 받는 인류에 대한 사랑을 바탕으로 그의 예술세계를 펼쳤다.</p>
-            <p>이런 그의 성서에 담은 인류에 대한 사랑의 메시지를 온전히 감상하는 시간이 될 것이다.</p>
+      </div>
+
+      <div class="contents_2nd">
+        <div class="position">
+          <div class="position_img">
+            <img src="img/02.jpg" alt="입지투어 이미지">
           </div>
+          <div class="positiona_desc">
+            <p>부지 입지 및 교육시설, 교통 등을<br>360˚ ISO 모드로 확인해보세요.</p>
+            <div class="vr_enter">
+              <a href="#">입지투어 VR</a>
+            </div>
+          </div>
+        </div>
+        <div class="position exterior">
+          <div class="position_img">
+            <img src="img/03.jpg" alt="입지투어 이미지">
+          </div>
+          <div class="positiona_desc ">
+            <p><br>단지 내의 편의시설 및 조망 등을<br>360˚ ISO 모드로 확인해보세요.</p>
+            <div class="vr_enter">
+              <a href="#">단지투어 VR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents_3rd">
+        <div class="bg">
+          <!-- <img src="img/04.jpg" alt=""> -->
+        </div>
+        <div class="desc">
+          <p class="title">당신을 위한 편안한 프라이빗 공간</p>
+          <p class="sub">서브 설명문 멋드러진 설명문 서브 설명문 멋드러진 설명문 <br>서브 설명문 멋드러진 설명문 서브 설명문 멋드러진 설명문 </p>
         </div>
       </div>
 
@@ -275,79 +302,79 @@
       //   });
       // });
 
-      $(window).scroll(function () {
-        sct = $(window).scrollTop();
-        // console.log(sct);
-        var header = $(".header");
-        var mainBanner = $(".main_banner");
-        var bottomBox = $(".contents_bottom");
-        var contents01 = $(".contents_bottom .cont_list ul li .list01");
-        var contents02 = $(".contents_bottom .cont_list ul li .list02");
-        var contents03 = $(".contents_bottom .cont_list ul li .list03");
-        var contents04 = $(".contents_bottom .cont_list ul li .list04");
+      // $(window).scroll(function () {
+      //   sct = $(window).scrollTop();
+      //   // console.log(sct);
+      //   var header = $(".header");
+      //   var mainBanner = $(".main_banner");
+      //   var bottomBox = $(".contents_bottom");
+      //   var contents01 = $(".contents_bottom .cont_list ul li .list01");
+      //   var contents02 = $(".contents_bottom .cont_list ul li .list02");
+      //   var contents03 = $(".contents_bottom .cont_list ul li .list03");
+      //   var contents04 = $(".contents_bottom .cont_list ul li .list04");
 
         
         
-        if (sct > 1) {
-          header.addClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        } else {
-          header.removeClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        }
+      //   if (sct > 1) {
+      //     header.addClass('hd_bg');
+      //     header.mouseover(function(){
+      //       $(".sub_hover_bg").addClass('on');
+      //       $(".sub").addClass('on');
+      //     }).mouseleave(function(){
+      //       $(".sub_hover_bg").removeClass('on');
+      //       $(".sub").removeClass('on');
+      //     });
+      //   } else {
+      //     header.removeClass('hd_bg');
+      //     header.mouseover(function(){
+      //       $(".sub_hover_bg").addClass('on');
+      //       $(".sub").addClass('on');
+      //     }).mouseleave(function(){
+      //       $(".sub_hover_bg").removeClass('on');
+      //       $(".sub").removeClass('on');
+      //     });
+      //   }
         
-        if (sct > 1000){
-          bottomBox.addClass('popup');
-        } else {
-          return false;
-        }
+      //   if (sct > 1000){
+      //     bottomBox.addClass('popup');
+      //   } else {
+      //     return false;
+      //   }
 
-        if (sct > 1270 && sct < 2270){
-          // if($('body').hasClass('change_bg')){
-          //   $('body').removeClass('change_bg');
-          // } else {
-          //   $('body').addClass('change_bg');
-          // }
-          $('body').css('background-color','#3052ac');
-          contents01.css("opacity",1);
-          contents02.css("opacity",0.5);
-          contents03.css("opacity",0.5);
-          contents04.css("opacity",0.5);
-        } else if (sct > 2270 && sct < 3270){
-          $('body').css('background-color','#8b1821');
-          contents01.css("opacity",0.5);
-          contents02.css("opacity",1);
-          contents03.css("opacity",0.5);
-          contents04.css("opacity",0.5);
-        } else if (sct > 3270 && sct < 4470){
-          $('body').css('background-color','#f9ce4a');
-          contents01.css("opacity",0.5);
-          contents02.css("opacity",0.5);
-          contents03.css("opacity",1);
-          contents04.css("opacity",0.5);
-        } else if(sct >4470) {
-          $('body').css('background-color','#803484');
-          contents01.css("opacity",0.5);
-          contents02.css("opacity",0.5);
-          contents03.css("opacity",0.5);
-          contents04.css("opacity",1);
-        } else {
-          $('body').css('background-color','#fff9f3');
-          return false;
-        }
-      });
+      //   if (sct > 1270 && sct < 2270){
+      //     // if($('body').hasClass('change_bg')){
+      //     //   $('body').removeClass('change_bg');
+      //     // } else {
+      //     //   $('body').addClass('change_bg');
+      //     // }
+      //     $('body').css('background-color','#3052ac');
+      //     contents01.css("opacity",1);
+      //     contents02.css("opacity",0.5);
+      //     contents03.css("opacity",0.5);
+      //     contents04.css("opacity",0.5);
+      //   } else if (sct > 2270 && sct < 3270){
+      //     $('body').css('background-color','#8b1821');
+      //     contents01.css("opacity",0.5);
+      //     contents02.css("opacity",1);
+      //     contents03.css("opacity",0.5);
+      //     contents04.css("opacity",0.5);
+      //   } else if (sct > 3270 && sct < 4470){
+      //     $('body').css('background-color','#f9ce4a');
+      //     contents01.css("opacity",0.5);
+      //     contents02.css("opacity",0.5);
+      //     contents03.css("opacity",1);
+      //     contents04.css("opacity",0.5);
+      //   } else if(sct >4470) {
+      //     $('body').css('background-color','#803484');
+      //     contents01.css("opacity",0.5);
+      //     contents02.css("opacity",0.5);
+      //     contents03.css("opacity",0.5);
+      //     contents04.css("opacity",1);
+      //   } else {
+      //     $('body').css('background-color','#fff9f3');
+      //     return false;
+      //   }
+      // });
     });
   </script>
 
