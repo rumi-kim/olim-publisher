@@ -2,7 +2,7 @@ $(function () {
 
     const menuBtn = $(".btn_menu"),
         menuModal = $('.modal_menu'),
-        menuListBtn = $(".modal_menu .slide_wrapper>li");
+        menuListBtn = $(".modal_menu .item_menu");
 
 
 
@@ -14,6 +14,7 @@ $(function () {
             menuModal.removeClass('active');
             $('body').removeClass('fixed');
             menuListBtn.removeClass('active');
+
         } else { // 메뉴 열때
             $(this).addClass('is-active');
             $(this).find('.ir_text').text('메뉴닫기');
@@ -45,7 +46,7 @@ $(function () {
             if (mySwiper == undefined) {
                 mySwiper = new Swiper(".swiper_menu", {
                     loop: false,
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                     // direction: getDirection(),
                     spaceBetween: 30,
                     breakpoints: {

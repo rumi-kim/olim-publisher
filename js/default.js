@@ -59,11 +59,11 @@ $(function () {
 
         let skipBtn = $(".wrap_introVideo .btn_skip");
 
+        introVideo.trigger("play");
         skipBtn.addClass('active');
         introSwipeModal.addClass('active');
-        introVideo.trigger("play");
-        $(".wrap_intro").fadeOut(1000);
-        $("footer").fadeOut(1000);
+        $(".wrap_intro").fadeOut(1500);
+        $("footer").fadeOut(1500);
 
         // 인트로 영상 스킵버튼 클릭 또는 영상 종료 시 함수 실행
         skipBtn.on('click', function () {
@@ -87,8 +87,6 @@ $(function () {
                 introSwipeModal.removeClass('active');
             });
         }
-
-
 
     });
 

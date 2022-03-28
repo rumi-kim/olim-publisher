@@ -291,7 +291,9 @@ body.fixed {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    font-size: 22px;
 }
+.modal_menu .list_menu>li * { color: #fff;}
 
 
 .modal_menu .list_menu>li>div {
@@ -309,7 +311,6 @@ body.fixed {
     justify-content: center;
     height: 100%;
     box-sizing: border-box;
-    color: #fff;
     font-size: 22px;
     letter-spacing: -0.025em;
     text-transform: uppercase;
@@ -344,6 +345,12 @@ body.fixed {
 .modal_menu .list_menu>li.active ul {
     animation: ani_fadeIn 1.5s 1 forwards;
 }
+
+/* 바로가기 링크가 필요한 경우 */
+.modal_menu .list_menu>li.item_link > a  { position: absolute; left: 0; right: 0; top: 0; bottom: 0;background:#ff01014d; display: flex; align-items: center; justify-content: center;}
+
+
+
 
 
 @keyframes ani_fadeOut {
@@ -418,7 +425,6 @@ body.fixed {
     margin: 0 auto;
     width: 90%;
     font-weight: 300;
-    font-size: 22px;
     line-height: 1.4;
     text-transform: capitalize;
     overflow: auto;

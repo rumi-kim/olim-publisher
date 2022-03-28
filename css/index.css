@@ -2,6 +2,7 @@
 /* ==========================================
 index page 
 ==========================================*/
+.wrap_intro { background: url(../assets/video/220318_INTRO_FIN1920.jpg) no-repeat center / cover;}
 
 .wrap_intro .box_text {
     position: fixed;
@@ -226,36 +227,31 @@ footer .logo_brand div img {
 .wrap_btns .box_info {
     opacity: 0;
     max-width: 17rem;
-    padding: 1.66rem;
+    padding: 1.3rem 1rem;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
+    letter-spacing: -0.05em;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 0.95rem;
 }
 
 .wrap_btns .box_info.active {
     opacity: 1;
 }
 
-.wrap_btns .box_info .info_desc {
-    text-align: center;
-    letter-spacing: -0.05em;
-    word-break: keep-all;
-}
-
-.wrap_btns .box_info .info_desc p:nth-child(1) {
-    font-size: 1.1rem;
+.wrap_btns .box_info strong {
+    display: block;
+    font-size: 1rem;
     color: #111;
     font-weight: 600;
     padding-bottom: 10px;
     letter-spacing: -0.075em;
 }
 
-.wrap_btns .box_info .info_desc p:nth-child(2) {
-    font-size: 0.93rem;
-    list-style: 1.7;
-}
 
 /* 진입 영상 */
 .video_move {
