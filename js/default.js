@@ -26,8 +26,7 @@ $(function () {
 
     const startBtn = $(".btn_start"),
         introSwipeModal = $(".modal_mobile"),
-        introVideo = $(".video_main"),
-        eachModal = $(".modal_each");
+        introVideo = $(".video_main");
 
     // ============================================= var
 
@@ -94,17 +93,12 @@ $(function () {
 
 
 
-    // 각 모달창 마우스오버시 노출, ============================================================================
-    eachModal.on('mouseenter', function () {
-        $(this).find('.box_info').addClass('active');
-    }).on('mouseleave', function () {
-        $(this).find('.box_info').removeClass('active')
-    });
-    // 안에 [들어가기]  버튼 필요할 경우 코드 
-    // $(".info_desc").append(
-    //   "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
-    // );
-    // 
+
+
+
+
+
+
 
 
     // 진입영상 function ============================================================================
@@ -209,17 +203,26 @@ $(function () {
     }
     const isMobile = Mobile();
 
+
     if (isMobile || window.devicePixelRatio > 1) { //mobile or tablet device
+        console.log('mobile')
 
 
 
     } else { // general pc 
+        console.log('pc');
 
     }
 
     function playAudio() {
 
     }
+
+
+   
+
+
+    
 
 
 

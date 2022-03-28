@@ -83,7 +83,7 @@ $(function () {
                 mySwiper.destroy();
                 mySwiper = undefined;
             }
-            
+
             menuListBtn.on("click", function () {
                 $(this).addClass("active");
                 $(this).siblings().removeClass('active');
@@ -93,11 +93,52 @@ $(function () {
         }
     }
 
+    function Mobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
+    }
+    const isMobile = Mobile(),
+            eachModal = $(".modal_each");
+
+
+
+    // 모달 아이콘 메뉴 
+    function initLobbyModal() {
+        if (isMobile || window.devicePixelRatio > 1) { //mobile or tablet device ==> hover effect X 
+            console.log('mobile')
+
+
+        } else { // general pc 
+            console.log('pc');
+
+            // 각 모달창 마우스오버시 노출, ============================================================================
+            eachModal.on('mouseenter', function () {
+                $(this).find('.box_info').addClass('active');
+            }).on('mouseleave', function () {
+                $(this).find('.box_info').removeClass('active')
+            });
+            // 안에 [들어가기]  버튼 필요할 경우 코드 
+            // $(".info_desc").append(
+            //   "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
+            // );
+            // 
+
+        }
+
+    }
+
+
+
+
     initMenu();
+    initLobbyModal();
 
     $(window).on("load resize orientationchange", function () {
         windowWidth = $(window).width();
         initMenu();
+        initLobbyModal();
+
     });
 
 
