@@ -1,99 +1,107 @@
 $(function () {
-  // const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-  const menuBtn = $(".btn_menu"),
-    menuModal = $('.modal_menu');
-  menuBtn.on("click ", function () {
-    if ($(this).hasClass("is-active")) { // 메뉴닫을떄
-      $(this).removeClass('is-active');
-      $(this).find('.ir_text').text('메뉴열기');
-      menuModal.removeClass('active');
-      $('body').removeClass('fixed');
-    } else { // 메뉴 열때
-      $(this).addClass('is-active');
-      $(this).find('.ir_text').text('메뉴닫기');
-      menuModal.addClass('active');
-      $('body').addClass('fixed');
+    const menuBtn = $(".btn_menu"),
+        menuModal = $('.modal_menu'),
+        menuListBtn = $(".modal_menu .slide_wrapper>li");
+
+
+
+    // 햄버거 메뉴 버튼 클릭 
+    menuBtn.on("click ", function () {
+        if ($(this).hasClass("is-active")) { // 메뉴닫을떄
+            $(this).removeClass('is-active');
+            $(this).find('.ir_text').text('메뉴열기');
+            menuModal.removeClass('active');
+            $('body').removeClass('fixed');
+        } else { // 메뉴 열때
+            $(this).addClass('is-active');
+            $(this).find('.ir_text').text('메뉴닫기');
+            menuModal.addClass('active');
+            $('body').addClass('fixed');
+        }
+    });
+
+
+
+    // 메뉴 레이아웃 스크립트 
+
+    let windowWidth = $(window).width();
+    let mySwiper = undefined;
+
+
+    function initMenu() {
+
+        // 2015부터 슬라이드 형식  - swiper on 
+        if (windowWidth > 1024) {
+
+            menuListBtn.on("click", function () {
+
+                $(this).addClass("active");
+                $(this).siblings().removeClass('active');
+            });
+
+
+            if (mySwiper == undefined) {
+                mySwiper = new Swiper(".swiper_menu", {
+                    loop: false,
+                    slidesPerView: 4,
+                    // direction: getDirection(),
+                    spaceBetween: 30,
+                    breakpoints: {
+                        1200: {
+                            spaceBetween: 15,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 18,
+                        },
+                    },
+                    observer: true,
+                    observeParents: true,
+                    // navigation: {
+                    //     nextEl: nextBtn,
+                    //     prevEl: prevBtn,
+                    // },
+                    // on: {
+                    //     resize: function () {
+                    //         swiper1.changeDirection(getDirection());
+                    //     },
+                    //     load: function () {
+                    //         swiper1.changeDirection(getDirection());
+                    //     },
+                    // },
+                });
+
+            }
+
+
+        } else if (windowWidth < 1025) {
+            // 2014이하는 아코디언 메뉴 형식 - swiper off (destory)
+            if (mySwiper != undefined) {
+                mySwiper.destroy();
+                mySwiper = undefined;
+            }
+            
+            menuListBtn.on("click", function () {
+                $(this).addClass("active");
+                $(this).siblings().removeClass('active');
+                $(this).find('ul').stop().slideDown();
+                $(this).siblings().find('ul').stop().slideUp();
+            });
+        }
     }
-  });
 
-  let menuListBtn = $(".modal_menu .slide_wrapper>li");
+    initMenu();
 
-
-
-  $(window).on("load resize orientationchange", function () {
-    let wapperWidth = $(window).width();
-
-    if (wapperWidth > 1024) {
-      // 1025이상부터 슬라이드 형식
-      const nextBtn = $(".btn_slide.next");
-      const prevBtn = $(".btn_slide.prev");
-
-      if ($(".swiper-container .swiper-slide").length > 3) {
-        const swiper1 = new Swiper(".swiper_menu", {
-          loop: false,
-          slidesPerView: 4,
-          direction: getDirection(),
-          spaceBetween: 30,
-          breakpoints: {
-            1200: {
-              spaceBetween: 15,
-            },
-            1024: {
-              slidesPerView: 5,
-              spaceBetween: 18,
-            },
-          },
-          observer: true,
-          observeParents: true,
-          navigation: {
-            nextEl: nextBtn,
-            prevEl: prevBtn,
-          },
-          on: {
-            resize: function () {
-              swiper1.changeDirection(getDirection());
-            },
-            load: function () {
-              swiper1.changeDirection(getDirection());
-            },
-          },
-        }); // swiper end
-      } else {
-        // 리스트가 4개 이하일 경우 슬라이드 X, 버튼 노출 X , 가운데 정렬
-
-        nextBtn.addClass("none");
-        prevBtn.addClass("none");
-
-      }
-
-      function getDirection() {
-        let direction = wapperWidth <= 690 ? "vertical" : "horizontal";
-
-        return direction;
-      }
-
-
-      menuListBtn
-        .on("click", function () {
-          $(this).toggleClass("active");
-          $(this).siblings().removeClass('active');
-        });
-
-    } else {
-
-      menuListBtn
-        .on("click", function () {
-          $(this).toggleClass("active");
-          $(this).siblings().removeClass('active');
-          $(this).find('ul').stop().slideToggle();
-          $(this).siblings().find('ul').stop().slideUp();
-        });
+    $(window).on("load resize orientationchange", function () {
+        windowWidth = $(window).width();
+        initMenu();
+    });
 
 
 
-    }
-  });
+
+    //
 
 
 
@@ -102,4 +110,9 @@ $(function () {
 
 
 
-}); // jquery function end
+
+
+
+
+
+}); //jquery function end
