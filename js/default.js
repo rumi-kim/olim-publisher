@@ -188,6 +188,13 @@ $(function () {
     });
 
 
+    // 도움말 모달 
+    $('.btn_help').on('click',function(){
+        $('.modal_help').css('display','block')
+    });
+
+
+
 
 
     

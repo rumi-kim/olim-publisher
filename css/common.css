@@ -155,11 +155,24 @@ header {
 
 
 /* 헤더의 버튼, 서브 도움말 모달의 버튼과 동일 적용 */
-.item_fixed.top .btn_type1 {
+.item_fixed.top.right ul:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.item_fixed.top.right ul li {
+    float: left;
+}
+
+.item_fixed.top.right ul li~li {
+    margin-left: 15px;
+}
+
+.item_fixed.top.right ul li .btn_type1 {
     height: 50px;
     width: 50px;
     line-height: 50px;
-    margin-left: 15px;
 }
 
 
@@ -224,7 +237,7 @@ body.fixed {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 75vw;
+    width: 85vw;
     max-height: 75vh;
 }
 
@@ -630,8 +643,8 @@ media query
         menu modal
     ==========================================*/
 
-    .modal_menu .slide_menu { 
-      overflow: overlay;
+    .modal_menu .slide_menu {
+        overflow: overlay;
     }
 
     .modal_menu .list_menu {
@@ -639,16 +652,17 @@ media query
     }
 
     .modal_menu .list_menu>li {
-        padding:30px 0; 
+        padding: 30px 0;
         width: 100%;
         margin-right: 0;
         height: auto;
     }
 
-    .modal_menu .list_menu>li ~ li { 
+    .modal_menu .list_menu>li~li {
         margin-top: -1px;
     }
-    .modal_menu .list_menu>li>div { 
+
+    .modal_menu .list_menu>li>div {
         font-size: 18px;
     }
 
@@ -663,9 +677,9 @@ media query
         transform: none;
     }
 
-    .modal_menu .list_menu>li>div>p:before { 
-        height:30px; 
-        margin-bottom : 20px
+    .modal_menu .list_menu>li>div>p:before {
+        height: 30px;
+        margin-bottom: 20px
     }
 
 

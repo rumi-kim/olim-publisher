@@ -13,6 +13,7 @@ $(function () {
             $(this).find('.ir_text').text('메뉴열기');
             menuModal.removeClass('active');
             $('body').removeClass('fixed');
+            menuListBtn.removeClass('active');
         } else { // 메뉴 열때
             $(this).addClass('is-active');
             $(this).find('.ir_text').text('메뉴닫기');

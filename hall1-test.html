@@ -52,18 +52,25 @@
         </a>
       </h1>
       <div class="item_fixed right top">
-        <button type="button" class="btn_sound ico_sound btn_type1">
-          <span class="ir_text">sound on</span>
-        </button>
-        <button class="btn_menu type4 btn_type1">
-          <span class="ir_text">메뉴열기</span>
-          <i></i>
-          <i></i>
-          <i></i>
-        </button>
+        <ul>
+          <li><button type="button" class="btn_sound ico_sound btn_type1">
+            <span class="ir_text">sound on</span>
+          </button></li>
+          <li><button type="button" class="btn_help btn_type1">
+            <span class="bg_absolute ico help"><span class="ir_text">도움말 보기</span></span>
+          </button></li>
+          <li>
+            <button class="btn_menu type4 btn_type1">
+              <span class="ir_text">메뉴열기</span>
+              <i></i>
+              <i></i>
+              <i></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="modal_menu bg_fixed active" >
+    <div class="modal_menu bg_fixed " >
       <h2 class="ir_text">대메뉴</h2>
       <button class="btn_close type4">
         <span class="ir_text">닫기</span>
@@ -114,13 +121,22 @@
                 </ul>
               </div>
             </li>
+            <li class="swiper-slide">
+              <div>
+                <p><span>푸르지오 보타닉</span></p>
+                <ul>
+                  <li><a href="hall4.html">Enter</a></li>
+                  <li><a href="#" target="_blank">홈페이지</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </header>
   <main class="">
-    <div class="modal_help modal_type1 modal bg_fixed" style="display: none;">
+    <div class="modal_help modal_type1 modal bg_fixed" >
       <div class="help_center ab_cent" style="z-index: 10;">
         <button class="btn_closemodal btn_close btn_type1"><span class="ir_text">도움말 모달 닫기</span><span class="bg_absolute ico close"></span></button>
       <div class="inner box_type1 ">
@@ -176,13 +192,13 @@
       <div class="help_side bg_absolute">
         <div class="item_fixed right top">
           <div class="box_help arrow">
-          <ul class="float_box">
-            <li class="float_left">
+          <ul class="">
+            <li class="">
               <div class="btn_type1" style="margin: 0;">
                 <span class="bg_absolute ico help"><span class="ir_text">도움말 버튼</span></span>
               </div>
             </li>
-            <li class="float_left">
+            <li class="">
               <div class="btn_type1">
                 <span class="bg_absolute ico menu"><span class="ir_text">메뉴 버튼</span></span>
               </div>
