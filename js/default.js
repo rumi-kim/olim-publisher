@@ -76,7 +76,7 @@ $(function () {
 
         function endIntroVideo() {
             $('.section_intro').fadeOut(2000);
-            $('.site_logo').addClass('active');
+            $('.logo_h1').addClass('active');
         }
 
 

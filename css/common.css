@@ -137,11 +137,11 @@ header {
 }
 
 
-.site_logo {
+.logo_h1 {
     display: none;
 }
 
-.site_logo.active {
+.logo_h1.active {
     display: block;
 }
 
