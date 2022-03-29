@@ -124,7 +124,10 @@
       <div class="contents_2nd">
         <div class="position">
           <div class="position_img">
-            <img src="img/02.jpg" alt="입지투어 이미지">
+            <div class="img_box">
+              <img src="img/02.jpg" alt="입지투어 이미지">
+            </div>
+            <div class="position_bg"></div>
           </div>
           <div class="positiona_desc">
             <p>부지 입지 및 교육시설, 교통 등을<br>360˚ ISO 모드로 확인해보세요.</p>
@@ -135,7 +138,10 @@
         </div>
         <div class="position exterior">
           <div class="position_img">
-            <img src="img/03.jpg" alt="입지투어 이미지">
+            <div class="img_box">
+              <img src="img/03.jpg" alt="입지투어 이미지">
+            </div>
+            <div class="position_bg"></div>
           </div>
           <div class="positiona_desc ">
             <p><br>단지 내의 편의시설 및 조망 등을<br>360˚ ISO 모드로 확인해보세요.</p>
@@ -211,81 +217,66 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script>
+
     $(function(){
+      
+      //스크롤 안 했을 때 서브 네비게이션 노출
+      var header = $(".header");
+      header.mouseover(function(){
+        $(".sub_hover_bg").addClass('on');
+        $(".sub").addClass('on');
+      }).mouseleave(function(){
+        $(".sub_hover_bg").removeClass('on');
+        $(".sub").removeClass('on');
+      });
 
-      // $(window).scroll(function () {
-      //   sct = $(window).scrollTop();
-      //   // console.log(sct);
-      //   var header = $(".header");
-      //   var mainBanner = $(".main_banner");
-      //   var bottomBox = $(".contents_bottom");
-      //   var contents01 = $(".contents_bottom .cont_list ul li .list01");
-      //   var contents02 = $(".contents_bottom .cont_list ul li .list02");
-      //   var contents03 = $(".contents_bottom .cont_list ul li .list03");
-      //   var contents04 = $(".contents_bottom .cont_list ul li .list04");
+      $(window).scroll(function () {
+        sct = $(window).scrollTop();
+        // console.log(sct);
+  
+        if (sct > 1) {
+          header.addClass('hd_bg');
+          header.mouseover(function(){
+            $(".sub_hover_bg").addClass('on');
+            $(".sub_hover_bg").css({
+              "background-color":"rgba(229, 212, 194, 0.5)"
+            });
+            $(".sub").addClass('on');
+          }).mouseleave(function(){
+            $(".sub_hover_bg").removeClass('on');
+            $(".sub").removeClass('on');
+          });
+        } else {
+          header.removeClass('hd_bg');
+          header.mouseover(function(){
+            $(".sub_hover_bg").addClass('on');
+            $(".sub_hover_bg").css({
+              "background-color":"rgba(0,0,0,0)"
+            });
+            $(".sub").addClass('on');
+          }).mouseleave(function(){
+            $(".sub_hover_bg").removeClass('on');
+            $(".sub").removeClass('on');
+          });
+        }
 
         
-        
-      //   if (sct > 1) {
-      //     header.addClass('hd_bg');
-      //     header.mouseover(function(){
-      //       $(".sub_hover_bg").addClass('on');
-      //       $(".sub").addClass('on');
-      //     }).mouseleave(function(){
-      //       $(".sub_hover_bg").removeClass('on');
-      //       $(".sub").removeClass('on');
-      //     });
-      //   } else {
-      //     header.removeClass('hd_bg');
-      //     header.mouseover(function(){
-      //       $(".sub_hover_bg").addClass('on');
-      //       $(".sub").addClass('on');
-      //     }).mouseleave(function(){
-      //       $(".sub_hover_bg").removeClass('on');
-      //       $(".sub").removeClass('on');
-      //     });
-      //   }
-        
-      //   if (sct > 1000){
-      //     bottomBox.addClass('popup');
-      //   } else {
-      //     return false;
-      //   }
+        // console.log(test);
 
-      //   if (sct > 1270 && sct < 2270){
-      //     // if($('body').hasClass('change_bg')){
-      //     //   $('body').removeClass('change_bg');
-      //     // } else {
-      //     //   $('body').addClass('change_bg');
-      //     // }
-      //     $('body').css('background-color','#3052ac');
-      //     contents01.css("opacity",1);
-      //     contents02.css("opacity",0.5);
-      //     contents03.css("opacity",0.5);
-      //     contents04.css("opacity",0.5);
-      //   } else if (sct > 2270 && sct < 3270){
-      //     $('body').css('background-color','#8b1821');
-      //     contents01.css("opacity",0.5);
-      //     contents02.css("opacity",1);
-      //     contents03.css("opacity",0.5);
-      //     contents04.css("opacity",0.5);
-      //   } else if (sct > 3270 && sct < 4470){
-      //     $('body').css('background-color','#f9ce4a');
-      //     contents01.css("opacity",0.5);
-      //     contents02.css("opacity",0.5);
-      //     contents03.css("opacity",1);
-      //     contents04.css("opacity",0.5);
-      //   } else if(sct >4470) {
-      //     $('body').css('background-color','#803484');
-      //     contents01.css("opacity",0.5);
-      //     contents02.css("opacity",0.5);
-      //     contents03.css("opacity",0.5);
-      //     contents04.css("opacity",1);
-      //   } else {
-      //     $('body').css('background-color','#fff9f3');
-      //     return false;
-      //   }
-      // });
+        if (sct > 600 && sct < 1600){
+          var test = (600 - sct) * 0.01;
+          var test1 = (600 - sct) * 0.019;
+          // console.log(test);
+          $(".contents_2nd .position .position_img .img_box").css({
+            "transform": "translateY("+ test +"%)"
+          });
+          $(".contents_2nd .position .position_img .position_bg").css({
+            "transform": "translateY("+ test1 +"%)"
+          });
+        } else {
+          return false;
+        }
+      });
     });
 
     const swiper = new Swiper('.swiper', {
