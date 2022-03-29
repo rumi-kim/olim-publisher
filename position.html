@@ -229,11 +229,28 @@
       });
     });
 
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.fromTo(".box1", {    
-    //   scrollTrigger: ".box1", y: 0, duration: 4,
+    //Scroll Trigger Plugin Usage
+    // 1.cdn 주소 추가
+
+    gsap.registerPlugin(ScrollTrigger);
+    // gsap.fromTo(".box1", {y:200},{y:0, duration:2});
+    // gsap.fromTo(".box1", {autoAlpha: 0}, {autoAlpha: 0.5, duration: 1});
+    // gsap.to(".box1",{
+    //   scrollTrigger:{
+    //     trigger:".box1",
+    //     markers:true, //start, end 마커 태크 추가
+    //     start:'top center',
+    //     end:'30%'
+    //   }, y:200, duration:5
     // });
-    gsap.fromTo(".box1", {autoAlpha: 0}, {autoAlpha: 0.5, duration: 1});
+    gsap.fromTo(".box1",{y:200},{
+      scrollTrigger:{
+        trigger:".box1",
+        markers:true, //start, end 마커 태그 추가
+        start:'top center',
+        end:'30%'
+      }, y:0, duration:2
+    });
     
   </script>
 
