@@ -18,6 +18,7 @@
 
   <!-- library -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <!-- <link rel="stylesheet" href="js/ScrollTrigger.min.js"> -->
 
   <!-- general style -->
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
@@ -28,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <script src="js/common.js"></script>
 
-  <title>Scroll Template3 - index</title>
+  <title>Scroll Template3 - Position</title>
 </head>
 
 <body>
@@ -105,100 +106,64 @@
         </ul>
       </div>
     </header>
-    <div class="contents">
+    <div class="contents position_page">
 
       <div class="contents_top">
-        <div class="top_img">
-          <img src="img/01.jpg" alt="">
-        </div>
-        <div class="scroll">
-          <div class="line">
-            <div class="scroll_bg"></div>
-          </div>
-          <div class="scroll_text">
-            <p>Scroll</p>
-          </div>
+        <div class="top_img"></div>
+        <div class="top_desc">
+          <p class="title">입지투어</p>
+          <p class="desc_sub">Location Tour</p>
         </div>
       </div>
 
       <div class="contents_2nd">
-        <div class="position">
-          <div class="position_img">
-            <div class="img_box">
-              <img src="img/02.jpg" alt="입지투어 이미지">
-            </div>
-            <div class="position_bg"></div>
-          </div>
-          <div class="positiona_desc">
-            <p>부지 입지 및 교육시설, 교통 등을<br>360˚ ISO 모드로 확인해보세요.</p>
-            <div class="vr_enter">
-              <a href="#">입지투어 VR</a>
-            </div>
-          </div>
-        </div>
-        <div class="position exterior">
-          <div class="position_img">
-            <div class="img_box">
-              <img src="img/03.jpg" alt="단지투어 이미지">
-            </div>
-            <div class="position_bg"></div>
-          </div>
-          <div class="positiona_desc ">
-            <p><br>단지 내의 편의시설 및 조망 등을<br>360˚ ISO 모드로 확인해보세요.</p>
-            <div class="vr_enter">
-              <a href="#">단지투어 VR</a>
-            </div>
-          </div>
+        <div class="vr-player">
+          <iframe
+            src="https://vr.zipview.kr/product/ZE128/?mode=embed-exterior"
+            class="vr-iframe"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
 
       <div class="contents_3rd">
-        <div class="bg">
-          <!-- <img src="img/04.jpg" alt=""> -->
+
+        <div class="top_title">
+          <p class="title">입지투어 Point</p>
         </div>
-        <div class="desc">
-          <p class="title">당신을 위한 편안한 프라이빗 공간</p>
-          <p class="sub">서브 설명문 멋드러진 설명문 서브 설명문 멋드러진 설명문 <br>서브 설명문 멋드러진 설명문 서브 설명문 멋드러진 설명문 </p>
+
+        <div class="inner_contents">
+          <div class="each_box box1">
+            <div class="each_img">
+              <img src="img/05.jpg" alt="">
+            </div>
+            <div class="each_desc">
+              <p class="sub_font_title">Title Title</p>
+              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
+            </div>
+          </div>
+
+          <div class="each_box box2">
+            <div class="each_img">
+              <img src="img/08.jpg" alt="">
+            </div>
+            <div class="each_desc">
+              <p class="sub_font_title">Title Title</p>
+              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
+            </div>
+          </div>
+
+          <div class="each_box box3">
+            <div class="each_img">
+              <img src="img/06.jpg" alt="">
+            </div>
+            <div class="each_desc">
+              <p class="sub_font_title">Title Title</p>
+              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="main_banner swiper">
-
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/01.jpg" alt="">
-            <div class="inner_cont">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div class="swiper-scrollbar"></div>
-            </div>
-            
-          </div>
-          <div class="swiper-slide">
-            <img src="img/02.jpg" alt="">
-            <div class="inner_cont">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/07.jpg" alt="">
-            <div class="inner_cont">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24" width="40px" fill="#c2925f"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-        </div>
-        <div class="swiper-button-next">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24" width="40px" fill="#c2925f"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        </div>
-
-      </div>
-
     </div>
 
     <footer>
@@ -215,7 +180,9 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
   <script>
 
     $(function(){
@@ -259,37 +226,15 @@
             $(".sub").removeClass('on');
           });
         }
-
-        
-        // console.log(test);
-
-        if (sct > 600 && sct < 1600){
-          var test = (600 - sct) * 0.01;
-          var test1 = (600 - sct) * 0.019;
-          // console.log(test);
-          $(".contents_2nd .position .position_img .img_box").css({
-            "transform": "translateY("+ test +"%)"
-          });
-          $(".contents_2nd .position .position_img .position_bg").css({
-            "transform": "translateY("+ test1 +"%)"
-          });
-        } else {
-          return false;
-        }
       });
     });
 
-    const swiper = new Swiper('.swiper', {
-      direction:'horizontal',
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      // autoplay: {
-      //   Delay:10000,
-      // }
-    });
+    // gsap.registerPlugin(ScrollTrigger);
+    // gsap.fromTo(".box1", {    
+    //   scrollTrigger: ".box1", y: 0, duration: 4,
+    // });
+    gsap.fromTo(".box1", {autoAlpha: 0}, {autoAlpha: 0.5, duration: 1});
+    
   </script>
 
 </body>

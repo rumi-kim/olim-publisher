@@ -2,8 +2,18 @@
 
 /* import CSS */
 @import "header.css";
+@import "position.css";
 
-/* default btn */
+/* default btn  */
+.sub_font_title {
+  font-size: 1.8vw;
+  font-weight: 600;
+}
+.sub_font_desc {
+  font-size: 0.8vw;
+  word-break: keep-all;
+}
+
 .header .btn-lobby,
 .main .content .btn,
 .lobby .contents .lobby_btn_wrap .btn,
