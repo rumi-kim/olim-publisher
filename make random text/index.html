@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문자 주소 생성하기</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    'use strict';
+    function makeRandomUrl(urlLength){
+
+        let str = "";
+        let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for(let i=0; i<urlLength; i++){
+            str += possible.charAt(Math.floor(Math.random() * possible.length));
+            
+        }
+        return str;
+    } 
+   console.log(makeRandomUrl(20));
+
+</script>
