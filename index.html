@@ -220,14 +220,14 @@
     $(function(){
       
       //스크롤 안 했을 때 서브 네비게이션 노출
-      // var header = $(".header");
-      // header.mouseover(function(){
-      //   $(".sub_hover_bg").addClass('on');
-      //   $(".sub").addClass('on');
-      // }).mouseleave(function(){
-      //   $(".sub_hover_bg").removeClass('on');
-      //   $(".sub").removeClass('on');
-      // });
+      var header = $(".header");
+      header.mouseover(function(){
+        $(".sub_hover_bg").addClass('on');
+        $(".sub").addClass('on');
+      }).mouseleave(function(){
+        $(".sub_hover_bg").removeClass('on');
+        $(".sub").removeClass('on');
+      });
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();

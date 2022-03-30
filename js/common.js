@@ -12,10 +12,13 @@ $(function () {
       $(".mobile_nav").click(function () {
         $(this).toggleClass("is_open");
         if ($(this).hasClass("is_open")) {
-          $(".nav.mobile .nav_list").css("transform", "translateX(0)");
+          $(".nav.mobile").css("transform", "translateX(0)");
         } else {
-          $(".nav.mobile .nav_list").css("transform", "translateX(100%)");
+          $(".nav.mobile").css("transform", "translateX(100%)");
         }
+      });
+      $(".nav.mobile .nav_each.depth_1").click(function () {
+        $(this).children(".nav.mobile .sub_nav.depth_2").slideToggle();
       });
     }
   }
