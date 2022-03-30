@@ -1,258 +1,336 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta property="og:image" content="https://vmh.zipview.kr/path/og_tvn2521.jpg">
-  <link rel="icon" href="https://vmh.zipview.kr/path/favi_mice.png">
-  <meta name="keywords" content="Scroll Template">
-  <meta name="description" content="Scroll Template">
-  <meta name="robots" content="all">
-  <meta property="og:url" content>
-  <meta property="og:title" content="Scroll Template">
-  <meta property="og:description" content="Scroll Template">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      property="og:image"
+      content="https://vmh.zipview.kr/path/og_tvn2521.jpg"
+    />
+    <link rel="icon" href="https://vmh.zipview.kr/path/favi_mice.png" />
+    <meta name="keywords" content="Scroll Template" />
+    <meta name="description" content="Scroll Template" />
+    <meta name="robots" content="all" />
+    <meta property="og:url" content />
+    <meta property="og:title" content="Scroll Template" />
+    <meta property="og:description" content="Scroll Template" />
 
-  <!-- Style include -->
-  <script src="https://vr.miceview.kr/path/assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Style include -->
+    <script src="https://vr.miceview.kr/path/assets/js/jquery-3.5.1.min.js"></script>
 
-  <!-- library -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  <!-- <link rel="stylesheet" href="js/ScrollTrigger.min.js"> -->
+    <!-- library -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- <link rel="stylesheet" href="js/ScrollTrigger.min.js"> -->
 
-  <!-- general style -->
-  <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/olim_general.css">
-  <script src="js/olim_general.js"></script>
+    <!-- general style -->
+    <link
+      href="https://cdn.zipview.kr/public/fonts/common.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/olim_general.css" />
+    <script src="js/olim_general.js"></script>
 
-  <!-- project -->
-  <link rel="stylesheet" type="text/css" href="css/common.css">
-  <script src="js/common.js"></script>
+    <!-- project -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script src="js/common.js"></script>
 
-  <title>Scroll Template3 - Position</title>
-</head>
+    <title>Scroll Template3 - Position</title>
+  </head>
 
-<body>
-  <div class="wrap">
-    <header class="header">
-      <div class="sub_hover_bg"> </div>
-      <!-- <div class="hd_bg"></div> -->
-      <div class="logo">
-        <img src="/img/logo_main.png" alt="Main Logo">
-      </div>
-      <div class="mobile_nav">
-        <img src="img/ico_menu.png" alt="">
-      </div>
-      <div class="nav">
-        <ul class="nav_list">
-          <li class="nav_each">
-            <a href="#">Brand</a>
-            <div class="sub_nav">
-              <ul>
-                <li class="nav_each sub"><a href="#">브랜드 스토리</a></li>
-              </ul>
-            </div>
-            
-          </li>
-          <li class="nav_each">
-            <a href="#">입지환경</a>
-            <div class="sub_nav">
-              <ul>
-                <li class="nav_each sub">
-                  <a href="#">입지투어 바로가기</a>
-                  <a href="#">서브메뉴</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav_each">
-            <a href="#">단지투어</a>
-            <div class="sub_nav">
-              <ul>
-                <li class="nav_each sub">
-                  <a href="#">단지 둘러보기</a>
-                  <a href="#">서브메뉴</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav_each">
-            <a href="#">내부투어</a>
-            <div class="sub_nav">
-              <ul>
-                <li class="nav_each sub">
-                  <a href="#">내부투어-a</a>
-                  <a href="#">내부투어-b</a>
-                  <a href="#">내부투어-C</a>
-                  <a href="#">내부투어-D</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav_each">
-            <a href="#">커뮤니티</a>
-            <div class="sub_nav">
-              <ul>
-                <li class="nav_each sub">
-                  <a href="#">커뮤니티-a</a>
-                  <a href="#">커뮤니티-b</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <div class="contents position_page">
-
-      <div class="contents_top">
-        <div class="top_img"></div>
-        <div class="top_desc">
-          <p class="title">입지투어</p>
-          <p class="desc_sub">Location Tour</p>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="sub_hover_bg"></div>
+        <!-- <div class="hd_bg"></div> -->
+        <div class="logo">
+          <img src="/img/logo_main.png" alt="Main Logo" />
         </div>
-      </div>
-
-      <div class="contents_2nd">
-        <div class="vr-player">
-          <iframe
-            src="https://vr.zipview.kr/product/ZE128/?mode=embed-exterior"
-            class="vr-iframe"
-            allowfullscreen
-          ></iframe>
+        <div class="mobile_nav">
+          <img src="img/ico_menu.png" alt="" />
         </div>
-      </div>
+        <div class="nav">
+          <ul class="nav_list">
+            <li class="nav_each">
+              <a href="#">Brand</a>
+              <div class="sub_nav">
+                <ul>
+                  <li class="nav_each sub"><a href="#">브랜드 스토리</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav_each">
+              <a href="#">입지환경</a>
+              <div class="sub_nav">
+                <ul>
+                  <li class="nav_each sub">
+                    <a href="#">입지투어 바로가기</a>
+                    <a href="#">서브메뉴</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-      <div class="contents_3rd">
+            <li class="nav_each">
+              <a href="#">단지투어</a>
+              <div class="sub_nav">
+                <ul>
+                  <li class="nav_each sub">
+                    <a href="#">단지 둘러보기</a>
+                    <a href="#">서브메뉴</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-        <div class="top_title">
-          <p class="title">입지투어 Point</p>
+            <li class="nav_each">
+              <a href="#">내부투어</a>
+              <div class="sub_nav">
+                <ul>
+                  <li class="nav_each sub">
+                    <a href="#">내부투어-a</a>
+                    <a href="#">내부투어-b</a>
+                    <a href="#">내부투어-C</a>
+                    <a href="#">내부투어-D</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav_each">
+              <a href="#">커뮤니티</a>
+              <div class="sub_nav">
+                <ul>
+                  <li class="nav_each sub">
+                    <a href="#">커뮤니티-a</a>
+                    <a href="#">커뮤니티-b</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="inner_contents">
-          <div class="each_box box1">
-            <div class="each_img">
-              <img src="img/05.jpg" alt="">
-            </div>
-            <div class="each_desc">
-              <p class="sub_font_title">Title Title</p>
-              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
-            </div>
-          </div>
-
-          <div class="each_box box2">
-            <div class="each_img">
-              <img src="img/08.jpg" alt="">
-            </div>
-            <div class="each_desc">
-              <p class="sub_font_title">Title Title</p>
-              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
-            </div>
-          </div>
-
-          <div class="each_box box3">
-            <div class="each_img">
-              <img src="img/06.jpg" alt="">
-            </div>
-            <div class="each_desc">
-              <p class="sub_font_title">Title Title</p>
-              <p class="sub_font_desc">입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요 </p>
-            </div>
+      </header>
+      <div class="contents position_page">
+        <div class="contents_top">
+          <div class="top_img"></div>
+          <div class="top_desc">
+            <p class="title">입지투어</p>
+            <p class="desc_sub">Location Tour</p>
           </div>
         </div>
+
+        <div class="contents_2nd">
+          <div class="vr-player">
+            <iframe
+              src="https://vr.zipview.kr/product/ZE128/?mode=embed-exterior"
+              class="vr-iframe"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="contents_3rd">
+          <div class="top_title">
+            <p class="title">입지투어 Point</p>
+          </div>
+
+          <div class="inner_contents">
+            <div class="each_box box1">
+              <div class="each_img">
+                <img src="img/05.jpg" alt="" />
+              </div>
+              <div class="each_desc">
+                <p class="sub_font_title">Title Title</p>
+                <p class="sub_font_desc">
+                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
+                  입지가 너무 좋아요 입지가 너무 좋아요
+                </p>
+              </div>
+            </div>
+
+            <div class="each_box box2">
+              <div class="each_img">
+                <img src="img/08.jpg" alt="" />
+              </div>
+              <div class="each_desc">
+                <p class="sub_font_title">Title Title</p>
+                <p class="sub_font_desc">
+                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
+                  입지가 너무 좋아요 입지가 너무 좋아요
+                </p>
+              </div>
+            </div>
+
+            <div class="each_box box3">
+              <div class="each_img">
+                <img src="img/06.jpg" alt="" />
+              </div>
+              <div class="each_desc">
+                <p class="sub_font_title">Title Title</p>
+                <p class="sub_font_desc">
+                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
+                  입지가 너무 좋아요 입지가 너무 좋아요
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <footer>
+        <div class="footer_bg">
+          <div class="footer_img">
+            <img src="img/logo_main_c.png" alt="footer brand logo" />
+          </div>
+          <div class="footer_desc">
+            <p>Copyrightⓒ 2022.Olim Planet, All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <footer>
-      <div class="footer_bg">
-        <div class="footer_img">
-          <img src="img/logo_main_c.png" alt="footer brand logo">
-        </div>
-        <div class="footer_desc">
-          <p>Copyrightⓒ 2022.Olim Planet, All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  </div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script>
+      $(function () {
+        //스크롤 안 했을 때 서브 네비게이션 노출
+        var header = $(".header");
+        header
+          .mouseover(function () {
+            $(".sub_hover_bg").addClass("on");
+            $(".sub").addClass("on");
+          })
+          .mouseleave(function () {
+            $(".sub_hover_bg").removeClass("on");
+            $(".sub").removeClass("on");
+          });
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-  <script>
+        $(window).scroll(function () {
+          sct = $(window).scrollTop();
+          // console.log(sct);
 
-    $(function(){
-      
-      //스크롤 안 했을 때 서브 네비게이션 노출
-      var header = $(".header");
-      header.mouseover(function(){
-        $(".sub_hover_bg").addClass('on');
-        $(".sub").addClass('on');
-      }).mouseleave(function(){
-        $(".sub_hover_bg").removeClass('on');
-        $(".sub").removeClass('on');
+          if (sct > 1) {
+            header.addClass("hd_bg");
+            header
+              .mouseover(function () {
+                $(".sub_hover_bg").addClass("on");
+                $(".sub_hover_bg").css({
+                  "background-color": "rgba(229, 212, 194, 0.5)",
+                });
+                $(".sub").addClass("on");
+              })
+              .mouseleave(function () {
+                $(".sub_hover_bg").removeClass("on");
+                $(".sub").removeClass("on");
+              });
+          } else {
+            header.removeClass("hd_bg");
+            header
+              .mouseover(function () {
+                $(".sub_hover_bg").addClass("on");
+                $(".sub_hover_bg").css({
+                  "background-color": "rgba(0,0,0,0)",
+                });
+                $(".sub").addClass("on");
+              })
+              .mouseleave(function () {
+                $(".sub_hover_bg").removeClass("on");
+                $(".sub").removeClass("on");
+              });
+          }
+
+          if (sct > 960) {
+            $(".top_title").addClass('ani1');
+          }
+          if (sct > 1057) {
+            $(".box1").addClass('ani1');
+            $(".box2").addClass('ani2');
+            $(".box3").addClass('ani3');
+          }
+        });
       });
 
-      $(window).scroll(function () {
-        sct = $(window).scrollTop();
-        // console.log(sct);
-  
-        if (sct > 1) {
-          header.addClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub_hover_bg").css({
-              "background-color":"rgba(229, 212, 194, 0.5)"
-            });
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        } else {
-          header.removeClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub_hover_bg").css({
-              "background-color":"rgba(0,0,0,0)"
-            });
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        }
-      });
-    });
+      //Scroll Trigger Plugin
 
-    //Scroll Trigger Plugin Usage
-    // 1.cdn 주소 추가
-
-    gsap.registerPlugin(ScrollTrigger);
-    // gsap.fromTo(".box1", {y:200},{y:0, duration:2});
-    // gsap.fromTo(".box1", {autoAlpha: 0}, {autoAlpha: 0.5, duration: 1});
-    // gsap.to(".box1",{
-    //   scrollTrigger:{
-    //     trigger:".box1",
-    //     markers:true, //start, end 마커 태크 추가
-    //     start:'top center',
-    //     end:'30%'
-    //   }, y:200, duration:5
-    // });
-    gsap.fromTo(".box1",{y:200},{
-      scrollTrigger:{
-        trigger:".box1",
-        markers:true, //start, end 마커 태그 추가
-        start:'top center',
-        end:'30%'
-      }, y:0, duration:2
-    });
-    
-  </script>
-
-</body>
+      // gsap.registerPlugin(ScrollTrigger);
+      // gsap.fromTo(
+      //   ".top_title",
+      //   { y: 200, autoAlpha:0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".top_title",
+      //       markers: false, //start, end 마커 태그 추가
+      //       start: "top center",
+      //       end: "30%",
+      //     },
+      //     y: 0,
+      //     autoAlpha:1,
+      //     duration: 1
+      //   }
+      // );
+      // gsap.fromTo(
+      //   ".box1",
+      //   { y: 200, autoAlpha:0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".box1",
+      //       markers: false, //start, end 마커 태그 추가
+      //       start: "top center",
+      //       end: "30%",
+      //     },
+      //     y: 0,
+      //     autoAlpha:1,
+      //     duration: 1
+      //   }
+      // );
+      // gsap.fromTo(
+      //   ".box2",
+      //   { y: 200, autoAlpha:0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".box1",
+      //       markers: false, //start, end 마커 태그 추가
+      //       start: "top center",
+      //       end: "30%",
+      //     },
+      //     y: 0,
+      //     autoAlpha:1,
+      //     delay:0.2,
+      //     duration: 1
+      //   }
+      // );
+      // gsap.fromTo(
+      //   ".box3",
+      //   { y: 200, autoAlpha:0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".box1",
+      //       markers: false, //start, end 마커 태그 추가
+      //       start: "top center",
+      //       end: "30%",
+      //     },
+      //     y: 0,
+      //     autoAlpha:1,
+      //     delay:0.4,
+      //     duration: 1
+      //   }
+      // );
+    </script>
+  </body>
 </html>

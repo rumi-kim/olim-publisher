@@ -44,18 +44,17 @@
       </div>
       <div class="nav">
         <ul class="nav_list">
-          <li class="nav_each">
+          <li class="nav_each depth_1">
             <a href="#">Brand</a>
-            <div class="sub_nav">
+            <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub"><a href="#">브랜드 스토리</a></li>
               </ul>
             </div>
-            
           </li>
-          <li class="nav_each">
+          <li class="nav_each depth_1">
             <a href="#">입지환경</a>
-            <div class="sub_nav">
+            <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
                   <a href="#">입지투어 바로가기</a>
@@ -65,9 +64,9 @@
             </div>
           </li>
 
-          <li class="nav_each">
+          <li class="nav_each depth_1">
             <a href="#">단지투어</a>
-            <div class="sub_nav">
+            <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
                   <a href="#">단지 둘러보기</a>
@@ -77,9 +76,9 @@
             </div>
           </li>
 
-          <li class="nav_each">
+          <li class="nav_each depth_1">
             <a href="#">내부투어</a>
-            <div class="sub_nav">
+            <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
                   <a href="#">내부투어-a</a>
@@ -91,9 +90,9 @@
             </div>
           </li>
 
-          <li class="nav_each">
+          <li class="nav_each depth_1">
             <a href="#">커뮤니티</a>
-            <div class="sub_nav">
+            <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
                   <a href="#">커뮤니티-a</a>
@@ -221,14 +220,14 @@
     $(function(){
       
       //스크롤 안 했을 때 서브 네비게이션 노출
-      var header = $(".header");
-      header.mouseover(function(){
-        $(".sub_hover_bg").addClass('on');
-        $(".sub").addClass('on');
-      }).mouseleave(function(){
-        $(".sub_hover_bg").removeClass('on');
-        $(".sub").removeClass('on');
-      });
+      // var header = $(".header");
+      // header.mouseover(function(){
+      //   $(".sub_hover_bg").addClass('on');
+      //   $(".sub").addClass('on');
+      // }).mouseleave(function(){
+      //   $(".sub_hover_bg").removeClass('on');
+      //   $(".sub").removeClass('on');
+      // });
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();
