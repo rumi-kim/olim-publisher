@@ -19,6 +19,7 @@ $(function () {
       });
       $(".nav.mobile .nav_each.depth_1").click(function () {
         $(this).children(".nav.mobile .sub_nav.depth_2").slideToggle();
+        $(this).stopPropagation();
       });
     }
   }

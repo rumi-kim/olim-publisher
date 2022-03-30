@@ -102,6 +102,11 @@ header .nav .nav_list {
   font-size: 1.1rem !important;
   display: block;
   padding: 10px;
+  transition: all 0.4s;
+}
+
+.sub_nav.depth_2 .nav_each a:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* mobile nav style code */
