@@ -55,27 +55,6 @@ $(function () {
     $(".modal_bg").fadeIn(200);
     // $('#tutorial_video').get(0).play();
   });
-
-  //article back page
-  $(".mp button").click(function () {
-    location.href = "sublist_mp.html";
-  });
-
-  $(".subchar button").click(function () {
-    location.href = "sublist_subchar.html";
-  });
-
-  $(".mtvs button").click(function () {
-    location.href = "sublist_mtvs.html";
-  });
-
-  $(".nft button").click(function () {
-    location.href = "sublist_nft.html";
-  });
-
-  $(".virtual button").click(function () {
-    location.href = "sublist_virtual.html";
-  });
 });
 
 /**
