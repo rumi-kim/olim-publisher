@@ -723,3 +723,327 @@ footer {
   font-size: 0.625vw;
   color: #fff9f3;
 }
+
+/* 내부투어 style code */
+
+.intro_video {
+  width: 100%;
+  position: relative;
+}
+
+.main_video {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  /* background: url(../assets/video/intro_thumbnail.jpg) no-repeat 50% 50%;
+  background-size: cover; */
+}
+
+.video_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  visibility: hidden;
+}
+
+.video_bg a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  opacity: 0.6;
+}
+
+.video_bg a span {
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 600;
+}
+
+.video_bg a:hover {
+  opacity: 1;
+}
+
+.intro_video:hover .video_bg {
+  visibility: visible;
+}
+
+.contents {
+  width: auto;
+}
+
+.tour .container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.tour .container .contents {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* width: 844px; */
+  text-align: left;
+  margin: auto;
+  padding-top: 8vw;
+  display: inline-block;
+  /* -webkit-transform: translate(-50%, -50%); */
+  /* transform: translate(-50%, -50%); */
+  z-index: 300;
+}
+
+/* @media screen and (max-height: 1080px) {
+  .tour .container .contents {
+    top: 100px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+} */
+
+@media screen and (max-width: 1279px) {
+  .tour .container {
+    padding-bottom: 1%;
+  }
+  .tour .container .contents {
+    position: static;
+    -webkit-transform: none;
+    transform: none;
+    margin: 90px auto 40px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .tour .container {
+    overflow-y: visible;
+    height: auto;
+  }
+  .tour .container#app {
+    height: 100%;
+  }
+  .tour .container .contents {
+    position: static;
+    -webkit-transform: none;
+    transform: none;
+    min-width: 0;
+    width: auto;
+    max-width: 400px;
+    margin: 90px auto 40px;
+    padding: 0 24px;
+  }
+}
+
+.tour .main {
+  /* margin-bottom: 100px; */
+}
+
+.tour .main .main_cont {
+  margin-top: 60px;
+}
+
+.tour .main .main_cont:first-child {
+  margin-top: 0;
+}
+
+.tour .main .title {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1.15px;
+  line-height: 1.47;
+}
+
+.tour .main .title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #515151;
+  content: "";
+}
+
+.tour .main .desc {
+  margin-top: 16px;
+  font-size: 16px;
+  letter-spacing: -0.8px;
+  line-height: 1.5;
+}
+
+.tour .main .ib_wrap {
+  margin-top: 40px;
+}
+
+.tour .main .ib_wrap > .ib_item {
+  width: 186px !important;
+  height: 186px;
+  margin-right: 32px;
+  margin-left: 0 !important;
+  margin-bottom: 28px;
+}
+
+.tour .main .ib_wrap > .ib_item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.tour .main .ib_item a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 30px;
+  letter-spacing: -2px;
+  text-align: center;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+  overflow: hidden;
+}
+
+.tour .main .ib_item a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  content: "";
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+.tour .main .ib_item a .ab_vert {
+  left: 0;
+  width: 100%;
+}
+
+.tour .main .ib_item a:hover {
+  border-color: #1f4975;
+}
+
+.tour .main .ib_item a:hover:after {
+  opacity: 1;
+}
+
+.tour .main .ib_item a:hover .ab_vert {
+  color: transparent;
+}
+
+.tour .main .ib_item a:focus {
+  border-color: #1f4975;
+}
+
+.tour .main .ib_item a:focus:after {
+  opacity: 1;
+}
+
+.tour .main .ib_item a:focus .ab_vert {
+  color: transparent;
+}
+
+.tour .main .item_A1 a:after {
+  background-image: url(../img/thumb/A1a.jpg);
+}
+
+.tour .main .item_C2 a:after {
+  background-image: url(../img/thumb/C2.jpg);
+}
+
+.tour .main .item_D a:after {
+  background-image: url(../img/thumb/D.jpg);
+}
+
+.tour .main .item_K a:after {
+  background-image: url(../img/thumb/K.jpg);
+}
+
+.tour .main .item_B2F a:after {
+  background-image: url(../img/thumb/B2F.jpg);
+}
+
+.tour .main .item_B1F a:after {
+  background-image: url(../img/thumb/B1F.jpg);
+}
+
+.tour .main .item_1F a:after {
+  background-image: url(../img/thumb/1F.jpg);
+}
+
+.tour .main .item_Roof a:after {
+  background-image: url(../img/thumb/Roof.jpg);
+}
+
+@media screen and (max-width: 999px) {
+  .tour .main .desc {
+    font-size: 1.5rem;
+  }
+  .tour .main .ib_wrap {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .tour .main .ib_wrap > .ib_item {
+    width: 100% !important;
+    height: 134px;
+    margin: 14px auto 0 !important;
+  }
+  .tour .main .ib_wrap > .ib_item:first-child {
+    margin-top: 0;
+  }
+  .tour .main .ib_item a {
+    font-size: 2.8rem;
+  }
+  .tour .main .ib_item a:after {
+    opacity: 1;
+    width: 40%;
+    background-position: 0 50%;
+    background-size: contain;
+  }
+  .tour .main .ib_item a .ab_vert {
+    padding-left: 45%;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .tour .main .ib_item a:hover .ab_vert {
+    color: #fff;
+  }
+  .tour .main .ib_item a:focus .ab_vert {
+    color: #fff;
+  }
+  .tour .main .item_exterior a:after {
+    background-position: 50%;
+  }
+  .tour .main .item_thumb a:after {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .tour .main {
+    margin-bottom: 120px;
+  }
+  .tour .main .ib_item a {
+    font-size: 2.8rem;
+  }
+}

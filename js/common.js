@@ -1,10 +1,22 @@
 $(function () {
+  // common data
+  var header = $(".header");
   // gnb
   function gnb() {
     var windowWidth = $(window).width();
     if (windowWidth > 690) {
       $(".mobile_nav").css("display", "none");
       $(".nav").removeClass("mobile");
+      //스크롤 안 했을 때 마우스오버 시 서브 네비게이션 노출 (pc)
+      header
+        .mouseover(function () {
+          $(".sub_hover_bg").addClass("on");
+          $(".sub").addClass("on");
+        })
+        .mouseleave(function () {
+          $(".sub_hover_bg").removeClass("on");
+          $(".sub").removeClass("on");
+        });
     } else {
       $(".mobile_nav").css("display", "block");
       $(".nav").addClass("mobile");
@@ -27,6 +39,49 @@ $(function () {
   $(window).resize(function () {
     gnb();
   });
+
+  //헤더 기능 코드---------------------------//
+
+  addEventListener(
+    "mousewheel",
+    (e) => {
+      const direction = e.deltaY > 0 ? "ScrollDown" : "ScrollUp";
+      // console.log(direction);
+      if (direction === "ScrollUp") {
+        header.removeClass("header_up");
+        header.addClass("hd_bg");
+        header
+          .mouseover(function () {
+            $(".sub_hover_bg").addClass("on");
+            $(".sub_hover_bg").css({
+              "background-color": "rgba(229, 212, 194, 0.5)",
+            });
+            $(".sub").addClass("on");
+          })
+          .mouseleave(function () {
+            $(".sub_hover_bg").removeClass("on");
+            $(".sub").removeClass("on");
+          });
+      } else if (direction === "ScrollDown") {
+        header.addClass("header_up");
+        header.removeClass("hd_bg");
+        header
+          .mouseover(function () {
+            $(".sub_hover_bg").addClass("on");
+            $(".sub_hover_bg").css({
+              "background-color": "rgba(0,0,0,0)",
+            });
+            $(".sub").addClass("on");
+          })
+          .mouseleave(function () {
+            $(".sub_hover_bg").removeClass("on");
+            $(".sub").removeClass("on");
+          });
+      }
+    },
+    { passive: false }
+  );
+  // 헤더 기능 종료----------------------------//
 
   // modal next
   $(".btn_modal_next").click(function () {

@@ -1,4 +1,4 @@
-/* ------------------- sub page style code ------------------- */
+/* ------------------- sub page style code (position)------------------- */
 
 .position_page .top_img {
   width: 100%;
@@ -153,11 +153,11 @@
 }
 
 .ani2 {
-  animation: popup 0.7s 0.2s ease forwards;
+  animation: popup 0.7s 0.3s ease forwards;
 }
 
 .ani3 {
-  animation: popup 0.7s 0.4s ease forwards;
+  animation: popup 0.7s 0.6s ease forwards;
 }
 
 /* position media query style */
@@ -192,4 +192,11 @@
   .position_page .top_img {
     height: 85vw !important;
   }
+}
+
+/* ------------------- sub page style code (exterior)------------------- */
+
+.exterior_page .top_img {
+  background: url(../img/03.jpg) top no-repeat;
+  background-attachment: fixed;
 }

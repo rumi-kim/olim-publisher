@@ -9,6 +9,7 @@ header {
   width: 100%;
   border-bottom: 1px solid #fff;
   z-index: 10;
+  transition: all 0.4s;
 }
 
 .hd_bg {
@@ -174,6 +175,11 @@ header .nav.mobile .nav_list > .nav_each > .sub_nav > ul > .sub {
 
 .nav.mobile .sub_nav ul li a {
   font-size: 1.6rem !important;
+}
+
+.header_up {
+  transition: all 0.4s;
+  transform: translateY(-100%);
 }
 
 /* header media query style */

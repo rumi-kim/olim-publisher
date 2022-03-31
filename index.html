@@ -37,7 +37,7 @@
       <div class="sub_hover_bg"> </div>
       <!-- <div class="hd_bg"></div> -->
       <div class="logo">
-        <img src="/img/logo_main.png" alt="Main Logo">
+        <a href="index.html"><img src="/img/logo_main.png" alt="Main Logo"></a>
       </div>
       <div class="mobile_nav">
         <img src="img/ico_menu.png" alt="">
@@ -57,7 +57,7 @@
             <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
-                  <a href="#">입지투어 바로가기</a>
+                  <a href="position.html">입지투어 바로가기</a>
                   <a href="#">서브메뉴</a>
                 </li>
               </ul>
@@ -69,7 +69,7 @@
             <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
-                  <a href="#">단지 둘러보기</a>
+                  <a href="exterior.html">단지 둘러보기</a>
                   <a href="#">서브메뉴</a>
                 </li>
               </ul>
@@ -77,7 +77,7 @@
           </li>
 
           <li class="nav_each depth_1">
-            <a href="#">내부투어</a>
+            <a href="tour-lobby.html">내부투어</a>
             <div class="sub_nav depth_2">
               <ul>
                 <li class="nav_each sub">
@@ -131,7 +131,7 @@
           <div class="positiona_desc">
             <p>부지 입지 및 교육시설, 교통 등을<br>360˚ ISO 모드로 확인해보세요.</p>
             <div class="vr_enter">
-              <a href="#">입지투어 VR</a>
+              <a href="position.html">입지투어 VR</a>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
           <div class="positiona_desc ">
             <p><br>단지 내의 편의시설 및 조망 등을<br>360˚ ISO 모드로 확인해보세요.</p>
             <div class="vr_enter">
-              <a href="#">단지투어 VR</a>
+              <a href="exterior.html">단지투어 VR</a>
             </div>
           </div>
         </div>
@@ -218,49 +218,10 @@
   <script>
 
     $(function(){
-      
-      //스크롤 안 했을 때 서브 네비게이션 노출
-      var header = $(".header");
-      header.mouseover(function(){
-        $(".sub_hover_bg").addClass('on');
-        $(".sub").addClass('on');
-      }).mouseleave(function(){
-        $(".sub_hover_bg").removeClass('on');
-        $(".sub").removeClass('on');
-      });
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();
         // console.log(sct);
-  
-        if (sct > 1) {
-          header.addClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub_hover_bg").css({
-              "background-color":"rgba(229, 212, 194, 0.5)"
-            });
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        } else {
-          header.removeClass('hd_bg');
-          header.mouseover(function(){
-            $(".sub_hover_bg").addClass('on');
-            $(".sub_hover_bg").css({
-              "background-color":"rgba(0,0,0,0)"
-            });
-            $(".sub").addClass('on');
-          }).mouseleave(function(){
-            $(".sub_hover_bg").removeClass('on');
-            $(".sub").removeClass('on');
-          });
-        }
-
-        
-        // console.log(test);
 
         if (sct > 600 && sct < 1600){
           var test = (600 - sct) * 0.01;

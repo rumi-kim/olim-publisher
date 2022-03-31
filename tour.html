@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta property="og:image" content="https://vmh.zipview.kr/path/og_tvn2521.jpg">
-    <link rel="icon" href="https://vmh.zipview.kr/path/favi_mice.png">
-    <meta name="keywords" content="Scroll Template">
-    <meta name="description" content="Scroll Template">
-    <meta name="robots" content="all">
-    <meta property="og:url" content>
-    <meta property="og:title" content="Scroll Template">
-    <meta property="og:description" content="Scroll Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      property="og:image"
+      content="https://vmh.zipview.kr/path/og_tvn2521.jpg"
+    />
+    <link rel="icon" href="https://vmh.zipview.kr/path/favi_mice.png" />
+    <meta name="keywords" content="Scroll Template" />
+    <meta name="description" content="Scroll Template" />
+    <meta name="robots" content="all" />
+    <meta property="og:url" content />
+    <meta property="og:title" content="Scroll Template" />
+    <meta property="og:description" content="Scroll Template" />
 
     <!-- Style include -->
     <script src="https://vr.miceview.kr/path/assets/js/jquery-3.5.1.min.js"></script>
@@ -35,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <script src="js/common.js"></script>
 
-    <title>Scroll Template3 - Position</title>
+    <title>Scroll Template3 - Tour</title>
   </head>
 
   <body>
@@ -114,67 +120,23 @@
         <div class="contents_top">
           <div class="top_img"></div>
           <div class="top_desc">
-            <p class="title">입지투어</p>
-            <p class="desc_sub">Location Tour</p>
+            <p class="title">내부투어</p>
+            <p class="desc_sub">Type Tour</p>
           </div>
         </div>
 
-        <div class="contents_2nd">
-          <div class="vr-player">
-            <iframe
-              src="https://vr.zipview.kr/product/ZE128/?mode=embed-exterior"
-              class="vr-iframe"
-              allowfullscreen
-            ></iframe>
+        <!-- intro main video background -->
+        <div class="contents_2nd" style="padding: 0;">
+          <div class="intro_video" style="height: 100%;">
+            <div class="video_bg">
+              <a href="tour-lobby.html"><span>VR Play</span></a>
+            </div>
+            <video class="main_video" autoplay muted playsinline poster="assets/video/INTRO_FIN1920.jpg">
+              <source src="assets/video/Intro_test.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
-
-        <div class="contents_3rd">
-          <div class="top_title">
-            <p class="title">입지투어 Point</p>
-          </div>
-
-          <div class="inner_contents">
-            <div class="each_box box1">
-              <div class="each_img">
-                <img src="img/05.jpg" alt="" />
-              </div>
-              <div class="each_desc">
-                <p class="sub_font_title">Title Title</p>
-                <p class="sub_font_desc">
-                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
-                  입지가 너무 좋아요 입지가 너무 좋아요
-                </p>
-              </div>
-            </div>
-
-            <div class="each_box box2">
-              <div class="each_img">
-                <img src="img/08.jpg" alt="" />
-              </div>
-              <div class="each_desc">
-                <p class="sub_font_title">Title Title</p>
-                <p class="sub_font_desc">
-                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
-                  입지가 너무 좋아요 입지가 너무 좋아요
-                </p>
-              </div>
-            </div>
-
-            <div class="each_box box3">
-              <div class="each_img">
-                <img src="img/06.jpg" alt="" />
-              </div>
-              <div class="each_desc">
-                <p class="sub_font_title">Title Title</p>
-                <p class="sub_font_desc">
-                  입지가 너무 좋아요 입지가 너무 좋아요 입지가 너무 좋아요
-                  입지가 너무 좋아요 입지가 너무 좋아요
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- // intro main video background -->
       </div>
 
       <footer>
@@ -201,10 +163,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script> -->
     <script>
-
       $(function () {
-
-        addEventListener("scroll", function(e){
+        addEventListener("scroll",function(e){
           sct = $(window).scrollTop();
           // console.log(sct);
           if (sct > 960) {
@@ -215,8 +175,31 @@
             $(".box2").addClass('ani2');
             $(".box3").addClass('ani3');
           }
+          e.preventDefault ();
         }, {passive: false});
-        
+
+        //pre video event
+        $('.main_video').on({
+          ended: function(e){
+            window.location = 'tour-lobby.html'
+            // pageMove('lobby');
+          }
+        });
+        // $(window).scroll(function () {
+        //   sct = $(window).scrollTop();
+        //   if (sct > 960) {
+        //     $(".top_title").addClass('ani1');
+        //   }
+        //   if (sct > 1057) {
+        //     $(".box1").addClass('ani1');
+        //     $(".box2").addClass('ani2');
+        //     $(".box3").addClass('ani3');
+        //   }
+        // });
+
+        // $(".main_video").mouseover(function(){
+        //   $(this).
+        // });
       });
 
       //Scroll Trigger Plugin
