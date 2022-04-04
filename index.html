@@ -39,8 +39,9 @@
         <img src="/img/logo_main.png" alt="Main Logo">
       </div>
       <div class="nav">
+        <h2 class="ir_text">Main menu</h2>
         <ul class="nav_list">
-          <li class="nav_each"><a href="#">전시관 1</a></li>
+          <li class="nav_each"><a href="hall1.html">전시관 1</a></li>
           <li class="nav_each"><a href="#">전시관 2</a></li>
           <li class="nav_each"><a href="#">전시관 3</a></li>
           <li class="nav_each"><a href="#">전시관 4</a></li>
@@ -86,7 +87,7 @@
                   <p>첫 번째 섹션은 1956년경에 제작된 석판화를 통해 화가 샤갈의 상징적인 요소로 자리매김한 주요 모티프들을 살펴본다.<br>그가 파리를 배경으로 제작한 석판화에는 에펠 탑, 노트르담 성당, 콩코르드 광장 등 파리의 주요 명소를 배경으로 그의 모티프들이 화폭에 수놓아졌으며 낭만적인 파리의 광경이 펼쳐진다.</p>
                 </div>
                 <div class="right_vr_btn">
-                  <a href="#">▶ VR Play </a>
+                  <a href="hall1.html">▶ VR Play </a>
                 </div>
               </div>
             </div>
@@ -148,10 +149,10 @@
             <div class="left_sticky">
               <div class="cont_list">
                 <ul>
-                  <li><button type="button" class="list01"><span></span><span>샤갈의 모티프</span></button></li>
-                  <li><button type="button" class="list02"><span></span><span>성서의 백다섯 가지 장면</span></button></li>
-                  <li><button type="button" class="list03"><span></span><span>성서적 메시지</span></button></li>
-                  <li><button type="button" class="list04"><span></span><span>또 다른 빛을 향하여</span></button></li>
+                  <li><button type="button" class="list01" data-href="#box01"><span></span><span>샤갈의 모티프</span></button></li>
+                  <li><button type="button" class="list02" data-href="#box02"><span></span><span>성서의 백다섯 가지 장면</span></button></li>
+                  <li><button type="button" class="list03" data-href="#box03"><span></span><span>성서적 메시지</span></button></li>
+                  <li><button type="button" class="list04" data-href="#box04"><span></span><span>또 다른 빛을 향하여</span></button></li>
                 </ul>
               </div>
             </div>
@@ -216,7 +217,7 @@
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();
-        // console.log(sct);
+
         var header = $(".header");
         var mainBanner = $(".main_banner");
         var bottomBox = $(".contents_bottom");
@@ -224,8 +225,6 @@
         var contents02 = $(".contents_bottom .cont_list ul li .list02");
         var contents03 = $(".contents_bottom .cont_list ul li .list03");
         var contents04 = $(".contents_bottom .cont_list ul li .list04");
-
-
         
         if (sct > 200) {
           mainBanner.addClass('popup');
@@ -240,11 +239,7 @@
         }
 
         if (sct > 1270 && sct < 2270){
-          // if($('body').hasClass('change_bg')){
-          //   $('body').removeClass('change_bg');
-          // } else {
-          //   $('body').addClass('change_bg');
-          // }
+
           $('body').css('background-color','#3052ac');
           contents01.css("opacity",1);
           contents02.css("opacity",0.5);
@@ -272,6 +267,7 @@
           $('body').css('background-color','#fff9f3');
           return false;
         }
+
       });
     });
   </script>

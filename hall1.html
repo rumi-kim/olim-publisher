@@ -35,58 +35,22 @@
 
 <body>
   <!-- header -->
-  <header class="header" id="header">
-    <div class="header_wrap_blur"></div>
-    <a class="site_logo" href="index.html"><h1>Scroll Template</h1></a>
-    <!-- gnb -->
-    <nav class="gnb">
-      <h2 class="ir_text">Main menu</h2>
-      <button type="button" class="gnb-btn"><span class="ir_text">Main menu</span></button>
-      <div class="gnb-wrap">
-        <ul class="gnb-list">
-          <li class="gnb-item">
-            <a href="lobby-ko.html">
-              <div class="gnb-title">Lobby</div>
-            </a>
-          </li>
-          <li class="gnb-item is_selected">
-            <a href="hall1-ko.html">
-              <div class="gnb-title">UNESCO Global Geoparks</div>
-            </a>
-          </li>
-          <li class="gnb-item">
-            <a href="hall2-ko.html">
-              <div class="gnb-title">National Geoparks of Korea</div>
-            </a>
-          </li>
-          <li class="gnb-item">
-            <a href="hall3-ko.html">
-              <div class="gnb-title">Virtual Trip to JEJU & E-poster</div>
-            </a>
-          </li>
-          <li class="gnb-item">
-            <a href="search-ko.html">
-              <div class="gnb-title">Search</div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- //gnb -->
-    <div class="breadcrumbs ir_text" role="navigation">
-      <ol class="breadcrumbs_list">
-        <li class="breadcrumbs_item">
-          <strong><span class="is_now">Scroll Template</span></strong>
-        </li>
-      </ol>
+  <header class="header">
+    <div class="hd_bg"></div>
+    <div class="logo">
+      <img src="/img/logo_main.png" alt="Main Logo">
     </div>
-    <div class="global">
-      <ul class="global-list">
-        <!-- <li class="global-item global-link"><a href="https://imcities.com/vtowerground/lobby" class="btn_link btn_vtower" title="Open in new window" target="_blank"><span class="ir_text">V-Tower Lobby</span></a></li> -->
-        <li class="global-item"><button type="button" class="btn_help_pop"><span class="ir_text">Control guide</span></button></li>
+    <div class="nav">
+      <h2 class="ir_text">Main menu</h2>
+      <ul class="nav_list">
+        <li class="nav_each is_active"><a href="hall1.html">전시관 1</a></li>
+        <li class="nav_each"><a href="#">전시관 2</a></li>
+        <li class="nav_each"><a href="#">전시관 3</a></li>
+        <li class="nav_each"><a href="#">전시관 4</a></li>
       </ul>
     </div>
   </header>
+
   <!-- //header -->
 
   <!-- container / add page class -->
@@ -98,15 +62,15 @@
     <!-- contents/본문 -->
     <div class="contents">
       <!-- modal -->
-      <div class="modal">
-        <!-- <div class="modal_inner">
+      <!-- <div class="modal">
+        <div class="modal_inner">
           <div class="modal_inner-text">
             <p>Hello. Welcome to Digital 9th International Conference on UNESCO Global Geoparks.</p>
           </div>
           <div class="btn_wrap">
             <a class="btn btn_modal_next" style="cursor: pointer;"><span>Next</span></a>
           </div>
-        </div> -->
+        </div>
         <div class="modal_inner modal_inner2 modal_inner_help">
           <div class="modal_help-center">
             <div class="modal_help-center-desc">
@@ -147,16 +111,10 @@
                     <span class="img_desc">Contact</span>
                   </span>
                 </li>
-                <!-- <li class="modal_help-control-item control-form_item">
-                  <span class="item_wrap">
-                    <span class="img_wrap"><img src="img/help_contact.png" alt></span>
-                    <span class="img_desc">---</span>
-                  </span>
-                </li> -->
               </ul>
             </div>
             <div class="modal_help-btn_unit">
-              <!-- [D 오늘 하루 그만 보기 팝업-->
+              [D 오늘 하루 그만 보기 팝업
               <div class="inp_chk_wrap inp_custom chk_wrap-not_today">
                 <input type="checkbox" id="not_today" class="inp_chk">
                 <label for="not_today">Do not open today</label>
@@ -170,10 +128,10 @@
             <span class="ico_gnb-btn"><span class="ir_text">Main menu</span></span>
             <p class="help_desc gnb_desc">You can move the hall and search for participating companies.</p>
           </div>
-          <!-- <div class="modal_help-tutorial">
+          <div class="modal_help-tutorial">
             <span class="ico_tutorial-btn"><span class="ir_text">View the full screen</span></span>
             <p class="help_desc tutorial_desc">Appreciation of the exhibition with full screen.</p>
-          </div> -->
+          </div>
           <div class="modal_help-innav">
             <p class="help_desc innav_desc">You can move to a specific booth or check your current location.</p>
             <ul class="help-innav">
@@ -185,8 +143,8 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="modal_bg"></div>
+      </div> -->
+      <!-- <div class="modal_bg"></div> -->
       <!-- //modal -->
       <!-- vr player -->
       <div class="vr-player">
