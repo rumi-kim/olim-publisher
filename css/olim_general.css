@@ -624,7 +624,7 @@ video {
 
 .anker_item.is_active .line{
   transition: all 0.4s;
-  animation: border 2s ease-in forwards;
+  animation: border 0.3s ease-in forwards;
 }
 @keyframes border {
   0%{
@@ -947,38 +947,41 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
 }
 .owl-nav .owl-prev > span {
-  background: url(/img/arrow-left.png) no-repeat 50% 50%;
+  background: url(/img/ico_slideArr_L.svg) no-repeat 50% 50%;
   background-size: cover;
 }
 .owl-nav .owl-next > span {
-  background: url(/img/arrow-right.png) no-repeat 50% 50%;
+  background: url(/img/ico_slideArr_R.svg) no-repeat 50% 50%;
   background-size: cover;
 }
 .owl-dots {
   display: none;
 }
 
-/* .top .owl-stage {
-  width: 300% !important;
-} */
-/* .top .owl-item {
-  animation: slide-fadeinout 5s infinite ease-in-out alternate;
-} */
-/* @keyframes slide-fadeinout {
+#arrL, #arrR {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 920;
+  margin: 0 2px;
+}
+
+#arrL:hover, #arrR:hover {
+  animation: arrHover 1s ease-in-out alternate;
+}
+
+@keyframes arrHover {
   0% {
-    opacity: 0;
+    stroke-dasharray: 460;
+    stroke-dashoffset: 920;
   }
-  50% {
-    opacity: 1;
+  100% {
+    stroke-dasharray: 460;
+    stroke-dashoffset: 0;
   }
-  80% {
-    opacity: 0;
-  }
-} */
+}
 /* .top .owl-item.active {
   width: 33.33% !important;
 } */

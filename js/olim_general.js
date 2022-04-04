@@ -126,6 +126,19 @@ $(function () {
   var second_top = $("#btn_group_wrap").offset().top;
   var third_top = $("#cont_w").offset().top;
 
+  $(".anker_item").click(function () {
+    var ankerItem = $(this).find("a").attr("data-href");
+    console.log(ankerItem);
+
+    if (ankerItem === "#anker_wrap") {
+      $("html, body").animate({ scrollTop: first_top }, 300);
+    } else if (ankerItem === "#btn_group_wrap") {
+      $("html, body").animate({ scrollTop: second_top }, 300);
+    } else {
+      $("html, body").animate({ scrollTop: third_top }, 300);
+    }
+  });
+
   $(window).scroll(function () {
     sct = $(window).scrollTop();
 
@@ -139,53 +152,29 @@ $(function () {
 
     if (sct >= first_top && sct < second_top) {
       $(".anker_item").removeClass("is_active");
-      $('.anker_item .anker_flex>a[data-href="#anker_wrap"]')
-        .parent("li")
-        .addClass("is_active");
+      var parent1 = $(
+        '.anker_item .anker_flex>a[data-href="#anker_wrap"]'
+      ).parent();
+      var root1 = parent1.parent();
+      root1.addClass("is_active");
     } else if (sct >= second_top && sct < third_top) {
       $(".anker_item").removeClass("is_active");
-      $('.anker_item .anker_flex>a[data-href="#btn_group_wrap"]')
-        .parent("li")
-        .addClass("is_active");
+      var parent2 = $(
+        '.anker_item .anker_flex>a[data-href="#btn_group_wrap"]'
+      ).parent();
+      var root2 = parent2.parent();
+      root2.addClass("is_active");
     } else if (sct >= third_top) {
       $(".anker_item").removeClass("is_active");
-      $('.anker_item .anker_flex>a[data-href="#cont_w"]')
-        .parent("li")
-        .addClass("is_active");
+      var parent3 = $(
+        '.anker_item .anker_flex>a[data-href="#cont_w"]'
+      ).parent();
+      var root3 = parent3.parent();
+      root3.addClass("is_active");
     } else {
       $(".anker_item").removeClass("is_active");
     }
   });
-
-  //   anker box custom
-
-  // console.log(sct);
-  var firstChild = $(".anker_menu").children().first();
-  var secondChild = $(".anker_menu").children().eq(1);
-  var lastChild = $(".anker_menu").children().last();
-
-  // if (sct < 960) {
-  //   secondChild.removeClass("is_active");
-  //   lastChild.removeClass("is_active");
-  //   firstChild.addClass("is_active");
-  //   firstChild.children("a").css("opacity", 1);
-  //   secondChild.children("a").css("opacity", 0);
-  //   lastChild.children("a").css("opacity", 0);
-  // } else if (sct < 1920) {
-  //   secondChild.addClass("is_active");
-  //   lastChild.removeClass("is_active");
-  //   firstChild.removeClass("is_active");
-  //   firstChild.children("a").css("opacity", 0);
-  //   secondChild.children("a").css("opacity", 1);
-  //   lastChild.children("a").css("opacity", 0);
-  // } else {
-  //   secondChild.removeClass("is_active");
-  //   lastChild.addClass("is_active");
-  //   firstChild.removeClass("is_active");
-  //   firstChild.children("a").css("opacity", 0);
-  //   secondChild.children("a").css("opacity", 0);
-  //   lastChild.children("a").css("opacity", 1);
-  // }
 
   //form custom
   //placeholder
