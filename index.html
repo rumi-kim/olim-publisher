@@ -219,6 +219,63 @@
   <script>
 
     $(function(){
+      $(window).load(function(){
+
+        // Today Cookie Check Code
+
+        // localStorage 문법
+        // var cat = localStorage.getItem('myCat');//조회 
+        // localStorage.setItem('myCat', 'Tom'); //추가 
+        // localStorage.removeItem('myCat'); //삭제 
+        // localStorage.clear(); // 전체삭제
+
+        var hasTodayCookie = false;
+
+        //밀리세컨드로 날짜를 표현
+        var currentTime = (new Date()).getTime(); 
+        // new Date() -> 1970/01/01 00:00:00초 로부터 시작해서 얼마나 지났는지를 알려줌.
+        // getTime() -> Date 타입의 시간을 밀리초로 환산해 가져옴. (long Type)
+        console.log(currentTime); //1649065118898
+
+        var dateOffset = (24 * 60 * 60 * 1000) * 1; //하루의 시각을 표현
+        console.log(dateOffset); //86400000
+
+        var todayCookie = localStorage.getItem('todayCloseModal_cookie');
+
+        if (!hasTodayCookie) {
+          // checkedCookieBox = $('#not_today').is(':checked');
+            localStorage.setItem('todayCloseModal_zr057', (new Date()).getTime());
+
+          if (checkedCookieBox) {
+            //writeCookie('todayCloseModal_zr042',true,1);
+          } else {
+            localStorage.removeItem('todayCloseModal_zr057');
+            //deleteCookie('todayCloseModal_zr042');
+          }
+        }
+
+        if (todayCookie) {
+          console.log(todayCookie);
+          if (currentTime - todayCookie > dateOffset) {
+            localStorage.removeItem('todayCloseModal_cookie');
+          }
+        }
+
+        hasTodayCookie = localStorage.getItem('todayCloseModal_cookie') ? true : false;
+        // console.log(hasTodayCookie);
+
+      });
+
+      // if (!hasTodayCookie) {
+      //   checkedCookieBox = $('#not_today').is(':checked');
+      //   if (checkedCookieBox) {
+      //     localStorage.setItem('todayCloseModal_zr057', (new Date()).getTime());
+      //     //writeCookie('todayCloseModal_zr042',true,1);
+      //   } else {
+      //     localStorage.removeItem('todayCloseModal_zr057');
+      //     //deleteCookie('todayCloseModal_zr042');
+      //   }
+      // }
 
       $(window).scroll(function () {
         sct = $(window).scrollTop();
