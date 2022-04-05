@@ -1,0 +1,32 @@
+
+
+
+
+.list_menu { height: 100vh; }
+.list_menu > li { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 90%; color: #fff; text-align: center; transition: all .3s; box-sizing: border-box;}
+.list_menu > li ~ li { border-left: 1px solid #fff;}
+.list_menu > li.active { background: rgba(255,255,255,0.15);}
+.list_menu > li > a { display: block; font-size: 20px;}
+.list_menu > li > div { display: none; margin-top: 20px;}
+.list_menu > li > div.active { display: block;}
+.list_menu > li > div a { display: block; padding: 5px 0;}
+.list_menu > li > div > ul > li { margin-top: 20px; font-size:18px;}
+.item_depth3 > a span { vertical-align: middle;}
+.item_depth3 > a:after{ content: "▼"; display: inline-block; margin-left: 15px; vertical-align: middle; font-size: 0.6em; transition: all .3s;}
+.item_depth3 > a.active:after { transform: rotate(180deg);}
+.item_depth3 > ul { margin-top: 10px; font-size: 15px; opacity: 0.8; display: none;}
+
+
+/* ==========================================
+media query 
+
+==> 브래이크포인트 디폴트는 olim_general.css 를 따름
+==========================================*/
+@media screen and (max-width: 1024px) { 
+.list_menu { padding:20px 0; overflow: scroll; box-sizing: border-box;}
+.list_menu { flex-direction: column;}
+.list_menu > li { padding:20px 0; width: 90%;}
+.list_menu > li ~ li { border-left:none; border-top: 1px solid #fff;}
+.list_menu > li > a { padding:5px 0; width: 100%;}
+}
+

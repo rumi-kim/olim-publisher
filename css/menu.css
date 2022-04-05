@@ -1,0 +1,417 @@
+body.fixed {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    touch-action: none;
+}
+
+.btn_menu i {
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    margin: 5px auto;
+    border-radius: 1.5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 0px 0px 31px -2px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 0px 31px -2px rgba(0, 0, 0, 0.22);
+}
+
+.btn_menu.is-active {
+    z-index: 2000;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+
+/* ====================================================
+btn_close animation  type* 클래스 명에 따라 사용 가능 
+==================================================== */
+
+/* type1 ==================================== */
+.btn_menu.type1.is-active {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn_menu.type1.is-active i:nth-of-type(2) {
+    width: 0px;
+}
+
+.btn_menu.type1.is-active i:nth-of-type(1),
+.btn_menu.type1.is-active i:nth-of-type(3) {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.btn_menu.type1.is-active i:nth-of-type(1) {
+    -webkit-transform: translateY(9px);
+    -ms-transform: translateY(9px);
+    -o-transform: translateY(9px);
+    transform: translateY(9px);
+}
+
+.btn_menu.type1.is-active i:nth-of-type(3) {
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
+/* type2 ==================================== */
+
+.btn_menu.type2.is-active i:nth-of-type(1) {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.btn_menu.type2.is-active i:nth-of-type(3) {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+/* type3 ==================================== */
+
+.btn_menu.type3.is-active i:nth-of-type(1) {
+    -webkit-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    -o-transform: translateY(12px);
+    transform: translateY(12px);
+}
+
+.btn_menu.type3.is-active i:nth-of-type(3) {
+    -webkit-transform: translateY(-11px);
+    -ms-transform: translateY(-11px);
+    -o-transform: translateY(-11px);
+    transform: translateY(-11px);
+}
+
+/* type4 ==================================== */
+
+.btn_menu.type4.is-active i:nth-of-type(2) {
+    opacity: 0;
+}
+
+.btn_menu.type4.is-active i:nth-of-type(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+
+.btn_menu.type4.is-active i:nth-of-type(3) {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+    -ms-transform: translateY(-6px) rotate(-45deg);
+    -o-transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+
+.modal_menu {
+    display: none;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal_menu.active {
+    display: block;
+}
+
+.modal_menu .slide_menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+    max-height: 75vh;
+}
+
+.modal_menu .btn_slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 !important;
+    width: 3vw;
+    height: 3vw;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+}
+
+.modal_menu .btn_slide.none {
+    display: none;
+}
+
+.modal_menu .btn_slide.next {
+    right: 6.5vw;
+    background-position: right center;
+    background-image: url(../img/ico_arr_right.png);
+}
+
+.modal_menu .btn_slide.prev {
+    left: 6.5vw;
+    background-position: left center;
+    background-image: url(../img/ico_arr_left.png);
+}
+
+.modal_menu .list_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.modal_menu .list_menu>li {
+    cursor: pointer;
+    position: relative;
+    margin-right: 1.4%;
+    width: 23.95%;
+    height: 50vh;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 22px;
+}
+
+.modal_menu .list_menu>li * {
+    color: #fff;
+}
+
+.modal_menu .list_menu>li>div {
+    position: relative;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 22px;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -0.075em;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal_menu .list_menu>li>div>p:before {
+    content: "";
+    display: block;
+    margin-bottom: 12%;
+    height: 2.3vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal_menu .list_menu>li.active {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.modal_menu .list_menu>li.active>div>p {
+    animation: ani_fadeOut 0.3s 1 ease-in-out forwards;
+}
+
+.modal_menu .list_menu>li.active ul {
+    animation: ani_fadeIn 1.5s 1 forwards;
+}
+
+/* 바로가기 링크가 필요한 경우 */
+.modal_menu .list_menu>li.item_link>a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ff01014d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modal_menu .list_menu>li.media>div>p:before {
+    background-image: url(../img/logo_HHbrand_w.png);
+}
+
+.modal_menu .list_menu>li>div>p:before {
+    background-image: url(../img/logo_gravity_w.png);
+}
+
+.modal_menu .list_menu>li>div>p {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal_menu .list_menu>li ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 90%;
+    font-weight: 300;
+    line-height: 1.4;
+    text-transform: capitalize;
+    overflow: auto;
+    opacity: 0;
+    z-index: -100;
+}
+
+.modal_menu .list_menu>li ul::-webkit-scrollbar {
+    padding: 3px;
+    width: 5px;
+}
+
+.modal_menu .list_menu>li ul::-webkit-scrollbar-track {
+    width: 5px;
+}
+
+.modal_menu .list_menu>li ul::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.modal_menu .list_menu>li ul>li~li {
+    padding-top: 5px;
+}
+
+.modal_menu .list_menu>li ul>li a {
+    display: inline-block;
+    padding: 8px 10px;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal_menu .list_menu>li ul>li a:hover {
+    opacity: 1;
+    text-shadow: 2px 2px 2px #000;
+}
+
+
+
+@keyframes ani_fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes ani_fadeIn {
+    from {
+        opacity: 0;
+        z-index: -100;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 10;
+    }
+}
+
+
+
+/* ==========================================
+media query 
+
+==> 브래이크포인트 디폴트는 olim_general.css 를 따름
+==========================================*/
+
+@media screen and (max-width: 1920px) {
+    .modal_menu .list_menu>li>div>p:before {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+    .modal_menu .slide_menu {
+        overflow: overlay;
+    }
+
+    .modal_menu .list_menu {
+        flex-direction: column;
+    }
+
+    .modal_menu .list_menu>li {
+        padding: 30px 0;
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+    }
+
+    .modal_menu .list_menu>li~li {
+        margin-top: -1px;
+    }
+
+    .modal_menu .list_menu>li>div {
+        font-size: 18px;
+    }
+
+    .modal_menu .list_menu>li ul {
+        display: none;
+        position: initial;
+        width: 100%;
+        opacity: 1;
+        margin: 0;
+        margin-top: 15px;
+        font-size: 16px;
+        transform: none;
+    }
+
+    .modal_menu .list_menu>li>div>p:before {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .modal_menu .list_menu>li.active>div>p,
+    .modal_menu .list_menu>li.active ul {
+        animation: none;
+    }
+
+}
