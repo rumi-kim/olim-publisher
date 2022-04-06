@@ -1,0 +1,61 @@
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+.modal_menu > div { padding:40px; height:100%; box-sizing: border-box; }
+.modal_menu > .left  { width: 70%; padding-right: 0;}
+.modal_menu > .left nav { padding:25px 40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.4); box-sizing: border-box; border-radius: 10px;}
+.list_menu { overflow-y: overlay; height:100%; padding-right: 25px; text-align: center;}
+.list_menu * { color: rgba(255,255,255,0.9);}
+.list_menu > li { padding: 25px; font-size: 20px;}
+.list_menu > li.active { background: rgba(255,255,255,0.15);}
+.list_menu > li ~ li { border-top: 1px solid rgba(255,255,255,0.5);}
+.list_menu > li > a { font-size: 25px; color: #fff;}
+.list_menu > li > div { padding-left: 40px;}
+.list_menu > li > div a { display: block; padding: 5px 0; }
+.list_menu > li > div > ul { display: flex; justify-content: center; padding: 30px 0 20px;}
+.list_menu > li > div > ul > li { padding: 0 30px;}
+.list_menu > li > div > ul > li ~ li { border-left: 1px dotted rgba(255,255,255,0.5)}
+.item_depth3 ul { padding-top: 10px;}
+.item_depth3 ul li { font-size: 17px; }
+.item_depth3 ul li a { color: rgba(255,255,255,0.7);}
+
+/* right */
+.modal_menu > .right  { width: 30%; text-align: center;}
+.modal_menu > .right img { width: 80%;}
+
+
+
+
+/* ==========================================
+media query 
+
+==> 브래이크포인트 디폴트는 olim_general.css 를 따름
+==========================================*/
+
+ @media screen and (max-width: 1024px) { 
+.modal_menu > div { padding: 0 !important;}
+.modal_menu > .left { width: 100%;}
+.modal_menu > .right  { display: none;}
+.modal_menu > .left nav { padding: 4vw ; border-radius: 0;}
+.list_menu { padding: 0;}
+.list_menu > li { padding: 25px 15px; flex-direction: column;}
+.list_menu > li > div { display: none; padding-left: 0;}
+.list_menu > li.active > div { display: block;}
+.list_menu > li > a { padding: 15px 0;}
+.item_depth3 ul:before { display: none;}
+.item_depth3 ul li { display: block;}
+
+
+}
