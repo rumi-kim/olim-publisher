@@ -10,12 +10,14 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
   }
+
+.modal_menu { background:rgba(0, 0, 0, 0.2)}
 .modal_menu > div { padding:40px; height:100%; box-sizing: border-box; }
 .modal_menu > .left  { width: 70%; padding-right: 0;}
-.modal_menu > .left nav { padding:25px 40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.4); box-sizing: border-box; border-radius: 10px;}
+.modal_menu > .left nav { padding:25px 40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.7); box-sizing: border-box; border-radius: 10px;}
 .list_menu { overflow-y: overlay; height:100%; padding-right: 25px;}
 .list_menu * { color: rgba(255,255,255,0.9);}
 .list_menu > li { display: flex; padding: 25px; font-size: 20px;}

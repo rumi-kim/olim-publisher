@@ -17,7 +17,7 @@
   .modal_menu { background:rgba(0, 0, 0, 0.4)}
 .modal_menu > div { padding:40px; height:100%; box-sizing: border-box; }
 .modal_menu > .left  { width: 70%; padding-right: 0;}
-.modal_menu > .left nav { padding:25px 40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.4); box-sizing: border-box; border-radius: 10px;}
+.modal_menu > .left nav { padding:40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.4); box-sizing: border-box; border-radius: 10px;}
 .list_menu { overflow-y: overlay; height:100%; padding-right: 25px;}
 .list_menu * { color: rgba(255,255,255,0.9);}
 .list_menu > li { display: flex; padding: 25px; font-size: 20px; transition: all .3s;}
@@ -49,14 +49,11 @@ media query
 .modal_menu > div { padding: 0 !important;}
 .modal_menu > .left { width: 100%;}
 .modal_menu > .right  { display: none;}
-.modal_menu > .left nav { padding: 4vw ; border-radius: 0;}
-.list_menu { padding: 0;}
-.list_menu > li { padding: 25px 15px; flex-direction: column;}
-.list_menu > li > div { display: none; padding-left: 0;}
-.list_menu > li.active > div { display: block;}
-.list_menu > li > a { padding: 15px 0;}
-.item_depth3 ul:before { display: none;}
-.item_depth3 ul li { display: block;}
+.list_menu > li { display: block; padding: 25px 0;}
+.list_menu > li > div > ul { display: block; border: none; padding: 0;}
+.list_menu > li > div > ul > li ~ li { padding: 20px 0 0;}
+.item_depth3 ul { padding: 5px 0 0;}
+
 
 
 }
