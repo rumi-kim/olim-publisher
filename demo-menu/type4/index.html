@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 모든 타입 공통  -->
+    <script src="https://vr.miceview.kr/path/assets/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../../css/olim_general.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../compatibility.css">
+
+    <!-- 각 스타일 삽입 -->
+    <link rel="stylesheet" href="./style.css">
+
+
+    <title>menu type1</title>
+</head>
+
+<body>
+    <div class="bg_main bg_fixed">
+        <div class="modal_menu flex justify-end bg_absolute ">
+            <div class="inner">
+                <!-- <div class="top">
+                    <a href="">
+                        <img src="../../img/logo_h1_w.png" alt="">
+                    </a>
+                    <p></p>
+                </div> -->
+                <div class="">
+                    <nav class="">
+                        <ul class="list_menu">
+                            <li class="active">
+                                <a href="">
+                                    <div>세운지구 홍보관</div>
+                                </a>
+                                <div>
+                                    <ul>
+                                        <li><a href=""><span>enter</span></a></li>
+                                        <li class="item_depth3">
+                                            <a href=""><span>유니트 VR</span></a>
+                                            <ul class="">
+                                                <li><a href="">커뮤니티 3-1</a></li>
+                                                <li><a href="">커뮤니티 3-2</a></li>
+                                                <li><a href="">커뮤니티 3-3</a></li>
+                                                <li><a href="">커뮤니티 3-4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item_depth3">
+                                            <a href=""><span>커뮤니티 VR</span></a>
+                                            <ul class="">
+                                                <li><a href="">커뮤니티 3-1</a></li>
+                                                <li><a href="">커뮤니티 3-2</a></li>
+                                                <li><a href="">커뮤니티 3-3</a></li>
+                                                <li><a href="">커뮤니티 3-4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="">
+                                    <div>그래비티</div>
+                                </a>
+                                <div>
+                                    <ul>
+                                        <li><a href=""><span>enter</span></a></li>
+                                        <li class="item_depth3">
+                                            <a href=""><span>유니트 VR</span></a>
+                                            <ul class="">
+                                                <li><a href="">커뮤니티 3-1</a></li>
+                                                <li><a href="">커뮤니티 3-2</a></li>
+                                                <li><a href="">커뮤니티 3-3</a></li>
+                                                <li><a href="">커뮤니티 3-4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item_depth3">
+                                            <a href=""><span>커뮤니티 VR</span></a>
+                                            <ul class="">
+                                                <li><a href="">커뮤니티 3-1</a></li>
+                                                <li><a href="">커뮤니티 3-2</a></li>
+                                                <li><a href="">커뮤니티 3-3</a></li>
+                                                <li><a href="">커뮤니티 3-4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="">
+                                    <div>힐스테이트</div>
+                                </a>
+                                <div>
+                                    <ul>
+                                        <li><a href=""><span>enter</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="">
+                                    <div>한호 브랜드관</div>
+                                </a>
+                                <div>
+                                    <ul>
+                                        <li><a href=""><span>enter</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="">
+                                    <div>보타닉관</div>
+                                </a>
+                                <div>
+                                    <ul>
+                                        <li><a href=""><span>enter</span></a></li>
+                                        <li><a href=""><span>입지투어</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                        <li><a href=""><span>홈페이지</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            const menuItemBtn = $('.list_menu > li > a '),
+                depth3menuBtn = $('.item_depth3 > a');
+
+            menuItemBtn.on('click', function (e) {
+                e.preventDefault();
+                $(this).parent('li').siblings().removeClass('active');
+                depth3menuBtn.next('ul').slideUp();
+                $(this).parent('li').addClass('active')
+            });
+
+
+
+            depth3menuBtn.on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+                $(this).parent().siblings().children('a').removeClass('active');
+                $(this).parent().siblings().children('ul').slideUp();
+                $(this).next('ul').slideToggle();
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

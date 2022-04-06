@@ -1,0 +1,50 @@
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+
+
+
+.modal_menu { background: none; backdrop-filter:none}
+.modal_menu > .inner { position: fixed; top:30px; bottom:30px; right:30px; padding:40px; width:700px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border-radius: 10px;}
+.modal_menu > .inner > div { position:relative; height: 100%;}
+
+/* 서브 메뉴 bg 생성 */
+.modal_menu > .inner > div:after { content:""; position: absolute; right:0; top: 0; bottom: 0; width:65%; background: rgba(0,0,0,0.7); border-radius: 10px;}
+
+.modal_menu a{ color: #fff;}
+.list_menu { position:relative;}
+.list_menu > li { padding:0 0 30px; }
+.list_menu > li > a { display: block; padding: 15px 0; width:30%; box-sizing: border-box; font-size: 22px; }
+.list_menu > li > div { display:none; position: absolute; padding:30px 45px;  right: 0; top: 0; width:65%; z-index: 10; box-sizing: border-box; font-size: 18px;}
+.list_menu > li > a > div:after { content:"▶"; display: inline-block; margin-left: 15px; font-size: 0.6em; vertical-align: 0.15em; transition: all .3s; opacity: 0;}
+.list_menu > li.active > div { display:block;}
+.list_menu > li.active > a > div:after,
+.list_menu > li > a:hover > div:after 
+ {  opacity: 1;}
+.list_menu > li > div > ul > li { padding: 0 0 30px;}
+.item_depth3 { font-size: 16px;}
+.item_depth3 > a:after { content:"▼"; display: inline-block; margin-left: 15px; font-size: 0.6em; vertical-align:0.3em;}
+.item_depth3 ul { padding: 5px 0 0; display: none;}
+.item_depth3 ul li a { display: block; padding: 5px 10px; color: rgba(255,255,255,0.7);}
+
+
+/* ==========================================
+media query 
+
+==> 브래이크포인트 디폴트는 olim_general.css 를 따름
+==========================================*/
+
+ 
