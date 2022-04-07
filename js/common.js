@@ -1,44 +1,46 @@
 $(function () {
+  // // common data
+  // var header = $(".header");
+  // // gnb
+  // function gnb() {
+  //   var windowWidth = $(window).width();
+  //   if (windowWidth > 690) {
+  //     $(".mobile_nav").css("display", "none");
+  //     $(".nav").removeClass("mobile");
+  //     //스크롤 안 했을 때 마우스오버 시 서브 네비게이션 노출 (pc)
+  //     header
+  //       .mouseover(function () {
+  //         $(".sub_hover_bg").addClass("on");
+  //         $(".sub").addClass("on");
+  //       })
+  //       .mouseleave(function () {
+  //         $(".sub_hover_bg").removeClass("on");
+  //         $(".sub").removeClass("on");
+  //       });
+  //   } else {
+  //     $(".mobile_nav").css("display", "block");
+  //     $(".nav").addClass("mobile");
+  //     // $(".gnb-list").stop().show();
+  //     $(".mobile_nav").click(function () {
+  //       $(this).toggleClass("is_open");
+  //       if ($(this).hasClass("is_open")) {
+  //         $(".nav.mobile").css("transform", "translateX(0)");
+  //       } else {
+  //         $(".nav.mobile").css("transform", "translateX(100%)");
+  //       }
+  //     });
+  //     $(".nav.mobile .nav_each.depth_1").click(function () {
+  //       $(this).children(".nav.mobile .sub_nav.depth_2").slideToggle();
+  //       $(this).stopPropagation();
+  //     });
+  //   }
+  // }
+  // gnb();
+  // $(window).resize(function () {
+  //   gnb();
+  // });
+
   // common data
-  var header = $(".header");
-  // gnb
-  function gnb() {
-    var windowWidth = $(window).width();
-    if (windowWidth > 690) {
-      $(".mobile_nav").css("display", "none");
-      $(".nav").removeClass("mobile");
-      //스크롤 안 했을 때 마우스오버 시 서브 네비게이션 노출 (pc)
-      header
-        .mouseover(function () {
-          $(".sub_hover_bg").addClass("on");
-          $(".sub").addClass("on");
-        })
-        .mouseleave(function () {
-          $(".sub_hover_bg").removeClass("on");
-          $(".sub").removeClass("on");
-        });
-    } else {
-      $(".mobile_nav").css("display", "block");
-      $(".nav").addClass("mobile");
-      // $(".gnb-list").stop().show();
-      $(".mobile_nav").click(function () {
-        $(this).toggleClass("is_open");
-        if ($(this).hasClass("is_open")) {
-          $(".nav.mobile").css("transform", "translateX(0)");
-        } else {
-          $(".nav.mobile").css("transform", "translateX(100%)");
-        }
-      });
-      $(".nav.mobile .nav_each.depth_1").click(function () {
-        $(this).children(".nav.mobile .sub_nav.depth_2").slideToggle();
-        $(this).stopPropagation();
-      });
-    }
-  }
-  gnb();
-  $(window).resize(function () {
-    gnb();
-  });
 
   //헤더 기능 코드---------------------------//
 
