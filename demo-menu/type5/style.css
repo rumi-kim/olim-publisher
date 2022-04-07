@@ -14,7 +14,7 @@
     border-radius: 20px;
   }
 
-  .modal_menu { background:rgba(0, 0, 0, 0.4)}
+.modal_menu { background:rgba(0, 0, 0, 0.4)}
 .modal_menu > div { padding:40px; height:100%; box-sizing: border-box; }
 .modal_menu > .left  { width: 70%; padding-right: 0;}
 .modal_menu > .left nav { padding:40px; padding-left: 60px;   height:100%;  background: rgba(0,0,0,0.4); box-sizing: border-box; border-radius: 10px;}
