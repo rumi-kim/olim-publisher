@@ -666,11 +666,23 @@ html body {
   transform: translate(-50%, -50%);
 }
 
-.inner_cont p {
+.inner_cont .icon {
+  width: 4vw;
+  margin: auto;
+}
+
+.inner_cont .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner_cont .inner_modal p {
   font-size: 1.2vw;
   width: 70%;
   text-align: center;
   margin: auto;
+  color: #fff;
 }
 
 .inner_cont .swiper-scrollbar {
@@ -681,7 +693,7 @@ html body {
   margin: 3vw auto;
   /* transform: translate(-50%, -50%); */
 }
-.inner_cont .swiper-scrollbar::after {
+/* .inner_cont .swiper-scrollbar::after {
   content: "";
   position: absolute;
   width: 20%;
@@ -700,7 +712,7 @@ html body {
   100% {
     width: 100%;
   }
-}
+} */
 
 /* .popup {
   animation: popup 2s ease-in-out forwards;

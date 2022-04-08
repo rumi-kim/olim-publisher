@@ -55,8 +55,12 @@
           <div class="swiper-slide">
             <img src="img/left.jpg" alt="">
             <div class="inner_cont">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div class="swiper-scrollbar"></div>
+              <div class="icon">
+                <img src="img/ico_arrow.png" alt="">
+              </div>
+              <div class="inner_modal">
+                <p>test test test test test<br>test test test test</p>
+              </div>
             </div>
             
           </div>
@@ -64,7 +68,6 @@
             <img src="img/right.jpg" alt="">
             <div class="inner_cont">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
 
@@ -174,6 +177,18 @@
           //   Delay:10000,
           // }
         });
+
+        // 좌우 스크롤 중앙 배치
+        let scrollWrapper = $(".main_banner");
+
+        // scroll wrapper 길이의 반
+        halfWrapperWidth = scrollWrapper.width() / 2;
+        console.log(halfWrapperWidth);
+
+        // 현재 디바이스 길이의 반
+        let halfDeviceWidth = $(window).width() / 2;
+        videoWrapper.scrollLeft(halfWrapperWidth - halfDeviceWidth);
+
       } else {
         $(".main_banner").css("display","none");
         $(".main_bg").css("display","block");
