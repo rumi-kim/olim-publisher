@@ -33,6 +33,7 @@ $(function(){
     if (!hasCookie) {
         $(this).parents('.modal_inner').hide();
         $(this).parents('.modal_inner').next('.modal_inner').show();
+        // $('#tutorial_video').get(0).play();
     }
   });
 
@@ -42,7 +43,7 @@ $(function(){
   //tutorial btn
   $('.btn_help_pop').click(function(){
     $('.modal_inner').hide();
-    $('.btn_modal_close span').text('Close');
+    $('.btn_modal_close span').text('닫기');
     $('.chk_wrap-not_today').hide();
     // this project only
     // $('.modal_inner.has_logo').show();

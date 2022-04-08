@@ -4,23 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta property="og:image" content="https://vmh.zipview.kr/path/og_mice.jpg">
-  <link rel="icon" href="https://vmh.zipview.kr/path/favi_mice.png">
-  <meta name="keywords" content="2021 APAAC">
-  <meta name="description" content="2021 APAAC">
+  <meta property="og:image" content="https://vr.miceview.kr/path/og_ep.jpg">
+  <link rel="icon" href="https://vr.miceview.kr/path/favi_ep.png">
+  <meta name="keywords" content="2022 KOTRA 메타버스 전시관">
+  <meta name="description" content="2022 KOTRA 메타버스 전시관">
   <meta name="robots" content="all">
   <meta property="og:url" content>
-  <meta property="og:description" content="2021 APAAC">
-  <meta property="og:title" content="2021 APAAC">
+  <meta property="og:description" content="2022 KOTRA 메타버스 전시관">
+  <meta property="og:title" content="2022 KOTRA 메타버스 전시관">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9KVF2NB5"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VR3BBBMP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
   
-    gtag('config', 'G-PR9KVF2NB5');
+    gtag('config', 'G-T5VR3BBBMP');
   </script>
 
   <!-- Style include -->
@@ -39,30 +39,24 @@
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <script src="js/common.js"></script>
 
-  <title>2021 APAAC</title>
+  <title>2022 KOTRA 메타버스 전시관</title>
 </head>
 
-<body style="background-color: grey;">
+<body>
   <!-- pre_video_wrap -->
   <div class="pre_video_wrap main">
     <!-- content -->
     <div class="content">
       <!-- main video background -->
-      <!--<video class="main_video" autoplay muted playsinline poster="assets/video/intro_thumbnail.jpg">
-        <source src="assets/video/0928_fire_intro.mp4" type="video/mp4">
-      </video>-->
+     <video class="main_video" autoplay muted playsinline poster="assets/video/intro_thumbnail.jpg">
+        <source src="assets/video/intro.mp4" type="video/mp4">
+      </video>
       <!-- //main video background -->
 
       <!-- main text -->
       <div class="main-title_box">
-        <h1 class="main_title">
-          <img src="img/main_logo.png" alt="2021 APAAC">
-        </h1>
-        <h1 class="main_brand">
-          <img src="img/brand-logo.png" alt="FORCIA">
-        </h1>
-        <div class="afterPlay">
-          <button type="button" class="btn"><span>Skip</span></button>
+        <div class="" style="text-align: center;">
+          <button type="button" class="btn btn_enter"><span>입장하기</span></button>
           <!-- footer -->
           <div class="footer" id="footer">
             <div class="chrome_download">
@@ -74,7 +68,7 @@
         </div>
       </div>
       <strong class="miceview_logo">
-        <img src="img/logo_miceview-w.png" alt="miceview">
+        <img src="img/logo_elypecs.png" alt="elypecs">
       </strong>
       <!-- //main text -->
     </div>
@@ -85,15 +79,19 @@
 
 <script>
 $(function(){
+  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    window.location = 'microsoft-edge:' + window.location;
+  }
+
   //pre video event
   $('.pre_video_wrap video').on({
     ended: function(e){
-      window.location = 'entry-en.html'
+      window.location = 'lobby-ko.html'
     }
   });
 
-  $('.afterPlay .btn').click(function(){
-      window.location = 'entry-en.html'
+  $('.btn_enter').click(function(){
+      window.location = 'lobby-ko.html'
   });
 });
 </script>
