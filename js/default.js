@@ -17,6 +17,8 @@ window.addEventListener('load', function () {
     }
   });
 });
+
+
 $(function () {
 
   var params = getUrlParams();
