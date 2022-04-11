@@ -67,10 +67,10 @@ $(function () {
       }
     } else if (windowWidth < 1025) {
       // 2014이하는 아코디언 메뉴 형식 - swiper off (destory)
-      if (mySwiper != undefined) {
-        mySwiper.destroy();
-        mySwiper = undefined;
-      }
+      // if (mySwiper != undefined) {
+      //   mySwiper.destroy();
+      //   mySwiper = undefined;
+      // }
 
       menuListBtn.on("click", function () {
         $(this).addClass("active");
