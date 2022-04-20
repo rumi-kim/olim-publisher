@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { padding: 20px;}
+        body small { color:blue}
+        body *{ padding:0; margin:0}
+
+        section { border:1px solid blue; padding: 40px; padding-top: 10px; line-height:1.6}
+        section h2 { padding: 10px 0; color:blue}
+        section > ol > li ~ li { padding-top: 25px;}
+        section > ol > li > p { padding:0 0 10px; font-size:17px}
+        section > ol > li > div { font-size: 15px;}
+        small:before, .line:before { content:"line"; display: inline-block; padding-left: 10px;}
+        section > ol { margin-left: 20px;}
+        .ex { color:#666; font-style: italic;}
+        .ex:before { content: "ex)"; display: inline-block; padding-right: 5px;}
+    </style>
+</head>
+<body>
+    <section style="margin-bottom:50px">
+        <h2>reset</h2>
+    <ol>
+        <li>
+            <p><strong>font-size 단위 지정</strong><small>16</small></p>
+            <div>
+
+            </div>
+        </li>
+    </ol>
+</section>
+<section>
+    <h2>olim general</h2>
+    <ol>
+        <li>
+            <p><strong>class 명 순서의 재정의 (형태 + 의미 + 상태)</strong></p>
+            <div>
+                <p class="ex">.breadcrumbs_list ➡ .list_breadcrumbs<small>79</small></p>
+            </div>
+        </li>
+        <li>
+            <p><strong>class 표기법 통일</strong></p>
+            <div>
+                <p></p>
+            </div>
+        </li>
+        <li>
+            <p><strong>주관적인 해석이 들어갈 수 있는 클래스명 사용 지양. <br> margin, padding 등 단순 스타일 적용을 위한 class명은 있는 css 속성명을 그대로 사용하거나 직관적인 네이밍을 사용</strong></p>
+            <div>
+                <p class="ex">.txt_bold ➡ .fw700<small>61</small></p>
+                <p class="ex">.divider_top ➡ .mt60<small>188</small></p>
+            </div>
+        </li>
+        <li>
+            <p><strong>float_box 미디어쿼리에서의 초기화 필요성에 대한 고민</strong><small>221</small></p>
+            <div>
+                <p>현재 미디어쿼리에 따라 float 속성이 초기화되게끔 설정되어있는 상태.</p>
+            </div>
+        </li>
+        
+    </ol>
+
+    
+</section>
+
+    
+</body>
+</html>
