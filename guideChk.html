@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide</title>
+    <style>
+        html, body{color: #353535; line-height: 1.4;}
+        h1{margin: 0 0 20px 10px ; font-size: 20px;}
+        h2{margin: 0 0 0 20px; font-size: 16px;}
+        pre{margin: 0; padding: 0;}
+        p.ex_tag{display: inline-block; margin: 0; font-weight: 600; color: #2132b9}
+        li.none{text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>기존 퍼블리싱 가이드 논의</h1>
+        <h2>마크업 가이드 부분</h2>
+        
+        <ul>
+          <li>head 영역
+              <ol>
+                <li>올림플래닛 cdn 주소를 이용해 링크하는 방식</li>
+                <li class="none">구글 cdn 주소를 이용해 링크하는 방식</li>
+              </ol>
+          </li>
+          <li>h 태그<br>
+            현행 가이드 항목 유지
+          </li>
+          <li>이미지 대체 텍스트(alt)<br>
+            현행 가이드 항목 유지
+          </li>
+          <li>&lt;b&gt;, &lt;i&gt; 태그 및 &lt;strong&gt;, &lt;em&gt; 태그<br>
+            현행 가이드 항목 유지하나<br>
+            b태그를 아이콘 요소에 사용하는 일은 없는 것으로 변경 희망
+          </li>
+        </ul>
+
+        
+        <h2>CSS 가이드 부분 - General class</h2>
+        
+        <ul>
+          <li>media query 기준
+              현행가이드는 Wordpress 테마를 기준으로 작성되어있으나, 가이드 작성 시점과 현재 시점을 비교해볼 때(가이드 작성 시점 : 2020년 / 현재 가이드 수정 시점 : 2022년)<br>
+              디바이스의 종류가 다양해지면서 자연스럽게 해상도도 다양해졌기에, 세분화해서 관리하는 것으로 한다.<br>
+              다만 기초적인 base 사이즈 지정하되, 갤럭시 z fold 시리즈와 같은 논외케이스는 프로젝트에서 필요할시 추가하여 작성하도록 한다.<br><br>
+
+              base 사이즈 <br><br>
+
+              /* common window device */<br>
+              @media screen and (max-width: 1920px) {}<br><br>
+
+              /* common small laptop (13inch) */<br>
+              @media screen and (max-width: 1280px) {}<br><br>
+
+              /* old laptop or 13inch laptop, iPad Pro series */<br>
+              @media screen and (max-width: 1024px) {}<br><br>
+
+              /* small tablet - ipad mini */<br>
+              @media screen and (max-width: 768px){}<br><br>
+
+              /* large mobile device  */<br>
+              @media screen and (max-width: 425px){}<br><br>
+
+              /* small mobile device - iphone mini series and old device */<br>
+              @media screen and (max-width: 360px){}<br><br>
+
+          </li>
+          <li>reset<br>
+            현행 가이드 항목 일부 수정 후 유지<br>
+            수정할 항목 : 전체 font-size
+          </li>
+          <li>font 관련<br>
+            폰트 두께 - 내용 보강 후 일부 유지<br>
+            word-keep - 스타일선언과 관련된 내용으로 페이지를 분류할 필요성이 보임<br>
+            ir_text - 유지<br>
+            레이아웃 관련 - 논의 필요<br>
+            divider - 폐기<br>
+            수평정렬 - 작성중인 신규 가이드를 참조<br>
+            부모기준 수직 / 수평 중앙 정렬 - 내용 보강 및 수정하여 유지
+          </li>
+        </ul>
+
+        <h2>CSS 가이드 부분 - UIO(User Interface Object)</h2>
+        
+        <ul>
+          <li>skip navigation<br>
+              도입 여부 논의
+          </li>
+          <li>btn_quick_wrap<br>
+              프로젝트별로 다르게 사용할 가능성이 높아 샘플만 만들어 둘 필요는 있을 것으로 보임<br>
+          </li>
+          <li>.breadcrumb<br>
+            내용 보강하여 유지
+          </li>
+          <li>fix_nav-top<br>
+              내용 참조하여 모바일 환경에서 오류 없도록 테스트 하여 내용 보강해서 공통화로 남기기
+          </li>
+          <li>anker_wrap / inner_anker_wrap<br>
+              디자인이 있는 경우에만 사용을 할 컴포넌트, css 가이드에선 제외하고 컴포넌트 가이드를 만들어서 제공하거나 모달 샘플처럼 샘플기능으로 준비
+          </li>
+          <li>tbl_Wrap<br>
+              클래스 선언 규칙만 바꿔서 활용할 수 있을듯 함
+          </li>
+          <li>
+            캘린더<br>
+            가이드에서 삭제
+          </li>
+        </ul>
+
+        <h2>이메일 퍼블리싱 가이드</h2>
+        <ul>
+          <li>적극 도입</li>
+        </ul>
+    </div>
+</body>
+</html>
