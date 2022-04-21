@@ -1,104 +1,4 @@
 /* common */
-/* default btn */
-.header .btn-lobby,
-.main .content .btn,
-.lobby .contents .lobby_btn_wrap .btn,
-.search_company-item .btn_wrap .btn,
-.modal .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #4a1480;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(1%, #9327ff),
-    to(#4a1480)
-  );
-  background: linear-gradient(to right, #9327ff 1%, #4a1480 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$btn_color1', endColorstr='$btn_color2', GradientType=1);
-  border-radius: 52px;
-  color: #fff;
-  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
-  font-size: 0;
-  vertical-align: middle;
-  outline: 0;
-}
-
-.header .btn-lobby > span,
-.main .content .btn > span,
-.lobby .contents .lobby_btn_wrap .btn > span,
-.search_company-item .btn_wrap .btn > span,
-.modal .btn > span {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.9px;
-  line-height: 1.7;
-}
-
-.header .btn-lobby > span.has_ico,
-.main .content .btn > span.has_ico,
-.lobby .contents .lobby_btn_wrap .btn > span.has_ico,
-.search_company-item .btn_wrap .btn > span.has_ico,
-.modal .btn > span.has_ico {
-  position: relative;
-  padding-right: 14px;
-}
-
-.header .btn-lobby > span.has_ico:before,
-.main .content .btn > span.has_ico:before,
-.lobby .contents .lobby_btn_wrap .btn > span.has_ico:before,
-.search_company-item .btn_wrap .btn > span.has_ico:before,
-.modal .btn > span.has_ico:before {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 7px;
-  height: 12px;
-  background: url(../img/arrow-right.png) no-repeat 0 50%;
-  background-size: auto 12px;
-  content: "";
-}
-
-@media screen and (max-width: 1024px) {
-  .header .btn-lobby,
-  .main .content .btn,
-  .lobby .contents .lobby_btn_wrap .btn,
-  .search_company-item .btn_wrap .btn,
-  .modal .btn {
-    padding: 6px 14px;
-  }
-
-  .header .btn-lobby > span,
-  .main .content .btn > span,
-  .lobby .contents .lobby_btn_wrap .btn > span,
-  .search_company-item .btn_wrap .btn > span,
-  .modal .btn > span {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-  .header .btn-lobby,
-  .main .content .btn,
-  .lobby .contents .lobby_btn_wrap .btn,
-  .search_company-item .btn_wrap .btn,
-  .modal .btn {
-    padding: 6px 14px;
-  }
-
-  .header .btn-lobby > span,
-  .main .content .btn > span,
-  .lobby .contents .lobby_btn_wrap .btn > span,
-  .search_company-item .btn_wrap .btn > span,
-  .modal .btn > span {
-    font-size: 14px;
-  }
-}
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -114,7 +14,6 @@
   background: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
-
 
 /* base */
 
@@ -141,15 +40,10 @@ html body {
   }
 }
 
-#app {
-  width: 100%;
-  height: 100%;
-}
-
-.scroll_auto,
+/* .scroll_auto,
 .scroll_auto body {
   overflow-y: visible !important;
-}
+} */
 
 /* header */
 .header {
@@ -163,24 +57,21 @@ html body {
   /* font-size: 0; */
 }
 
+.header .header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 4.5rem 0 4.5rem;
+}
+
 .header .header-wrap > div {
-  position: fixed;
   z-index: 2000;
-  top: 30px;
   display: flex;
   align-items: center;
 }
 
-.header .header-wrap > .left {
-  left: 70px;
-}
-
 .header .header-wrap > .left .site_logo {
   display: block;
-}
-
-.header .header-wrap > .right {
-  right: 70px;
 }
 
 .site_logo h1 {
@@ -192,12 +83,8 @@ html body {
 }
 
 @media screen and (max-width: 1024px) {
-  .header .header-wrap > .left {
-    left: 30px;
-  }
-
-  .header .header-wrap > .right {
-    right: 30px;
+  .header .header-wrap {
+    padding: 22px 1.8rem 0 1.8rem;
   }
 }
 @media screen and (max-width: 690px) {
@@ -247,8 +134,8 @@ body.tour div#header .right > .sound_box {
 
   .sound-icon,
   .btn_menu {
-    height: 40px !important;
-    width: 40px !important;
+    height: 35px !important;
+    width: 35px !important;
   }
 }
 
@@ -324,6 +211,14 @@ body.tour div#header .right > .sound_box {
 
   .global .btn_vtower {
     background-image: url(https://vr.miceview.kr/path/assets/images/immersive-m.png);
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .global-btn,
+  .global .btn_help_pop,
+  .global .btn_link {
+    background-size: 20px;
   }
 }
 
@@ -643,8 +538,7 @@ body.tour div#header .right > .sound_box {
 }
 
 .btn.btn_menu {
-  width: 50px;
-  height: 50px;
+  margin-left: auto;
   padding: unset;
 }
 
@@ -732,7 +626,7 @@ body.tour div#header .right > .sound_box {
 .modal .modal_inner .modal_help-tutorial {
   position: absolute;
   /* 헤더의 버튼과 동일한 위치로 세팅 */
-  top: 23px;
+  top: 16px;
   right: 60px;
   padding-right: 150px;
   padding-top: 70px;
@@ -787,8 +681,8 @@ body.tour div#header .right > .sound_box {
     padding-top: 80px;
   }
   .modal .modal_inner .ico_tutorial-btn::before {
-    width: 112px;
-    height: 48px;
+    width: 98px;
+    height: 45px;
   }
   .modal .modal_inner .modal_help-tutorial:before {
     top: 36px;
@@ -948,11 +842,11 @@ body.tour div#header .right > .sound_box {
     margin-top: 16px;
   }
   .modal .modal_inner .modal_help-gnb {
-    left: 20px;
+    left: 10px;
   }
 
   .modal .modal_inner .modal_help-tutorial {
-    right: 20px;
+    right: 10px;
   }
 }
 

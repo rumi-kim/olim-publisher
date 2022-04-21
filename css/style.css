@@ -9,8 +9,10 @@ ody.fixed {
 }
 .btn_menu {
   margin-left: 12px;
-  width: 50px;
-  height: 50px;
+  /* width: 50px; */
+  /* height: 50px; */
+  width: 3rem;
+  height: 3rem;
   background: linear-gradient(147deg, #302e42 12%, #0a090d 112%);
   border-radius: 100%;
 }
@@ -183,9 +185,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 .list_menu > li ~ li {
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
-.list_menu > li.active {
-  background: rgba(255, 255, 255, 0.15);
-}
+
 .list_menu > li > a {
   display: block;
   width: 100%;
@@ -220,11 +220,27 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 .list_menu > li > div {
   display: none;
+  /* visibility: hidden; */
   margin-top: 20px;
 }
+
+/* .list_menu > li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.list_menu > li:hover > div {
+  display: block;
+} */
+
+.list_menu > li.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .list_menu > li.active > div {
   display: block;
+  /* visibility: visible; */
 }
+
 .list_menu > li > div a {
   display: block;
   padding: 5px 0;
@@ -235,6 +251,20 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   color: #fff;
 }
+.list_menu > li > div a.item_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list_menu > li > div a.item_btn::after {
+  content: "";
+  background: url(../img/ico_link.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+}
+
 .list_menu > li > div > ul > li {
   margin-top: 20px;
   font-size: 18px;
@@ -273,7 +303,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   ==========================================*/
 @media screen and (max-width: 1024px) {
   .list_menu {
-    padding: 20px 0;
+    padding: 40px 0;
     overflow: overlay;
     box-sizing: border-box;
   }
@@ -295,5 +325,26 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   }
   .list_menu > li > a:before {
     height: 30px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .btn_menu i {
+    width: 18px;
+    margin: 4px auto;
+  }
+
+  .btn_menu.type4.is-active i:nth-of-type(1) {
+    -webkit-transform: translateY(5px) rotate(45deg);
+    -ms-transform: translateY(5px) rotate(45deg);
+    -o-transform: translateY(5px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .btn_menu.type4.is-active i:nth-of-type(3) {
+    -webkit-transform: translateY(-7px) rotate(-45deg);
+    -ms-transform: translateY(-7px) rotate(-45deg);
+    -o-transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
