@@ -25,23 +25,50 @@
         }
 
 
-        h2,h3 {
+        h2,
+        h3 {
             letter-spacing: -0.05em;
-            color: blue;
         }
 
-        h2 { margin: 0 0 20px ; padding: 5px 10px;}
-        h3 { padding: 0 0 10px;}
+        h2 {
+            margin: 0 0 20px;
+            padding: 5px 10px;
+            color: #0000b3;
+        }
+
+        h2:before {
+            content: "◆ ";
+            display: inline-block;
+            margin-right: 10px;
+            font-size: .5em;
+            vertical-align: 5px;
+        }
+
+        h3 {
+            padding: 30px 0 20px;
+            color: #0000b3
+        }
 
         .section {
             padding: 40px 30px 0;
         }
-        ol,ul {
+
+        ol,
+        ul {
             margin-left: 20px;
         }
 
-        section { padding-left: 30px ;}
-        section ~ section { margin: 50px 0 0 ;}
+        li {
+            margin: 0 0 5px;
+        }
+
+        section {
+            padding-left: 30px;
+        }
+
+        section~section {
+            margin: 50px 0 0;
+        }
 
         section>ol>li~li {
             padding-top: 60px;
@@ -55,6 +82,7 @@
         section>ol>li>div {
             font-size: 15px;
         }
+
         small:before,
         .line:before {
             content: "line";
@@ -63,7 +91,7 @@
             font-style: italic;
         }
 
-        
+
         .ex {
             margin: 20px 0;
             padding: 15px;
@@ -87,7 +115,7 @@
         .result {
             border: 1px dotted rgba(255, 0, 0, 0.47);
             padding: 15px 20px;
-            margin:20px 0; 
+            margin: 20px 0;
             background: rgba(255, 0, 0, 0.062);
         }
 
@@ -98,12 +126,16 @@
             color: red;
             font-weight: bold;
         }
+
+        .color_red {
+            color: #f00 !important
+        }
     </style>
 </head>
 
 <body>
     <div class="section memo">
-        <h2>※ 참고사항</h2>
+        <h2>참고사항</h2>
         <ul>
             <li>현재 CSS 가이드 문서 <a
                     href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/667746418/CSS+2+-+UIO">1.General</a> / <a
@@ -116,24 +148,64 @@
                 </ol>
                 위 두가지의 파일로 나눠서 배포될 예정.
             </li>
+            <li><a href="guideChk.html">guideChk.html(Bread)</a> 의 내용을 참고하여 추합 작성중</li>
+            <li>
+                <p class="color_red">하기에 없는 내용은 기존 가이드 문서를 따름</p>
+            </li>
         </ul>
     </div>
     <div class="section">
-        <h2>진행상황 메모</h2>
+        <h2>기타 진행상황 메모</h2>
         <div class="result">
             <ul>
                 <li>id 속성 사용 지양</li>
-                <li>section / article 태그 사용 금지</li>
+                <li>section / article 태그 사용 지양</li>
                 <li>address 태그 사용</li>
                 <li>플러그인 통일</li>
-                <li>scrollbar plugin 사용 검토( jQuery custom content scrollbar ) - 스크롤바 영역 통일이 필요한 경우</li>
-
+                <li>scrollbar plugin 사용 검토( jQuery custom content scrollbar) - 스크롤바 영역 통일이 필요한 경우(ie/edge)</li>
             </ul>
-
         </div>
     </div>
+    <hr>
     <div class="section">
-        <h2>※ olim_general.css 분석</h2>
+        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/667582566">
+            <h2>마크업 가이드</h2>
+        </a>
+        <section>
+            <ol>
+                <li>
+                    <p><strong>header 영역</strong></p>
+                    <div class="result">
+                        <ul>
+                            <li>
+                                <strong>h태그 사용법(h1) - 기존 가이드 문서를 따름</strong>
+                                <p>SEO를 고려해 사이트의 성격에 따라 &lt;h1&gt; 을 다르게 지정하여 사용</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p><strong>contents 영역</strong></p>
+                    <div class="result">
+                        <ul>
+                            <li>
+                                <strong>이미지 대체 텍스트(alt) - 기존 가이드 문서를 따름</strong>
+                                <p></p>
+                            </li>
+                            <li>
+                                <strong> b / i / strong / em 태그
+                                </strong>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <div class="section">
+        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/664600693">
+            <h2>olim_general.css 가이드 분석 - 1. General class</h2>
+        </a>
         <section>
             <h3>reset</h3>
             <ol>
@@ -142,29 +214,45 @@
                     <div>
                         <p>rem / em / px</p>
                     </div>
+                    <div class="result">
+                        <ul>
+                            <li>pc: px</li>
+                            <li>tablet & mobile : viewport </li>
+                        </ul>
+                    </div>
                 </li>
             </ol>
+
         </section>
         <section>
-            <h3>olim general</h3>
+            <h3>general</h3>
             <ol>
-                <li><strong>레거시코드의 제거/유지에 대한 검토</strong></li>
+                <li><strong>레거시코드의 제거/유지에 대한 검토</strong>
+                    <div class="result">
+                        <ul>
+                            <li>통상적으로 사용하는 class는( ex : breadcrumbs/header/wrap/footer) 네이밍만 보강하여 사용</li>
+                            <li>word-keep - 스타일선언과 관련된 내용으로 페이지를 분류할 필요성이 보임</li>
+                            <li>주관적 의미 클래스명 제거 (ex:.divider) - 아래 <a href="#link1">'주관적인 해석이 들어갈 수 있는 클래스명 사용 지양'</a> 항목
+                                참고 </li>
+                            <li>레이아웃 관련(only_XX / not_XX)</li>
+                        </ul>
+                    </div>
+                </li>
                 <li>
                     <p><strong>class명 작성 순서의 재정의 (형태 + 의미 + 상태)</strong></p>
-                    <div>
-                        <p class="ex">.breadcrumbs_list ➡ .list_breadcrumbs<small>79</small></p>
-                    </div>
                     <div class="result">
-                        <p class="">클래스명만 수정하여 사용</p>
+                        <p>.float_box ➡ <b>.box_float</b></p>
+                        <p>.ib_wrap ➡ <b>.wrap_ib</b></p>
+                        <p>.tbl_wrap ➡ <b>.wrap_tbl + <span class="color_red">.is_active</span></b></p>
                     </div>
                 </li>
                 <li>
                     <p><strong>class 표기법 통일</strong></p>
-                    <div>
+                    <div class="result">
                         <p>현재 olim_general.css의 스네이크기법으로 통일</p>
                     </div>
                 </li>
-                <li>
+                <li id="link1">
                     <p><strong>주관적인 해석이 들어갈 수 있는 클래스명 사용 지양</strong></p>
                     <div>
                         <p> margin, padding 등 단순 스타일 적용을 위한 class명은 있는 css 속성명을 그대로 사용하거나 직관적인 네이밍을 사용</p>
@@ -221,33 +309,79 @@
                         </ol>
                     </div>
                     <div class="result">
-                       <p> 1. 맨 하단으로 몰아서 작성한다.</p>
-                       <p> 2. Bread가 작성한 guideChk.html 참고</p>
+                        <p> 1. 맨 하단으로 몰아서 작성.</p>
+                        <p> 2. guideChk.html 참고(Bread) <a href="guideChk.html" target="_blank">페이지 바로가기</a></p>
                     </div>
                 </li>
-                <li>
-                    <p><strong>버튼 컨벤션의 필요성(btn_group_wrap)</strong><small>343</small></p>
-                    <div>
-                        <p>현재 버튼 형태에 따른 기본적인 버튼 디자인이 존재. </p>
-                        <p>추후 사용 가능성 여부에 대한 논의 필요할듯</p>
-                    </div>
-                    <div class="result">
-                        <p>원형버튼은 제외하고</p>
-
-                    </div>
-                </li>
-                <li>
-                    <p><strong>form 관련 태그</strong><small>365</small></p>
-                    <div>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </li>
-
 
             </ol>
 
 
+        </section>
+    </div>
+    <div class="section">
+        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/667746418" target="_blank">
+            <h2>olim_general.css 가이드 분석 - 2. UIO(User Interface Object)</h2>
+        </a>
+        <section>
+            <ol>
+                <li>
+                    <p><strong>header 이전 / header 영역</strong></p>
+                    <div class="result">
+                        <ol>
+                            <li>
+                                <p>skip navigation <small>56</small></p>
+                                <div>우선 올림플래닛 공홈 리뉴얼 사이트에는 도입할 예정. 디자인제공 여부 확인 필요</div>
+                            </li>
+                            <li>
+                                <p>.btn_quick_wrap <small>109</small></p>
+                                <div>스타일은 제거하고 기본적인 위치 및 레이아웃 샘플만 제작</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <p><strong>contents 영역</strong></p>
+                    <div>
+                        <ul>
+                            <li>
+                                <p><strong>disclaimer</strong></p>
+                                <div></div>
+                            </li>
+                            <li>
+                                <p><strong>form 태그 관련 요소</strong></p>
+                                <div>
+                                    현재 .inp_rdo_wrap / .inp_sel_wrap 과 같이 축약되어있는 class명 보강 하여 기존 가이드 활용
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="result">
+                        <ol>
+                            <li>
+                                <p>.fix_nav-top <small>89</small></p>
+                                <div>모바일 환경 오류테스트 후 내용 보강해서 공통화로 남기기</div>
+                            </li>
+                            <li>
+                                <p>.anker_wrap / .inner_anker_wrap <small>139</small></p>
+                                <div>css 가이드에선 제외. 컴포넌트 가이드 또는 샘플을 제작하여 디자인이 있는 경우에만 사용. </div>
+                            </li>
+                            <li>
+                                <p>.btn_group_wrap <small>284</small></p>
+                                <div>둥근 버튼 그룹(.btn_group-round)은 제거, 이외 항목은 베이직한 레이아웃 샘플만 제작</div>
+                            </li>
+                            <li>
+                                <p>tbl_wrap <small>430</small></p>
+                                <div>클래스명 보강하여 활용</div>
+                            </li>
+                            <li>
+                                <p>calendar<small>451</small></p>
+                                <div>가이드에서 삭제. <br>캘린더 콘텐츠가 필요한 경우 플러그인 또는 table 태그 활용</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
         </section>
     </div>
 
