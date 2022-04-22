@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <title>Document</title>
-    <style>
+   <style>
         body {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
@@ -23,7 +23,6 @@
             padding: 0;
             margin: 0;
         }
-
 
         h2,
         h3 {
@@ -59,7 +58,7 @@
         }
 
         li {
-            margin: 0 0 5px;
+            margin: 0 0 10px;
         }
 
         section {
@@ -130,7 +129,9 @@
         .color_red {
             color: #f00 !important
         }
-    </style>
+        .list_query { padding: 30px 0 0;}
+        .list_query > li > p { color:rgb(51, 46, 175)}
+    </style> 
 </head>
 
 <body>
@@ -160,15 +161,16 @@
             <ul>
                 <li>id 속성 사용 지양</li>
                 <li>section / article 태그 사용 지양</li>
-                <li>address 태그 사용</li>
+                <li>시멘틱태그 사용 ( ex: address )</li>
                 <li>플러그인 통일</li>
-                <li>scrollbar plugin 사용 검토( jQuery custom content scrollbar) - 스크롤바 영역 통일이 필요한 경우(ie/edge)</li>
+                <li>scrollbar plugin 사용( jQuery custom content scrollbar) - 스크롤바 영역 통일(ie/edge)</li>
+                <li>.container 와 .contents 구분 사용 </li>
             </ul>
         </div>
     </div>
     <hr>
     <div class="section">
-        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/667582566">
+        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/667582566" target="_blank">
             <h2>마크업 가이드</h2>
         </a>
         <section>
@@ -193,7 +195,7 @@
                                 <p></p>
                             </li>
                             <li>
-                                <strong> b / i / strong / em 태그
+                                <strong> b / i / strong / em 태그 - b태그 사용 지양
                                 </strong>
                             </li>
                         </ul>
@@ -203,7 +205,7 @@
         </section>
     </div>
     <div class="section">
-        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/664600693">
+        <a href="https://olimgroup.atlassian.net/wiki/spaces/dm/pages/664600693" target="_blank">
             <h2>olim_general.css 가이드 분석 - 1. General class</h2>
         </a>
         <section>
@@ -212,12 +214,11 @@
                 <li>
                     <p><strong>font-size 단위지정 및 선언</strong><small>16</small></p>
                     <div>
-                        <p>rem / em / px</p>
                     </div>
                     <div class="result">
                         <ul>
-                            <li>pc: px</li>
-                            <li>tablet & mobile : viewport </li>
+                            <li>pc: px(기본 16px로 수정)</li>
+                            <li>tablet & mobile : viewport</li>
                         </ul>
                     </div>
                 </li>
@@ -227,23 +228,24 @@
         <section>
             <h3>general</h3>
             <ol>
-                <li><strong>레거시코드의 제거/유지에 대한 검토</strong>
+                <li>
+                    <p><strong>레거시코드의 제거/유지에 대한 검토</strong></p>
+                    <ul>
+                        <li>레이아웃 관련(only_XX / not_XX)</li>
+                    </ul>
                     <div class="result">
                         <ul>
                             <li>통상적으로 사용하는 class는( ex : breadcrumbs/header/wrap/footer) 네이밍만 보강하여 사용</li>
                             <li>word-keep - 스타일선언과 관련된 내용으로 페이지를 분류할 필요성이 보임</li>
                             <li>주관적 의미 클래스명 제거 (ex:.divider) - 아래 <a href="#link1">'주관적인 해석이 들어갈 수 있는 클래스명 사용 지양'</a> 항목
                                 참고 </li>
-                            <li>레이아웃 관련(only_XX / not_XX)</li>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <p><strong>class명 작성 순서의 재정의 (형태 + 의미 + 상태)</strong></p>
                     <div class="result">
-                        <p>.float_box ➡ <b>.box_float</b></p>
-                        <p>.ib_wrap ➡ <b>.wrap_ib</b></p>
-                        <p>.tbl_wrap ➡ <b>.wrap_tbl + <span class="color_red">.is_active</span></b></p>
+                        큰 박스모델 단위를 제외한 하위 item / element 만 해당 - 추후 작업하면서 지속적인 논의 필요할듯
                     </div>
                 </li>
                 <li>
@@ -255,21 +257,19 @@
                 <li id="link1">
                     <p><strong>주관적인 해석이 들어갈 수 있는 클래스명 사용 지양</strong></p>
                     <div>
-                        <p> margin, padding 등 단순 스타일 적용을 위한 class명은 있는 css 속성명을 그대로 사용하거나 직관적인 네이밍을 사용</p>
                         <div class="ex">
                             <p>.txt_bold ➡ .fw700<small>61</small></p>
                             <p>.divider_top ➡ .mt60<small>188</small></p>
                         </div>
                         <div class="result">
-                            <p>위 예시와 같이 스타일 속성명을 축약하여 명시적인 클래스명으로 일괄 변경하며,
-                                <br>divider와 같이 지극히 주관적인 클래스명의 경우는 제거한다. ( 제거 요소에 대한 추가적인 검토 필요)</p>
+                            <p>위 예시와 같이 단순 스타일 적용을 위한 class명은 속성명을 축약하여 명시적인 클래스명으로 일괄 변경하며,
+                                <br>divider와 같이 주관적인 클래스명의 경우는 제거한다. ( 제거 요소에 대한 추가적인 검토 필요)</p>
                         </div>
                 </li>
                 <li>
                     <p><strong>미디어쿼리에서의 float 초기화 필요성에 대한 고민</strong><small>221 ~ 236</small></p>
-                    <div>
-                        <p>현재 미디어쿼리에 따라 float 속성이 초기화되게끔 설정되어있는 상태.</p>
-                        <p>모바일에서도 float속성이 그대로 유지되는 경우 ? </p>
+                    <div class="result">
+                        flex로 대체하되, 필요에 따라 사용 
                     </div>
                 </li>
                 <li>
@@ -279,6 +279,9 @@
                             경우
                             스타일 지정이 필요.</p>
                         <p>개인적인 의견으로는 inline-block으로 정렬이 필요한 경우가 있을 것으로 보아 class명만 수정하여 필요에 따라 사용하면 괜찮을듯 함.</p>
+                    </div>
+                    <div class="result">
+                        가능한 사용 지양, flex로 대체
                     </div>
                 </li>
                 <li>
@@ -296,6 +299,9 @@
                         <p> 위와 같이 코드를 작성했다고 가정했을 때 class명을 활용한다면? ➡ <strong>class="pos absolute center"</strong> </p>
                         <p>이 방법을 사용하면 호환성 코드 또한 간결해질 것으로 판단됨</p>
                     </div>
+                    <div class="result">
+                        위 예시와 같은 사용법으로 변경
+                    </div>
                 </li>
                 <li>
                     <p><strong>미디어쿼리 관련</strong></p>
@@ -309,8 +315,47 @@
                         </ol>
                     </div>
                     <div class="result">
-                        <p> 1. 맨 하단으로 몰아서 작성.</p>
-                        <p> 2. guideChk.html 참고(Bread) <a href="guideChk.html" target="_blank">페이지 바로가기</a></p>
+                        <ol>
+                            <li>
+                                <p>맨 하단으로 몰아서 작성.</p>
+                            </li>
+                            <!-- <li><p>guideChk.html 참고(Bread) <a href="guideChk.html" target="_blank">페이지 바로가기</a></p></li> -->
+                            <li>
+                                <p>해상도 사이즈</p>
+                                <div>
+                                    media query 기준 현행가이드는 Wordpress 테마를 기준으로 작성되어있으나, <br>가이드 작성 시점과 현재 시점을 비교해볼 때(가이드
+                                    작성 시점 : 2020년 / 현재 가이드 수정 시점 : 2022년)<br>
+                                    디바이스의 종류가 다양해지면서 자연스럽게 해상도도 다양해졌기에, 세분화해서 관리하는 것으로 한다.<br>
+                                    다만 기초적인 base 사이즈 지정하되, 갤럭시 z fold 시리즈와 같은 논외케이스는 프로젝트에서 필요할시 추가하여 작성하도록 한다.
+                                </div>
+                                <ul class="list_query">
+                                    <li>
+                                        <span>/* common window device */</span>
+                                        <p>@media screen and (max-width: 1920px) {}</p>
+                                    </li>
+                                    <li>
+                                        <span>/* common small laptop (13inch) */</span>
+                                        <p>@media screen and (max-width: 1280px) {}</p>
+                                    </li>
+                                    <li>
+                                        <span>/* old laptop or 13inch laptop, iPad Pro series */</span>
+                                        <p>@media screen and (max-width: 1024px) {}</p>
+                                    </li>
+                                    <li>
+                                        <span>/* small tablet - ipad mini */</span>
+                                        <p>@media screen and (max-width: 768px){}</p>
+                                    </li>
+                                    <li>
+                                        <span>/* large mobile device */</span>
+                                        <p>@media screen and (max-width: 425px){}</p>
+                                    </li>
+                                    <li>
+                                        <span>/* small mobile device - iphone mini series and old device */</span>
+                                        <p>@media screen and (max-width: 360px){}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
                 </li>
 
@@ -342,20 +387,6 @@
                 </li>
                 <li>
                     <p><strong>contents 영역</strong></p>
-                    <div>
-                        <ul>
-                            <li>
-                                <p><strong>disclaimer</strong></p>
-                                <div></div>
-                            </li>
-                            <li>
-                                <p><strong>form 태그 관련 요소</strong></p>
-                                <div>
-                                    현재 .inp_rdo_wrap / .inp_sel_wrap 과 같이 축약되어있는 class명 보강 하여 기존 가이드 활용
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="result">
                         <ol>
                             <li>
@@ -365,6 +396,10 @@
                             <li>
                                 <p>.anker_wrap / .inner_anker_wrap <small>139</small></p>
                                 <div>css 가이드에선 제외. 컴포넌트 가이드 또는 샘플을 제작하여 디자인이 있는 경우에만 사용. </div>
+                            </li>
+                            <li>
+                                <p>.disclaimer<small>263</small></p>
+                                <div>둥근 버튼 그룹(.btn_group-round)은 제거, 이외 항목은 베이직한 레이아웃 샘플만 제작</div>
                             </li>
                             <li>
                                 <p>.btn_group_wrap <small>284</small></p>
@@ -378,7 +413,24 @@
                                 <p>calendar<small>451</small></p>
                                 <div>가이드에서 삭제. <br>캘린더 콘텐츠가 필요한 경우 플러그인 또는 table 태그 활용</div>
                             </li>
+                            <li>
+                                <p>form 태그 관련 요소<small>365</small></p>
+                                <div>
+                                    현재 .inp_rdo_wrap / .inp_sel_wrap 과 같이 축약되어있는 class명 보강 하여 기존 가이드 활용
+                                </div>
+                            </li>
                         </ol>
+                    </div>
+                </li>
+                <li>
+                    <p><strong>footer 영역</strong></p>
+                    <div>
+                        <ul>
+                            <li>
+                                <p><strong>top button</strong><small>133</small></p>
+                                <div>기존 가이드 활용해도 괜찮을 것으로 보임 </div>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ol>
