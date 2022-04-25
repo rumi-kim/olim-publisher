@@ -4,15 +4,63 @@
     File   : olim_general.css
     Author : Sunny, 2020-06
     Version: 1.0
-    CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding,
-    border, background, border-radius, box-shadow, font(font-family, font-size , font-weight, font-style, color, line-height,), opacity, cursor, box-sizing, etc
-/*--------------------------------------------------------------------------------------------------------*/
+    CSS 속성 선언순서: 
+    공통 
+    컬러값은 hex 코드를 원칙으로 2자리씩 반복되면 1자리씩으로 줄여 3자리가 가능하나, 하위 브라우저 이슈로 축약형 사용 금지
+    반투명 효과가 들어가야하는 색상은 rgba(0, 0, 0, 0.3) 으로 사용
+    색상의 이름으로 쓰는 것은 완전 배제
 
+    display,
+    opacity,
+    overflow,
+    visibility,
+
+    .hidden{display: hidden !important;}
+
+    소수점 단위에서 0은 쓰지 않는다. 쓰지 않아도 브라우저가 알아서 인식하기 때문.
+
+    opacity: 1;
+    opaccity: .35; 
+
+    position(top left right bottom z-index),
+    float/clear,
+    
+    margin/padding,
+    margin - element, object의 사이 간격 조정 시 사용
+    padding - element, object의 내부 여백 조정 시 사용
+    width/height,
+
+    font(font-family),
+    color,
+    font-size ,
+    font-weight,
+    font-style,
+    line-height,
+    text-align,
+    letter-spacing, -.5px
+    word-break,
+
+    border,
+    border: 1px solid #ff00cc;
+
+    border-radius,
+
+    background,
+    
+    cursor,
+    box-shadow,
+    box-sizing,
+    etc
+
+    속성 선언 순서
+
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------- */
 /* reset */
 /* ---------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body,
+iv,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 pre{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-o-pre-wrap;word-break:break-all;}
 
 /* 기본폰트 지정 */
@@ -320,6 +368,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 
 /* btn group border */
 .btn_group_wrap{position:relative;}
+.btn_group_wrap .btn_border_group{}
 .btn_group_wrap .btn_group-border{position:static;margin-left:0 !important;margin-bottom:10px !important;font-size:0;}
 .btn_group_wrap .btn_group-border .list_btn{display:inline-block;list-style:none;text-align:center;}
 .btn_group_wrap .btn_group-border .list_btn>a{display:block;width:100px;height:40px;border:2px solid #045096/* 버튼 기본 보더 */;border-radius:0;border-right-width:0;border-left-width:1px;background:#fff/* 버튼 기본 배경 */;padding:8px 0;font-size:14px;;color:#222/* 버튼 글자색 */;line-height:18px;transition:color .3s;-webkit-transition:color .3s;}
