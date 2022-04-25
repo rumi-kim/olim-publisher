@@ -112,18 +112,28 @@
         }
 
         .result {
-            border: 1px dotted rgba(255, 0, 0, 0.47);
+            border: 1px dotted #033c1a;
             padding: 15px 20px;
             margin: 20px 0;
-            background: rgba(255, 0, 0, 0.062);
+            background: rgba(28, 122, 100, 0.055);
         }
 
         .result:before {
             display: block;
             padding: 0 0 5px;
             content: "회의 결과";
-            color: red;
+            color: rgb(0 71 7);
             font-weight: bold;
+        }
+
+        .result.yet {
+            border-color: rgba(255, 0, 0, 0.47);
+            background:  rgba(255, 0, 0, 0.062);
+        }
+
+        .result.yet:before {
+            content: "검토 필요";
+            color:  #f00; 
         }
 
         .color_red {
@@ -268,7 +278,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    border: 1px solid #ff00cc;
+                                    border: 1px solid #ff00cc ( 작성 순서 고정 ) ;
                                 </li>
                                 <li>border-radius</li>
                                 <li>background</li>
@@ -334,9 +344,7 @@
             <ol>
                 <li>
                     <p><strong>레거시코드의 제거/유지에 대한 검토</strong></p>
-                    <ul>
-                        <li>레이아웃 관련(only_XX / not_XX)</li>
-                    </ul>
+                    <div class="result yet">레이아웃 관련(.only_XX / .not_XX) <small>59</small></div>
                     <div class="result">
                         <ul>
                             <li>통상적으로 사용하는 class는( ex : breadcrumbs/header/wrap/footer) 네이밍만 보강하여 사용</li>
@@ -493,6 +501,15 @@
                     <p><strong>contents 영역</strong></p>
                     <div class="result">
                         <ol>
+                            <li>
+                                <p>.breadcrumbs <small>79</small></p>
+                                <div>
+                                    <p>네이밍만 보강하여 사용</p>
+                                    <div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <p>.fix_nav-top <small>89</small></p>
                                 <div>모바일 환경 오류테스트 후 내용 보강해서 공통화로 남기기</div>

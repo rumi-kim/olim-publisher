@@ -59,8 +59,7 @@
 /* ---------------------------------------- */
 /* reset */
 /* ---------------------------------------- */
-body,
-iv,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 pre{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-o-pre-wrap;word-break:break-all;}
 
 /* 기본폰트 지정 */
