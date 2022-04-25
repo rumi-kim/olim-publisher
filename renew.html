@@ -151,7 +151,7 @@
                 <p>현 olim_general.css는</p>
                 <ol>
                     <li>package_general.css (zipview/miceview)</li>
-                    <li>service_general.css (기타)</li>
+                    <li>service_general.css ( 공홈 / zipview for developer 등의 홍보성 / 비쥬얼홈페이지 )</li>
                 </ol>
                 위 두가지의 파일로 나눠서 배포될 예정.
             </li>
@@ -169,7 +169,7 @@
                 <li>section / article 태그 사용 지양</li>
                 <li>시멘틱태그 사용 ( ex: address )</li>
                 <li>
-                    <p>플러그인 통일</p>
+                    <p>플러그인 통일 - 사용 여부 검토 필요 </p>
                     <div>
                         <ul>
                             <li>Swiper.js / Carousel.js / bxSlider </li>
@@ -224,92 +224,93 @@
         </a>
         <section class="section_base">
             <h3>base</h3>
-            <ol>
-                <li>
-                    <p><strong>CSS 속성 선언 순서</strong></p>
-                    <div>
-                        <ol>
-                            <li>
-                                <ul>
-                                    <li>display - none / block / inline / inline-block </li>
-                                    <li>opacity</li>
-                                    <li>overflow - visible / hidden / scroll / auto .. </li>
-                                    <li>visibility - visible / hidden / collapse</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>position ( + top / left / right / bottom / z-index )</li>
-                                    <li>float / clear</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>margin - element, object의 사이 간격 조정 시 사용</li>
-                                    <li>
-                                        <p> padding - element, object의 내부 여백 조정 시 사용</p>
-                                        <div>2개 이상의 방향에 값이 들어갈 경우에만 축약형을 사용한다. ( padding: 20px 0 ) </div>
-                                    </li>
-                                    <li>width / height</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>font(font-family)</li>
-                                    <li>color</li>
-                                    <li>font-size</li>
-                                    <li>font-weight</li>
-                                    <li>font-style</li>
-                                    <li>line-height</li>
-                                    <li>text-align</li>
-                                    <li>letter-spacing</li>
-                                    <li>word-break</li>
-                                </ul>
-                            </li>
-                            <li>
-                                border: 1px solid #ff00cc;
-                            </li>
-                            <li>border-radius</li>
-                            <li>background</li>
-                            <li>
-                                <ul>
-                                    <li>cursor</li>
-                                    <li>box-shadow</li>
-                                    <li>box-sizing</li>
-                                    <li>etc</li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </div>
-                </li>
-                <li>
-                    <p><strong>기타 공통 사항</strong></p>
-                    <div>
-                        <ol>
-                            <li>
-                                <p><strong>color 값 작성 규칙</strong></p>
-                                <ul>
-                                    <li>hex 코드를 원칙으로 2자리씩 반복되면 1자리씩으로 줄여 3자리가 가능하나, 하위 브라우저 이슈로 축약형 사용 금지</li>
-                                    <li>opcity가 들어갈 경우 rgba 사용 (ex : rgba(0,0,0,0.3)) </li>
-                                    <li>색상이름 사용 배제 (ex: red / blue .. ) </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <p><strong>소수점 단위 처리</strong></p>
-                                <div>
-                                    <p>소수점 단위에서 0 생략(브라우저가 알아서 인식)</p>
-                                    <div class="ex">
-                                        opacity: .35; <br>
-                                        font-size: .35rem;
+            <div class="result">
+                <ol class="">
+                    <li>
+                        <p><strong>CSS 속성 선언 순서</strong></p>
+                        <div>
+                            <ol>
+                                <li>
+                                    <ul>
+                                        <li>display - none / block / inline / inline-block </li>
+                                        <li>opacity</li>
+                                        <li>overflow - visible / hidden / scroll / auto .. </li>
+                                        <li>visibility - visible / hidden / collapse</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>position ( + top / left / right / bottom / z-index )</li>
+                                        <li>float / clear</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>margin - element, object의 사이 간격 조정 시 사용</li>
+                                        <li>
+                                            <p> padding - element, object의 내부 여백 조정 시 사용</p>
+                                            <div>2개 이상의 방향에 값이 들어갈 경우에만 축약형을 사용한다. ( padding: 20px 0 ) </div>
+                                        </li>
+                                        <li>width / height</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>font(font-family)</li>
+                                        <li>color</li>
+                                        <li>font-size</li>
+                                        <li>font-weight</li>
+                                        <li>font-style</li>
+                                        <li>line-height</li>
+                                        <li>text-align</li>
+                                        <li>letter-spacing</li>
+                                        <li>word-break</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    border: 1px solid #ff00cc;
+                                </li>
+                                <li>border-radius</li>
+                                <li>background</li>
+                                <li>
+                                    <ul>
+                                        <li>cursor</li>
+                                        <li>box-shadow</li>
+                                        <li>box-sizing</li>
+                                        <li>etc</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>기타 공통 사항</strong></p>
+                        <div>
+                            <ol>
+                                <li>
+                                    <p><strong>color 값 작성 규칙</strong></p>
+                                    <ul>
+                                        <li>hex 코드를 원칙으로 2자리씩 반복되면 1자리씩으로 줄여 3자리가 가능하나, 하위 브라우저 이슈로 축약형 사용 금지</li>
+                                        <li>opcity가 들어갈 경우 rgba 사용 (ex : rgba(0,0,0,0.3)) </li>
+                                        <li>색상이름 사용 배제 (ex: red / blue .. ) </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>소수점 단위 처리</strong></p>
+                                    <div>
+                                        <p>소수점 단위에서 0 생략(브라우저가 알아서 인식)</p>
+                                        <div class="ex">
+                                            opacity: .35; <br>
+                                            font-size: .35rem;
 
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </li>
-            </ol>
-
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+            </div>
         </section>
         <section>
             <h3>reset</h3>
