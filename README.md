@@ -1,2 +1,4 @@
 # olim-publisher
-웹퍼블리셔 공유 레포지터리 
+
+전시회용 header include test 작업.
+-is_active 처리를 중점으로 test 작업 요망
