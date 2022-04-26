@@ -7,7 +7,6 @@ $(function () {
     if (!hasCookie) {
       $(this).parents(".modal_inner").hide();
       $(this).parents(".modal_inner").next(".modal_inner").show();
-      // $('#tutorial_video').get(0).play();
     }
   });
 
@@ -20,11 +19,9 @@ $(function () {
     $(".btn_modal_close span").text("닫기");
     $(".chk_wrap-not_today").hide();
     // this project only
-    // $('.modal_inner.has_logo').show();
     $(".modal_inner_help").show();
     $(".modal").fadeIn(200);
     $(".modal_bg").fadeIn(200);
-    // $('#tutorial_video').get(0).play();
   });
 });
 
