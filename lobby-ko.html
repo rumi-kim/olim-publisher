@@ -43,11 +43,13 @@
 </head>
 
 <body>
+  <input type="hidden" value="lobby" id="input_elm">
   <!-- header -->
   <header class="header" id="header">
     <a class="site_logo" href="index.html"><h1>2021 NEXPO in 순천</h1></a>
     <!-- gnb -->
-    <nav class="gnb">
+    <div class="nav_include"></div>
+    <!-- <nav class="gnb">
       <h2 class="ir_text">Main menu</h2>
       <button type="button" class="gnb-btn"><span class="ir_text">Main menu</span></button>
       <div class="gnb-wrap">
@@ -66,7 +68,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <!-- //gnb -->
     <div class="breadcrumbs ir_text" role="navigation">
       <ol class="breadcrumbs_list">
@@ -78,7 +80,7 @@
     <div class="global">
       <ul class="global-list">
         <!-- <li class="global-item global-link"><a href="https://imcities.com/vtowerground/lobby" class="btn_link btn_vtower" title="Open in new window" target="_blank"><span class="ir_text">V-Tower Lobby</span></a></li> -->
-        <!-- <li class="global-item"><button type="button" class="btn_help_pop"><span class="ir_text">Control guide</span></button></li> -->
+        <li class="global-item"><button type="button" class="btn_help_pop"><span class="ir_text">Control guide</span></button></li>
       </ul>
     </div>
   </header>
@@ -118,55 +120,23 @@
   <!-- //container -->
 
 
-<script>
-//layer popup
-// $('.btn_pop').click(function(){
-//   var object = $(this).attr('data-layer');
-//   $('.ly_pop').show();
-//   $('.ly_inner[data-pop="'+object+'"').show();
-//   $('.html-modal-close').click(function(){
-//     $(this).parents('.ly_pop,.ly_inner').hide();
-//   });
-// });
+<script type="text/javascript">
+  // var url = window.location.pathname;
+  // console.log(url);
+  // var urlSplit = url.split('.','1');
+  // console.log(urlSplit);
+  // var keyword = urlSplit[0].substr('1');
+  // console.log(keyword);
 
-// modal close
-// function closeModal () {
-//   $('.modal').fadeOut(200);
-//   $('.modal_bg').fadeOut(200);
-// }
+  // var navList = document.querySelectorAll(".gnb-item");
+  // console.log(navList);
+  // navList[0].classList.remove('is_selected');
+  
+  // for(let i; i>navList.length; i++) {
+  //   console.log(navList);
+  //   navList[i].classList.remove('is_selected');
+  // }
 
-// $(function(){
-//   // landing img change on time
-//   var setNightHour = 18; //time to change: night hour
-//   var setNightMin = 00; //time to change: night minute
-//   var setDayHour = 6; //time to change: day hour
-//   var setDayMin = 00; //time to change: day minute
-
-//   var setDayTime = (60*setDayHour)+setDayMin;
-//   var setNightTime = (60*setNightHour)+setNightMin;
-
-//   function nightCheck(){
-//     var currentHour = new Date().getHours();
-//     var currentMin = new Date().getMinutes();
-//     var currentTime = (60*currentHour)+currentMin;
-
-//     if(currentTime < setNightTime && currentTime >= setDayTime){
-//       // day time
-//       $('.lobby_bg .bg_img').attr('src', 'img/lobby.jpg');
-//       $('.contents').removeClass('is_night');
-//     }else{
-//       // night time
-//       $('.lobby_bg .bg_img').attr('src', 'img/lobby-night.jpg');
-//       $('.contents').addClass('is_night');
-//     }
-//   }
-
-//   nightCheck();
-
-//   var landingInt = setInterval(function(){
-//     nightCheck();
-//   },1000) //check time on 1s
-// });
 </script>
 
 </body>

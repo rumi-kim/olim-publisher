@@ -78,6 +78,14 @@
   <!-- // pre_video_wrap -->
 
 <script>
+
+  var url = window.location.pathname;
+  console.log(url);
+  var urlSplit = url.split('.','1');
+  console.log(urlSplit);
+  var keyword = urlSplit[0].substr('1');
+  console.log(keyword);
+
 $(function(){
   if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
     window.location = 'microsoft-edge:' + window.location;
