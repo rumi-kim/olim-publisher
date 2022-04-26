@@ -68,10 +68,10 @@ $(window).resize(function () {
 function navClass() {
   // input 엘리먼트 추출
   var inputElm = document.getElementById("input_elm");
-  //value 값 추출
+  // value 값 추출
   var inputVal = inputElm.value;
   var navList = document.querySelectorAll(".gnb-item");
-  console.log(navList[0]);
+  // class 제어
   for (let i = 0; i < navList.length; i++) {
     navList[i].classList.remove("is_selected");
     if (inputVal == "lobby") {
