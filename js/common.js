@@ -1,31 +1,7 @@
 $(function(){
-  // gnb
-  function gnb(){
-    var windowWidth = $(window).width();
-    if(windowWidth > 1024){
-      $('.gnb').removeClass('is_res');
-      $('.gnb').addClass('is_pc');
-      $('.gnb-list').stop().show();
-    }else{
-      $('.gnb').addClass('is_res');
-      $('.gnb').removeClass('is_pc');
-      $('.gnb-btn').click(function(){
-        if($(this).hasClass('is_open')){
-          $('.gnb-list').stop().fadeOut(function(){
-            $('.gnb-btn').removeClass('is_open');
-          });
-        }else{
-          $('.gnb-list').stop().fadeIn(function(){
-            $('.gnb-btn').addClass('is_open');
-          });
-        }
-      });
-    };
-  };
-  gnb();
-  $(window).resize(function(){
-    gnb();
-  });
+
+  include(); // 메뉴 인클루드
+  
 
   // modal next
   $('.btn_modal_next').click(function(){
@@ -52,6 +28,38 @@ $(function(){
     $('.modal_bg').fadeIn(200);
     // $('#tutorial_video').get(0).play();
   });
+});
+
+$(window).on("load", function () {
+  setTimeout(gnb(), 100)
+})
+
+// gnb
+function gnb(){
+  var windowWidth = $(window).width();
+  if(windowWidth > 1024){
+    $('.gnb').removeClass('is_res');
+    $('.gnb').addClass('is_pc');
+    $('.gnb-list').stop().show();
+  }else{
+    $('.gnb').addClass('is_res');
+    $('.gnb').removeClass('is_pc');
+    $('.gnb-btn').click(function(){
+      if($(this).hasClass('is_open')){
+        $('.gnb-list').stop().fadeOut(function(){
+          $('.gnb-btn').removeClass('is_open');
+        });
+      }else{
+        $('.gnb-list').stop().fadeIn(function(){
+          $('.gnb-btn').addClass('is_open');
+        });
+      }
+    });
+  };
+};
+
+$(window).resize(function(){
+  gnb();
 });
 
 /**
@@ -92,4 +100,9 @@ function writeCookie(name,value,days) {
  */
 function deleteCookie(name) {
     writeCookie(name,"",-1);
+}
+
+function include() {
+  commonInc = $(".nav_include");
+  commonInc.load("header_nav_include.html");
 }
