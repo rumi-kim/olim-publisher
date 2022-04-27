@@ -1,0 +1,17 @@
+❗ 부모 기준으로 형태 붙이기 
+.gnb 
+.gnb_list
+.gnb_item 
+
+❗ CSS 중복 선언 4개까지, 앞부분을 줄이기로 
+
+
+❗ 관용적으로 축약형 사용할 네이밍 
+.button = .btn
+.title = .tit
+.text = .txt
+.description = .desc
+
+
+
+
