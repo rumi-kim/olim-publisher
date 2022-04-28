@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* component styling */
+
+/* quick nav */
+.quick_nav_box{right: 50px; bottom: 36px; } /* right 값은 마크업 구조 확인 후 변경 필요 */
+.quick_item .btn{margin-bottom: 10px; box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);}
+/* hover action setting */
+.quick_item .btn .desc{overflow: hidden; opacity: 0; top: 50%; right: 100%; margin-right: 14px; width: 0; height: 30px; color: #4c4c4c; font-size: 12px; text-align: center; line-height: 30px; border-radius: 15px; background-color: #4c4c4c; transform: translateY(-50%); box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); transition: width 0.2s, opacity 0.2s;}
+.quick_item .btn:hover .desc{opacity: 1; color: #fff;}
+.quick_item .btn.company:hover .desc{width: 135px;}
+.quick_item .btn.faq:hover .desc{width: 80px;}
+.quick_item .btn.newsletter:hover .desc{width: 104px;}
+/* background ico setting */
+.quick_item .btn.company{background-image: url("../../static/images/ico_download.png"); background-size: 19px 17px;}
+.quick_item .btn.faq{background-image: url("../../static/images/ico_faq.png"); background-size: 23px 23px;}
+.quick_item .btn.newsletter{background-image: url("../../static/images/ico_letter.png"); background-size: 21px 14px;}
+.quick_item .btn.btn_top{background-image: url("../../static/images/ico_btn_top.png"); background-size: 19px 22px;}
