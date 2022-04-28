@@ -24,18 +24,93 @@
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
   <link rel="stylesheet" href="lib/css/common.css">
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" href="lib/css/olim_general_renew.css">
+  <script src="lib/js/common.js"></script>
+
   
   <style>
     .component_inner{margin: 0 auto; width: 1920px;}
+    .header{margin-bottom: 60px; background: #292929}
+    .footer{margin-top: 60px;}
   </style>
 </head>
 <body>
-  <div class="wrap" style="width: 100%; height: 100%; background-color: #909090;">
+  <div class="wrap" style="height: 100%; background-color: #909090;">
+
+    <header class="header">
+        
+      <!-- header inner -->
+      <div class="inner">
+        <!-- logo -->
+        <h1 class="logo">
+            <a href="javascript:void(0)">
+                올림플래닛 로고
+            </a>
+        </h1>
+        <!-- //logo -->
+
+        <!-- gnb -->
+        <nav class="gnb">
+          <ul class="gnb_list">
+            <li class="gnb_item">
+              <a href="javascript:void(0)" class="is_active">올림플래닛</a>
+            </li>
+            <li class="gnb_item">
+              <a href="javascript:void(0)">서비스</a>
+            </li>
+            <li class="gnb_item">
+              <a href="javascript:void(0)">투자정보</a>
+            </li>
+            <li class="gnb_item">
+              <a href="javascript:void(0)">뉴스</a>
+            </li>
+            <li class="gnb_item">
+              <a href="javascript:void(0)">채용</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- //gnb -->
+
+
+        <div class="btn_box flex lan_chg_box">
+
+          <a href="javascript:void(0)" class="btn btn_txt is_active">KOR</a>
+          <a href="javascript:alert('현재 다국어 기능 지원중입니다.')" class="btn btn_txt">ENG</a>
+
+        </div>
+
+      </div>
+      <!-- // header inner -->
+    </header>
 
     <div class="component_inner">
 
       <div class="box">
+
+        <div class="btn_wrap flex flex_row">
+
+          <div class="btn_box">
+            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more ">자세히보기</a>
+          </div>
+
+          <div class="btn_box">
+            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more is_active">자세히보기</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="box">
+      </div>
+
+
+    </div>
+
+    <footer class="footer">
+      
+      <div class="inner">
+
+        <!-- quick Nav -->
         <div class="quick_nav_box">
 
           <ul class="quick_nav_list">
@@ -67,10 +142,41 @@
           </ul>
 
         </div>
+        <!-- //quick Nav -->
+
+        <h4 class="tit footer_tit red_dot">All Better Experience</h4>
+
+        <div class="box footer_content flex">
+
+          <!-- address -->
+          <address class="address">
+            <h4 class="logo footer_logo">올림플래닛 푸터영역 로고</h4>
+            OLIMPLANET Inc. 120-88-24298 7F, Parnas Tower,521, Teheran-ro, Gangnam-gu, Seoul, Korea Tel.+82-1544-6517 FAX: 02-6499-2183<br>
+            Copyright © 2022 OLIM PLANET Inc.
+          </address>
+          <!-- // address -->
+
+          
+          <!-- family site -->
+          <div class="dropdown_box">
+            <div class="dropdown dropdown_top">
+              <label tabindex="0" class="dropdown_name">Family Site</label>
+              <div class="ico_act"></div>
+              <ul class="dropdown_list">
+                <li class="dropdown_item"><a>Olim Planet</a></li>
+                <li class="dropdown_item"><a>Elypecs</a></li>
+                <li class="dropdown_item"><a>Elypecs Studio</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- //family site -->
+
+        </div>
+
+        
       </div>
 
-
-    </div>
+    </footer>
 
   </div>    
 </body>

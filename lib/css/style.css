@@ -1,9 +1,55 @@
 @charset "UTF-8";
 
+/* layout styling */
+.inner{margin: 0 auto; width: 1680px;}
+
+/* header */
+.header .inner{display: flex; justify-content: space-between; align-items: center; padding: 0 70px; width: 100%; min-width: 1680px; height: 80px;}
+.header .logo{width: 150px; height: 16.5px; background: transparent url("../../static/images/img_logo.png") no-repeat; background-size: contain;}
+
+/* gnb */
+.gnb{display: flex; align-items: center; height: 100%;}
+.gnb .gnb_list{display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch;}
+.gnb .gnb_item+.gnb_item{margin-left: 72px;}
+.gnb .gnb_item a{display: block; color: #fff; font-size: 16px; font-weight: 400; letter-spacing: -0.4px; transition: color 0.3s}
+.gnb .gnb_item a.is_active{color: #ff3232; font-weight: 500;}
+.gnb .gnb_item a:hover{font-weight: 500;}
+
+/* footer */
+.footer{background: #1e1e1e}
+.footer .inner{padding: 64px 70px 92px 140px}
+.footer_tit{margin-bottom: 65px; color: #fff; font-size: 60px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.45}
+.footer .address{color: #666; font-size: 12px; line-height: 1.67}
+.footer .footer_logo{margin-bottom: 10px; width: 104px; height: 12px; background: transparent url("../../static/images/img_footer_logo.png") no-repeat; text-indent: -9999px;}
+.footer_content{justify-content: space-between;}
+
+/* dropDown */
+.dropdown{position: relative; width: 100%; text-align: left; }
+.dropdown .dropdown_list{position: absolute; top: 100%; left: 0; right: 0;}
+.dropdown.dropdown_top .dropdown_list{top: initial; bottom: 100%;}
+.dropdown .dropdown_list .dropdown_item:hover{background: #262626}
+
+.dropdown .dropdown_list .dropdown_item a{}
+
+/* container */
+
 /* component styling */
+.tit{position: relative; display: inline-block;}
+.tit.red_dot:after{content:""; display: inline-block; vertical-align: baseline; margin-left: 8px; width: 12px; height: 12px; border-radius: 100%; background: #ff3232;}
+
+/* lan chg component styling */
+.lan_chg_box{}
+.lan_chg_box .btn_txt{color: #fff; font-size: 14px;}
+.lan_chg_box .btn_txt+.btn_txt{margin-left: 20px;}
+.lan_chg_box .btn_txt.is_active{font-weight: 700;}
+
+/* btn */
+.btn.btn_round{width: 180px}
+.btn.btn_more{vertical-align: middle; font-weight: normal}
+.btn.btn_more:after{content: ""; display: inline-block; vertical-align: middle; margin-top: -2px; margin-left: 6px; width: 15px; height: 14px; background: url("../../static/images/ico_arrow.png") no-repeat;}
 
 /* quick nav */
-.quick_nav_box{right: 50px; bottom: 36px; } /* right 값은 마크업 구조 확인 후 변경 필요 */
+.quick_nav_box{right: 50%; bottom: 36px; margin-right: -910px;} 
 .quick_item .btn{margin-bottom: 10px; box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);}
 /* hover action setting */
 .quick_item .btn .desc{overflow: hidden; opacity: 0; top: 50%; right: 100%; margin-right: 14px; width: 0; height: 30px; color: #4c4c4c; font-size: 12px; text-align: center; line-height: 30px; border-radius: 15px; background-color: #4c4c4c; transform: translateY(-50%); box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); transition: width 0.2s, opacity 0.2s;}
