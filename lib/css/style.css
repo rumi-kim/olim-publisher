@@ -117,14 +117,18 @@
 .swiper_txt_box .main_txt strong{color: #e4e3e3}
 
 .section_olim{padding-bottom: 235px;}
-.section_olim .bg_txt{bottom: 0; left: -240px;}
+.section_olim .bg_txt{bottom: 0; left: -230px;}
 .section_olim .txt_box{float: left;}
 .section_olim .txt_box i{line-height: 1;}
 .section_olim .txt_box strong{font-size: 24px; letter-spacing: -0.6px; line-height: 1;}
-.swiper_mini_box{float: right; position: relative; width: 46%; height: 624px;}
-.swiper.mini{height: 100%; background: #fff;}
-.swiper.mini .swiper-slide{transform: scale(0.8); transition: transform 0.5s}
+.swiper_mini_box{float: right; position: relative; width: 784px; height: 624px;}
+.swiper_mini_box:after{content: ""; position: absolute; top: -1px; right: -1px; bottom: -1px; z-index: 2; width: 40%; height: 100%; background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%);}
+.swiper_mini_box .swiper-slide{overflow: hidden; height: 575px; border-radius: 20px; box-shadow: 32px 49px 0px #f0f0f0; transform: scale(0.8); transition: transform 0.5s}
 .swiper.mini .swiper-slide-active{transform: scale(1);}
+
+.swiper_mini_box .swiper-controlbox{left: 163px;}
+.swiper.mini{height: 100%; background: #fff;}
+
 .swiper.mini .swiper-controlbox{top: 630px; left: 163px;}
 .swiper-pagination.mini span{color: #454545}
 .swiper-progress-bar.mini .slide_progress-bar{background: #e0e0e0}
