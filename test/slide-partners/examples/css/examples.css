@@ -29,7 +29,6 @@
 .item a {
   text-decoration: none;
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -50,6 +49,6 @@
 
 @media (min-width: 768px) {
   .promo-carousel .item-wrap {
-    /* width: 200%; */
+    width: 200%;
   }
 }
