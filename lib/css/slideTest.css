@@ -51,9 +51,9 @@ body {
     animation-name: marquee_right;
   }
   
-  .marquee-inner:hover {
+  /* .marquee-inner:hover {
     animation-play-state: paused;
-  }
+  } */
   
   /*.half {
     float: left;
