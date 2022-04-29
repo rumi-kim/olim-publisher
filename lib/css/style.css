@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-/* layout styling */
+/* layout styling = style common*/
 .inner{margin: 0 auto; width: 1680px;}
 
 /* header */
+.header{position: fixed; top: 0; left: 0; right: 0;}
 .header .inner{display: flex; justify-content: space-between; align-items: center; padding: 0 70px; width: 100%; min-width: 1680px; height: 80px;}
 .header .logo{width: 150px; height: 16.5px; background: transparent url("../../static/images/img_logo.png") no-repeat; background-size: contain;}
 
@@ -12,7 +13,7 @@
 .gnb .gnb_list{display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch;}
 .gnb .gnb_item+.gnb_item{margin-left: 72px;}
 .gnb .gnb_item a{display: block; color: #fff; font-size: 16px; font-weight: 400; letter-spacing: -0.4px; transition: color 0.3s}
-.gnb .gnb_item a.is_active{color: #ff3232; font-weight: 500;}
+.gnb .gnb_item a.is_active{color: #ff3232; font-weight: 600;}
 .gnb .gnb_item a:hover{font-weight: 500;}
 
 /* footer */
@@ -32,10 +33,55 @@
 .dropdown .dropdown_list .dropdown_item a{}
 
 /* container */
+/* swiper */
+.section_wrap:not(.swiper){position: relative; padding-top: 130px}
+
+.swiper{width: 100%; height: 1080px; background: #666;}
+.swiper-container {overflow: hidden; width: 100%; height: 100%;}
+.swiper-inner{position: absolute; top: 0; left: 50%; z-index: 100; width: 100%; max-width: 1920px; height: 100%; transform: translateX(-50%)}
+
+.swiper-controlbox{display: flex; align-items: center; position: absolute; left: 218px; top: 630px; width: 270px; height: 40px; }
+
+.swiper-btn-wrap{display: flex; align-items: center; width: 80px; height: 40px;}
+
+.swiper-button-next,
+.swiper-button-prev {position: static; margin: 0; width: 40px; height: 40px; background: #ddd;}
+.swiper-button-next:after,
+.swiper-button-prev:after, 
+.swiper-rtl .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after{display: none;}
+
+.swiper-slide-duplicate,
+.swiper-slide {background-color: #666}
+
+.swiper-slide-duplicate-active .description,
+.swiper-slide-duplicate-active .title,
+.swiper-slide-active .description,
+.swiper-slide-active .title {opacity: 1;}
+
+.swiper-pagination{position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; font-size: 0;}
+.swiper-pagination span{position: absolute; top: 50%; color: #fff; font-size: 15px; font-weight: 600; transform: translateY(-50%)}
+.swiper-pagination span:nth-of-type(1){right: 144px;}
+.swiper-pagination span:nth-of-type(2){right: 0;}
+
+.swiper-progress-bar {position: relative; z-index: 1; display: block; margin-left: 57px; height: 3px;}
+.swiper-progress-bar .slide_progress-bar {opacity: 0; position: absolute; left: 0; right: 0; height: 3px; width: 105px; clear: both; background-color: #e0e0e0;}
+.swiper-progress-bar .slide_progress-bar:after {position: absolute; top: 0; left: 0; width: 0; height: 100%; background-color: #ff3232; content: ""; transition: 0.1s width linear;}
+.swiper-progress-bar.active .slide_progress-bar{opacity: 1;}
+.swiper-progress-bar.animate .slide_progress-bar:after {transition: width linear; transition-delay: unset; width: 100%; transition-duration: 5s; }
 
 /* component styling */
+/* component tit */
 .tit{position: relative; display: inline-block;}
 .tit.red_dot:after{content:""; display: inline-block; vertical-align: baseline; margin-left: 8px; width: 12px; height: 12px; border-radius: 100%; background: #ff3232;}
+.tit.section_tit{margin-bottom: 32px; color: #212121; font-size: 50px; font-weight: 600; line-height: 1.6; letter-spacing: -1.25px;}
+.tit.main_title{color: #fff; font-size: 72px; font-weight: 500; letter-spacing: normal;}
+.tit.main_title.red_dot:after{width: 16px; height: 16px;}
+
+/* component txt */
+.txt{color: #030303; font-size: 18px; letter-spacing: -0.45px; line-height: 1.94;}
+.txt.bg_txt{position: absolute; color: #f5f5f5; font-family: futura-pt-bold, sans-serif; font-size: 265px; font-weight: 700; font-style: normal; letter-spacing: -5.3px; line-height: 1;}
+.txt.txt_acc{color: #ff3232; font-size: inherit; font-style: normal; line-height: inherit;}
 
 /* lan chg component styling */
 .lan_chg_box{}
@@ -49,7 +95,7 @@
 .btn.btn_more:after{content: ""; display: inline-block; vertical-align: middle; margin-top: -2px; margin-left: 6px; width: 15px; height: 14px; background: url("../../static/images/ico_arrow.png") no-repeat;}
 
 /* quick nav */
-.quick_nav_box{right: 50%; bottom: 36px; margin-right: -910px;} 
+.quick_nav_box{right: 50%; bottom: 36px; z-index: 9000; margin-right: -910px;} 
 .quick_item .btn{margin-bottom: 10px; box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);}
 /* hover action setting */
 .quick_item .btn .desc{overflow: hidden; opacity: 0; top: 50%; right: 100%; margin-right: 14px; width: 0; height: 30px; color: #4c4c4c; font-size: 12px; text-align: center; line-height: 30px; border-radius: 15px; background-color: #4c4c4c; transform: translateY(-50%); box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); transition: width 0.2s, opacity 0.2s;}
@@ -57,8 +103,30 @@
 .quick_item .btn.company:hover .desc{width: 135px;}
 .quick_item .btn.faq:hover .desc{width: 80px;}
 .quick_item .btn.newsletter:hover .desc{width: 104px;}
+
 /* background ico setting */
 .quick_item .btn.company{background-image: url("../../static/images/ico_download.png"); background-size: 19px 17px;}
 .quick_item .btn.faq{background-image: url("../../static/images/ico_faq.png"); background-size: 23px 23px;}
 .quick_item .btn.newsletter{background-image: url("../../static/images/ico_letter.png"); background-size: 21px 14px;}
 .quick_item .btn.btn_top{background-image: url("../../static/images/ico_btn_top.png"); background-size: 19px 22px;}
+
+/* circle box */
+.box.circle_box{}
+.box.circle_box .circle_item{}
+
+/* 섹션별 요소 정리 */
+.swiper_txt_box{margin-top: 430px; margin-left: 230px; }
+.swiper_txt_box .main_txt{color: #dcdcdc; font-size: 18px; line-height: 35px; letter-spacing: -0.45px;}
+.swiper_txt_box .main_txt strong{color: #e4e3e3}
+
+.section_olim{padding-bottom: 235px;}
+.section_olim .bg_txt{left: -240px;}
+.swiper_mini_box{position: absolute; top: 193px; right: 0; width: 46%; height: 624px;}
+.swiper.mini{height: 100%;}
+.swiper.mini .swiper-controlbox{top: 630px; left: 163px;}
+
+/* mediaQuery */
+
+
+/* keyframe */
+
