@@ -31,83 +31,30 @@
 <body>
   <canvas id="mycanvas"/>
 
+
+
   <script type="text/javascript">
-    var canvas = document.getElementById('mycanvas');
-    canvas.width = 1500;
-    canvas.height = 800;
-    var x=0;
-    var context = canvas.getContext('2d');
-    
-    
-    
-    context.beginPath();
 
-
-
-    function line1 (){
-      for (let i = 0; i<500; i++) {
-        var x = i;
-      }
-      // start
-      // 시작점 x축 y축 값 지정
-      context.moveTo(0,300);
-      // 선 좌표 지정 (일러스트 펜툴 곡선 그려지는 원리와 비슷)
-      // context.bezierCurveTo(500, 50, 360, 460, 1000, 80);
-
-      // second
-      // context.moveTo(0,300);
-      context.bezierCurveTo(0, 300, 400, 300, 1000, 300);
-      // //선 컬러 지정
-      context.strokeStyle = "rgba(0,0,0,.5)";
-      // //선 두께 지정
-      context.lineWidth = 1;
-      context.stroke();
-    }
-    line1();
-
-    // function line2 (){
-    //   // start
-    //   // 시작점 x축 y축 값 지정
-    //   context.moveTo(0,300);
-    //   // 선 좌표 지정 (일러스트 펜툴 곡선 그려지는 원리와 비슷)
-    //   context.bezierCurveTo(500, 50, 360, 460, 1000, 80);
-
-    //   // second
-    //   // context.moveTo(0,300);
-    //   // context.bezierCurveTo(400, 300, 400, 0, 1000, 160);
-    //   // //선 컬러 지정
-    //   context.strokeStyle = "rgba(0,0,0,.5)";
-    //   // //선 두께 지정
-    //   context.lineWidth = 1;
-    //   context.stroke();
-    // }
-    // context.translate(80, -55);
-    // context.rotate(8 * Math.PI / 180);
-    // line2();
-
-    // function line3 (){
-    //   // start
-    //   // 시작점 x축 y축 값 지정
-    //   context.moveTo(0,300);
-    //   // 선 좌표 지정 (일러스트 펜툴 곡선 그려지는 원리와 비슷)
-    //   context.bezierCurveTo(500, 50, 360, 460, 1000, 80);
-
-    //   // second
-    //   // context.moveTo(0,300);
-    //   // context.bezierCurveTo(400, 300, 400, 0, 1000, 160);
-    //   // //선 컬러 지정
-    //   context.strokeStyle = "rgba(0,0,0,.5)";
-    //   // //선 두께 지정
-    //   context.lineWidth = 1;
-    //   context.stroke();
-    // }
-    // context.translate(80, -70);
-    // context.rotate(10 * Math.PI / 180);
-    // line3();
-   
-    // 좌표 시간에 따라 자동으로 변경하는 법
-    // ex)
-
+    // 1. canvas 엘리먼트 취득
+    const canvas = document.getElementById("mycanvas");
+    // 2. 그리기객체 취득
+    const ctx = canvas.getContext("2d"); 
+    // 3. 애니메이션 시작점 좌표 설정
+    let x = 0;
+    // 4. 애니메이션 함수 선언
+    function animate(){ 
+      // 1) 함수가 실행될 때마다 화면 초기화(canvas의 너비와 높이 만큼 지움) 
+      ctx.clearRect(0, 0, canvas.width, canvas.height); 
+      // 2) 사각형 그리기 
+      ctx.fillStyle = "blue"; 
+      ctx.fillRect(x, 130, 100, 100); 
+      // 3) 사각형이 그려질 x좌표 증가 // => 함수가 실행될때마다 x좌표가 1씩 증가한 상태로 사각형이 그려진다. 
+      x++; 
+      // 4) *** requestAnimationFrame 함수를 재귀적으로 호출한다.
+      requestAnimationFrame(animate); 
+    } 
+    // 5. *** requestAnimationFrame로 애니메이션 구현: 재귀적으로 호출된다. 
+    animate();
 
   </script>
 </body>
