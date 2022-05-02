@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* layout styling = style common*/
-.inner{position: relative; margin: 0 auto; height: 100%; padding: 0 90px; width: 1680px;}
+.inner{position: relative; margin: 0 auto; padding: 0 90px; width: 1640px; height: 100%;}
 .inner:after{content: ""; clear: both; display: block;}
 
 /* header */
