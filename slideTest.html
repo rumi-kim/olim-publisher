@@ -26,6 +26,19 @@
     <link rel="stylesheet" href="lib/css/common.css">
     <link rel="stylesheet" href="lib/css/style.css">
     <link rel="stylesheet" href="lib/css/slideTest.css">
+    <style>
+        .section_partners { display: flex; flex-direction: column; justify-content: center; align-items: center; } 
+        .partners_list { display: flex; } 
+        .partners_list .partners_item { margin-right: 20px; width: 160px; height: 100%; background: rgb(216, 216, 216); text-align: center; transition: all .2s ease-out; } 
+        .partners_list .partners_item img { height: 100%;} 
+        .partners_group { height: 108px; width: 100%; overflow: hidden; box-sizing: border-box; position: relative; } 
+        .partners_inner { display: flex; width: 200%; position: absolute; top:10px; bottom:10px; animation: marquee_left 40s linear infinite; } 
+        .partners_inner.marquee_right { animation-name: marquee_right; } 
+        /* .partners_inner:hover { animation-play-state: paused; } */
+        /*.half { float: left; width: 10%; }*/ 
+        @keyframes marquee_left { 0% { left: 0; } 100% { left: -100%; } } 
+        @keyframes marquee_right { 0% { right: 0; } 100% { right: -100%; } }
+    </style>
 
 </head>
 
