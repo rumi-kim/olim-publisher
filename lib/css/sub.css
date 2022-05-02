@@ -150,6 +150,7 @@
 .tit.section_anker_tit {display: block; color: #ff3232; font-size: 30px; font-weight: 600; line-height: 46px; letter-spacing: -0.6px;}
 .txt.section_desc {color: #030303; font-size: 18px; font-weight: normal; line-height: 30px; letter-spacing: -0.45px;}
 .txt.section_desc.padding-top {padding-top: 40px;}
+.tit.section_tit.eng {font-size: 60px; line-height: normal;}
 
 /* mediaQuery */
 
