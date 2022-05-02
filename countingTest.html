@@ -179,9 +179,6 @@
           <h2 class="tit section_tit red_dot">올림플래닛이 하는 일</h2>
           <p class="txt bg_txt">Technology</p>
         </div>
-
-
-
         <div class="section_wrap">
           <h2 class="tit section_tit red_dot">Award History</h2>
         </div>
@@ -198,38 +195,39 @@
         <div class="typo_box inner">
           <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
           <p class="txt">
-            아무나 할 수 있는 일이 아닌 우리만 할 수 있는 일을 합니다.<br>
-            상상에 기술을 더해 삶의 즐거움과 가치를 높입니다.
+            엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
+            공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
           </p>
+
           <div class="cnt">
-            <ul>
-              <li></li>
+            <ul class="cnt_list txt txt_acc flex">
+              <li>
+                <p><strong>누적 가상공간</strong></p>
+                <div><span class="num">0</span></div>
+              </li>
+              <li>
+                <p><strong>뷰어 포인트</strong></p>
+                <div><span>19,500</span></div>
+              </li>
+              <li>
+                <p><strong>참여 기업수</strong></p>
+                <div><span>19,500</span></div>
+              </li>
+              <li>
+                <p><strong>누적 가상공간</strong></p>
+                <div><span>19,500</span></div>
+              </li>
             </ul>
           </div>
+
         </div>
+
         <div class="bg_box">
-          <div class="dim">
-            <ul>
-              <li>
-                <p>누적 가상공간</p>
-                <div></div>
-              </li>
-              <li>
-                <p>뷰어 포인트</p>
-                <div></div>
-              </li>
-              <li>
-                <p> 참여 기업수</p>
-                <div></div>
-              </li>
-              <li>
-                <p>누적 가상공간</p>
-                <div></div>
-              </li>
-            </ul>
-          </div>
+          <div class="dim"></div>
         </div>
+
       </div>
+
     </div>
     <!-- //container -->
 
@@ -329,29 +327,47 @@
       gsap.timeline({
           scrollTrigger: {
             trigger: ".section_cnt",
-            start: "top top+=100",
+            start: "top top",
             end: "bottom top",
             scrub: 0.8,
             pin: true,
             markers: true,
-            onUpdate: (self) => {
-                    console.log(self.direction)
-                    // self.direction === -1 ? showAnim.play() : showAnim.reverse() // reverse : 0에서 -100으로 
-                }
+            onEnter: (self) => {
+              // console.log(self.direction)
+              counting();
+            }
           },
         })
         .from(".bg_box", { // from : 시작값을 세팅하고 원래대로 돌아옴 
-          scale : 0.5
+          scale: 0.5
         })
-        .from(".bg_box .dim", { 
-          opacity : 0
+        .from(".bg_box .dim", {
+          opacity: 0
         })
-        .from(".typo_box", { 
+        .from(".typo_box", {
           y: innerHeight * 1.5
 
         });
-
     });
+  </script>
+
+  <script>
+  
+      let countBox = document.querySelector('.num'),
+        count = 0;
+
+      let counting = setInterval(function () {
+        if (count == 10000) {
+          clearInterval(counting);
+          return false;
+        }
+        count += 1;
+        countBox.innerHTML = new Intl.NumberFormat().format(count);
+      }, 20);
+
+
+
+    
   </script>
 </body>
 
