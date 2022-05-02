@@ -324,7 +324,7 @@
       // 값이 2개 있을 경우 : 
       // ( 1: Trigger가 시작되는 기준 점 (TOP | CENTER | BOTTOM ) , 2:  Viewport에서 스크롤의 위치 (TOP | CENTER | BOTTOM ))
 
-      gsap.timeline({
+      const step1 = gsap.timeline({
           scrollTrigger: {
             trigger: ".section_cnt",
             start: "top top",
@@ -332,10 +332,6 @@
             scrub: 0.8,
             pin: true,
             markers: true,
-            onEnter: (self) => {
-              // console.log(self.direction)
-              counting();
-            }
           },
         })
         .from(".bg_box", { // from : 시작값을 세팅하고 원래대로 돌아옴 
@@ -344,30 +340,42 @@
         .from(".bg_box .dim", {
           opacity: 0
         })
-        .from(".typo_box", {
-          y: innerHeight * 1.5
 
-        });
-    });
+
+      const step2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section_cnt",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.8,
+          pin: true,
+          markers: true,
+          onEnter: (self) => {
+            countFunc(2000);
+          }
+        },
+      }).from(".typo_box", {
+        y: innerHeight * 1.5
+      });
+
+    }); //$function end
   </script>
 
   <script>
-  
-      let countBox = document.querySelector('.num'),
-        count = 0;
+    let countBox = document.querySelector('.num'),
+      count = 0;
 
-      let counting = setInterval(function () {
-        if (count == 10000) {
-          clearInterval(counting);
+    function countFunc(num1){
+      setInterval(function () {
+        if (count == num1) {
+          clearInterval();
           return false;
         }
-        count += 1;
+        count += 20;
         countBox.innerHTML = new Intl.NumberFormat().format(count);
       }, 20);
 
-
-
-    
+    }
   </script>
 </body>
 
