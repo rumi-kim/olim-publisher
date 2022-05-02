@@ -138,3 +138,9 @@
 
 /* keyframe */
 
+
+
+.section_cnt { position: relative; width: 100vw; height:100vh; border: 1px solid red; justify-content: center; align-items: center;}
+.section_cnt .bg_box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1047px; height: 646.5px; background: url(../img/img_sample.jpg) no-repeat center / cover;}
+.section_cnt .bg_box:after { content:""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5);}
+.section_cnt .typo_box { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1;}
