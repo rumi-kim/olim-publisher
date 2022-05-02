@@ -201,8 +201,34 @@
             아무나 할 수 있는 일이 아닌 우리만 할 수 있는 일을 합니다.<br>
             상상에 기술을 더해 삶의 즐거움과 가치를 높입니다.
           </p>
+          <div class="cnt">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
         </div>
-        <div class="bg_box"></div>
+        <div class="bg_box">
+          <div class="dim">
+            <ul>
+              <li>
+                <p>누적 가상공간</p>
+                <div></div>
+              </li>
+              <li>
+                <p>뷰어 포인트</p>
+                <div></div>
+              </li>
+              <li>
+                <p> 참여 기업수</p>
+                <div></div>
+              </li>
+              <li>
+                <p>누적 가상공간</p>
+                <div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <!-- //container -->
@@ -283,6 +309,50 @@
     </footer>
     <!-- footer -->
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+
+  <script>
+    'use strict';
+
+    $(function () {
+
+
+      // start, end 기준점 설명 
+      // 값이 1개만 있을 경우 :  viewport 기준 ScrollTrigger의 시작점. 예시) 400px = 스크롤 시작 후 400px 떨어진 시점.
+
+      // 값이 2개 있을 경우 : 
+      // ( 1: Trigger가 시작되는 기준 점 (TOP | CENTER | BOTTOM ) , 2:  Viewport에서 스크롤의 위치 (TOP | CENTER | BOTTOM ))
+
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: ".section_cnt",
+            start: "top top+=100",
+            end: "bottom top",
+            scrub: 0.8,
+            pin: true,
+            markers: true,
+            onUpdate: (self) => {
+                    console.log(self.direction)
+                    // self.direction === -1 ? showAnim.play() : showAnim.reverse() // reverse : 0에서 -100으로 
+                }
+          },
+        })
+        .from(".bg_box", { // from : 시작값을 세팅하고 원래대로 돌아옴 
+          scale : 0.5
+        })
+        .from(".bg_box .dim", { 
+          opacity : 0
+        })
+        .from(".typo_box", { 
+          y: innerHeight * 1.5
+
+        });
+
+    });
+  </script>
 </body>
 
 </html>
