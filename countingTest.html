@@ -325,9 +325,6 @@
       // ( 1: Trigger가 시작되는 기준 점 (TOP | CENTER | BOTTOM ) , 2:  Viewport에서 스크롤의 위치 (TOP | CENTER | BOTTOM ))
 
 
-      // gsap.registerPlugin(ScrollTrigger);
-
-
 
       const step1 = gsap.timeline({
           scrollTrigger: {
@@ -361,11 +358,10 @@
         },
       }).from(".txt_box", {
         y: innerHeight * 1.5
-      });
+      })
 
 
-
-
+      // gsap.registerPlugin(ScrollTrigger);
 
       gsap.to(startCount, {
         var: 1000,
@@ -377,19 +373,28 @@
           // toggleActions: "restart none reverse none",
         },
       })
+      
+
 
     }); //$function end
 
+    var startCount = {
+        var: 0
+      };
 
+    // let number = document.querySelector('#number');
+    // function changeNumber() {
+    //   number.innerHTML = (startCount.var).toFixed();
+    // }
 
-
-    let number = document.querySelector('#number'),
-        startCount = { var: 0 };
-
+    let numList = document.querySelectorAll('.num');
     function changeNumber() {
-      number.innerHTML = (startCount.var).toFixed();
-      console.log(number)
+      
+      for( let i=0; i<numList.length; i++){
+        numList[i].innerHTML = (startCount.var).toFixed();
+      }
     }
+
 
 
 
