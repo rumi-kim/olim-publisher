@@ -80,9 +80,9 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 
 /* common layout */
 .wrap{overflow: hidden; min-width: 1680px;}
-.header{z-index: 9000;}
-.container{z-index: 7000;}
-.footer{z-index: 8000;}
+.header{position: relative; z-index: 9000;}
+.container{position: relative; z-index: 7000;}
+.footer{position: relative; z-index: 8000;}
 .clearfix:after{content:""; clear: both; display: block;}
 
 /* common layout direction */
@@ -91,6 +91,12 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .flex.flex_col{flex-direction: column;}
 .flex.flex_col_rev{flex-direction: column-reverse;}
 .flex.flex_align_center{justify-content: center; align-items: center;}
+.flex.flex_align_start{align-items: flex-start;}
+.flex.flex_align_stretch{align-items: stretch;}
+.flex.flex_between{justify-content: space-between;}
+.flex.flex_around{justify-content: space-around;}
+.flex.flex_evenly{justify-content: space-evenly;}
+
 
 /* common object */
 .ir_text,.blind{overflow:hidden;position:absolute;top:0;left:0;border:0;width:1px;height:1px;clip:rect(1px,1px,1px,1px)}
@@ -145,6 +151,8 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 /* input 요소 */
 input[type="checkbox"],
 input[type="radio"]{display: none;}
+.input_chk_box{}
+.input_chk_box .input_label{padding-left: 22px; font-size: 18px; line-height: 26px; letter-spacing: -.45px;}
 
 /* box 단위 구분 */
 .txt_box{}
@@ -152,6 +160,7 @@ input[type="radio"]{display: none;}
 .img_box{position: relative;}
 
 /* element 단위 구분 */
+.fw300{font-weight: 300;}
 .fw400{font-weight: 400;}
 .fw500{font-weight: 500;}
 .fw600{font-weight: 600;}
