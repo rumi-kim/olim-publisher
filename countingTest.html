@@ -364,7 +364,10 @@
       // gsap.registerPlugin(ScrollTrigger);
 
       gsap.to(startCount, {
-        var: 1000,
+        var0: 7000,
+        var1 : 4000,
+        var2 : 5000,
+        var3 : 10000,
         duration: 3,
         ease: "none",
         onUpdate: changeNumber,
@@ -373,25 +376,17 @@
           // toggleActions: "restart none reverse none",
         },
       })
-      
-
-
     }); //$function end
 
-    var startCount = {
-        var: 0
-      };
-
-    // let number = document.querySelector('#number');
-    // function changeNumber() {
-    //   number.innerHTML = (startCount.var).toFixed();
-    // }
 
     let numList = document.querySelectorAll('.num');
+    let startCount = { var0: 0, var1:0,var2:0,var3:0 };
+
+    console.log(startCount)
+
     function changeNumber() {
-      
-      for( let i=0; i<numList.length; i++){
-        numList[i].innerHTML = (startCount.var).toFixed();
+      for (let i = 0; i < numList.length; i++) {
+        numList[i].innerHTML = (startCount[`var${i}`]).toFixed();
       }
     }
 
