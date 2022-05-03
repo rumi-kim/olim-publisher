@@ -192,30 +192,31 @@
         </div>
       </div>
       <div class="section_cnt">
-        <div class="typo_box inner">
-          <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
-          <p class="txt">
-            엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
-            공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
-          </p>
-
+        <div class="txt_box inner">
+          <div class="tit_box">
+            <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
+            <p class="txt">
+              엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
+              공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
+            </p>
+          </div>
           <div class="cnt">
             <ul class="cnt_list txt txt_acc flex">
               <li>
                 <p><strong>누적 가상공간</strong></p>
-                <div><span class="num">0</span></div>
+                <div><span class="num" id="number">0</span></div>
               </li>
               <li>
                 <p><strong>뷰어 포인트</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
               <li>
                 <p><strong>참여 기업수</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
               <li>
                 <p><strong>누적 가상공간</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
             </ul>
           </div>
@@ -227,7 +228,6 @@
         </div>
 
       </div>
-
     </div>
     <!-- //container -->
 
@@ -324,6 +324,8 @@
       // 값이 2개 있을 경우 : 
       // ( 1: Trigger가 시작되는 기준 점 (TOP | CENTER | BOTTOM ) , 2:  Viewport에서 스크롤의 위치 (TOP | CENTER | BOTTOM ))
 
+
+
       const step1 = gsap.timeline({
           scrollTrigger: {
             trigger: ".section_cnt",
@@ -350,33 +352,78 @@
           scrub: 0.8,
           pin: true,
           markers: true,
-          onEnter: (self) => {
-            countFunc(2000);
-          }
+          // onEnter: (self) => {
+          //   changeNumber
+          // }
         },
-      }).from(".typo_box", {
+      }).from(".txt_box", {
         y: innerHeight * 1.5
-      });
+      })
 
+
+      // gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(startCount, {
+        var0: 7000,
+        var1 : 4000,
+        var2 : 5000,
+        var3 : 10000,
+        duration: 3,
+        ease: "none",
+        onUpdate: changeNumber,
+        scrollTrigger: {
+          trigger: ".section_cnt",
+          // toggleActions: "restart none reverse none",
+        },
+      })
     }); //$function end
-  </script>
 
-  <script>
-    let countBox = document.querySelector('.num'),
-      count = 0;
 
-    function countFunc(num1){
-      setInterval(function () {
-        if (count == num1) {
-          clearInterval();
-          return false;
-        }
-        count += 20;
-        countBox.innerHTML = new Intl.NumberFormat().format(count);
-      }, 20);
+    let numList = document.querySelectorAll('.num');
+    let startCount = { var0: 0, var1:0,var2:0,var3:0 };
 
+    console.log(startCount)
+
+    function changeNumber() {
+      for (let i = 0; i < numList.length; i++) {
+        numList[i].innerHTML = (startCount[`var${i}`]).toFixed();
+      }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let countBox = document.querySelector('.num'),
+    //   count = 0;
+
+    // function countFunc(num1) {
+    //   setInterval(function () {
+    //     if (count == num1) {
+    //       clearInterval();
+    //       return false;
+    //     }
+    //     count += 20;
+    //     countBox.innerHTML = new Intl.NumberFormat().format(count);
+    //   }, 20);
+    // }
   </script>
+
+
+
+
 </body>
 
 </html>
