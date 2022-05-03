@@ -87,7 +87,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .skip a:focus,.skip a:active{position:fixed;width:100%;height:auto;padding:10px}
 
 /* breadcrumbs */
-.breadcrumbs {padding-bottom: 14px;}
+.breadcrumbs {padding: 222px 0 14px 0;}
 .breadcrumbs_list{font-size:0;}
 .breadcrumbs.right .breadcrumbs_list{text-align:right;}
 .breadcrumbs_item{display:inline-block;font-weight:400;font-size:15px;color:#474747;vertical-align:middle}
