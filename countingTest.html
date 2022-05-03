@@ -204,7 +204,7 @@
             <ul class="cnt_list txt txt_acc flex">
               <li>
                 <p><strong>누적 가상공간</strong></p>
-                <div><span class="num">0</span></div>
+                <div><span class="num" id="number">0</span></div>
               </li>
               <li>
                 <p><strong>뷰어 포인트</strong></p>
@@ -324,6 +324,11 @@
       // 값이 2개 있을 경우 : 
       // ( 1: Trigger가 시작되는 기준 점 (TOP | CENTER | BOTTOM ) , 2:  Viewport에서 스크롤의 위치 (TOP | CENTER | BOTTOM ))
 
+
+      // gsap.registerPlugin(ScrollTrigger);
+
+
+
       const step1 = gsap.timeline({
           scrollTrigger: {
             trigger: ".section_cnt",
@@ -350,30 +355,70 @@
           scrub: 0.8,
           pin: true,
           markers: true,
-          onEnter: (self) => {
-            countFunc(2000);
-          }
+          // onEnter: (self) => {
+          //   changeNumber
+          // }
         },
       }).from(".txt_box", {
         y: innerHeight * 1.5
       });
 
+
+
+
+
+      gsap.to(startCount, {
+        var: 1000,
+        duration: 3,
+        ease: "none",
+        onUpdate: changeNumber,
+        scrollTrigger: {
+          trigger: ".section_cnt",
+          // toggleActions: "restart none reverse none",
+        },
+      })
+
     }); //$function end
 
-    let countBox = document.querySelector('.num'),
-      count = 0;
 
-    function countFunc(num1) {
-      setInterval(function () {
-        if (count == num1) {
-          clearInterval();
-          return false;
-        }
-        count += 20;
-        countBox.innerHTML = new Intl.NumberFormat().format(count);
-      }, 20);
 
+
+    let number = document.querySelector('#number'),
+        startCount = { var: 0 };
+
+    function changeNumber() {
+      number.innerHTML = (startCount.var).toFixed();
+      console.log(number)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let countBox = document.querySelector('.num'),
+    //   count = 0;
+
+    // function countFunc(num1) {
+    //   setInterval(function () {
+    //     if (count == num1) {
+    //       clearInterval();
+    //       return false;
+    //     }
+    //     count += 20;
+    //     countBox.innerHTML = new Intl.NumberFormat().format(count);
+    //   }, 20);
+    // }
   </script>
 
 
