@@ -192,13 +192,14 @@
         </div>
       </div>
       <div class="section_cnt">
-        <div class="typo_box inner">
-          <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
-          <p class="txt">
-            엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
-            공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
-          </p>
-
+        <div class="txt_box inner">
+          <div class="tit_box">
+            <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
+            <p class="txt">
+              엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
+              공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
+            </p>
+          </div>
           <div class="cnt">
             <ul class="cnt_list txt txt_acc flex">
               <li>
@@ -207,15 +208,15 @@
               </li>
               <li>
                 <p><strong>뷰어 포인트</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
               <li>
                 <p><strong>참여 기업수</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
               <li>
                 <p><strong>누적 가상공간</strong></p>
-                <div><span>19,500</span></div>
+                <div><span class="num">19,500</span></div>
               </li>
             </ul>
           </div>
@@ -227,7 +228,6 @@
         </div>
 
       </div>
-
     </div>
     <!-- //container -->
 
@@ -354,18 +354,16 @@
             countFunc(2000);
           }
         },
-      }).from(".typo_box", {
+      }).from(".txt_box", {
         y: innerHeight * 1.5
       });
 
     }); //$function end
-  </script>
 
-  <script>
     let countBox = document.querySelector('.num'),
       count = 0;
 
-    function countFunc(num1){
+    function countFunc(num1) {
       setInterval(function () {
         if (count == num1) {
           clearInterval();
@@ -377,6 +375,10 @@
 
     }
   </script>
+
+
+
+
 </body>
 
 </html>

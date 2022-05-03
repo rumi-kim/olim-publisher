@@ -192,8 +192,8 @@
 .section_cnt .tit.section_tit + .txt { height:143px}
 .section_cnt .cnt { padding-left: 110px;}
 .section_cnt .cnt_list > li { margin-right: 127px;}
-.section_cnt .cnt_list > li > div { font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
-.section_cnt .cnt_list > li > div:after { content: ""; display: inline-block;}
+.section_cnt .cnt_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
+.section_cnt .cnt_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url(../../static/images/ico_plus.png) no-repeat center / 100% 100%; vertical-align: middle;}
 
 /* mediaQuery */
 @media screen and (min-width: 1920px) {
