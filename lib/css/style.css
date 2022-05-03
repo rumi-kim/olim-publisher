@@ -85,16 +85,21 @@
 /* component tit */
 .tit{position: relative; display: inline-block;}
 .tit.red_dot:after{content:""; display: inline-block; vertical-align: baseline; margin-left: 8px; width: 12px; height: 12px; border-radius: 100%; background: #ff3232;}
-.tit.section_tit{margin-bottom: 32px; color: #212121; font-size: 50px; font-weight: 600; line-height: 1.6; letter-spacing: -1.25px;}
+.tit.section_tit{margin-bottom: 30px; color: #212121; font-size: 50px; font-weight: 600;}
 .tit.section_tit.size60{font-size: 60px;}
 .tit.main_title{color: #fff; font-size: 72px; font-weight: 500; letter-spacing: normal;}
 .tit.main_title .txt_acc{font-size: inherit;}
 .tit.main_title.red_dot:after{width: 16px; height: 16px;}
 
+/* main & suv section title edit */
+.wrap.main .tit.section_tit{line-height: 1.6; letter-spacing: -1.25px;}
+
+
 /* component txt */
 .txt{color: #030303; font-size: 18px; letter-spacing: -0.45px; line-height: 35px;}
-.txt.bg_txt{position: absolute; color: #f5f5f5; font-family: futura-pt-bold, sans-serif; font-size: 265px; font-weight: 700; font-style: normal; letter-spacing: -5.3px; line-height: 1;}
+.txt.bg_txt{position: absolute; z-index: -1; color: #f5f5f5; font-family: futura-pt-bold, sans-serif; font-size: 265px; font-weight: 700; font-style: normal; letter-spacing: -5.3px; line-height: 1;}
 .txt.txt_acc{color: #ff3232; font-size: 18px; font-style: normal; line-height: inherit;}
+.txt.txt_lg{margin-top: 10px; font-size: 30px; font-weight: 600; letter-spacing: -.75px;}
 
 .tit.section_tit .tit_desc{position: absolute; bottom: 100%; left: 0; margin-bottom: 7px; font-size: 30px;}
 .tit.section_tit .tit_desc.desc_sm{margin-bottom: 0; font-size: 22px;}
@@ -122,23 +127,23 @@
 .quick_item .btn.btn_top{background-image: url("../../static/images/ico_btn_top.png"); background-size: 19px 22px;}
 
 /* circle box */
-.box.circle_box{position: absolute; z-index: 1; width: 580px; height: 580px;}
-.box.circle_box .circle_item{display: flex; flex-direction: row; flex-wrap: wrap; position: absolute; z-index: 2; width: 580px; height: 580px;}
-.box.circle_box .circle_item .half_circle{position: relative; overflow: hidden; opacity: .3;}
-.box.circle_box .circle_item .half_circle.left{width: 50%; height: 100%;}
-.box.circle_box .circle_item .half_circle.right{width: 50%; height: 100%;}
-.box.circle_box .circle_item .half_circle:after{content: ""; display: block; width: calc(100% - 3px); height: calc(100% - 6px); border-color: #ff3232; border-style: solid; border-width: 1px;}
+.circle_box{position: absolute; z-index: 1; width: 580px; height: 580px;}
+.circle_box .circle_item{display: flex; flex-direction: row; flex-wrap: wrap; position: absolute; z-index: 2; width: 580px; height: 580px;}
+.circle_box .circle_item .half_circle{position: relative; overflow: hidden; opacity: .3;}
+.circle_box .circle_item .half_circle.left{width: 50%; height: 100%;}
+.circle_box .circle_item .half_circle.right{width: 50%; height: 100%;}
+.circle_box .circle_item .half_circle:after{content: ""; display: block; width: 100%; height: calc(100% - 6px); border-color: #ff3232; border-style: solid; border-width: 1px;}
 
-.box.circle_box .circle_item .half_circle.left:after{border-top-left-radius: 290px; border-bottom-left-radius: 290px; border-right: 0;}
-.box.circle_box .circle_item .half_circle.right:after{border-top-right-radius: 290px; border-bottom-right-radius: 290px; border-left: 0;}
+.circle_box .circle_item .half_circle.left:after{border-top-left-radius: 290px; border-bottom-left-radius: 290px; border-right: 0;}
+.circle_box .circle_item .half_circle.right:after{border-top-right-radius: 290px; border-bottom-right-radius: 290px; border-left: 0;}
 
-.box.circle_box .circle_item.item01{top: 0; right: 0;}
-.box.circle_box .circle_item.item02{top: 30px; right: 50px;}
-.box.circle_box .circle_item.item03{top: 60px; right: 100px;}
-.box.circle_box .circle_item.item04{top: 90px; right: 150px;}
+.circle_box .circle_item.item01{top: 0; right: 0;}
+.circle_box .circle_item.item02{top: 30px; right: 50px;}
+.circle_box .circle_item.item03{top: 60px; right: 100px;}
+.circle_box .circle_item.item04{top: 90px; right: 150px;}
 
-.box.circle_box.draw_circle .circle_item .half_circle.left:after{transform: rotate(180deg); transform-origin: right; animation: circleDraw 0.5s ease-in forwards; }
-.box.circle_box.draw_circle .circle_item .half_circle.right:after{transform: rotate(180deg); transform-origin: left; animation: circleDraw 0.5s 0.45s ease-out forwards;}
+.circle_box.draw_circle .circle_item .half_circle.left:after{transform: rotate(180deg); transform-origin: right; animation: circleDraw 0.5s ease-in forwards; }
+.circle_box.draw_circle .circle_item .half_circle.right:after{transform: rotate(180deg); transform-origin: left; animation: circleDraw 0.5s 0.45s ease-out forwards;}
 
 
 /* 섹션별 요소 정리 */
@@ -176,13 +181,35 @@
 .swiper-progress-bar.mini .slide_progress-bar{background: #e0e0e0}
 
 /* main section work */
-.section_works{padding-bottom: 200px; }
-.section_works .bg_txt{position: relative; text-align: center; letter-spacing: -9px;}
-.section_works .box.circle_box{top: -100px; left: 100%; margin-left: 100px;}
-.section_works .box.circle_box .circle_item{animation: circleWave 8s 0.5s ease-in-out infinite;}
-.section_works .box.circle_box .circle_item.item02{animation-delay: 1.5s;}
-.section_works .box.circle_box .circle_item.item03{animation-delay: 2.5s;}
-.section_works .box.circle_box .circle_item.item04{animation-delay: 3.5s;}
+.section_works{}
+.section_works .bg_txt{position: absolute; top: 100%; left: 0; z-index: 1; margin-top: -28px; letter-spacing: -9px; }
+.section_works .box+.box{margin-top: 250px;}
+
+.img_mask_frame{position: relative; overflow: hidden; margin-top: 160px; width: 430px; height: 496px; background: #fc0;}
+.img_mask_frame.frame_lg{margin-top: 0; width: 700px; height: 810px;}
+.img_mask_frame+.img_mask_frame{margin-left: 40px;}
+.img_mask_frame:before{content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%}
+.img_mask_frame img{position: absolute; top: -240px; left: -1380px; width: 1920px; max-width: initial; height: 1080px;}
+.img_mask_frame.frame_lg img{top: 0; left: -640px;}
+
+.section_works .circle_box{top: -100px; left: 100%; margin-left: 100px;}
+.section_works .circle_box .circle_item{animation: circleWave 8s 0.5s ease-in-out infinite;}
+.section_works .circle_box .circle_item.item02{animation-delay: 1.5s;}
+.section_works .circle_box .circle_item.item03{animation-delay: 2.5s;}
+.section_works .circle_box .circle_item.item04{animation-delay: 3.5s;}
+
+/* main section award */
+.award .inner{padding: 0;}
+.award .canvas_bg{position: absolute; top: 0; left: 50%; z-index: -10; transform: translateX(-50%);}
+.award .card_box{justify-content: space-between; align-items: flex-start; margin-top: 140px; margin-bottom: 96px; }
+.award .card{justify-content: center; overflow: hidden; position: relative; margin-top: 0; width: 293px; height: 350px; border-radius: 20px; background-color: #fc0;}
+.award .card:nth-last-of-type(even){margin-top: 100px;}
+.award .card .card_title{position: absolute; bottom: 100%; left: 0; z-index: 1; margin-bottom: 8px; font-family: futura-pt-bold, sans-serif; color: #ff3232; font-size: 37px; line-height: 1; letter-spacing: -.93px;}
+.award .card .card_txt{position: relative; z-index: 100; color: #fff; font-size: 28px; font-weight: 500; text-align: center;}
+.award .card .desc{display: block; margin-top: 10px; font-size: 16px; font-weight: 400;}
+.award .card .card_bg{position: absolute; top: 50%; left: 50%; z-index: 50; width: 193px; height: 181px; transform: translate(-50%, -50%); background: url("../../static/images/img_award.png") no-repeat; background-size: contain;}
+.award .card:after{content: ""; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; width: 100%; height: 100%; background-color: #7f0202; transition: opacity 0.3s}
+.award .card:hover:after{opacity: 1;}
 
 .section_cnt { position: relative;  overflow: hidden; width: 100vw; height:100vh; justify-content: center; align-items: center;}
 .section_cnt .bg_box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url(../img/img_sample.jpg) no-repeat center / cover;}

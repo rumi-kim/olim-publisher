@@ -90,6 +90,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .flex.flex_row_rev{flex-direction: row-reverse;}
 .flex.flex_col{flex-direction: column;}
 .flex.flex_col_rev{flex-direction: column-reverse;}
+.flex.flex_align_center{justify-content: center; align-items: center;}
 
 /* common object */
 .ir_text,.blind{overflow:hidden;position:absolute;top:0;left:0;border:0;width:1px;height:1px;clip:rect(1px,1px,1px,1px)}
@@ -146,6 +147,9 @@ input[type="checkbox"],
 input[type="radio"]{display: none;}
 
 /* box 단위 구분 */
+.txt_box{}
+.btn_box{}
+.img_box{position: relative;}
 
 /* element 단위 구분 */
 .fw400{font-weight: 400;}
