@@ -225,6 +225,41 @@
 .section_cnt .cnt_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
 .section_cnt .cnt_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url("../../static/images/ico_plus.png") no-repeat center / 100% 100%; vertical-align: middle;}
 
+
+
+/* company page */
+/* 전체 한글, 영문 title 셋팅 */
+.company .txt_box .tit.section_tit {margin-bottom: 30px; color: #212121; font-size: 50px; font-weight: 600; line-height: 1.6; letter-spacing: -1.25px;}
+.company .txt_box .tit.section_tit.eng {font-size: 60px; line-height:normal; letter-spacing: normal;}
+
+/* 전체 layout */
+.section_box {padding-bottom: 180px;}
+.company .inner {padding: 0 155px;}
+
+/* 전체 section_desc */
+.txt.section_desc {font-weight: normal; line-height: 30px;}
+.txt.section_desc.strong{font-size: 24px; letter-spacing: -0.6px; line-height: 45px;}
+
+/* 전체 tit_desc */
+.company .tit.section_tit .tit_desc.desc_sm {color: #ff3232; font-size: 30px; font-weight: 600; line-height: 46px; letter-spacing: -0.6px;}
+
+/* section#01 img_box layout */
+.company .img_box {width: 100%; height: 618px; background: rgba(0,0,0,.5);}
+.company .img_box img {width: 100%; height: 100%; object-fit: cover;}
+
+/* section#02 img_box */
+.company .img_box.round20 {border-radius: 20px; overflow: hidden;}
+.company .img_box.hei {height: 513px;}
+
+/* section#04 slogan */
+.section_box.slogan {padding-bottom: 130px;}
+
+/* section#04 core value */
+.section_box.core_value {background: #f1f1f1;}
+.core_value .contents {padding: 152px 0 110px 0;}
+
+
+
 /* mediaQuery */
 @media screen and (min-width: 1920px) {
   .quick_nav_box{right: 50%; bottom: 36px; margin-right: -910px;} 
