@@ -203,7 +203,7 @@
 /* main section award */
 .award .inner{padding: 0;}
 .award .txt_box{padding-left: 90px;}
-.award .canvas_bg{position: absolute; top: 130px; left: 50%; z-index: -10; transform: translateX(-50%);}
+.award .canvas_bg{position: absolute; top: 300px; left: 50%; z-index: -10; transform: translateX(-50%);}
 
 .card_box{justify-content: space-between; align-items: flex-start; margin-top: 140px; margin-bottom: 96px; }
 .card_box .card{justify-content: center; position: relative; margin-top: 0; width: 293px; height: 350px; border-radius: 20px; background-color: #fc0;}
