@@ -82,6 +82,20 @@
       <!-- // header inner -->
     </header>
 
+    <div class="breadcrumbs">
+
+      <div class="inner">
+
+        <ul class="breadcrumb_list">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+
+      </div>
+
+    </div>
+
     <div class="component_inner">
 
       <div class="box">
@@ -177,6 +191,13 @@
       </div>
 
     </footer>
+
+    <style>
+      .breadcrumbs{padding-top: 220px;}
+      .breadcrumb_list{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center;}
+      .breadcrumb_list li{position: relative; padding-left: 20px;}
+      .breadcrumb_list li:not(:last-of-type):after{content: ">";}
+    </style>
 
   </div>    
 </body>
