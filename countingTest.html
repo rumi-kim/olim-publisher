@@ -191,40 +191,40 @@
           </form>
         </div>
       </div>
-      <div class="section_cnt">
+      <div class="section_exp">
+
         <div class="inner">
           <div class="txt_box">
-          <div class="tit_box">
-            <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
-            <p class="txt">
-              엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
-              공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
-            </p>
-          </div>
-          <div class="cnt">
-            <ul class="cnt_list txt txt_acc flex">
-              <li>
-                <p><strong>누적 가상공간</strong></p>
-                <div><span class="num" id="number">0</span></div>
-              </li>
-              <li>
-                <p><strong>뷰어 포인트</strong></p>
-                <div><span class="num">19,500</span></div>
-              </li>
-              <li>
-                <p><strong>참여 기업수</strong></p>
-                <div><span class="num">19,500</span></div>
-              </li>
-              <li>
-                <p><strong>누적 가상공간</strong></p>
-                <div><span class="num">19,500</span></div>
-              </li>
-            </ul>
+            <div class="tit_box">
+              <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
+              <p class="txt">
+                엘리펙스 스튜디오를 활용하여 구축/운영된 <strong>하이퍼리얼리즘 가상공간</strong>은 누적 19,500곳 이상으로<br>
+                공공기관부터 대기업, 중소규모 사업자까지 <strong>다양한 산업이 메타버스 공간</strong>으로 이동되고 있습니다.
+              </p>
+            </div>
+            <div class="cnt">
+              <ul class="cnt_list txt txt_acc flex">
+                <li>
+                  <p><strong>누적 가상공간</strong></p>
+                  <div><span class="num" id="number">0</span></div>
+                </li>
+                <li>
+                  <p><strong>뷰어 포인트</strong></p>
+                  <div><span class="num">19,500</span></div>
+                </li>
+                <li>
+                  <p><strong>참여 기업수</strong></p>
+                  <div><span class="num">19,500</span></div>
+                </li>
+                <li>
+                  <p><strong>누적 가상공간</strong></p>
+                  <div><span class="num">19,500</span></div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        </div>
-
+        
         <div class="bg_box">
           <div class="dim"></div>
         </div>
@@ -330,7 +330,7 @@
 
       const step1 = gsap.timeline({
           scrollTrigger: {
-            trigger: ".section_cnt",
+            trigger: ".section_exp",
             start: "top top",
             end: "bottom top",
             scrub: 0.3,
@@ -348,7 +348,7 @@
 
       const step2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section_cnt",
+          trigger: ".section_exp",
           start: "top top",
           end: "bottom top",
           scrub: 0.1,
@@ -365,14 +365,14 @@
 
       gsap.to(startCount, {
         var0: 19.500,
-        var1 : 31.000,
-        var2 : 5.256,
-        var3 : 10,
+        var1: 31.000,
+        var2: 5.256,
+        var3: 10,
         duration: 3,
         ease: "none",
         onUpdate: changeNumber,
         scrollTrigger: {
-          trigger: ".section_cnt",
+          trigger: ".section_exp",
           // toggleActions: "restart none reverse none",
           toggleActions: "restart none",
         },
@@ -381,14 +381,18 @@
 
 
     let numList = document.querySelectorAll('.num');
-    let startCount = { var0: 0, var1:0,var2:0,var3:0 };
+    let startCount = {
+      var0: 0,
+      var1: 0,
+      var2: 0,
+      var3: 0
+    };
 
     function changeNumber() {
       for (let i = 0; i < numList.length; i++) {
         numList[i].innerHTML = (startCount[`var${i}`]).toFixed(3);
       }
     }
-
   </script>
 
 
