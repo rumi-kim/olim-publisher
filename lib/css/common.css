@@ -152,12 +152,16 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 input[type="checkbox"],
 input[type="radio"]{display: none;}
 .input_chk_box{}
-.input_chk_box .input_label{padding-left: 22px; font-size: 18px; line-height: 26px; letter-spacing: -.45px;}
+.input_chk_box .input_label{position: relative; display: block; padding-left: 22px; font-size: 18px; line-height: 26px; letter-spacing: -.45px;}
+.input_chk_box .input_label:before{content: ""; position: absolute; top: 50%; left: 0; width:  14px; height: 14px; background: url("../../static/images/ico_chk_frame.png") no-repeat; background-size: cover; transform: translateY(-50%);}
+.input_chk_box :checked+.input_label:before{background: url("../../static/images/ico_chk_frame_on.png") no-repeat; background-size: cover; }
 
 /* box 단위 구분 */
 .txt_box{}
 .btn_box{}
 .img_box{position: relative;}
+.terms,
+.terms:hover{text-decoration: underline;}
 
 /* element 단위 구분 */
 .fw300{font-weight: 300;}

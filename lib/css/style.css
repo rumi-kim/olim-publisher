@@ -224,8 +224,10 @@
 .award .card:nth-of-type(even){margin-top: 100px;}
 
 /* main - form section */
-.form_wrap{overflow: hidden; justify-content: space-between; align-items: flex-start; padding: 110px 170px 200px 90px; border-top-left-radius: 20px; border-top-right-radius: 20px; background: rgba(0,0,0,0.8);}
+.form_wrap{overflow: hidden; justify-content: space-between; align-items: flex-start; position: relative; padding: 110px 170px 200px 90px; margin: 0 auto; width: 1640px; border-top-left-radius: 20px; border-top-right-radius: 20px; background: rgba(0,0,0,0.8);}
+.form_box{position: relative; z-index: 10;}
 .form_tit{font-size: 30px; letter-spacing: -.75px;}
+.form_wrap .terms{margin-left: 25px; color: #909090; font-size: 14px;}
 .form_wrap .circle_box{bottom: -300px; left: 300px;}
 
 .section_exp { position: relative; overflow: hidden; padding-top:0 !important; width: 100vw; height:100vh; justify-content: center; align-items: center;}
