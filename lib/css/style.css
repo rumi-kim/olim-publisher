@@ -206,6 +206,20 @@
 .section_works .circle_box .circle_item.item03{animation-delay: 2.5s;}
 .section_works .circle_box .circle_item.item04{animation-delay: 3.5s;}
 
+
+/* main section exp */
+.section_exp { position: relative; overflow: hidden; padding-top:0 !important; width: 100vw; height:100vh; justify-content: center; align-items: center;}
+.section_exp .bg_box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url("../../static/images/img_section_experience.jpg") no-repeat center / cover;}
+.section_exp .bg_box .dim { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.7); opacity: 1;}
+.section_exp .txt_box { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; padding: 245px 22px 0; box-sizing: border-box;}
+.section_exp .tit.section_tit, .section_exp .tit.section_tit + .txt { color: #fff ;}
+.section_exp .tit.section_tit + .txt { height:143px}
+.section_exp .exp { padding-left: 110px;}
+.section_exp .exp_list > li { margin-right: 127px;}
+.section_exp .exp_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
+.section_exp .exp_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url("../../static/images/ico_plus.png") no-repeat center / 100% 100%; vertical-align: middle;}
+
+
 /* main section award */
 .award .inner{padding: 0;}
 .award .txt_box{padding-left: 90px;}
@@ -223,6 +237,17 @@
 
 .award .card:nth-of-type(even){margin-top: 100px;}
 
+
+/* main section partners */
+.section_partners {display: flex; flex-direction: column; justify-content: center; align-items: center;} 
+.section_partners > .inner {padding:0}
+.partners_list {display: flex;} 
+.partners_list .partners_item {display: flex; align-items: center; justify-content: center; margin-right: 20px; width: 160px; height: 100%; text-align: center; transition: all .2s ease-out;} 
+.partners_list .partners_item img {width:100} 
+.partners_group {height: 90px; width: 100%; overflow: hidden; box-sizing: border-box; position: relative;} 
+.partners_inner {display: flex; width: 200%; position: absolute; top:10px; bottom:10px; animation: marquee_left 60s linear alternate infinite;} 
+.partners_inner.marquee_right {animation-name: marquee_right;} 
+
 /* main - form section */
 .form_wrap{overflow: hidden; justify-content: space-between; align-items: flex-start; position: relative; padding: 110px 170px 200px 90px; margin: 0 auto; width: 1640px; border-top-left-radius: 20px; border-top-right-radius: 20px; background: rgba(0,0,0,0.8);}
 .form_box{position: relative; z-index: 10;}
@@ -231,26 +256,6 @@
 .form_wrap .circle_box{bottom: -300px; left: 300px;}
 
 
-/* main section exp */
-.section_exp { position: relative; overflow: hidden; padding-top:0 !important; width: 100vw; height:100vh; justify-content: center; align-items: center;}
-.section_exp .bg_box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url("../../static/images/img_section_experience.jpg") no-repeat center / cover;}
-.section_exp .bg_box .dim { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.7); opacity: 1;}
-.section_exp .txt_box { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; padding: 245px 22px 0; box-sizing: border-box;}
-.section_exp .tit.section_tit, .section_exp .tit.section_tit + .txt { color: #fff ;}
-.section_exp .tit.section_tit + .txt { height:143px}
-.section_exp .exp { padding-left: 110px;}
-.section_exp .exp_list > li { margin-right: 127px;}
-.section_exp .exp_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
-.section_exp .exp_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url("../../static/images/ico_plus.png") no-repeat center / 100% 100%; vertical-align: middle;}
-
-/* main section partners */
-.section_partners {display: flex; flex-direction: column; justify-content: center; align-items: center;} 
-.partners_list {display: flex;} 
-.partners_list .partners_item {display: flex; align-items: center; justify-content: center; margin-right: 20px; width: 160px; height: 100%; text-align: center; transition: all .2s ease-out;} 
-.partners_list .partners_item img {width:100} 
-.partners_group {height: 90px; width: 100%; overflow: hidden; box-sizing: border-box; position: relative;} 
-.partners_inner {display: flex; width: 200%; position: absolute; top:10px; bottom:10px; animation: marquee_left 60s linear alternate infinite;} 
-.partners_inner.marquee_right {animation-name: marquee_right;} 
 
 
 
