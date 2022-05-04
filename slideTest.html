@@ -28,15 +28,25 @@
     <style>
         .section_partners { display: flex; flex-direction: column; justify-content: center; align-items: center; } 
         .partners_list { display: flex; } 
-        .partners_list .partners_item { margin-right: 20px; width: 160px; height: 100%; background: rgb(216, 216, 216); text-align: center; transition: all .2s ease-out; } 
-        .partners_list .partners_item img { height: 100%;} 
-        .partners_group { height: 108px; width: 100%; overflow: hidden; box-sizing: border-box; position: relative; } 
-        .partners_inner { display: flex; width: 200%; position: absolute; top:10px; bottom:10px; animation: marquee_left 40s linear infinite; } 
+        .partners_list .partners_item { display: flex; align-items: center; justify-content: center; margin-right: 20px; width: 160px; height: 100%; text-align: center; transition: all .2s ease-out; } 
+        .partners_list .partners_item img { width:100%} 
+        .partners_group { height: 90px; width: 100%; overflow: hidden; box-sizing: border-box; position: relative; } 
+        .partners_inner { display: flex; width: 200%; position: absolute; top:10px; bottom:10px; animation: marquee_left 60s linear alternate infinite; } 
         .partners_inner.marquee_right { animation-name: marquee_right; } 
         /* .partners_inner:hover { animation-play-state: paused; } */
         /*.half { float: left; width: 10%; }*/ 
-        @keyframes marquee_left { 0% { left: 0; } 100% { left: -100%; } } 
-        @keyframes marquee_right { 0% { right: 0; } 100% { right: -100%; } }
+        @keyframes marquee_left { 
+            0% { left: 0; } 
+            1.5% { left: 0; } 
+            98.5% { left: -85%;} 
+            100% { left: -85%; } 
+        } 
+        @keyframes marquee_right { 
+            0% { right: -15%; }
+            1.5% { right: -15%; }
+            98.5% { right: -100%;} 
+            100% { right: -100%; } 
+        }
     </style>
 
 </head>
@@ -46,72 +56,63 @@
         <div class="partners_group">
             <div class="partners_inner">
                 <ul class="partners_list">
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_ajoumc.png" alt="아주대학교병원"></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_amway.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_arenacast.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_asiatrust.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_channel.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_daegu.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_daelim.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_dgtia.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_dku.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_dl.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_doosan.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_exco.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_exporum.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_fintech.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_galaxycorp.png" alt=""></li>
                 </ul>
             </div>
         </div>
         <div class="partners_group">
             <div class="partners_inner marquee_right">
                 <ul class="partners_list">
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv01.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv04.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_hana.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv05.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gsbd.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gurokumc.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv02.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_hankyung.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv07.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_hankyungTV.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv06.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_hansol.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_ibct.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_gorv03.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_kdata.png" alt=""></li>
                 </ul>
             </div>
         </div>
         <div class="partners_group">
             <div class="partners_inner">
                 <ul class="partners_list">
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
-                    <li class="partners_item"><img src="lib/img/logo_sample_hori.png" alt="올림플래닛"></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_khidi.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_kita.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_kocca.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_koreaGFE.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_koreit.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_kotra.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_kt.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_lgchem.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_loreal.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_mindslab.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_samsung.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_savina.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_sports.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_th.png" alt=""></li>
+                    <li class="partners_item"><img src="static/images/logo/logo_thehyundai.png" alt=""></li>
                 </ul>
             </div>
         </div>
