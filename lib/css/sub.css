@@ -289,7 +289,7 @@
 .company_card .card_box .card{width: 265px; height: 362px;}
 
 /* card - is_active 처리*/
-.company_card .card.is_active{transform: scale(1.1); z-index: 1; overflow: hidden;}
+/* .company_card .card.is_active{transform: scale(1.1); z-index: 1; overflow: hidden;} */
 /* --------------------- */
 
 /* awards section */
