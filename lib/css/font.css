@@ -1,0 +1,12 @@
+@font-face {
+      font-family: 'segoe';
+      font-weight: 400;
+      src: url(fonts/segoe/Segoe-UI.ttf) format('truetype');
+      src: url(fonts/segoe/Segoe-UI.woff) format('woff')
+}
+@font-face {
+      font-family: 'segoe';
+      font-weight: 600;
+      src: url(fonts/segoe/Segoe-UI-Bold.ttf) format('truetype');
+      src: url(fonts/segoe/Segoe-UI-Bold.woff) format('woff')
+}
