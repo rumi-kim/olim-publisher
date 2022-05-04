@@ -227,10 +227,10 @@
 .section_exp .txt_box { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; padding: 245px 22px 0; box-sizing: border-box;}
 .section_exp .tit.section_tit, .section_exp .tit.section_tit + .txt { color: #fff ;}
 .section_exp .tit.section_tit + .txt { height:143px}
-.section_exp .cnt { padding-left: 110px;}
-.section_exp .cnt_list > li { margin-right: 127px;}
-.section_exp .cnt_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
-.section_exp .cnt_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url("../../static/images/ico_plus.png") no-repeat center / 100% 100%; vertical-align: middle;}
+.section_exp .exp { padding-left: 110px;}
+.section_exp .exp_list > li { margin-right: 127px;}
+.section_exp .exp_list > li > div { display: flex; align-items: center; margin-top: 9px; font-size: 62px; color: #fff; font-weight: bold; font-family: Futura;}
+.section_exp .exp_list > li > div:after { content: ""; display: inline-block; margin-left: 20px; width: 29px; height: 29px; background: url("../../static/images/ico_plus.png") no-repeat center / 100% 100%; vertical-align: middle;}
 
 
 
