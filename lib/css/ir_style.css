@@ -4,6 +4,9 @@
 /* 공시정보 페이지 */
 .irinfo .section_box{position: relative;}
 .irinfo_list_box{min-height: 200px;}
+.irinfo_list_box a{font-size: 18px;}
+.irinfo_list_box a:hover{text-decoration: underline;}
+.table_box table span.irinfo_badge{width: 114px; height: 40px; color: #fff; font-size: 18px; line-height: 40px; border-radius: 20px; background-color: #9d9d9d;}
 
 /* 공시정보 디테일 뷰 */
 .irinfo{padding-bottom: 150px;}
