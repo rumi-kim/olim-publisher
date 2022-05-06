@@ -255,6 +255,11 @@
 .form_wrap .terms{margin-left: 25px; color: #909090; font-size: 14px;}
 .form_wrap .circle_box{bottom: -300px; left: 300px;}
 
+.form_box.right { width: 510px;}
+.form_box.left { width: 637px;}
+.form_box input { border-bottom: 1px solid #666; background: none; }
+.form_box input[type="email"] { border-bottom: 1px solid #fff;}
+
 
 
 
