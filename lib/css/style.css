@@ -55,7 +55,7 @@
 
 .swiper{width: 100%; height: 1080px;}
 .swiper-container {overflow: hidden; width: 100%; height: 100%;}
-.swiper-inner{position: absolute; top: 0; left: 50%; z-index: 100; width: 100%; max-width: 1920px; height: 100%; transform: translateX(-50%)}
+.swiper-inner{position: absolute; top: 0; left: 50%; z-index: 100; width: 100%; height: 100%; transform: translateX(-50%); background-color: rgba(0,0,0,0.75)}
 .swiper-inner .inner{overflow: hidden; height: 100%; }
 .swiper-slide .bg_video { width: 100%; height:100%}
 .swiper-slide .bg_video video { width: 100%; height:100%; object-fit: cover;}
@@ -65,9 +65,7 @@
 .swiper-btn-wrap{display: flex; align-items: center; width: 80px; height: 40px;}
 
 .swiper-button-next,
-.swiper-button-prev {position: static; margin: 0; width: 40px; height: 40px; background: #ddd;}
-.swiper-button-next:after,
-.swiper-button-prev:after, 
+.swiper-button-prev {position: static; margin: 0; width: 40px; height: 40px;}
 .swiper-rtl .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after{display: none;}
 
@@ -156,6 +154,10 @@
 /* 섹션별 요소 정리 */
 /* main swiper detail */
 .swiper.main .swiper-progress-bar.animate .slide_progress-bar:after{transition-duration: 20s;}
+.swiper.main .swiper-button-next:after,
+.swiper.main .swiper-button-prev:after{content: ""; width: 40px; height: 40px;}
+.swiper.main .swiper-button-next:after{background: url("../../static/images/ico/ico_slider_next.png") no-repeat; background-size: 10px 17px; background-position: center center}
+.swiper.main .swiper-button-prev:after{background: url("../../static/images/ico/ico_slider_prev.png") no-repeat; background-size: 10px 17px; background-position: center center}
 .swiper_txt_box{margin-top: 430px;}
 .swiper_txt_box .main_txt{color: #dcdcdc; font-size: 18px; line-height: 35px; letter-spacing: -0.45px;}
 .swiper_txt_box .main_txt strong{color: #e4e3e3}
@@ -186,6 +188,11 @@
 .swiper.mini .swiper-controlbox{top: 630px; left: 163px;}
 .swiper-pagination.mini span{color: #454545}
 .swiper-progress-bar.mini .slide_progress-bar{background: #e0e0e0}
+
+.swiper_mini_box .swiper-button-next:after,
+.swiper_mini_box .swiper-button-prev:after{content: ""; width: 40px; height: 40px;}
+.swiper_mini_box .swiper-button-next:after{background: url("../../static/images/ico/ico_slider_next_bk.png") no-repeat; background-size: 10px 17px; background-position: center center}
+.swiper_mini_box .swiper-button-prev:after{background: url("../../static/images/ico/ico_slider_prev_bk.png") no-repeat; background-size: 10px 17px; background-position: center center}
 
 /* main section work */
 .section_works{}
@@ -276,7 +283,7 @@
 
 .form_box .select {border: none; border-bottom: 1px solid #fff; border-radius: 0;}
 .form_box .select_box {width: 100%;}
-.form_box .select .dropdown_name {padding-left:5px; font-size: 18px; position: relative;}
+.form_box .select .dropdown_name {padding-left:5px; font-size: 18px; position: relative; cursor: pointer;}
 .form_box .select .dropdown_name:after {content:""; display: block; position: absolute; right: 13px; top: 50%; transform: translateY(-50%); width: 10px; height: 5px; background:url(../../static/images/ico_dropdown_arrow_x2.png) no-repeat center / 100% 100%; transition: all .2s;}
 .form_box .select .dropdown_name.is_active:after { transform: translateY(-50%) rotate(180deg);}
 .form_box .select .select_list { padding:19.5px 0; transform: translateY(5px); background: #434343; border-radius:5px}

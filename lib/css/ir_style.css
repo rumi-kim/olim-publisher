@@ -3,11 +3,15 @@
 
 /* 공시정보 페이지 */
 
+
 /* 공시정보 디테일 뷰 */
 .irinfo{padding-bottom: 150px;}
+.irinfo .inner{padding: 0 155px;}
 .ir_dl_btn{position: relative;}
 .ir_dl_btn:after{content:""; display: inline-block; vertical-align: middle; margin-top: -4px; margin-left: 20px; width: 24px; height: 23px; background: url("../../static/images/ico/ic_download_wh.png") no-repeat; background-size: cover;}
 .btn.btn_history_back{height: 50px; line-height: 48px; border-radius: 25px}
+.btn_history_back:before{content: ""; display: inline-block; vertical-align: middle; margin-top: -2px; margin-right: 16px; width: 8px; height: 12px; background: url("../../static/images/ico/ico_btn_back_arrow.png") no-repeat; background-size: cover;}
+.btn_history_back:hover{background-color: #ccc}
 
 .irinfo .img_box{height: 618px;}
 .irinfo .section_box{padding-bottom: 0;}
@@ -15,12 +19,17 @@
 .irinfo .desc_txt{color: #848484; font-size: 16px; line-height: 24px; letter-spacing: normal;} 
 .irinfo img{width: 100%; height: 100%; object-fit: cover;}
 
-.irinfo_box{position: relative; padding: 70px 30px !important; min-height: 500px; border-top: 1px solid #707070; border-bottom: 1px solid #999}
+.irinfo_head_box{padding: 0 46px 0 10px; height: 80px; border-bottom: 2px solid #ddd;}
+.irinfo_head_box .box{width: 394px;}
+.btn_circle.ir_download_btn{font-size: 0; background: #fff url("../../static/images/ico/ico_download_type02.png") no-repeat; background-position: center center; background-size: 15px 14px; box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);}
+.btn_circle.ir_download_btn:hover{background-color: #ccc}
+
+.section_box.irinfo_box{position: relative; padding-bottom: 70px; border-top: 1px solid #707070; border-bottom: 1px solid #999}
 .ir_btn_box{position: absolute; z-index: 100; bottom: 100%; right: 0; margin-bottom: 24px;}
 
-.ir_txt_box{min-height: 340px;}
+.irinfo_txt_box{padding: 70px 30px 0; min-height: 340px;}
 .irinfo_txt{font-size: 20px; line-height: 1.8;}
-.irinfo_creator{margin-top: 100px; color: #969696; font-size: 16px; letter-spacing: -.4px; line-height: 24px}
+.irinfo_creator{margin-top: 120px; color: #969696; font-size: 16px; letter-spacing: -.4px; line-height: 24px}
 .irinfo_creator .date_txt{display: block; margin-bottom: 15px; color: #111; font-weight: 600;}
 .irinfo_creator .ceo{display: block; margin-top: 6px; color: #454545}
 .irinfo_creator .ceo b{font-weight: 600;}
