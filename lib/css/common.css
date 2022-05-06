@@ -103,7 +103,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .logo a{display: block; width: 100%; height: 100%; text-indent: -9999px;}
 
 /* btn */
-.btn{display: block; height: 42px; color: #4f4f4f; font-size: 18px; letter-spacing: -0.45px; text-align: center; line-height: 40px; border: 1px solid #d3d3d3; transition: all 0.3s; background-repeat: no-repeat !important;}
+.btn{display: block; height: 42px; color: #000; font-size: 18px; letter-spacing: -0.45px; text-align: center; line-height: 40px; border: 1px solid #ccc; transition: all 0.3s; background-color: #fff; background-repeat: no-repeat !important;}
 /* color 구분 */
 .btn.btn_primary{color: #fff; border-color: #ff3232; background-color: #ff3232;}
 .btn.btn_secondary{}
@@ -120,7 +120,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .btn.btn_xs{}
 .btn.btn_sm{width: 148px}
 .btn.btn_md{width: 180px}
-.btn.btn_lg{width: 248px; height: 50px}
+.btn.btn_lg{width: 230px; height: 50px; font-size: 22px; font-weight: 400; line-height: 48px;}
 .btn.btn_xl{}
 /* btn action */
 .btn.btn_primary:hover,
