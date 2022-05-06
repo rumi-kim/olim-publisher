@@ -112,6 +112,8 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .btn.btn_txt{height: auto; border: 0; line-height: initial;}
 .btn.btn_circle{width: 50px; height: 50px; font-size: 16px; letter-spacing: -0.4px; border-radius: 50px; background-position: center center !important;}
 .btn.btn_round{border-radius: 21.5px;}
+.btn.btn_search{display: block; width: 29px; height: 29px; font-size: 0; border: 0; background: url("../../static/images/ico_search.png") no-repeat; background-size: cover;}
+
 /* 크기구분 */
 /* 크기구분은 추후 추가 */
 .btn.btn_xs{}
@@ -151,10 +153,14 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 /* input 요소 */
 input[type="checkbox"],
 input[type="radio"]{display: none;}
+input{border: 0; outline: 0;}
+::placeholder{color: #e0e0e0; font-weight: 500;}
 .input_chk_box{}
 .input_chk_box .input_label{position: relative; display: block; padding-left: 22px; font-size: 18px; line-height: 26px; letter-spacing: -.45px;}
 .input_chk_box .input_label:before{content: ""; position: absolute; top: 50%; left: 0; width:  14px; height: 14px; background: url("../../static/images/ico_chk_frame.png") no-repeat; background-size: cover; transform: translateY(-50%);}
 .input_chk_box :checked+.input_label:before{background: url("../../static/images/ico_chk_frame_on.png") no-repeat; background-size: cover; }
+
+.input_search{overflow: hidden; margin-left: 12px;height: 25px; color: #6c6c6c; font-size: 16px; font-weight: 400; letter-spacing: -.4px; background: transparent}
 
 /* box 단위 구분 */
 .txt_box{}
@@ -162,6 +168,8 @@ input[type="radio"]{display: none;}
 .img_box{position: relative;}
 .terms,
 .terms:hover{text-decoration: underline;}
+.search_box{padding: 0 20px; width: 422px; height: 42px; border: 1px solid #dfdfdf; border-radius: 21px; background: #f3f3f3; transition: all 0.2s}
+.search_box:focus-within{border: 2px solid #585858}
 
 /* element 단위 구분 */
 .fw300{font-weight: 300;}
