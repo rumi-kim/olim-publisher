@@ -199,7 +199,7 @@
 .img_mask_frame img{position: absolute; top: -240px; left: -1380px; width: 1920px; max-width: initial; height: 1080px;}
 .img_mask_frame.frame_lg img{top: 0; left: -640px;}
 
-.section_works .img_frame{width: calc((100% - 40px) / 2); height: 530px; background: #888;}
+.section_works .img_frame{ overflow: hidden; width: calc((100% - 40px) / 2); height: 530px; background: #888; }
 
 .section_works .circle_box{bottom: 100%; left: 100%; margin-bottom: -180px; margin-left: 100px;}
 .section_works .circle_box .circle_item{animation: circleWave 8s 0.5s ease-in-out infinite;}
