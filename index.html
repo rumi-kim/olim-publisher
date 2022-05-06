@@ -907,10 +907,10 @@
       // gsap.registerPlugin(ScrollTrigger);
 
       gsap.to(startCount, {
-        var0: 19.500,
-        var1: 31.000,
-        var2: 5.256,
-        var3: 10,
+        var0: 19500,
+        var1: 31000,
+        var2: 5256,
+        var3: 10000000,
         duration: 3,
         ease: "none",
         onUpdate: changeNumber,
@@ -932,8 +932,37 @@
 
     function changeNumber() {
       for (let i = 0; i < numList.length; i++) {
-        numList[i].innerHTML = (startCount[`var${i}`]).toFixed(3);
+        // numList[i].innerHTML = (startCount[`var${i}`]).toFixed();
+        let numberVal = numberFormatter(Math.ceil(startCount[`var${i}`]));
+        numList[i].innerHTML = numberVal
       }
+    }
+
+    function numberToString(number) {
+      return number.toLocaleString('en-US');
+    }
+
+    function numberFormatter(number) {
+      const setting = [
+        { value: 1, symbol: '' },
+        { value: 1e6, symbol: 'M' },
+        { value: 1e9, symbol: 'G' },
+        { value: 1e12, symbol: 'T' },
+        { value: 1e15, symbol: 'P' },
+        { value: 1e18, symbol: 'E' },
+      ];
+      const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      let i;
+      for (i = setting.length - 1; i > 0; i--) {
+        if (number >= setting[i].value) {
+          break;
+        }
+      }
+      return (
+        setting[i].symbol.length === 0
+        ? numberToString(number)
+        : (number / setting[i].value).toFixed(0).replace(rx, '$1') + setting[i].symbol
+      );
     }
   </script>
 </body>

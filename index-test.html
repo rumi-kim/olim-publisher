@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="lib/css/common.css">
   <link rel="stylesheet" href="lib/css/style.css">
   <script src="lib/js/common.js"></script>
+  <script src="lib/js/form.js" defer></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@
         <nav class="gnb">
           <ul class="gnb_list">
             <li class="gnb_item">
-              <a href="javascript:void(0)" class="is_active">올림플래닛</a>
+              <a href="javascript:void(0)">올림플래닛</a>
             </li>
             <li class="gnb_item">
               <a href="javascript:void(0)">서비스</a>
@@ -90,11 +91,31 @@
       <div class="swiper main">
 
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background: rgba(0,0,0,0.2)">Slide 1</div>
-          <div class="swiper-slide" style="background: rgba(0,0,0,0.35)">Slide 2</div>
-          <div class="swiper-slide" style="background: rgba(0,0,0,0.5)">Slide 3</div>
-          <div class="swiper-slide" style="background: rgba(0,0,0,0.65)">Slide 4</div>
-          <div class="swiper-slide" style="background: rgba(0,0,0,0.8)">Slide 5</div>
+          <div class="swiper-slide">
+            <div class="bg_video">
+              <video src="static/mov/mov_visual01.mp4" muted autoplay loop poster="static/mov/bg_visual01.png"></video>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg_video">
+              <video src="static/mov/mov_visual02.mp4" muted autoplay loop poster="static/mov/bg_visual02.png"></video>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg_video">
+              <video src="static/mov/mov_visual03.mp4" muted autoplay loop poster="static/mov/bg_visual03.png"></video>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg_video">
+              <video src="static/mov/mov_visual04.mp4" muted autoplay loop poster="static/mov/bg_visual04.png"></video>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg_video">
+              <video src="static/mov/mov_visual05.mp4" muted autoplay loop poster="static/mov/bg_visual05.png"></video>
+            </div>
+          </div>
         </div>
 
         <div class="swiper-inner">
@@ -132,8 +153,7 @@
             <div class="main_quick_nav">
               <ul>
                 <li><a href="https://stg.elypecs.com/" target="_blank"><img
-                      src="static/images/img_elypecs_studio_logo.png" alt="엘리펙스 스튜디오 바로가기"></a>
-                </li>
+                      src="static/images/img_elypecs_studio_logo.png" alt="엘리펙스 스튜디오 바로가기"></a></li>
                 <li><a href="https://studio.elypecs.com/" target="_blank"><img src="static/images/img_elypecs_logo.png"
                       alt="엘리펙스 바로가기"></a></li>
               </ul>
@@ -172,11 +192,21 @@
           <div class="swiper_mini_box">
             <div class="swiper mini">
               <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background: rgba(0,0,0,0.2)">Slide 1</div>
-                <div class="swiper-slide" style="background: rgba(0,0,0,0.35)">Slide 2</div>
-                <div class="swiper-slide" style="background: rgba(0,0,0,0.5)">Slide 3</div>
-                <div class="swiper-slide" style="background: rgba(0,0,0,0.65)">Slide 4</div>
-                <div class="swiper-slide" style="background: rgba(0,0,0,0.8)">Slide 5</div>
+                <div class="swiper-slide">
+                  <img src="static/images/img_door01.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="static/images/img_door02.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="static/images/img_door03.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="static/images/img_door04.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="static/images/img_door05.png" alt="">
+                </div>
               </div>
             </div>
 
@@ -232,7 +262,10 @@
               </p>
             </div>
             <div class="box img_box">
-              <img src="static/images/img_section_work.png" alt="Elypecs 당신의 유니버스 컨셉아트 이미지">
+              <p class="txt img_desc txt_white">
+                <b>Elypecs</b> 당신의 유니버스 컨셉아트 이미지
+              </p>
+              <img src="static/images/img_section_work.jpg" alt="Elypecs 당신의 유니버스 컨셉아트 이미지">
               <p class="txt bg_txt">What We Do</p>
             </div>
 
@@ -240,7 +273,7 @@
           <!-- // 올림플래닛이 하는 일 - Platform -->
 
           <!-- 올림플래닛이 하는 일 - Software -->
-          <div class="box">
+          <div class="box software">
 
             <div class="txt_box mb80">
               <b class="txt txt_acc">Software</b>
@@ -251,6 +284,10 @@
             <div class="box img_box flex flex_center flex_center flex_align_center">
 
               <div class="img_mask_frame frame_lg">
+                <p class="txt img_desc txt_white">
+                  <b>Elypecs Studio</b><br>
+                  상상하는 모든 공간을 만드는 가장 쉬운 방법
+                </p>
                 <img src="static/images/img_framecut.png" alt="">
               </div>
               <div class="img_mask_frame">
@@ -273,9 +310,17 @@
             </div>
             <div class="box img_box flex flex_center flex_center flex_align_center">
               <div class="img_frame">
-                <img src="static/images/img_media01.jpg" alt="METAPLANET, 가상공간에서 펼쳐지는 버추얼 메타버스 매거진">
+                <p class="txt img_desc txt_white">
+                  <b>METAPLANET</b><br>
+                  가상공간에서 펼쳐지는 버추얼 메타버스 매거진
+                </p>
+                <img src="static/images/img_media01.jpg" alt="YGP, 디지털 뉴노멀의 기준을 만들어가는 디지털 콘텐츠 제작사">
               </div>
               <div class="img_frame ml40">
+                <p class="txt img_desc txt_white">
+                  <b>YGP</b><br>
+                  디지털 뉴노멀의 기준을 만들어가는 디지털 콘텐츠 제작사
+                </p>
                 <img src="static/images/img_media02.jpg" alt="YGP, 디지털 뉴노멀의 기준을 만들어가는 디지털 콘텐츠 제작사">
               </div>
             </div>
@@ -285,7 +330,7 @@
 
           <div class="btn_box flex flex_center flex_center flex_align_center mt80">
 
-            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more">자세히보기</a>
+            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md">자세히보기</a>
 
           </div>
 
@@ -315,9 +360,10 @@
       <!-- // section#2 - works -->
 
       <!-- section#3 exp -->
-      <div class="section_wrap section_exp" >
+      <div class="section_wrap section_exp">
 
         <div class="inner">
+
           <div class="txt_box">
             <div class="tit_box">
               <h2 class="tit section_tit red_dot">올림플래닛의 경험</h2>
@@ -334,7 +380,7 @@
                 </li>
                 <li>
                   <p><strong>뷰어 포인트</strong></p>
-                  <div><span class="num">19,500</span></div>
+                  <div><span class="num"></span></div>
                 </li>
                 <li>
                   <p><strong>참여 기업수</strong></p>
@@ -377,6 +423,7 @@
                 <span class="desc">과기정통부 장관상</span>
               </p>
               <div class="card_bg award"></div>
+              <div class="card_bg bg_img"></div>
             </div>
 
             <div class="card flex flex_col flex_center flex_center flex_align_center">
@@ -386,6 +433,7 @@
                 <span class="desc">과기정통부 장관상</span>
               </p>
               <div class="card_bg award"></div>
+              <div class="card_bg bg_img"></div>
             </div>
 
             <div class="card flex flex_col flex_center flex_center flex_align_center">
@@ -395,6 +443,7 @@
                 <span class="desc">과기정통부 장관상</span>
               </p>
               <div class="card_bg award"></div>
+              <div class="card_bg bg_img"></div>
             </div>
 
             <div class="card flex flex_col flex_center flex_center flex_align_center">
@@ -404,6 +453,7 @@
                 <span class="desc">최우수상</span>
               </p>
               <div class="card_bg award"></div>
+              <div class="card_bg bg_img"></div>
             </div>
 
             <div class="card flex flex_col flex_center flex_center flex_align_center">
@@ -413,6 +463,7 @@
                 <span class="desc">대상</span>
               </p>
               <div class="card_bg award"></div>
+              <div class="card_bg bg_img"></div>
             </div>
 
           </div>
@@ -420,7 +471,7 @@
 
           <div class="btn_box flex flex_center flex_center flex_align_center">
 
-            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more">자세히보기</a>
+            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md">자세히보기</a>
 
           </div>
 
@@ -432,74 +483,207 @@
       <!-- // section#4 award -->
 
       <!-- section#5 partners -->
-      <div class="section_wrap">
+      <div class="section_wrap section_partners">
+
         <div class="inner">
 
-          <div class="txt_box">
+          <div class="txt_box inner">
             <h2 class="tit section_tit red_dot">Partners</h2>
+            <p class="txt mb40">올림플래닛은 다양한 분야의 소중한 파트너들과 함께 합니다.</p>
           </div>
-          <div class="box">
-
+          <div class="logo_box flex">
+            <div class="partners_group">
+              <div class="partners_inner">
+                <ul class="partners_list">
+                  <li class="partners_item"><img src="static/images/logo/logo_ajoumc.png" alt="아주대학교병원"></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_amway.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_arenacast.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_asiatrust.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_channel.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_daegu.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_daelim.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_dgtia.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_dku.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_dl.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_doosan.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_exco.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_exporum.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_fintech.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_galaxycorp.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+            <div class="partners_group">
+              <div class="partners_inner marquee_right">
+                <ul class="partners_list">
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv01.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv04.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_hana.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv05.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gsbd.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gurokumc.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv02.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_hankyung.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv07.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_hankyungTV.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv06.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_hansol.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_ibct.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_gorv03.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_kdata.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+            <div class="partners_group">
+              <div class="partners_inner">
+                <ul class="partners_list">
+                  <li class="partners_item"><img src="static/images/logo/logo_khidi.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_kita.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_kocca.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_koreaGFE.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_koreit.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_kotra.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_kt.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_lgchem.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_loreal.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_mindslab.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_samsung.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_savina.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_sports.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_th.png" alt=""></li>
+                  <li class="partners_item"><img src="static/images/logo/logo_thehyundai.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
         </div>
+
       </div>
       <!-- section#5 partners -->
 
       <!-- section#6 form -->
       <div class="section_wrap">
 
-        <div class="inner">
-          <form>
-            <div class="form_wrap flex">
+        <form>
+          <div class="form_wrap flex">
 
-              <div class="form_box">
+            <!-- 뉴스레터 구독 -->
+            <div class="form_box left">
 
-                <div class="txt_box">
-                  <h3 class="tit form_tit red_dot txt_white">올림플래닛 뉴스레터를 구독하세요</h3>
-                  <p class="txt txt_white mt20 mb20">이메일 주소를 등록하시면 올린플래닛의 뉴스, 행사 및 이벤트정보를 보내드립니다.</p>
-                </div>
+              <div class="txt_box">
+                <h3 class="tit form_tit red_dot txt_white">올림플래닛 뉴스레터를 구독하세요</h3>
+                <p class="txt txt_white mt20 mb20">이메일 주소를 등록하시면 올린플래닛의 뉴스, 행사 및 이벤트정보를 보내드립니다.</p>
+              </div>
 
-                <div class="box">
+              <!-- input type check box common object -->
+              <div class="box agree">
 
-                  <div class="input_box">
-                    <label class="input_chk_box">
-                      <input type="checkbox">
-                      <span class="input_label txt_white">동의하기</span>
-                    </label>
-                    <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
-                  </div>
-
+                <div class="input_box flex flex_align_center">
+                  <label class="input_chk_box">
+                    <input type="checkbox">
+                    <span class="input_label txt_white">동의하기</span>
+                  </label>
+                  <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
                 </div>
 
               </div>
+              <!-- input type check box common object -->
 
-              <div class="form_box">
-                <h3 class="tit form_tit red_dot txt_white fw300">궁금하신 내용을 남겨주세요</h3>
+              <div class="box flex flex_align_center flex_between">
+                <div class="input_item">
+                  <label for="input01">이메일</label>
+                  <input id="input01" class="user_name" type="text">
+                </div>
+                <a href="" class="btn btn_round btn_primary btn_more btn_sm">문의하기</a>
               </div>
 
-              <div class="circle_box">
-                <div class="circle_item item01">
-                  <i class="half_circle left"></i>
-                  <i class="half_circle right"></i>
+
+
+            </div>
+            <!-- // 뉴스레터 구독 -->
+
+            <!-- 문의하기 -->
+            <div class="form_box right">
+
+              <div class="txt_box">
+                <h3 class="tit form_tit red_dot txt_white">궁금하신 내용을 남겨주세요</h3>
+                <p class="txt txt_white mt20 mb20">문의 사항을 남겨주시면 담당자가 연락드리겠습니다.</p>
+              </div>
+
+              <div class="box agree">
+
+                <div class="input_box flex flex_align_center">
+                  <label class="input_chk_box">
+                    <input type="checkbox">
+                    <span class="input_label txt_white">동의하기</span>
+                  </label>
+                  <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
                 </div>
-                <div class="circle_item item02">
-                  <i class="half_circle left"></i>
-                  <i class="half_circle right"></i>
-                </div>
-                <div class="circle_item item03">
-                  <i class="half_circle left"></i>
-                  <i class="half_circle right"></i>
-                </div>
-                <div class="circle_item item04">
-                  <i class="half_circle left"></i>
-                  <i class="half_circle right"></i>
+              </div>
+
+              <div class="box">
+                <ul>
+                  <li class="input_item">
+                    <div class="select_box dropdown_box">
+                      <div class="select dropdown">
+                        <label tabindex="0" class="dropdown_name">문의유형</label>
+                        <ul class="select_list dropdown_list">
+                          <li class="select_item"><button>입점 문의</button></li>
+                          <li class="select_item"><button>솔루션 도입</button></li>
+                          <li class="select_item"><button>업무제휴</button></li>
+                          <li class="select_item"><button>기타</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="input_item">
+                    <label for="input02">이름을 입력해주세요</label>
+                    <input id="input02" type="text">
+                  </li>
+                  <li class="input_item">
+                    <label for="input03">회사명을 입력해주세요</label>
+                    <input id="input03" type="text">
+                  </li>
+                  <li class="input_item">
+                    <label for="input04">이메일주소를 입력해주세요</label>
+                    <input id="input04" type="email">
+                  </li>
+                  <li class="input_item">
+                    <label for="input05">문의 내용을 입력해주세요</label>
+                    <input id="input05" type="text">
+                  </li>
+                </ul>
+                <div class="btn_box flex mt20">
+                  <a href="" class="btn btn_round btn_primary btn_more btn_sm">문의하기</a>
                 </div>
               </div>
 
             </div>
-          </form>
-        </div>
+            <!-- //문의하기 -->
+
+            <div class="circle_box">
+              <div class="circle_item item01">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <div class="circle_item item02">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <div class="circle_item item03">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <div class="circle_item item04">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+            </div>
+
+          </div>
+        </form>
+
       </div>
       <!-- // section#6 form -->
     </div>
@@ -552,8 +736,8 @@
           <!-- address -->
           <address class="address">
             <h4 class="logo footer_logo">올림플래닛 푸터영역 로고</h4>
-            OLIMPLANET Inc. 120-88-24298 7F, Parnas Tower,521, Teheran-ro, Gangnam-gu, Seoul, Korea
-            Tel.+82-1544-6517 FAX: 02-6499-2183<br>
+            OLIMPLANET Inc. 120-88-24298 7F, Parnas Tower,521, Teheran-ro, Gangnam-gu, Seoul, Korea Tel.+82-1544-6517
+            FAX: 02-6499-2183<br>
             Copyright © 2022 OLIM PLANET Inc.
           </address>
           <!-- // address -->
@@ -566,10 +750,8 @@
               <div class="ico_act"></div>
               <ul class="dropdown_list">
                 <li class="dropdown_item"><a>Olim Planet</a></li>
-                <li class="dropdown_item"><a href="https://stg.elypecs.com/" target="_blank">Elypecs</a>
-                </li>
-                <li class="dropdown_item"><a href="https://studio.elypecs.com/" target="_blank">Elypecs
-                    Studio</a></li>
+                <li class="dropdown_item"><a href="https://stg.elypecs.com/" target="_blank">Elypecs</a></li>
+                <li class="dropdown_item"><a href="https://studio.elypecs.com/" target="_blank">Elypecs Studio</a></li>
               </ul>
             </div>
           </div>
@@ -700,7 +882,7 @@
             // markers: true,
           },
         })
-        .from(".section_exp .bg_box", { 
+        .from(".section_exp .bg_box", {
           scale: 0.5
         })
         .from(".section_exp .bg_box .dim", {
@@ -725,10 +907,10 @@
       // gsap.registerPlugin(ScrollTrigger);
 
       gsap.to(startCount, {
-        var0: 19.500,
-        var1: 31.000,
-        var2: 5.256,
-        var3: 10,
+        var0: 19500,
+        var1: 31000,
+        var2: 5256,
+        var3: 10000000,
         duration: 3,
         ease: "none",
         onUpdate: changeNumber,
@@ -750,8 +932,37 @@
 
     function changeNumber() {
       for (let i = 0; i < numList.length; i++) {
-        numList[i].innerHTML = (startCount[`var${i}`]).toFixed(3);
+        // numList[i].innerHTML = (startCount[`var${i}`]).toFixed();
+        let numberVal = numberFormatter(Math.ceil(startCount[`var${i}`]));
+        numList[i].innerHTML = numberVal
       }
+    }
+
+    function numberToString(number) {
+      return number.toLocaleString('en-US');
+    }
+
+    function numberFormatter(number) {
+      const setting = [
+        { value: 1, symbol: '' },
+        { value: 1e6, symbol: 'M' },
+        { value: 1e9, symbol: 'G' },
+        { value: 1e12, symbol: 'T' },
+        { value: 1e15, symbol: 'P' },
+        { value: 1e18, symbol: 'E' },
+      ];
+      const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      let i;
+      for (i = setting.length - 1; i > 0; i--) {
+        if (number >= setting[i].value) {
+          break;
+        }
+      }
+      return (
+        setting[i].symbol.length === 0
+        ? numberToString(number)
+        : (number / setting[i].value).toFixed(0).replace(rx, '$1') + setting[i].symbol
+      );
     }
   </script>
 </body>
