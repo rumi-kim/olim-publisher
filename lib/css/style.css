@@ -40,7 +40,7 @@
 
 /* dropDown */
 .dropdown{position: relative; width: 100%; text-align: left; }
-.dropdown .dropdown_list{position: absolute; top: 100%; left: 0; right: 0;}
+.dropdown .dropdown_list{position: absolute; top: 100%; left: 0; right: 0; z-index: 1;}
 .dropdown.dropdown_top .dropdown_list{top: initial; bottom: 100%;}
 .dropdown .dropdown_list .dropdown_item:hover{background: #262626}
 
@@ -254,17 +254,28 @@
 .form_tit{font-size: 30px; letter-spacing: -.75px;}
 .form_wrap .terms{margin-left: 25px; color: #909090; font-size: 14px;}
 .form_wrap .circle_box{bottom: -300px; left: 300px;}
+.form_box .box.agree { margin-bottom: 30px;}
+.form_box.right {width: 510px;}
+.form_box.right .btn_box { justify-content: flex-end;}
+.form_box.left {width: 637px;}
+.form_box.left .input_item { width: 460px;}
+.form_box .btn.btn_round { width:147px} 
+.form_box .input_item { position: relative; border-bottom: 1px solid #666; }
+.form_box .input_item.on { border-bottom: 1px solid #fff; }
+.form_box .input_item ~ .form_box .input_item { margin-top: 10px;}
+.form_box .input_item label { position: absolute; top: 50%; transform: translateY(-50%); left: 5px; transition: all .5s; font-size: 18px; color: gray; cursor: text;}
+.form_box .input_item input { display: block; line-height:50px; width: 100%; border: 0; background-color: transparent; transition: all .2s;color:#fff; background: none; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none}  
+.form_box .input_item input:focus { outline: 0;}
+.form_box .input_item.on label { opacity: 0;}
 
-.form_box.right { width: 510px;}
-.form_box.left { width: 637px;}
-.form_box input { border-bottom: 1px solid #666; background: none; }
-.form_box input[type="email"] { border-bottom: 1px solid #fff;}
-
-
-
-
-
-
+.form_box .select {border: none; border-bottom: 1px solid #fff; border-radius: 0;}
+.form_box .select_box {width: 100%;}
+.form_box .select .dropdown_name {padding-left:5px; font-size: 18px; position: relative;}
+.form_box .select .dropdown_name:after {content:""; display: block; position: absolute; right: 13px; top: 50%; transform: translateY(-50%); width: 10px; height: 5px; background:url(../../static/images/ico_dropdown_arrow_x2.png) no-repeat center / 100% 100%; transition: all .2s;}
+.form_box .select .dropdown_name.is_active:after { transform: translateY(-50%) rotate(180deg);}
+.form_box .select .select_list { padding:19.5px 0; transform: translateY(5px); background: #434343; border-radius:5px}
+.form_box .select .select_list .select_item button { display:block; padding-left:30px; line-height:46px; width:100%; color: #fff; text-align: left;box-sizing: border-box; font-size: 18px; color: #b7b7b7; transition: all .3s;}
+.form_box .select .select_list .select_item button:hover { background: #393939;}
 
 
 
@@ -277,7 +288,7 @@
 .section_box {padding-bottom: 180px;}
 .company .inner {padding: 0 155px;}
 
-/* 전체 section_desc */
+/* 전체 section_desc */ 
 .txt.section_desc {font-weight: normal; line-height: 30px;}
 .txt.section_desc.strong{font-size: 24px; letter-spacing: -0.6px; line-height: 45px;}
 
@@ -340,3 +351,4 @@
   98.5% { right: -100%;} 
   100% { right: -100%; } 
 }
+
