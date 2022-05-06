@@ -105,25 +105,26 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 /* btn */
 .btn{display: block; height: 42px; color: #4f4f4f; font-size: 18px; letter-spacing: -0.45px; text-align: center; line-height: 40px; border: 1px solid #d3d3d3; transition: all 0.3s; background-repeat: no-repeat !important;}
 /* color 구분 */
-.btn.btn_primary{color: #fff; border-color: #ff3232; background: #ff3232;}
+.btn.btn_primary{color: #fff; border-color: #ff3232; background-color: #ff3232;}
 .btn.btn_secondary{}
 .btn.btn_white{background: #fff;}
 /* 형태구분 */
 .btn.btn_txt{height: auto; border: 0; line-height: initial;}
 .btn.btn_circle{width: 50px; height: 50px; font-size: 16px; letter-spacing: -0.4px; border-radius: 50px; background-position: center center !important;}
 .btn.btn_round{border-radius: 21.5px;}
+.btn.btn_lg.btn_round{border-radius: 25px;}
 .btn.btn_search{display: block; width: 29px; height: 29px; font-size: 0; border: 0; background: url("../../static/images/ico_search.png") no-repeat; background-size: cover;}
 
 /* 크기구분 */
 /* 크기구분은 추후 추가 */
 .btn.btn_xs{}
-.btn.btn_sm{}
-.btn.btn_md{}
-.btn.btn_lg{}
+.btn.btn_sm{width: 148px}
+.btn.btn_md{width: 180px}
+.btn.btn_lg{width: 248px; height: 50px}
 .btn.btn_xl{}
 /* btn action */
 .btn.btn_primary:hover,
-.btn.btn_primary.is_active{border-color: #d32727; background: #d32727}
+.btn.btn_primary.is_active{border-color: #d32727; background-color: #d32727}
 
 /* quick Nav */
 .quick_nav_box{position: fixed;}

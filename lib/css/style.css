@@ -112,7 +112,6 @@
 .txt.img_desc{position: absolute; bottom: 30px; left: 30px; z-index: 1; font-size: 20px; line-height: 1.4; letter-spacing: -.5px;}
 
 /* btn */
-.btn.btn_round{width: 180px}
 .btn.btn_more{vertical-align: middle; font-weight: normal}
 .btn.btn_more:after{content: ""; display: inline-block; vertical-align: middle; margin-top: -2px; margin-left: 6px; width: 15px; height: 14px; background: url("../../static/images/ico_arrow.png") no-repeat;}
 
