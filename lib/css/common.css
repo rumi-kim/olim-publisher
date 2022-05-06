@@ -109,7 +109,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .btn.btn_secondary{}
 .btn.btn_white{background: #fff;}
 /* 형태구분 */
-.btn.btn_txt{height: auto; border: 0; line-height: initial;}
+.btn.btn_txt{height: auto; border: 0; line-height: initial; background-color: transparent;}
 .btn.btn_circle{width: 50px; height: 50px; font-size: 16px; letter-spacing: -0.4px; border-radius: 50px; background-position: center center !important;}
 .btn.btn_round{border-radius: 21.5px;}
 .btn.btn_lg.btn_round{border-radius: 25px;}

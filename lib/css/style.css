@@ -232,6 +232,12 @@
 .card_box .card .card_txt{position: relative; z-index: 100; color: #fff; font-size: 28px; font-weight: 500; text-align: center;}
 .card_box .card .desc{display: block; margin-top: 10px; font-size: 16px; font-weight: 400;}
 .card_box .card .card_bg{position: absolute; top: 50%; left: 50%; z-index: 50; width: 193px; height: 181px; transform: translate(-50%, -50%); background: url("../../static/images/img_award.png") no-repeat; background-size: contain;}
+.card_box .card .bg_img{ width: 100%; height: 100%; z-index: 10;border-radius: 20px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.card_box .card:nth-child(1) .bg_img {  background-image: url("../../static/images/img_award01.jpg"); }
+.card_box .card:nth-child(2) .bg_img {  background-image: url("../../static/images/img_award02.jpg"); }
+.card_box .card:nth-child(3) .bg_img {  background-image: url("../../static/images/img_award03.jpg"); }
+.card_box .card:nth-child(4) .bg_img {  background-image: url("../../static/images/img_award04.jpg"); }
+.card_box .card:nth-child(5) .bg_img {  background-image: url("../../static/images/img_award05.jpg"); }
 .card_box .card:after{content: ""; opacity: 0.6; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; width: 100%; height: 100%; border-radius: 20px; background-color: #222525; transition: background-color 0.3s}
 .card_box .card:hover{top: -20px;}
 .card_box .card:hover:after{background-color: #7f0202;}
@@ -261,7 +267,6 @@
 .form_box.right ul li ~ li { margin-top:10px}
 .form_box.left {width: 637px;}
 .form_box.left .input_item { width: 460px;}
-.form_box .btn.btn_round { width:147px} 
 .form_box .input_item { position: relative; border-bottom: 1px solid #666; }
 .form_box .input_item.on { border-bottom: 1px solid #fff; }
 .form_box .input_item label { position: absolute; top: 50%; transform: translateY(-50%); left: 5px; transition: all .5s; font-size: 18px; color: gray; cursor: text;}
