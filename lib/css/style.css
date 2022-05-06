@@ -257,12 +257,12 @@
 .form_box .box.agree { margin-bottom: 30px;}
 .form_box.right {width: 510px;}
 .form_box.right .btn_box { justify-content: flex-end;}
+.form_box.right ul li ~ li { margin-top:10px}
 .form_box.left {width: 637px;}
 .form_box.left .input_item { width: 460px;}
 .form_box .btn.btn_round { width:147px} 
 .form_box .input_item { position: relative; border-bottom: 1px solid #666; }
 .form_box .input_item.on { border-bottom: 1px solid #fff; }
-.form_box .input_item ~ .form_box .input_item { margin-top: 10px;}
 .form_box .input_item label { position: absolute; top: 50%; transform: translateY(-50%); left: 5px; transition: all .5s; font-size: 18px; color: gray; cursor: text;}
 .form_box .input_item input { display: block; line-height:50px; width: 100%; border: 0; background-color: transparent; transition: all .2s;color:#fff; background: none; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none}  
 .form_box .input_item input:focus { outline: 0;}
