@@ -355,7 +355,7 @@
 /* --------------------- */
 
 /* card section*/
-.company_card .card_box {margin-top: 40px; margin-bottom: 40px;}
+.company_card .card_box {margin-top: 40px; margin-bottom: 0;}
 .company_card .card_box .card{width: 265px; height: 362px; overflow: hidden; transition: width 0.3s, height 0.3s;}
 .company_card .card_box .card:hover{transform-origin: 50% 50%; z-index: 100;}
 .company_card .card_box .card_bg_img{height: 100%;position: absolute;top: 0;left: 0;}
@@ -398,6 +398,7 @@
 .green{color: #118d16;}
 .yellow{color: #cb9e00;}
 .map .circle_box {top: -280px; right: -450px; z-index: -1;}
+
 /* mediaQuery */
 @media screen and (min-width: 1920px) {
   .quick_nav_box{right: 50%; bottom: 36px; margin-right: -910px;} 
