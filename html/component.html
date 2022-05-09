@@ -29,20 +29,22 @@
   
   <style>
     .component_inner{margin: 0 auto; width: 1680px;}
+    
   </style>
 </head>
 <body>
-  <div class="wrap" style="height: 100%; background-color: #909090;">
+  <div class="wrap" style="background-color: #909090;">
 
+    <!-- header -->
     <header class="header">
-        
+
       <!-- header inner -->
       <div class="inner">
         <!-- logo -->
         <h1 class="logo">
-            <a href="javascript:void(0)">
-                올림플래닛 로고
-            </a>
+          <a href="javascript:void(0)">
+            올림플래닛 로고
+          </a>
         </h1>
         <!-- //logo -->
 
@@ -50,11 +52,11 @@
         <nav class="gnb">
           <ul class="gnb_list">
             <li class="gnb_item">
-              <a href="javascript:void(0)" class="is_active">올림플래닛</a>
+              <a href="javascript:void(0)">올림플래닛</a>
             </li>
             <li class="gnb_item">
               <a href="javascript:void(0)">서비스</a>
-            </li> 
+            </li>
             <li class="gnb_item">
               <a href="javascript:void(0)">공시정보</a>
             </li>
@@ -69,7 +71,7 @@
         <!-- //gnb -->
 
 
-        <div class="btn_box flex lan_chg_box">
+        <div class="btn_box flex sub_nav_box">
 
           <a href="javascript:void(0)" class="btn btn_txt is_active">KOR</a>
           <a href="javascript:alert('현재 다국어 기능 지원중입니다.')" class="btn btn_txt">ENG</a>
@@ -79,105 +81,381 @@
       </div>
       <!-- // header inner -->
     </header>
-    <div class="component_inner mt80">
+    <!-- // header -->
 
-      <div class="box">
+    <div class="container mt80 pt40">
+      <div class="inner">
+  
+        <div class="box">
 
-        <div class="btn_wrap flex flex_row">
-
-          <div class="btn_box">
-            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md ">자세히보기</a>
+          <h3>버튼 컴포넌트</h3>
+  
+          <div class="btn_wrap mt20 mb20">
+  
+            <div class="btn_box flex flex_row">
+              <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md ">자세히보기</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md is_active">자세히보기</a>
+            </div>
+  
           </div>
+  
+        </div>
+        
+  
+        <div class="box">
 
-          <div class="btn_box">
-            <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md is_active">자세히보기</a>
+          <h3>버튼 컴포넌트 (분류별)</h3>
+  
+          <div class="btn_wrap flex flex_row mt20 mb20">
+  
+            <div class="btn_box">
+              <a href="javascript:void(0)" class="btn btn_round btn_sm">btn_sm</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_md mt10">btn_md</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_lg mt10">btn_lg</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_primary btn_md mt10">btn_primary</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_primary btn_more btn_md mt10">btn_more</a>
+              <a href="javascript:void(0)" class="btn btn_round btn_primary btn_md is_active mt10">is_active</a>
+
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <!-- 검색 컴포넌트 -->
+        <div class="box">
+
+          <h3>검색 컴포넌트</h3>
+
+          <div class="search_box flex flex_align_center mt20 mb20">
+            <button class="btn btn_search">검색하기</button>
+            <input type="text" class="input_search" placeholder="Search">
           </div>
 
         </div>
+  
+        <!-- input type check box common object -->
+        <div class="box">
 
-      </div>
-
-      <!-- 검색 컴포넌트 -->
-      <div class="search_box flex flex_align_center">
-        <button class="btn btn_search">검색하기</button>
-        <input type="text" class="input_search" placeholder="Search">
-      </div>
-
-      <!-- input type check box common object -->
-      <div class="box">
-
-        <div class="input_box flex flex_align_center">
-          <label class="input_chk_box">
-            <input type="checkbox">
-            <span class="input_label txt_white">동의하기</span>
-          </label>
-          <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
+          <h3>체크박스 컴포넌트</h3>
+  
+          <div class="input_box flex flex_align_center mt20 mb20">
+            <label class="input_chk_box">
+              <input type="checkbox">
+              <span class="input_label txt_white">동의하기</span>
+            </label>
+          </div>
+  
         </div>
+        <!-- input type check box common object -->
+  
+        <!-- card list -->
+        <div class="list_box">
+
+          <h3>카드형 리스트 컴포넌트 (3 x n)</h3>
+          
+          <ul class="board_list mt20 mb20">
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+          </ul>
+            
+        </div>
+        <!-- //card list -->
+  
+        <!-- card list has Date -->
+        <div class="list_box">
+
+          <h3>카드형 리스트 컴포넌트 (3 x n & view date)</h3>
+          
+          <ul class="board_list mt20 mb20">
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <span class="card_date">2022/04/27</span>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <span class="card_date">2022/04/27</span>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+            <li class="board_item">
+              <a href="">
+                <div class="img_box">
+                  <img src="../static/mov/bg_visual03.png" alt="">
+                </div>
+                <span class="card_date">2022/04/27</span>
+                <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
+              </a>
+            </li>
+          </ul>
+            
+        </div>
+        <!-- //card list has Date -->
+
+        <!-- dropdown -->
+        <div class="box">
+
+          <h3>드롭다운 - default</h3>
+          
+          <div>
+            <div class="dropdown_box mt20 mb20">
+              <div class="select dropdown">
+                <label tabindex="0" class="dropdown_name">문의유형</label>
+                <ul class="select_list dropdown_list">
+                  <li class="select_item"><a href="javascript:void(0)">입점 문의</a></li>
+                  <li class="select_item"><a href="javascript:void(0)">솔루션 도입</a></li>
+                  <li class="select_item"><a href="javascript:void(0)">업무제휴</a></li>
+                  <li class="select_item"><a href="javascript:void(0)">기타</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- //dropdown -->
+
+        <!-- dropdown -->
+        <div class="box">
+
+          <h3>드롭다운 - up</h3>
+
+          <div class="dropdown_box mt20 mb20">
+            <div class="dropdown dropdown_top">
+              <label tabindex="0" class="dropdown_name">Family Site</label>
+              <div class="ico_act"></div>
+              <ul class="dropdown_list">
+                <li class="dropdown_item"><a>Olim Planet</a></li>
+                <li class="dropdown_item"><a href="https://stg.elypecs.com/" target="_blank">Elypecs</a></li>
+                <li class="dropdown_item"><a href="https://studio.elypecs.com/" target="_blank">Elypecs Studio</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <!-- //dropdown -->
+
+        <!-- form type 이메일 보내기 -->
+        <div class="box">
+
+          <h3>입력폼 예시</h3>
+
+          <form>
+            <div class="form_wrap flex mt20 mb20">
+  
+              <!-- 뉴스레터 구독 -->
+              <div class="form_box left">
+  
+                <div class="txt_box">
+                  <h3 class="tit form_tit red_dot txt_white">올림플래닛 뉴스레터를 구독하세요</h3>
+                  <p class="txt txt_white mt20 mb20">이메일 주소를 등록하시면 올린플래닛의 뉴스, 행사 및 이벤트정보를 보내드립니다.</p>
+                </div>
+  
+                <!-- input type check box common object -->
+                <div class="box agree">
+  
+                  <div class="input_box flex flex_align_center">
+                    <label class="input_chk_box">
+                      <input type="checkbox">
+                      <span class="input_label txt_white">동의하기</span>
+                    </label>
+                    <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
+                  </div>
+  
+                </div>
+                <!-- input type check box common object -->
+  
+                <div class="box flex flex_align_center flex_between">
+                  <div class="input_item">
+                    <label for="input01">이메일</label>
+                    <input id="input01" class="user_name" type="text">
+                  </div>
+                  <a href="" class="btn btn_round btn_primary btn_more btn_sm">문의하기</a>
+                </div>
+  
+  
+  
+              </div>
+              <!-- // 뉴스레터 구독 -->
+  
+            </div>
+          </form>
+        
+        </div>
+        <!-- // form type 이메일 보내기 -->
+
+        <!-- form type 문의하기 -->
+        <div class="box">
+
+          <h3>입력폼 예시</h3>
+
+          <form>
+            <div class="form_wrap flex mt20 mb20">
+  
+              <!-- 문의하기 -->
+              <div class="form_box right">
+  
+                <div class="txt_box">
+                  <h3 class="tit form_tit red_dot txt_white">궁금하신 내용을 남겨주세요</h3>
+                  <p class="txt txt_white mt20 mb20">문의 사항을 남겨주시면 담당자가 연락드리겠습니다.</p>
+                </div>
+  
+                <div class="box agree">
+  
+                  <div class="input_box flex flex_align_center">
+                    <label class="input_chk_box">
+                      <input type="checkbox">
+                      <span class="input_label txt_white">동의하기</span>
+                    </label>
+                    <a href="javascript:void(0)" class="terms">개인정보 취급방침</a>
+                  </div>
+                </div>
+  
+                <div class="box">
+                  <ul>
+                    <li class="input_item">
+                      <div class="select_box dropdown_box">
+                        <div class="select dropdown">
+                          <label tabindex="0" class="dropdown_name">문의유형</label>
+                          <ul class="select_list dropdown_list">
+                            <li class="select_item"><button>입점 문의</button></li>
+                            <li class="select_item"><button>솔루션 도입</button></li>
+                            <li class="select_item"><button>업무제휴</button></li>
+                            <li class="select_item"><button>기타</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="input_item">
+                      <label for="input02">이름을 입력해주세요</label>
+                      <input id="input02" type="text">
+                    </li>
+                    <li class="input_item">
+                      <label for="input03">회사명을 입력해주세요</label>
+                      <input id="input03" type="text">
+                    </li>
+                    <li class="input_item">
+                      <label for="input04">이메일주소를 입력해주세요</label>
+                      <input id="input04" type="email">
+                    </li>
+                    <li class="input_item">
+                      <label for="input05">문의 내용을 입력해주세요</label>
+                      <input id="input05" type="text">
+                    </li>
+                  </ul>
+                  <div class="btn_box flex mt20">
+                    <a href="" class="btn btn_round btn_primary btn_more btn_sm">문의하기</a>
+                  </div>
+                </div>
+  
+              </div>
+              <!-- //문의하기 -->
+  
+            </div>
+          </form>
+        
+        </div>
+        <!-- // form type 문의하기 -->
+  
+        <!-- table -->
+        <div class="box irinfo_list_box table_box" style="margin-bottom: 20px; padding: 20px; background-color: #fff;">
+          
+          <h3>테이블(리스트) 예시</h3>
+
+          <table class="mt20 mb20">
+            
+            <colgroup>
+              <col class="w20p">
+              <col class="w50p">
+              <col class="w10p">
+              <col class="w10p">
+              <col class="w10p">
+            </colgroup>
+
+            <thead>
+
+              <tr>
+                <th>
+                  <span>종류</span>
+                </th>
+                <th>
+                  <span>제목</span>
+                </th>
+                <th>
+                  <span>작성자</span>
+                </th>
+                <th>
+                  <span>조회수</span>
+                </th>
+                <th>
+                  <span>날짜</span>
+                </th>
+              </tr>
+
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>
+                  <span class="irinfo_badge">공시정보</span>
+                </td>
+                <td class="left_txt">
+                  <a href="javascript:void(0)">주식액면분할에 따른 주권제출공고</a>
+                </td>
+                <td>
+                  <span>올림플래닛</span>
+                </td>
+                <td>
+                  <span class="sm_txt opt_txt">조회수 256</span>
+                </td>
+                <td>
+                  <span class="sm_txt opt_txt">2022/04/28</span>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+        <!-- // table -->
 
       </div>
-      <!-- input type check box common object -->
-
-      <!-- card list -->
-      <div class="list_box">
-        
-        <ul class="board_list">
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-          <li class="board_item">
-            <a href="">
-              <div class="img_box">
-                <img src="../static/mov/bg_visual03.png" alt="">
-              </div>
-              <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-            </a>
-          </li>
-        </ul>
-        
-     </div>
-     <!-- card list -->
-
     </div>
 
+    <!-- footer -->
+
     <footer class="footer">
-      
+
       <div class="inner">
 
         <!-- quick Nav -->
@@ -208,7 +486,7 @@
                 <p class="ir_text">상단으로</p>
               </a>
             </li>
-            
+
           </ul>
 
         </div>
@@ -221,12 +499,13 @@
           <!-- address -->
           <address class="address">
             <h4 class="logo footer_logo">올림플래닛 푸터영역 로고</h4>
-            OLIMPLANET Inc. 120-88-24298 7F, Parnas Tower,521, Teheran-ro, Gangnam-gu, Seoul, Korea Tel.+82-1544-6517 FAX: 02-6499-2183<br>
+            OLIMPLANET Inc. 120-88-24298 7F, Parnas Tower,521, Teheran-ro, Gangnam-gu, Seoul, Korea Tel.+82-1544-6517
+            FAX: 02-6499-2183<br>
             Copyright © 2022 OLIM PLANET Inc.
           </address>
           <!-- // address -->
 
-          
+
           <!-- family site -->
           <div class="dropdown_box">
             <div class="dropdown dropdown_top">
@@ -234,8 +513,8 @@
               <div class="ico_act"></div>
               <ul class="dropdown_list">
                 <li class="dropdown_item"><a>Olim Planet</a></li>
-                <li class="dropdown_item"><a>Elypecs</a></li>
-                <li class="dropdown_item"><a>Elypecs Studio</a></li>
+                <li class="dropdown_item"><a href="https://stg.elypecs.com/" target="_blank">Elypecs</a></li>
+                <li class="dropdown_item"><a href="https://studio.elypecs.com/" target="_blank">Elypecs Studio</a></li>
               </ul>
             </div>
           </div>
@@ -243,10 +522,11 @@
 
         </div>
 
-        
+
       </div>
 
     </footer>
+    <!-- footer -->
   </div>    
 </body>
 </html>

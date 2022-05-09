@@ -121,6 +121,7 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 
 /* btn */
 .btn{display: block; height: 42px; color: #000; font-size: 18px; letter-spacing: -0.45px; text-align: center; line-height: 40px; border: 1px solid #ccc; transition: all 0.3s; background-color: #fff; background-repeat: no-repeat !important;}
+.btn:hover{background: #ccc}
 /* color 구분 */
 .btn.btn_primary{color: #fff; border-color: #ff3232; background-color: #ff3232;}
 .btn.btn_secondary{}
@@ -151,9 +152,20 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 
 /* dropDown */
 .dropdown_box{width: 264px;}
-.dropdown{position: relative; width: 100%; text-align: left; height: 45px; border: 1px solid #505050; border-radius: 29px;}
+.dropdown{position: relative; width: 100%; text-align: left; height: 45px; border: 1px solid #505050;}
 .dropdown .dropdown_name{display: block; padding-left: 32px; color: #fff; font-size: 14px; text-align: left; line-height: 45px; cursor: pointer}
 .dropdown .dropdown_list{display: none; overflow: hidden; position: absolute; top: 100%; left: 0; right: 0; border-radius: 20px; background: #333;}
+
+/* dropDown - 기본형*/
+.dropdown_box .select{border: none; border-bottom: 1px solid #fff; border-radius: 0;}
+.dropdown_box .select .dropdown_name {padding-left:5px; font-size: 18px; position: relative; cursor: pointer;}
+.dropdown_box .select .dropdown_name:after {content:""; display: block; position: absolute; right: 13px; top: 50%; transform: translateY(-50%); width: 10px; height: 5px; background:url("../../static/images/ico/ico_dropdown_arrow_x2.png") no-repeat center / 100% 100%; transition: all .2s;}
+.dropdown_box .select .dropdown_name.is_active:after { transform: translateY(-50%) rotate(180deg);}
+.dropdown_box .select .select_list { padding:19.5px 0; transform: translateY(5px); background: #434343; border-radius:5px}
+.dropdown_box .select .select_list .select_item a { display:block; padding-left:30px; line-height:46px; width:100%; color: #fff; text-align: left;box-sizing: border-box; font-size: 18px; color: #b7b7b7; transition: all .3s;}
+.dropdown_box .select .select_list .select_item a:hover { background: #393939;}
+
+/* dropDown - 상단오픈형*/
 .dropdown.dropdown_top .dropdown_list{top: initial; bottom: 100%; margin-bottom: 5px;}
 .dropdown .ico_act{position: absolute; top: 50%; right: 25px; margin-top: -6.5px;width: 13px; height: 13px; transition: transform 0.2s;}
 .dropdown .ico_act.is_active{transform: rotate(45deg)}
@@ -172,11 +184,13 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .board_list:after { display: block; clear: both; content: "";}
 .board_list .board_item {float: left; margin-bottom: 50px; margin-right:18px; width: calc((100% - 36px) / 3); height: 304px;}
 .board_list .board_item:nth-child(3n) {margin-right: 0;}
-.board_list .board_item a {display: block; width: 100%; height: 100;}
+.board_list .board_item a {display: block; width: 100%; height: 100%;}
 .board_list .board_item a .img_box {overflow: hidden; height:242px;}
 .board_list .board_item a .img_box img { min-height: 100%; width:100%; object-fit: cover;}
 .board_list .board_item a .txt {margin-top: 36px; line-height: 1.44; font-weight: 600;}
 
+.board_list .board_item .card_date{display: block; margin-top: 10px; padding: 0 14px; width: fit-content; height: 18px; color: #585858; font-size: 12px; font-weight: 500; letter-spacing: normal; line-height: 16px; border-radius: 14px; background: #f0efef;}
+.board_list .board_item .card_date+.txt{margin-top: 10px}
 
 /* input 요소 */
 input[type="checkbox"],
@@ -198,6 +212,8 @@ input{border: 0; outline: 0;}
 .terms:hover{text-decoration: underline;}
 .search_box{padding: 0 20px; width: 422px; height: 42px; border: 1px solid #dfdfdf; border-radius: 21px; background: #f3f3f3; transition: all 0.2s}
 .search_box:focus-within{border: 2px solid #585858}
+.form_wrap{}
+
 
 /* element 단위 구분 */
 .fw300{font-weight: 300;}
