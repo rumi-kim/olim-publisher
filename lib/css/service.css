@@ -2,8 +2,14 @@
 
 
 /* service page */
+/* common */
+.service .section_wrap { padding-top: 0;}
+.service .section_box {padding-bottom: 0;}
+.service .circle_box {right: -50px; top: -270px;}
+.service .txt.section_desc.strong {line-height: 1.67;}
+.service .bg_txt { white-space: nowrap; right: 0; top: 110px; margin-right: -87px;}
 
-/* service */
+
 .service_list li {width:48.7218%; }
 .service_list li > a {display: block;}
 .service_list li .img_box {overflow: hidden; position: relative; height:307px; }
@@ -20,12 +26,19 @@
 .service_list li > a:hover .btn.btn_more span {display: inline-block;}
 
 
+
+.service .section_visual { padding-top: 0;}
+.service .section_visual .img_box {overflow: hidden; position: relative; height: 618px;}
+.service .section_visual .img_box img {width: 100%;}
+
 /* section_img */
 .section_img .bg_img {overflow: hidden;height: 380px; }
 
-/* section_tech */
+/* section_tech (올림플래닛의 능력) */
+.service  .section_tech {padding-top: 145px;}
+.section_tech .tit.section_tit .tit_desc {font-size: 18px; color: #ff3232; font-weight: bold;}
 .section_tech .bg_gray {background-color: #f1f1f1;}
-.section_tech .visual_box .box { text-align: center;}
+.section_tech .visual_box .box {padding:130px 0 100px; text-align: center;}
 .section_tech .visual_box .box > div { display: flex; flex-direction: column; align-items: center;}
 .section_tech .visual_box .box > div strong { display: block; margin:30px 0 20px; font-size: 26px; letter-spacing: -0.13px; color: #212121;}
 .section_tech .visual_box .box > div p { color: #585858; line-height: 1.67;}
@@ -33,22 +46,28 @@
 .section_tech .visual_box .ico img { height:73px;}
 .section_tech .visual_box .solution .ico img { height:94px; }
 .section_tech .visual_box .business .ico { background-color: #fa3232;}
+.section_tech h3.tit.section_tit {position: relative;; margin-bottom:20px; font-size: 30px; letter-spacing: -0.75px;}
+.section_tech .tit.section_tit .number {position: absolute; right: 90%; bottom: 0; height: 165px; font-family: Futura; color: rgb(255, 113, 113, 0.1); font-size: 227px; line-height: 137px; }
 
+.section_tech .with { padding-top: 240px;}
+.section_tech .with .list_box {margin-top:140px;padding: 0 95px;  }
+.section_tech .with .logo_box { margin: 0 auto 70px; width: 235px; }
+.section_tech .with .card_list {position: relative; height: 180px; }
+.section_tech .with .card_list > li {display: flex; justify-content: center; align-items: center; opacity: 0.8; position: absolute; top: 0; bottom: 0; width: 457px;border-radius: 180px; box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2); background-color:#e20000; color: #fff; text-align: center;}
+.section_tech .with .card_list > li:nth-child(1) {opacity: 1; left: 0; background-color: #fff; color: #000;}
+.section_tech .with .card_list > li:nth-child(2) {opacity: 0.75; left:50%; background-color: #ff4747; transform: translateX(-50%);}
+.section_tech .with .card_list > li:nth-child(3) {right:0}
+.section_tech .with .card_list > li strong {font-size: 30px; }
+.section_tech .with .card_list > li p { margin-top: 10px; line-height: 1.5;}
 
-.section_tech .box2 .list_box { padding: 0 95px;  }
-.section_tech .box2 .card_list {position: relative; height: 180px; }
-.section_tech .box2 .card_list > li {display: flex; justify-content: center; align-items: center; opacity: 0.8; position: absolute; top: 0; bottom: 0; width: 457px;border-radius: 180px; box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2); background-color:#e20000; color: #fff; text-align: center;}
-.section_tech .box2 .card_list > li:nth-child(1) {opacity: 1; left: 0; background-color: #fff; color: #000;}
-.section_tech .box2 .card_list > li:nth-child(2) {opacity: 0.75; left:50%; background-color: #ff4747; transform: translateX(-50%);}
-.section_tech .box2 .card_list > li:nth-child(3) {right:0}
-.section_tech .box2 .card_list > li strong {font-size: 30px; }
-.section_tech .box2 .card_list > li p { margin-top: 10px; line-height: 1.5;}
+.section_tech .immersive .inner {padding-top:550px; padding-bottom: 240px;}
 
 /* Top Tear 3D Technique */
+.toptear { padding: 256px 0 145px !important;}
 .toptear .card_list li {overflow: hidden; position: relative; border-radius: 20px; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url("../../static/images/img_toptear3d01.jpg");}
 .toptear .card_list li .txt_box { display: flex; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.7); align-items: center; justify-content: center; flex-direction: column; color: #fff;}
 .toptear .card_list li .txt_box span {font-size: 20px; font-weight: bold; color: #afafaf;}
-.toptear .card_list li .txt_box p {margin-top:10px; font-weight: bold; text-align: center;}
+.toptear .card_list li .txt_box p {margin-top:10px; font-weight: 500; text-align: center;}
 .toptear .card_list li .ico { margin-bottom: 20px;}
 .toptear .card_list li:not(:nth-child(2)) {width: 360px; height:404px; font-size: 30px;}
 .toptear .card_list li:nth-child(1) .ico { width: 120px;}
@@ -57,3 +76,7 @@
 .toptear .card_list li:nth-child(2) .txt_box {top:306px; background: rgba(129,0,0,0.75); font-size: 28px;}
 .toptear .card_list li:nth-child(2) .txt_box span { color: #ff6a6a; font-weight: normal;}
 .toptear .card_list li:nth-child(3) {background-image: url("../../static/images/img_toptear3d03.jpg");}
+
+.service .section_service .inner { padding-top: 230px;}
+.service .section_showcase .inner { padding-top: 355px;}
+.service .section_showcase .bg_txt { left: 0; top: 0; margin-left: -140px;}
