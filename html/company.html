@@ -11,10 +11,10 @@
   <!-- GA Code -->
 
   <!-- library -->
-  <script src="lib/js/jquery-3.5.1.min.js"></script>
+  <script src="../lib/js/jquery-3.5.1.min.js"></script>
   <!-- OwlCarousel2 -->
-  <link href="lib/css/owl.carousel.min.css" rel="stylesheet">
-  <script src="lib/js/owl.carousel.min.js"></script>
+  <link href="../lib/css/owl.carousel.min.css" rel="stylesheet">
+  <script src="../lib/js/owl.carousel.min.js"></script>
   <!-- or cdn... -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
@@ -24,14 +24,14 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>  
   <!-- general style -->
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
-  <link rel="stylesheet" href="lib/css/olim_general_renew.css">
+  <link rel="stylesheet" href="../lib/css/olim_general_renew.css">
   <!-- futura webfont -->
   <link rel="stylesheet" href="https://use.typekit.net/eta8mwx.css">
-  <link rel="stylesheet" href="lib/css/common.css">
+  <link rel="stylesheet" href="../lib/css/common.css">
 
   <!-- <link rel="stylesheet" href="lib/css/style.css"> -->
-  <link rel="stylesheet" href="lib/css/sub.css">
-  <script src="lib/js/common.js"></script>
+  <link rel="stylesheet" href="../lib/css/sub.css">
+  <script src="../lib/js/common.js"></script>
   
 </head>
 <body>
@@ -87,8 +87,29 @@
     <!-- container -->
     <div class="container company">
 
-      <div class="breadcrumbs" role="navigation">
-        <div class="inner">
+      <!-- 원이 그려지는 효과를 위해 circle_box에 draw_circle 추가 -->
+      <div class="circle_box">
+        <div class="circle_item item01">
+          <i class="half_circle left"></i>
+          <i class="half_circle right"></i>
+        </div>
+        <div class="circle_item item02">
+          <i class="half_circle left"></i>
+          <i class="half_circle right"></i>
+        </div>
+        <div class="circle_item item03">
+          <i class="half_circle left"></i>
+          <i class="half_circle right"></i>
+        </div>
+        <div class="circle_item item04">
+          <i class="half_circle left"></i>
+          <i class="half_circle right"></i>
+        </div>
+      </div>
+      
+      <!-- breadcrumbs -->
+      <div class="inner">
+        <div class="breadcrumbs" role="navigation">
           <ol class="breadcrumbs_list">
             <li class="breadcrumbs_item">
               <a href="#" class="home"><span>홈</span></a>
@@ -97,11 +118,10 @@
             <li class="breadcrumbs_item"><a href="#">회사개요</a></li>
           </ol>
         </div>
-        
       </div>
 
       <!-- section#01 -->
-      <div class="section_wrap pt0"> 
+      <div class="section_wrap pt0">
         <div class="section_box">
           <div class="inner">
             <div class="txt_box">
@@ -109,15 +129,19 @@
             </div>
           </div>
 
+          <!-- section#01 img_box -->
           <div class="img_box">
-            <img src="lib/img/img_company.jpg" alt="aaa">
+            <img src="../static/images/img_company.jpg" alt="aaa">
+
             <!-- scroll indicator -->
             <p class="txt scroll_action">
               Scroll
               <i></i>
             </p>
-            <!-- scroll indicator -->
+            <!-- // scroll indicator -->
+
           </div>
+          <!-- // section#01 img_box -->
 
         </div>
 
@@ -134,7 +158,7 @@
             </div>
 
             <div class="img_box round20 hei mt70">
-              <img src="lib/img/img_company.jpg" alt="aaa">
+              <img src="../static/images/img_company_olimplanet.jpg" alt="aaa">
             </div>
           </div>
           
@@ -161,71 +185,76 @@
             </div>
           </div>
         </div>
+
       </div>
+
       <!-- section#05 core value -->
       <div class="section_wrap">
+
+        <!-- section box -->
         <div class="section_box core_value pb0">
-          <div class="contents">
-            <div class="inner">
+          <div class="inner">
+
+            <div class="contents">
               <div class="txt_box">
                 <h2 class="tit section_tit red_dot mb70">올림플래닛의 가치는<span class="tit_desc txt_acc desc_sm">Core Value</span></h2>
               </div>
-              <div class="contents_inner">
-                <div class="contents_box flex flex_align_center flex_row_rev flex_justipy_end pb80">
-                  <div class="txt_box">
-                    <h2 class="tit section_tit red_dot mb20">Harmony Results<span class="tit_desc txt_acc desc_sm">우리가 일하는 방식</span></h2>
-                    <p class="txt section_desc">개인이 아닌 팀으로 결과를 만들어 냅니다.</p>
-                  </div>
-                  <div class="img_box round20">
-                    <img src="lib/img/img_corevalue_01.jpg" alt="">
-                  </div>
-                </div>
 
-                <div class="contents_box middle flex flex_align_center flex_justipy_end pb80">
-                  <div class="txt_box">
-                    <h2 class="tit section_tit red_dot mb20">Customer Value<br>Through Innovation<span class="tit_desc txt_acc desc_sm">우리가 만들어 내는 것</span></h2>
-                    <p class="txt section_desc">혁신을 통하여 고객의 가치를 창출합니다.</p>
-                  </div>
-                  <div class="img_box round20">
-                    <img src="lib/img/img_corevalue_02.jpg" alt="">
-                  </div>
+              <div class="contents_box flex flex_align_center flex_row_rev flex_justipy_end pb80">
+                <div class="txt_box">
+                  <h2 class="tit section_tit red_dot mb20">Harmony Results<span class="tit_desc txt_acc desc_sm">우리가 일하는 방식</span></h2>
+                  <p class="txt section_desc">개인이 아닌 팀으로 결과를 만들어 냅니다.</p>
                 </div>
+                <div class="img_box round20">
+                  <img src="../lib/img/img_corevalue_01.jpg" alt="">
+                </div>
+              </div>
 
-                <div class="contents_box flex flex_align_center flex_row_rev flex_justipy_end pb0">
-                  <div class="txt_box">
-                    <h2 class="tit section_tit red_dot mb20">Be Unique<span class="tit_desc txt_acc desc_sm">우리가 꿈꾸는 모습</span></h2>
-                    <p class="txt section_desc">그리하여 독보적인 기업이 될것 입니다.</p>
-                  </div>
-                  <div class="img_box round20">
-                    <img src="lib/img/img_corevalue_03.jpg" alt="">
-                  </div>
+              <div class="contents_box middle flex flex_align_center flex_justipy_end pb80">
+                <div class="txt_box">
+                  <h2 class="tit section_tit red_dot mb20"><p class="section_tit_style">Customer Value</p><span>Through Innovation</span><span class="tit_desc txt_acc desc_sm">우리가 만들어 내는 것</span></h2>
+                  <p class="txt section_desc">혁신을 통하여 고객의 가치를 창출합니다.</p>
+                </div>
+                <div class="img_box round20">
+                  <img src="../lib/img/img_corevalue_02.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="contents_box flex flex_align_center flex_row_rev flex_justipy_end pb0">
+                <div class="txt_box">
+                  <h2 class="tit section_tit red_dot mb20">Be Unique<span class="tit_desc txt_acc desc_sm">우리가 꿈꾸는 모습</span></h2>
+                  <p class="txt section_desc">그리하여 독보적인 기업이 될것 입니다.</p>
+                </div>
+                <div class="img_box round20">
+                  <img src="../lib/img/img_corevalue_03.jpg" alt="">
                 </div>
               </div>
 
             </div>
 
           </div>
+
         </div>
-        <p class="txt bg_txt">OlimPlanet</p>
+        <p class="txt bg_txt pb15">OlimPlanet</p>
 
       </div>
 
       <div class="section_wrap slide">
-        <div class="section_box pb0">
-          <div class="contents_box ">
+        <div class="section_box">
+          <div class="contents_box">
             <div class="txt_box">
               <h2 class="tit section_tit red_dot mb20">우리가 걸어온 여정<span class="tit_desc txt_acc desc_sm">History</span></h2>
               <p class="txt section_desc">History of OlimPlanet : Now~2015</p>
             </div>
-            <div class="swiper slide_box">
+            <div class="swiper company_slide">
               <div class="swiper_controll_box flex flex_align_center">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-btn-wrap">
                   <div class="swiper-button-prev main_btn_prev">
-                    <img src="static/images/ico_slider_prev_x2.png" alt="">
+                    <img src="../static/images/ico_slider_prev_x2.png" alt="">
                   </div>
                   <div class="swiper-button-next main_btn_next">
-                    <img src="static/images/ico_slider_next_x2.png" alt="">
+                    <img src="../static/images/ico_slider_next_x2.png" alt="">
                   </div>
                 </div>
               </div>
@@ -386,16 +415,17 @@
           </div>
           <!-- slide background -->
           <div class="slide_bg">
-            <img src="lib/img/img_company_slidebg.jpg" alt="">
+            <img src="../lib/img/img_company_slidebg.jpg" alt="">
           </div>
         </div>
           
       </div>
 
       <!-- card -->
-      <div class="section_wrap company_card">
-        <div class="section_box pb0">
-          <div class="inner">
+      <div class="section_wrap">
+        <div class="inner">
+
+          <div class="section_box company_card pt50">
             <div class="txt_box">
               <h2 class="tit section_tit red_dot">열심히 했더니 이만큼<span class="tit_desc txt_acc desc_sm">Awards and Certifications</span></h2>
             </div>
@@ -403,52 +433,63 @@
             <!-- card_box -->
             <div class="box flex card_box">
 
-              <div class="card flex flex_col flex_center flex_center flex_align_center is_active">
-                <div class="card_bg image">
-                  <img src="static/images/img_door01.png" alt="">
+              <div class="card flex flex_col flex_center flex_center flex_align_center">
+                <div class="card_bg_img">
+                  <img src="../static/images/img_door01.png" alt="">
                 </div>
-                <p class="card_txt">대한민국 MICE<span class="desc">대상</span></p>
-                <div class="card_bg award"></div>
-
-              </div>
-
-              <div class="card flex flex_col flex_center flex_center flex_align_center">
-                <p class="card_txt">코리아<br>메타버스 어워드<span class="desc">장관상</span></p>
+                <p class="card_txt">
+                  대한민국 MICE
+                  <span class="desc before">대상</span>
+                  <span class="desc after">한국 MICE 협회<br>디지털 MICE 분야</span>
+                </p>
                 <div class="card_bg award"></div>
               </div>
 
               <div class="card flex flex_col flex_center flex_center flex_align_center">
-                <p class="card_txt">과학기술<br>정보통신부<span class="desc">과기정통부 장관상</span></p>
+                <p class="card_txt">코리아<br>메타버스 어워드
+                  <span class="desc before">장관상</span>
+                  <span class="desc after">과학기술정보통신부<br>가상 융합기술(XR)분야</span>
+                </p>
                 <div class="card_bg award"></div>
               </div>
 
               <div class="card flex flex_col flex_center flex_center flex_align_center">
-                <p class="card_txt">제14회<br>웹어워드 코리아<span class="desc">최우수상</span></p>
+                <p class="card_txt">과학기술<br>정보통신부
+                  <span class="desc">과기정통부 장관상</span>
+                  <span class="desc after">과학기술정보통신부 주최<br>한국경제신문사, 한국정보통신진흥협회(KAIT)공동 주관<br>정보통신기술(ICT)분야</span>
+                </p>
                 <div class="card_bg award"></div>
               </div>
 
               <div class="card flex flex_col flex_center flex_center flex_align_center">
-                <p class="card_txt">대한민국<br>우수 특허<span class="desc">대상</span></p>
+                <p class="card_txt">제14회<br>웹어워드 코리아
+                  <span class="desc">최우수상</span>
+                  <span class="desc after">한국청년기업가정신재단,<br>Global Enterpreneurship Week(GEN) 주최<br>청년 기업인 대상</span>
+                </p>
+                <div class="card_bg award"></div>
+              </div>
+
+              <div class="card flex flex_col flex_center flex_center flex_align_center">
+                <p class="card_txt">대한민국<br>우수 특허
+                  <span class="desc">대상</span>
+                  <span class="desc after">(사)한국인터넷전문가협회 주최,<br>아이어워드위원회 주관<br>혁신적이고 우수한 웹사이트 선정</span>
+                </p>
                 <div class="card_bg award"></div>
               </div>
 
             </div>
           <!-- //card_box -->
-
-          </div>
           
-        </div>
-      </div>
+          </div>
 
-      <!-- awards 수상 및 인증 -->
-      <div class="section_wrap awards">
-        <div class="section_box pb100">
-          <div class="inner">
+          <!-- awards 수상 및 인증 -->
+          <div class="section_box awards">
+
             <div class="txt_box">
               <h2 class="tit section_tit red_dot">수상 및 인증</h2>
             </div>
 
-            <div class="contents_txt_box mt50">
+            <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2021</p>
               </div>
@@ -456,7 +497,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="trophy badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="trophy badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">대한민국 MICE 대상</p>
@@ -468,7 +509,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="trophy badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="trophy badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">코리아 메타버스 어워드 장관상</p>
@@ -482,10 +523,6 @@
               
             </div>
 
-            <!-- line -->
-            <div class="line"></div>
-            <!-- // line -->
-
             <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2019</p>
@@ -494,7 +531,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">지형정보 인식 기반 증강 현실 오브젝트 표시 방법 및 장치</p>
@@ -506,7 +543,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">실린더 디스플레이를 위한 공간왜곡 보정 시스템 및 방법</p>
@@ -518,7 +555,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">과학기술정보 통신부 장관상</p>
@@ -532,10 +569,6 @@
               
             </div>
 
-            <!-- line -->
-            <div class="line"></div>
-            <!-- // line -->
-
             <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2018</p>
@@ -544,7 +577,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">연속 이동 이미지 콘텐츠 생성 방법</p>
@@ -556,7 +589,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_badge_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_badge_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">Inno Biz ( 기술 혁신형 중소기업 )</p>
@@ -568,7 +601,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_badge_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_badge_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">Main Biz ( 경영혁신형 중소기업 )</p>
@@ -580,7 +613,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">청년기업인상 과기 정통부 장관표창</p>
@@ -594,10 +627,6 @@
               
             </div>
 
-            <!-- line -->
-            <div class="line"></div>
-            <!-- // line -->
-
             <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2017</p>
@@ -606,7 +635,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">가상현실 인터페이스 실시간 제어 프로그램</p>
@@ -618,7 +647,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_badge_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_badge_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">특허청 직무 발명보상</p>
@@ -630,7 +659,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">실린더 디스플레이 출력 콘텐츠 조정시스템</p>
@@ -642,7 +671,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">제 14회 웹 어워드 코리아 최우수상</p>
@@ -656,10 +685,6 @@
               
             </div>
 
-            <!-- line -->
-            <div class="line"></div>
-            <!-- // line -->
-
             <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2016</p>
@@ -668,7 +693,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_badge_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_badge_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">멀티미디어 전문회사</p>
@@ -680,7 +705,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">가상현실 인터페이스 제어 프로그램</p>
@@ -692,7 +717,7 @@
 
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_trophy_x2.png" alt="badge">
+                    <img src="../static/images/ico/ico_trophy_x2.png" alt="badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">우수 특허 대상</p>
@@ -706,10 +731,6 @@
               
             </div>
 
-            <!-- line -->
-            <div class="line"></div>
-            <!-- // line -->
-
             <div class="contents_txt_box">
               <div class="txt_num strong">
                 <p>2015</p>
@@ -718,7 +739,7 @@
               <div class="contents_desc_box">
                 <div class="contents_desc_inner">
                   <div class="ico">
-                    <img src="static/images/ico/ico_paper_x2.png" alt="paper badge">
+                    <img src="../static/images/ico/ico_paper_x2.png" alt="paper badge">
                   </div>
                   <div class="txt_desc_box pl30">
                     <p class="txt section_desc">벤처기업</p>
@@ -732,24 +753,111 @@
               
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- map/Directions -->
-      <div class="section_wrap map">
-        <div class="section_box">
-          <div class="inner">
+          <!-- map/Directions -->
+          <div class="section_box map">
             <div class="txt_box">
               <h2 class="tit section_tit red_dot">올림플래닛은 당신을 기다리고 있습니다<span class="tit_desc txt_acc desc_sm">Directions</span></h2>
             </div>
             <div class="contents_box">
-              <div class="contents_map">
 
+              <!-- insert map in here... -->
+              <div class="contents_map">
+                
               </div>
+              <!-- // -->
+
+              <div class="contents_text_box mt50">
+
+                <div class="box irinfo_list_box">
+
+                  <table>
+                    
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col style="width: 290px;">
+                      <col style="width: 200px;">
+                      <col style="width: 290px;">
+                    </colgroup>
+
+                    <tbody>
+    
+                      <tr>
+                        <td class="pb30">
+                          <span class="contents_text_tit">ADRESS</span>
+                        </td>
+                        <td colspan='3' class="left_txt pb30">
+                          <span class="txt contents_text_desc">서울특별시 강남구 테헤란로521 파르나스타워 7F / <span class="bold">(주)올림플래닛</span></span>
+                        </td>
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          <span class="contents_text_tit pl15">TEL</span>
+                        </td>
+                        <td class="left_txt">
+                          <span class="txt contents_text_desc">02 - 511 - 5110</span>
+                        </td>
+
+                        <td>
+                          <span class="contents_text_tit pl15">MAIL</span>
+                        </td>
+                        <td class="left_txt">
+                          <span class="txt contents_text_desc">hello@olimplanet.com</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          <span class="contents_text_tit pl15">FAX</span>
+                        </td>
+                        <td class="left_txt">
+                          <span class="txt contents_text_desc">02 - 6499 - 2183</span>
+                        </td>
+
+                        <td>
+                          <span class="contents_text_tit pl15">SUBWAY</span>
+                        </td>
+                        <td class="left_txt subway" style="position: relative;">
+                          <span class="txt contents_text_desc" style="position: absolute; top: 0; left: 0;"><span class="green">2호선</span> 삼성역 2번출구에서 도보 3분<br>
+                            <span class="yellow">9호선</span> 봉은사역 6번출구에서 도보 5분</span>
+                        </td>
+
+                      </tr>
+    
+                    </tbody>
+    
+                  </table>
+    
+                </div>
+              
+              </div>
+            </div>
+            
+            <div class="circle_box">
+              <div class="circle_item item01">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <div class="circle_item item02">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <div class="circle_item item03">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div>
+              <!-- <div class="circle_item item04">
+                <i class="half_circle left"></i>
+                <i class="half_circle right"></i>
+              </div> -->
             </div>
           </div>
 
         </div>
+
       </div>
 
     </div>
