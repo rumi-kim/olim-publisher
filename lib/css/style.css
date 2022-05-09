@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 /* layout styling = style common*/
-.inner{position: relative; margin: 0 auto; padding: 0 90px; width: 1640px; height: 100%;}
+.inner{position: relative; margin: 0 auto; padding: 0 155px; width: 1640px; height: 100%;}
 .inner:after{content: ""; clear: both; display: block;}
+.wrap.main .inner {padding: 0 90px; }
 
 /* header */
 .header{position: fixed; top: 0; left: 0; right: 0; transition: all 0.3s}
