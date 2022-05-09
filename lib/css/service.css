@@ -28,20 +28,22 @@
 
 
 .service .section_visual { padding-top: 0;}
-.service .section_visual .img_box {overflow: hidden; position: relative; height: 618px;}
-.service .section_visual .img_box img {width: 100%;}
+.service .section_visual .img_box {overflow: hidden; position: relative; height: 618px; background: url("../../static/images/img_service.jpg") no-repeat center / cover;}
 
 /* section_img */
-.section_img .bg_img {overflow: hidden;height: 380px; }
-
+.section_img {position: relative; background:url("../../static/images/img_zoom.jpg") no-repeat center / 100% auto; overflow: hidden;height: 380px; }
+.section_img .tit.section_tit {font-size: 40px; line-height: 1.6;}
+.section_img:after {opacity:0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.8);}
+.section_img .inner {z-index: 1;}
 /* section_tech (올림플래닛의 능력) */
 .service  .section_tech {padding-top: 145px;}
 .section_tech .tit.section_tit .tit_desc {font-size: 18px; color: #ff3232; font-weight: bold;}
 .section_tech .bg_gray {background-color: #f1f1f1;}
-.section_tech .visual_box .box {padding:130px 0 100px; text-align: center;}
+.section_tech .visual_box .box {margin:130px 0 100px; text-align: center;}
 .section_tech .visual_box .box > div { display: flex; flex-direction: column; align-items: center;}
 .section_tech .visual_box .box > div strong { display: block; margin:30px 0 20px; font-size: 26px; letter-spacing: -0.13px; color: #212121;}
 .section_tech .visual_box .box > div p { color: #585858; line-height: 1.67;}
+.section_tech .visual_box .tech { margin: 0 110px 0 88px;}
 .section_tech .visual_box .ico {display: flex; align-items: center; justify-content: center; width: 132px; height: 132px; box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16); background-color: #fff; border-radius: 100%;}
 .section_tech .visual_box .ico img { height:73px;}
 .section_tech .visual_box .solution .ico img { height:94px; }
