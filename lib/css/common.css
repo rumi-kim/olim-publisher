@@ -174,8 +174,8 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .board_list ul li:nth-child(3n) { margin-right: 0;}
 .board_list ul li a {display: block; width: 100%; height: 100; font-size: 18px; line-height: 1.44; font-weight: 600;}
 .board_list ul li a .img_box {overflow: hidden; height:242px; }
-.board_list ul li a .img_box img { min-height: 100%; object-fit: cover;}
-.board_list ul li a p {padding-top: 36px;}
+.board_list ul li a .img_box img { min-height: 100%; width:100%; object-fit: cover;}
+.board_list ul li a p {margin-top: 36px;}
 
 
 /* input 요소 */
