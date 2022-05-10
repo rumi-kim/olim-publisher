@@ -17,6 +17,10 @@
   <!-- OwlCarousel2 -->
   <link href="../lib/css/owl.carousel.min.css" rel="stylesheet">
   <script src="../lib/js/owl.carousel.min.js"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- or cdn... -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
@@ -125,43 +129,45 @@
         <!-- section#2 visual -->
         <div class="visual_box section_box">
           <div class="inner">
-          <div class="txt_box">
-            <h2 class="tit section_tit red_dot mb15">올림플래닛의 능력</h2>
-            <p class="txt section_desc strong">
-              올림플래닛의 미래는 찬란합니다.
-              <br>실감미래시대에서 탑티어가 될 수밖에 없는 기술력과 비즈니스모델을 갖고 있습니다.
-            </p>
+            <div class="txt_box">
+              <h2 class="tit section_tit red_dot mb15">올림플래닛의 능력</h2>
+              <p class="txt section_desc strong">
+                올림플래닛의 미래는 찬란합니다.
+                <br>실감미래시대에서 탑티어가 될 수밖에 없는 기술력과 비즈니스모델을 갖고 있습니다.
+              </p>
+            </div>
+            <div class="box flex flex_center">
+              <div class="solution">
+                <div class="ico_box aos-item" data-aos="fade-up"><img src="../static/images/ico/ico_light_x2.png" alt=""></div>
+                <div class="aos-item" data-aos="fade-up" data-aos-delay="200">
+                  <strong>Solution</strong>
+                  <p>메타버스 공간에 실제와 동등한<br>
+                    3D 실감형 콘텐츠 품질과 더불어 <br>
+                    상호작용이 가능한 정보를 제공합니다</p>
+                </div>
+              </div>
+              <div class="tech aos-item">
+                <span class="ico plus aos-item" data-aos="fade-up" data-aos-delay="350"><span class="ir_text">+</span></span>
+                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="500"><img src="../static/images/ico/ico_saw_x2.png" alt=""></div>
+                <div class="aos-item" data-aos="fade-up" data-aos-delay="650">
+                  <strong>Technology</strong>
+                  <p>3D 패키징 소프트웨어를 통해<br>
+                    인프라 솔루션을 제공하고<br>
+                    모듈화된 데이터를 배포하고 운영합니다</p>
+                </div>
+                <span class="ico result aos-item" data-aos="fade-up" data-aos-delay="800"><span class="ir_text">=</span></span>
+              </div>
+              <div class="business">
+                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="950"><img src="../static/images/ico/ico_box_x2.png" alt=""></div>
+                <div class="aos-item" data-aos="fade-up" data-aos-delay="1100">
+                  <strong>Business</strong>
+                  <p>올림플래닛에서만 경험할 수 있는<br>
+                    웹/앱기반의 하이퍼 리얼리즘<br>
+                    메타버스공간을 제공합니다</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="box flex flex_center">
-            <div class="solution">
-              <div class="ico"><img src="../static/images/ico/ico_light_x2.png" alt=""></div>
-              <div>
-                <strong>Solution</strong>
-                <p>메타버스 공간에 실제와 동등한<br>
-                  3D 실감형 콘텐츠 품질과 더불어 <br>
-                  상호작용이 가능한 정보를 제공합니다</p>
-              </div>
-            </div>
-            <div class="tech">
-              <div class="ico"><img src="../static/images/ico/ico_saw_x2.png" alt=""></div>
-              <div>
-                <strong>Technology</strong>
-                <p>3D 패키징 소프트웨어를 통해<br>
-                  인프라 솔루션을 제공하고<br>
-                  모듈화된 데이터를 배포하고 운영합니다</p>
-              </div>
-            </div>
-            <div class="business">
-              <div class="ico"><img src="../static/images/ico/ico_box_x2.png" alt=""></div>
-              <div>
-                <strong>Business</strong>
-                <p>올림플래닛에서만 경험할 수 있는<br>
-                  웹/앱기반의 하이퍼 리얼리즘<br>
-                  메타버스공간을 제공합니다</p>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
 
         <!-- 1. 기존과는 다른 Top Tear 3D 기술 -->
@@ -169,7 +175,8 @@
 
           <div class="inner">
             <div class="txt_box mb90">
-              <h3 class="tit section_tit red_dot"><span class="number">1</span>기존과는 다른 Top Tear 3D 기술<span class="tit_desc">Top Tear
+              <h3 class="tit section_tit red_dot"><span class="number">1</span>기존과는 다른 Top Tear 3D 기술<span
+                  class="tit_desc">Top Tear
                   3D Technique</span></h3>
               <p class="txt section_desc">
                 우리는 기존의 VR 콘텐츠 제작사들이 해소하지 못한 단점을 보완하며, 리얼타임 콘텐츠 제작을 위한 3D데이터 패키징과 표준화 기술부터<br> 3D모델링 추출을 통한 3D 360º 이미지와
@@ -205,10 +212,11 @@
         </div>
 
         <!-- 2. 함께 참여할 수 있는 개방형 생태계 -->
-        <div class="with">
+        <div class="with section_box">
           <div class="inner">
             <div class="txt_box">
-              <h3 class="tit section_tit red_dot"><span class="number">2</span>함께 참여할 수 있는 개방형 생태계<span class="tit_desc">With Every Body</span></h3>
+              <h3 class="tit section_tit red_dot"><span class="number">2</span>함께 참여할 수 있는 개방형 생태계<span
+                  class="tit_desc">With Every Body</span></h3>
               <p class="txt section_desc">
                 무엇보다 개방형 생태계를 통해서 창작자와 엔지니어, 소비자가 참여할 수 있는 통합서비스를 제공한다는 측면에서 <br>기존의 메타버스 관련 업체들과는 기술력, 확장성 측면에서 본질이
                 다릅니다.
@@ -246,10 +254,11 @@
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
-        <div class="immersive">
+        <div class="immersive section_box">
           <div class="inner">
             <div class="txt_box mb70">
-              <h3 class="tit section_tit red_dot"><span class="number">3</span>언제 어디서나 몰입형 버추얼 공간을<span class="tit_desc">Immersive Virtual Space</span></h3>
+              <h3 class="tit section_tit red_dot"><span class="number">3</span>언제 어디서나 몰입형 버추얼 공간을<span
+                  class="tit_desc">Immersive Virtual Space</span></h3>
               <p class="txt section_desc">
                 웹/앱 환경에 특화된 3D 리얼타임 360 시장은 올림플래닛이 완전히 새롭게 개척한 신시장입니다. <br>몰입형 버추얼 공간을 별도의 설치 프로그램 없이 언제 어디서나 경험할 수 있다는
                 것만으로 압도적이고 독보적입니다.
@@ -257,7 +266,7 @@
             <div class="video_box">
               <video src="../static/mov/mov_visual01.mp4" muted autoplay loop poster=""></video>
             </div>
-          <p class="txt bg_txt">Virtual Space</p>
+            <p class="txt bg_txt">Virtual Space</p>
           </div>
         </div>
 
@@ -495,6 +504,46 @@
     <!-- footer -->
   </div>
 
+  <script>
+    'use strict';
+    const el1 = document.querySelector('.section_visual .img_box');
+    let rect = el1.getBoundingClientRect();
+    // console.log("x: " + rect.x);
+    // console.log("y: " + rect.y);
+    console.log(rect)
+
+    window.addEventListener('scroll', function () {
+      el1.classList.add('is_active');
+    });
+
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+    // setInterval(addDelay, 300);
+
+    // let itemsCounter = 1;
+    // function addDelay() {
+
+    //   let aosItem = document.querySelectorAll('.section_tech .aos-item');
+    //   console.log(aosItem);
+    //   // if (itemsCounter > 42) return;
+    //   // let item = document.createElement('div');
+    //   // item.classList.add('aos-item');
+    //   // item.setAttribute('data-aos', 'fade-up');
+    //   // item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
+    //   // container.appendChild(item);
+    //   // itemsCounter++;
+    //   for(let i=0; i<aosItem.length; i++){
+    //     aosItem[i].
+    //   }
+
+
+    // }
+
+    addDelay()
+
+  </script>
 </body>
 
 </html>
