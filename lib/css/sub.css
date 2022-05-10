@@ -334,8 +334,8 @@
 .company .core_value ~ .txt.bg_txt {position: relative; padding-left: 410px;}
 .flex.flex_justipy_end {justify-content: flex-end;}
 
-.bg_line{width: 100%;}
-.bg_line img{position: absolute; top: -50%; right: -25%; width: 100%; z-index: -1; animation: lineAni 1s ease-in forwards; opacity: 0;}
+.bg_line{position: absolute; top: -60%; right: -30%;  width: 100%;}
+.bg_line img{position: absolute; top: 0; right: 0; width: 1920px; z-index: -1; animation: lineAni 1s ease-in forwards; opacity: 0;}
 .bg_line img:nth-child(2){animation: lineAni1 1s 0.3s ease-in-out forwards;}
 .bg_line img:nth-child(3){animation: lineAni2 1s 0.3s ease-in-out forwards;}
 .bg_line img:nth-child(4){animation: lineAni3 1s 0.3s ease-in-out forwards;}
