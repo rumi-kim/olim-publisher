@@ -93,7 +93,7 @@
 .lnb .lnb_list .lnb_item.is_active *,.lnb .lnb_list .lnb_item *:hover {color: #ff3232;} */
 
 /* anker_wrap */
-.anker_wrap{ position:fixed; top: 50%; left:20px; z-index:1000; width:200px; transform: translateY(-50%);}
+.anker_wrap{display: none; position:fixed; top: 20%; left:50%; z-index:8000; margin-left: -890px; width:200px; }
 .anker_inner{position:absolute;top:0;left:0;width:100%;}
 .anker_item>a{color: #b7b7b7; font-size: 18px; line-height: 2; font-weight: 500; transition: all .3s;}
 .anker_item.is_active>a,.anker_item>a:hover,.anker_item>a:focus{color:#ff3232;font-weight:700;}
