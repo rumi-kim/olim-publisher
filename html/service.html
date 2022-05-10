@@ -141,7 +141,7 @@
       <div class="section_wrap section_tech" id="anker1">
 
         <!-- section#2 visual -->
-        <div class="visual_box section_box lnbContent">
+        <div class="visual_box section_box ">
           <div class="inner">
             <div class="txt_box">
               <h2 class="tit section_tit red_dot mb15">올림플래닛의 능력</h2>
@@ -185,7 +185,7 @@
         </div>
 
         <!-- 1. 기존과는 다른 Top Tear 3D 기술 -->
-        <div class="toptear section_box bg_gray lnbContent" id="anker2">
+        <div class="toptear section_box bg_gray " id="anker2">
 
           <div class="inner">
             <div class="txt_box mb90">
@@ -226,7 +226,7 @@
         </div>
 
         <!-- 2. 함께 참여할 수 있는 개방형 생태계 -->
-        <div class="with section_box lnbContent" id="anker3">
+        <div class="with section_box " id="anker3">
           <div class="inner">
             <div class="txt_box">
               <h3 class="tit section_tit red_dot"><span class="number">2</span>함께 참여할 수 있는 개방형 생태계<span
@@ -268,7 +268,7 @@
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
-        <div class="immersive section_box lnbContent" id="anker4">
+        <div class="immersive section_box " id="anker4">
           <div class="inner">
             <div class="txt_box mb70">
               <h3 class="tit section_tit red_dot"><span class="number">3</span>언제 어디서나 몰입형 버추얼 공간을<span
@@ -348,7 +348,7 @@
       <!-- // section#3 -->
 
       <!-- section#4 -->
-      <div class="section_wrap section_showcase lnbContent" id="anker5">
+      <div class="section_wrap section_showcase " id="anker5">
 
         <div class="inner">
           <div class="txt_box mb50">
@@ -534,30 +534,20 @@
         second_top = $('#anker2').offset().top,
         third_top = $('#anker3').offset().top,
         fourth_top = $('#anker4').offset().top,
-        fifth_top = $('#anker5').offset().top;
-      let ankerItem = $('.anker_item');
+        fifth_top = $('#anker5').offset().top,
 
-        
-      // 클릭 이벤트 
-      $(".anker_item>a").click(function () {
-        let anker_item = $(this).attr('data-href'),
-          anker_offset = $(anker_item).offset().top;
-        ankerItem.removeClass('is_active');
-        $('.anker_item>a[data-href="' + anker_item + '"]').parent('li').addClass('is_active');
-        $("body,html").animate({
-          scrollTop: anker_offset
-        }, 300);
-      });
-      
+        ankerItem = $('.anker_item');
+
 
       // 스크롤 이벤트 
       $(window).scroll(function () {
 
         sct = $(window).scrollTop();
+
         if (sct >= first_top - 44) {
           $(".anker_wrap").addClass("is_fixed").fadeIn(200);
-        } else if (sct >= first_top - 76) {
-          $(".anker_wrap.is_admin").addClass("is_fixed").fadeIn(200);
+        } else if (sct >= first_top) {
+          $(".anker_wrap").addClass("is_fixed").fadeIn(200);
         } else {
           $(".anker_wrap").removeClass("is_fixed").fadeOut(200);
         };
@@ -583,6 +573,22 @@
         };
 
       });
+
+
+      // 클릭 이벤트 
+      $(".anker_item>a").click(function () {
+
+        let anker_data = $(this).attr('data-href'),
+          anker_offset = $(anker_data).offset().top;
+
+        // ankerItem.removeClass('is_active');
+        // $('.anker_item>a[data-href="' + anker_data + '"]').parent('li').addClass('is_active');
+        $(this).parent('li').addClass('is_active');
+        $("body,html").animate({
+          scrollTop: anker_offset
+        }, 300);
+      });
+
 
 
 
