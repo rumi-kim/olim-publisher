@@ -86,3 +86,8 @@
 .service .section_service .inner { padding-top: 230px;}
 .service .section_showcase .inner { padding-top: 355px; padding-bottom: 190px;}
 .service .section_showcase .bg_txt { left: 0; top: 0; margin-left: -140px;}
+
+
+.lnb { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 999;}
+.lnb .lnb_list .lnb_item * {color: #b7b7b7; font-size: 18px; line-height: 2; font-weight: 500; transition: all .3s;}
+.lnb .lnb_list .lnb_item.is_active *,.lnb .lnb_list .lnb_item *:hover {color: #ff3232;}

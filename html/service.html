@@ -124,10 +124,10 @@
       <!-- // section#1 -->
 
       <!-- section#2 - 올림플래닛의 능력-->
-      <div class="section_wrap section_tech">
+      <div class="section_wrap section_tech ">
 
         <!-- section#2 visual -->
-        <div class="visual_box section_box">
+        <div class="visual_box section_box lnb1">
           <div class="inner">
             <div class="txt_box">
               <h2 class="tit section_tit red_dot mb15">올림플래닛의 능력</h2>
@@ -138,7 +138,8 @@
             </div>
             <div class="box flex flex_center">
               <div class="solution">
-                <div class="ico_box aos-item" data-aos="fade-up"><img src="../static/images/ico/ico_light_x2.png" alt=""></div>
+                <div class="ico_box aos-item" data-aos="fade-up"><img src="../static/images/ico/ico_light_x2.png"
+                    alt=""></div>
                 <div class="aos-item" data-aos="fade-up" data-aos-delay="200">
                   <strong>Solution</strong>
                   <p>메타버스 공간에 실제와 동등한<br>
@@ -147,18 +148,22 @@
                 </div>
               </div>
               <div class="tech aos-item">
-                <span class="ico plus aos-item" data-aos="fade-up" data-aos-delay="350"><span class="ir_text">+</span></span>
-                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="500"><img src="../static/images/ico/ico_saw_x2.png" alt=""></div>
+                <span class="ico plus aos-item" data-aos="fade-up" data-aos-delay="350"><span
+                    class="ir_text">+</span></span>
+                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="500"><img
+                    src="../static/images/ico/ico_saw_x2.png" alt=""></div>
                 <div class="aos-item" data-aos="fade-up" data-aos-delay="650">
                   <strong>Technology</strong>
                   <p>3D 패키징 소프트웨어를 통해<br>
                     인프라 솔루션을 제공하고<br>
                     모듈화된 데이터를 배포하고 운영합니다</p>
                 </div>
-                <span class="ico result aos-item" data-aos="fade-up" data-aos-delay="800"><span class="ir_text">=</span></span>
+                <span class="ico result aos-item" data-aos="fade-up" data-aos-delay="800"><span
+                    class="ir_text">=</span></span>
               </div>
               <div class="business">
-                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="950"><img src="../static/images/ico/ico_box_x2.png" alt=""></div>
+                <div class="ico_box aos-item" data-aos="fade-up" data-aos-delay="950"><img
+                    src="../static/images/ico/ico_box_x2.png" alt=""></div>
                 <div class="aos-item" data-aos="fade-up" data-aos-delay="1100">
                   <strong>Business</strong>
                   <p>올림플래닛에서만 경험할 수 있는<br>
@@ -171,7 +176,7 @@
         </div>
 
         <!-- 1. 기존과는 다른 Top Tear 3D 기술 -->
-        <div class="toptear section_box bg_gray">
+        <div class="toptear section_box bg_gray lnb2">
 
           <div class="inner">
             <div class="txt_box mb90">
@@ -212,7 +217,7 @@
         </div>
 
         <!-- 2. 함께 참여할 수 있는 개방형 생태계 -->
-        <div class="with section_box">
+        <div class="with section_box lnb3">
           <div class="inner">
             <div class="txt_box">
               <h3 class="tit section_tit red_dot"><span class="number">2</span>함께 참여할 수 있는 개방형 생태계<span
@@ -254,7 +259,7 @@
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
-        <div class="immersive section_box">
+        <div class="immersive section_box lnb4">
           <div class="inner">
             <div class="txt_box mb70">
               <h3 class="tit section_tit red_dot"><span class="number">3</span>언제 어디서나 몰입형 버추얼 공간을<span
@@ -334,7 +339,7 @@
       <!-- // section#3 -->
 
       <!-- section#4 -->
-      <div class="section_wrap section_showcase">
+      <div class="section_wrap section_showcase lnb5">
 
         <div class="inner">
           <div class="txt_box mb50">
@@ -423,6 +428,18 @@
           <i class="half_circle right"></i>
         </div>
       </div>
+
+      <div class="lnb">
+        <ul class="lnb_list">
+          <li class="lnb_item is_active"><a href="" data-href=".lnb1">서비스소개</a></li>
+          <li class="lnb_item"><a href="" data-href=".lnb2">3D기술</a></li>
+          <li class="lnb_item"><a href="" data-href=".lnb3">개방형생태계</a></li>
+          <li class="lnb_item"><a href="" data-href=".lnb4">몰입형 웹</a></li>
+          <li class="lnb_item"><a href="" data-href=".lnb5">쇼케이스</a></li>
+        </ul>
+      </div>
+
+
     </div>
     <!-- //container -->
 
@@ -541,8 +558,22 @@
 
     // }
 
-    addDelay()
+    // addDelay()
 
+    $(function () {
+      const lnbItem = $('.lnb_item a');
+
+      lnbItem.click(function () {
+        var anker_item = $(this).attr('data-href');
+        var anker_offset = $(anker_item).offset().top;
+        $('.anker_item').removeClass('is_active');
+        $('.anker_item>a[data-href="' + anker_item + '"]').parent('li').addClass('is_active');
+        $("body,html").animate({
+          scrollTop: anker_offset
+        }, 300);
+      });
+
+    });
   </script>
 </body>
 
