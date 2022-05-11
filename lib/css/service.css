@@ -61,13 +61,14 @@
 .section_tech .with .logo_box { margin: 0 auto 70px; width: 235px; }
 .section_tech .with .card_list {position: relative; height: 180px; }
 .section_tech .with .card_list > li {display: flex; justify-content: center; align-items: center; opacity: 0.8; position: absolute; top: 0; bottom: 0; width: 457px;border-radius: 180px; box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2); background-color:#e20000; color: #fff; text-align: center;}
-.section_tech .with .card_list > li:nth-child(1) {opacity: 1; left: 0; background-color: #fff; color: #000;}
+.section_tech .with .card_list > li:nth-child(1) {opacity: 1; left: 0; background-color: #fff; color: #393939;}
 .section_tech .with .card_list > li:nth-child(2) {opacity: 0.75; left:50%; background-color: #ff4747; transform: translateX(-50%);}
 .section_tech .with .card_list > li:nth-child(3) {right:0}
 .section_tech .with .card_list > li strong {font-size: 30px; }
 .section_tech .with .card_list > li p { margin-top: 10px; line-height: 1.5;}
 
 .section_tech .immersive .inner {padding-top:550px; padding-bottom: 240px;}
+.section_tech .immersive .video_box video { width: 100%;}
 
 /* Top Tear 3D Technique */
 .toptear { padding: 256px 0 145px !important;}
