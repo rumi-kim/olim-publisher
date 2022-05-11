@@ -134,6 +134,26 @@
             <i></i>
           </p>
         </div>
+        <div class="circle_box draw_circle">
+          <div class="circle_item item01">
+            <i class="half_circle left"></i>
+            <i class="half_circle right"></i>
+          </div>
+          <div class="circle_item item02">
+            <i class="half_circle left"></i>
+            <i class="half_circle right"></i>
+          </div>
+          <div class="circle_item item03">
+            <i class="half_circle left"></i>
+            <i class="half_circle right"></i>
+          </div>
+          <div class="circle_item item04">
+            <i class="half_circle left"></i>
+            <i class="half_circle right"></i>
+          </div>
+        </div>
+       
+        
       </div>
       <!-- // section#1 -->
 
@@ -265,6 +285,25 @@
               </ul>
             </div>
           </div>
+          <div class="circle_box draw_circle">
+            <div class="circle_item item01">
+              <i class="half_circle left"></i>
+              <i class="half_circle right"></i>
+            </div>
+            <div class="circle_item item02">
+              <i class="half_circle left"></i>
+              <i class="half_circle right"></i>
+            </div>
+            <div class="circle_item item03">
+              <i class="half_circle left"></i>
+              <i class="half_circle right"></i>
+            </div>
+            <div class="circle_item item04">
+              <i class="half_circle left"></i>
+              <i class="half_circle right"></i>
+            </div>
+          </div>
+         
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
@@ -419,24 +458,7 @@
       </div>
       <!-- // section#4 -->
 
-      <div class="circle_box draw_circle">
-        <div class="circle_item item01">
-          <i class="half_circle left"></i>
-          <i class="half_circle right"></i>
-        </div>
-        <div class="circle_item item02">
-          <i class="half_circle left"></i>
-          <i class="half_circle right"></i>
-        </div>
-        <div class="circle_item item03">
-          <i class="half_circle left"></i>
-          <i class="half_circle right"></i>
-        </div>
-        <div class="circle_item item04">
-          <i class="half_circle left"></i>
-          <i class="half_circle right"></i>
-        </div>
-      </div>
+      
 
 
 
@@ -528,21 +550,19 @@
 
       // lnb click & scroll event 
 
-
       //offset top var
       let first_top = $('#anker1').offset().top,
         second_top = $('#anker2').offset().top,
         third_top = $('#anker3').offset().top,
         fourth_top = $('#anker4').offset().top,
         fifth_top = $('#anker5').offset().top,
-
         ankerItem = $('.anker_item');
 
 
       // 스크롤 이벤트 
       $(window).scroll(function () {
 
-        sct = $(window).scrollTop();
+        let sct = $(window).scrollTop();
 
         if (sct >= first_top - 44) {
           $(".anker_wrap").addClass("is_fixed").fadeIn(200);

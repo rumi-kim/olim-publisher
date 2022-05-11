@@ -5,7 +5,8 @@
 /* common */
 .service .section_wrap { padding-top: 0;}
 .service .section_box {padding-bottom: 0;}
-.service .circle_box {right: -50px; top: -270px;}
+.service .section_visual .circle_box {left: 50%; top: -500px; transform: translateX(350px);}
+.service .section_tech .circle_box {left: 50%; top: 0; transform: translateX(660px);}
 .service .txt.section_desc.strong {line-height: 1.67;}
 .service .bg_txt { white-space: nowrap; right: 0; top: 110px; margin-right: -87px;}
 
@@ -55,7 +56,7 @@
 .section_tech h3.tit.section_tit {position: relative;; margin-bottom:20px; font-size: 30px; letter-spacing: -0.75px;}
 .section_tech .tit.section_tit .number {position: absolute; right: 90%; bottom: 0; height: 165px; font-family: Futura; color: rgb(255, 113, 113, 0.1); font-size: 227px; line-height: 137px; }
 
-.section_tech .with { padding-top: 240px;}
+.section_tech .with {position:relative; padding-top: 240px;}
 .section_tech .with .list_box {margin-top:140px;padding: 0 95px;  }
 .section_tech .with .logo_box { margin: 0 auto 70px; width: 235px; }
 .section_tech .with .card_list {position: relative; height: 180px; }
