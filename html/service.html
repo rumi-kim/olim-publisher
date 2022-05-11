@@ -556,12 +556,14 @@
       // lnb click & scroll event 
 
       //offset top var
-      let first_top = $('#anker1').offset().top,
-        second_top = $('#anker2').offset().top,
-        third_top = $('#anker3').offset().top,
-        fourth_top = $('#anker4').offset().top,
-        fifth_top = $('#anker5').offset().top,
+      let first_top = $('#anker1').offset().top - 80,
+        second_top = $('#anker2').offset().top - 80,
+        third_top = $('#anker3').offset().top - 80,
+        fourth_top = $('#anker4').offset().top - 80,
+        fifth_top = $('#anker5').offset().top - 80,
         ankerItem = $('.anker_item');
+
+        console.log(first_top,second_top,third_top,fourth_top,fifth_top)
 
 
       // 스크롤 이벤트 
@@ -569,9 +571,7 @@
 
         let sct = $(window).scrollTop();
 
-        if (sct >= first_top - 44) {
-          $(".anker_wrap").addClass("is_fixed").fadeIn(200);
-        } else if (sct >= first_top) {
+        if (sct >= first_top - 120) {
           $(".anker_wrap").addClass("is_fixed").fadeIn(200);
         } else {
           $(".anker_wrap").removeClass("is_fixed").fadeOut(200);
@@ -604,13 +604,13 @@
       $(".anker_item>a").click(function () {
 
         let anker_data = $(this).attr('data-href'),
-          anker_offset = $(anker_data).offset().top;
+          anker_offset = $(anker_data).offset().top - 80;
 
         // ankerItem.removeClass('is_active');
         // $('.anker_item>a[data-href="' + anker_data + '"]').parent('li').addClass('is_active');
         $(this).parent('li').addClass('is_active');
         $("body,html").animate({
-          scrollTop: anker_offset
+          scrollTop: anker_offset + 5
         }, 300);
       });
 
