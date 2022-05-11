@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="lib/css/common.css">
   <link rel="stylesheet" href="lib/css/style.css">
   <script src="lib/js/common.js"></script>
-  <script src="lib/js/form.js" defer></script>
+  <!-- <script src="lib/js/form.js" defer></script> -->
 </head>
 
 <body>
@@ -968,6 +968,28 @@
         : (number / setting[i].value).toFixed(0).replace(rx, '$1') + setting[i].symbol
       );
     }
+
+    // form
+    let $user_name = document.querySelectorAll('input');
+
+    function onFocus(e) {
+      e.target.parentElement.classList.add("on");
+      console.log(e.target.value);
+
+    }
+
+    function onBlur(e) {
+      if (e.target.value == "") {
+        e.target.parentElement.classList.remove("on");
+      }
+    }
+
+    for (i = 0; i < $user_name.length; i++) {
+      $user_name[i].addEventListener('focus', onFocus);
+      $user_name[i].addEventListener('blur', onBlur);
+    }
+
+
   </script>
 </body>
 
