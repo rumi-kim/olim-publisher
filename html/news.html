@@ -63,7 +63,7 @@
               <a href="ir_list.html">공시정보</a>
             </li>
             <li class="gnb_item">
-              <a href="news.html">뉴스</a>
+              <a href="news.html" class="is_active">뉴스</a>
             </li>
             <li class="gnb_item">
               <a href="recruit.html">채용</a>
@@ -245,7 +245,7 @@
         </div>
 
       </div>
-      <!-- section#2 보도자료 -->
+      <!-- // section#2 보도자료 -->
 
       <!-- section#3 미디어 -->
       <div class="section_wrap">
@@ -288,7 +288,7 @@
               <ul class="board_list">
 
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -297,7 +297,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -306,7 +306,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -316,7 +316,7 @@
                 </li>
 
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -325,7 +325,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -334,7 +334,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -358,7 +358,16 @@
               <ul class="board_list">
 
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
+                    <div class="img_box">
+                      <img src="../static/mov/bg_visual03.png" alt="">
+                    </div>
+                    <span class="card_date">2022/04/27</span>
+                    <p class="txt">블로그 제9차 유네스코 세계지질공원 총회 가상전시관</p>
+                  </a>
+                </li>
+                <li class="board_item">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -367,16 +376,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
-                    <div class="img_box">
-                      <img src="../static/mov/bg_visual03.png" alt="">
-                    </div>
-                    <span class="card_date">2022/04/27</span>
-                    <p class="txt">제9차 유네스코 세계지질공원 총회 가상전시관</p>
-                  </a>
-                </li>
-                <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -386,7 +386,7 @@
                 </li>
 
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -395,7 +395,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -404,7 +404,7 @@
                   </a>
                 </li>
                 <li class="board_item">
-                  <a href="">
+                  <a href="javascript:void(0)">
                     <div class="img_box">
                       <img src="../static/mov/bg_visual03.png" alt="">
                     </div>
@@ -439,10 +439,22 @@
         </div>
 
       </div>
-      <!-- section#3 미디어 -->
+      <!-- // section#3 미디어 -->
 
     </div>
     <!-- //container -->
+
+    <!-- modal -->
+
+    <div class="box modal_wrap">
+
+      <div class="box modal_box">
+        <a href="javascript:void" class="btn_modal_close">팝업창 닫기</a>
+      </div>
+
+    </div>
+
+    <!-- // modal -->
 
     <!-- footer -->
     <footer class="footer">
@@ -519,9 +531,19 @@
       </div>
 
     </footer>
-    <!-- footer -->
+    <!-- // footer -->
   </div>
 
+  <script>
+    $(".media_box .board_item").on("click", function(){
+      $(".modal_wrap").fadeIn(200);
+    });
+
+    $(".modal_wrap .btn_modal_close").on("click", function(){
+      $(".modal_wrap").fadeOut(200);
+      return false
+    });
+  </script>
 </body>
 
 </html>

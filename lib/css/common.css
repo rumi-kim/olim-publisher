@@ -210,9 +210,10 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 
 /* 검색결과 없을 시 */
 .board_list .no_item{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 150px 0;}
-.board_list .ico_no_item{width: 25px; height: 25px; background-color: #fc0;}
+.board_list .ico_no_item{margin-left: 4px; width: 33px; height: 32px; background: url("../../static/images/ico/ico_list_none.png") no-repeat; background-size: cover;}
 .board_list .no_item_txt{margin-top: 20px; margin-bottom: 35px; font-size: 25px;}
-.board_list .no_item_btn{width: 42px; height: 42px; border-radius: 100%; font-size: 0; background-color: #414141}
+.board_list .no_item_btn{width: 42px; height: 42px; border-radius: 100%; font-size: 0; background: #414141 url("../../static/images/ico/ico_modal_close.png") no-repeat center center; background-size: 25px 25px; transition: background-color 0.2s;}
+.board_list .no_item_btn:hover{background-color: #111;}
 
 /* input 요소 */
 input[type="checkbox"],
@@ -245,13 +246,17 @@ input{border: 0; outline: 0;}
 .search_box:focus-within{border: 2px solid #585858}
 .form_wrap{}
 
-
 /* element 단위 구분 */
 .fw300{font-weight: 300;}
 .fw400{font-weight: 400;}
 .fw500{font-weight: 500;}
 .fw600{font-weight: 600;}
 .fw700{font-weight: 700;}
+
+/* modal base */
+.modal_wrap{display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9500; background-color: rgba(0, 0, 0, .83);}
+.modal_box{position: relative; top: 50%; left: 50%; width: 1330px; height: 740px; transform: translate(-50%, -50%); background-color: #fff;}
+.modal_box .btn_modal_close{position: absolute; bottom: 100%; right: 0; margin-right: -14px; width: 66px; height: 66px; font-size: 0; background: url("../../static/images/ico/ico_modal_close.png") no-repeat; background-size: cover}
 
 /* margin setting */
 
