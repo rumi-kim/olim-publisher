@@ -33,7 +33,7 @@
 
 /* footer */
 .footer{max-height: 370px; background: #1e1e1e;}
-.footer .inner{padding: 64px 70px 92px 140px; width: 100%;}
+.footer .inner{padding: 64px 70px 92px 140px; width: 100%; max-width: 1920px;}
 .footer_tit{margin-bottom: 65px; color: #fff; font-size: 60px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.45}
 .footer .address{color: #666; font-size: 12px; line-height: 1.67}
 .footer .footer_logo{margin-bottom: 10px; width: 104px; height: 12px; background: transparent url("../../static/images/img_footer_logo.png") no-repeat; text-indent: -9999px;}
@@ -46,7 +46,7 @@
 .dropdown .dropdown_list .dropdown_item:hover{background: #262626}
 
 /* container */
-.container{min-height: calc(100vh - 450px)}
+.container{min-height: calc(100vh - 370px)}
 .section_top_visual{position: relative; height: 618px;}
 .section_top_visual img{width: 100%; height: 100%; object-fit: cover;}
 .section_wrap .img_box,
@@ -231,7 +231,7 @@
 
 
 /* main section award */
-.award .inner{padding: 0;}
+.wrap.main .award .inner{padding: 0;}
 .award .txt_box{padding-left: 90px;}
 .award .canvas_bg{position: absolute; top: 300px; left: 50%; z-index: -10; transform: translateX(-50%);}
 

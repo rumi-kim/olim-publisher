@@ -144,6 +144,22 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .btn.btn_primary:hover,
 .btn.btn_primary.is_active{border-color: #d32727; background-color: #d32727}
 
+/* pagination */
+.pagination{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%;}
+.pagination .btn_page:not(.btn_page_move){display: block; width: 42px; height: 42px; color: #4f4f4f; font-size: 16px; text-align: center; letter-spacing: -.4px; line-height: 40px; border: 1px solid #d3d3d3; border-radius: 21px; background-color: #fff; transition: color 0.2s, border 0.2s, background-color 0.2s;}
+.pagination .btn_page:not(.btn_page_move):hover,
+.pagination .btn_page.is_active:not(.btn_page_move){color: #fff; border-color: #ff3232; background-color: #ff3232}
+.pagination .btn_page:not(.btn_page_move)+.btn_page:not(.btn_page_move){margin-left: 15px;}
+.pagination .prev,
+.pagination .next{width: 17px; height: 33px; font-size: 0; border: 0; border-radius: 0; background-color: transparent; background-size: contain; background-repeat: no-repeat}
+.pagination .prev{margin-right: 44px; background-image: url("../../static/images/ico/ico_page_prev.png");}
+.pagination .next{margin-left: 44px; background-image: url("../../static/images/ico/ico_page_next.png");}
+
+/* tab */
+.btn_tab_box{display: flex; align-items: center;}
+.btn_tab_box .btn_tab{width: 250px; height: 55px; color: #777; font-size: 24px; font-weight: 400; line-height: 53px; border: 1px solid #929292; border-radius: 27.5px;}
+.btn_tab_box .btn_tab+.btn_tab{margin-left: 22px;}
+
 /* quick Nav */
 .quick_nav_box{position: fixed;}
 .quick_nav_list{}
@@ -189,8 +205,14 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 .board_list .board_item a .img_box img { min-height: 100%; width:100%; object-fit: cover;}
 .board_list .board_item a .txt {margin-top: 36px; line-height: 1.44; font-weight: 600;}
 
-.board_list .board_item .card_date{display: block; margin-top: 10px; padding: 0 14px; width: fit-content; height: 18px; color: #585858; font-size: 12px; font-weight: 500; letter-spacing: normal; line-height: 16px; border-radius: 14px; background: #f0efef;}
+.board_list .board_item .card_date{display: block; margin-top: 10px; padding: 0 14px; width: fit-content; height: 18px; color: #585858; font-size: 12px; font-weight: 500; letter-spacing: normal; line-height: 16px; border: 1px solid #d1d1d1; border-radius: 14px; background: #f0efef;}
 .board_list .board_item .card_date+.txt{margin-top: 10px}
+
+/* 검색결과 없을 시 */
+.board_list .no_item{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 150px 0;}
+.board_list .ico_no_item{width: 25px; height: 25px; background-color: #fc0;}
+.board_list .no_item_txt{margin-top: 20px; margin-bottom: 35px; font-size: 25px;}
+.board_list .no_item_btn{width: 42px; height: 42px; border-radius: 100%; font-size: 0; background-color: #414141}
 
 /* input 요소 */
 input[type="checkbox"],
@@ -202,7 +224,7 @@ input{border: 0; outline: 0;}
 .input_chk_box .input_label:before{content: ""; position: absolute; top: 50%; left: 0; width:  14px; height: 14px; background: url("../../static/images/ico/ico_chk_frame.png") no-repeat; background-size: cover; transform: translateY(-50%);}
 .input_chk_box :checked+.input_label:before{background: url("../../static/images/ico/ico_chk_frame_on.png") no-repeat; background-size: cover; }
 
-.input_search{overflow: hidden; margin-left: 12px;height: 25px; color: #6c6c6c; font-size: 16px; font-weight: 400; letter-spacing: -.4px; background: transparent}
+.input_search{overflow: hidden; margin-left: 12px; width: calc(100% - 50px); height: 25px; color: #6c6c6c; font-size: 16px; font-weight: 400; letter-spacing: -.4px; background: transparent}
 
 /* breadcrumbs */
 .breadcrumbs_list{font-size:0; padding-top: 222px; padding-bottom: 15px;}
@@ -219,7 +241,7 @@ input{border: 0; outline: 0;}
 .img_box{position: relative;}
 .terms,
 .terms:hover{text-decoration: underline;}
-.search_box{padding: 0 20px; width: 422px; height: 42px; border: 1px solid #dfdfdf; border-radius: 21px; background: #f3f3f3; transition: all 0.2s}
+.search_box{display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; padding: 0 20px; width: 422px; height: 42px; border: 1px solid #dfdfdf; border-radius: 21px; background: #f3f3f3; transition: all 0.2s}
 .search_box:focus-within{border: 2px solid #585858}
 .form_wrap{}
 
