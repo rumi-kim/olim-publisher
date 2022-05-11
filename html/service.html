@@ -575,6 +575,8 @@
 
         if (sct >= first_top - 120) {
           $(".anker_wrap").addClass("is_fixed").fadeIn(200);
+        } else if (sct >= content_top - 76) {
+          $(".anker_wrap.is_admin").addClass("is_fixed").fadeIn(200);
         } else {
           $(".anker_wrap").removeClass("is_fixed").fadeOut(200);
         };
