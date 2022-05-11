@@ -33,7 +33,7 @@
 
 /* footer */
 .footer{max-height: 370px; background: #1e1e1e;}
-.footer .inner{padding: 64px 70px 92px 140px; width: 100%; max-width: 1920px;}
+.footer .inner{padding: 64px 70px 92px 140px !important; width: 100%; max-width: 1920px;}
 .footer_tit{margin-bottom: 65px; color: #fff; font-size: 60px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.45}
 .footer .address{color: #666; font-size: 12px; line-height: 1.67}
 .footer .footer_logo{margin-bottom: 10px; width: 104px; height: 12px; background: transparent url("../../static/images/img_footer_logo.png") no-repeat; text-indent: -9999px;}
