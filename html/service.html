@@ -14,7 +14,7 @@
 
   <!-- library -->
   <script src="../lib/js/jquery-3.5.1.min.js"></script>
-  
+
   <!-- aos -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -146,7 +146,7 @@
             <i class="half_circle right"></i>
           </div>
         </div>
-        
+
       </div>
       <!-- // section#1 -->
 
@@ -299,7 +299,7 @@
               <i class="half_circle right"></i>
             </div>
           </div>
-         
+
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
@@ -556,46 +556,36 @@
         fifth_top = $('#anker5').offset().top - 80,
         ankerItem = $('.anker_item');
 
-        console.log(first_top,second_top,third_top,fourth_top,fifth_top)
+      console.log(first_top, second_top, third_top, fourth_top, fifth_top)
 
 
       // 스크롤 이벤트 
       $(window).scroll(function () {
 
-        
         ankerItem.removeClass('is_active');
 
         let sct = $(window).scrollTop();
 
         if (sct >= first_top - 120) {
           $(".anker_wrap").addClass("is_fixed").fadeIn(200);
-        } 
-        else if (sct >= first_top - 80) {
+        } else if (sct >= first_top - 80) {
           $(".anker_wrap.is_admin").addClass("is_fixed").fadeIn(200);
-        }
-         else {
+        } else {
           $(".anker_wrap").removeClass("is_fixed").fadeOut(200);
         };
 
 
         if (sct >= first_top && sct < second_top) {
-          ankerItem.removeClass('is_active');
           $('.anker_item>a[data-href="#anker1"]').parent('li').addClass('is_active');
         } else if (sct >= second_top && sct < third_top) {
-          ankerItem.removeClass('is_active');
           $('.anker_item>a[data-href="#anker2"]').parent('li').addClass('is_active');
         } else if (sct >= third_top && sct < fourth_top) {
-          ankerItem.removeClass('is_active');
           $('.anker_item>a[data-href="#anker3"]').parent('li').addClass('is_active');
         } else if (sct >= fourth_top && sct < fifth_top) {
-          ankerItem.removeClass('is_active');
           $('.anker_item>a[data-href="#anker4"]').parent('li').addClass('is_active');
         } else if (sct >= fifth_top) {
-          ankerItem.removeClass('is_active');
           $('.anker_item>a[data-href="#anker5"]').parent('li').addClass('is_active');
-        } else {
-          ankerItem.removeClass('is_active');
-        };
+        } else {};
 
       });
 
@@ -604,7 +594,7 @@
       $(".anker_item>a").click(function () {
 
         let anker_data = $(this).attr('data-href'),
-          anker_offset = $(anker_data).offset().top - 80;
+            anker_offset = $(anker_data).offset().top - 80;
 
         // ankerItem.removeClass('is_active');
 
@@ -614,12 +604,6 @@
           scrollTop: anker_offset + 5
         }, 300);
       });
-
-
-
-
-
-
 
     });
   </script>
