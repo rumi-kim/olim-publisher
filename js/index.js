@@ -1,7 +1,7 @@
 //intro script
 
 $(function () {
-  include();
+  // include();
   resizeBg();
   lobbyModalFunc();
 });
@@ -46,10 +46,10 @@ $(window).on("resize", function () {
 /*================================================*/
 
 // include HTML file ===================================
-function include() {
-  let commonInc = $(".inc_wrap");
-  commonInc.load("header_modal_include.html");
-}
+// function include() {
+//   let commonInc = $(".inc_wrap");
+//   commonInc.load("header_modal_include.html");
+// }
 
 // get URL params ===================================
 function getUrlParams() {
