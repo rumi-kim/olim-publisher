@@ -26,7 +26,6 @@
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
   <!-- futura webfont -->
   <link rel="stylesheet" href="https://use.typekit.net/eta8mwx.css">
-  <link rel="stylesheet" href="../lib/css/olim_general_renew.css">
   <link rel="stylesheet" href="../lib/css/common.css">
   <link rel="stylesheet" href="../lib/css/style.css">
   <script src="../lib/js/common.js"></script>
@@ -104,11 +103,11 @@
       <div class="lnb anker_wrap">
         <div class="anker_inner">
           <ul class="anker_menu">
-            <li class="anker_item"><a href="#none" data-href="#anker1"><span class="">서비스소개</span></a></li>
-            <li class="anker_item"><a href="#none" data-href="#anker2"><span class="">3D기술</span></a></li>
-            <li class="anker_item"><a href="#none" data-href="#anker3"><span class="">개방형생태계</span></a></li>
-            <li class="anker_item"><a href="#none" data-href="#anker4"><span class="">몰입형 웹</span></a></li>
-            <li class="anker_item"><a href="#none" data-href="#anker5"><span class="">쇼케이스</span></a></li>
+            <li class="anker_item"><a href="" data-href="#anker1"><span class="">서비스소개</span></a></li>
+            <li class="anker_item"><a href="" data-href="#anker2"><span class="">3D기술</span></a></li>
+            <li class="anker_item"><a href="" data-href="#anker3"><span class="">개방형생태계</span></a></li>
+            <li class="anker_item"><a href="" data-href="#anker4"><span class="">몰입형 웹</span></a></li>
+            <li class="anker_item"><a href="" data-href="#anker5"><span class="">쇼케이스</span></a></li>
           </ul>
         </div>
       </div>
@@ -151,10 +150,10 @@
       <!-- // section#1 -->
 
       <!-- section#2 - 올림플래닛의 능력-->
-      <div class="section_wrap section_tech" id="anker1">
+      <div class="section_wrap section_tech">
 
         <!-- visual -->
-        <div class="visual_box section_box ">
+        <div class="visual_box section_box contents_lnb">
 
           <div class="inner">
             <div class="txt_box">
@@ -200,7 +199,7 @@
         </div>
 
         <!-- 1. 기존과는 다른 Top Tear 3D 기술 -->
-        <div class="toptear section_box bg_gray " id="anker2">
+        <div class="toptear section_box bg_gray contents_lnb">
 
           <div class="inner">
             <div class="txt_box mb90">
@@ -241,7 +240,7 @@
         </div>
 
         <!-- 2. 함께 참여할 수 있는 개방형 생태계 -->
-        <div class="with section_box " id="anker3">
+        <div class="with section_box contents_lnb">
 
           <div class="inner">
             <div class="txt_box">
@@ -303,7 +302,7 @@
         </div>
 
         <!-- 3. 언제 어디서나 몰입형 버추얼 공간을-->
-        <div class="immersive section_box " id="anker4">
+        <div class="immersive section_box contents_lnb">
 
           <div class="inner">
             <div class="txt_box mb70">
@@ -389,7 +388,7 @@
       <!-- // section#3 -->
 
       <!-- section#4 -->
-      <div class="section_wrap section_showcase " id="anker5">
+      <div class="section_wrap section_showcase contents_lnb">
 
         <div class="inner">
           <div class="txt_box mb50">
@@ -543,70 +542,81 @@
     <!-- footer -->
   </div>
 
+
+
   <script>
-    $(function () {
+    'use strict';
 
-      // lnb click & scroll event 
+    // var
+    const lnbContents = document.querySelectorAll('.contents_lnb'),
+      lnbFixedBox = document.querySelector('.lnb'),
+      lnbItem = document.querySelectorAll('.lnb li'),
+      bodyRect = document.body.getBoundingClientRect();
+    let offsetArr = [];
 
-      //offset top var
-      let first_top = $('#anker1').offset().top - 80,
-        second_top = $('#anker2').offset().top - 80,
-        third_top = $('#anker3').offset().top - 80,
-        fourth_top = $('#anker4').offset().top - 80,
-        fifth_top = $('#anker5').offset().top - 80,
-        ankerItem = $('.anker_item');
+    for (let i = 0; i < lnbContents.length; i++) {
 
-      console.log(first_top, second_top, third_top, fourth_top, fifth_top)
+      let lnbRect = lnbContents[i].getBoundingClientRect(),
+        lnbRectTop = lnbRect.top - bodyRect.top - 80; // 각 콘텐츠의 offset y값 - header 높이만큼 빼주기
 
-
-      // 스크롤 이벤트 
-      $(window).scroll(function () {
-
-        ankerItem.removeClass('is_active');
-
-        let sct = $(window).scrollTop();
-
-        if (sct >= first_top - 120) {
-          $(".anker_wrap").addClass("is_fixed").fadeIn(200);
-        } else if (sct >= first_top - 80) {
-          $(".anker_wrap.is_admin").addClass("is_fixed").fadeIn(200);
-        } else {
-          $(".anker_wrap").removeClass("is_fixed").fadeOut(200);
-        };
+      console.log(lnbRectTop + 80);
+      console.log(lnbContents[i].clientTop);
 
 
-        if (sct >= first_top && sct < second_top) {
-          $('.anker_item>a[data-href="#anker1"]').parent('li').addClass('is_active');
-        } else if (sct >= second_top && sct < third_top) {
-          $('.anker_item>a[data-href="#anker2"]').parent('li').addClass('is_active');
-        } else if (sct >= third_top && sct < fourth_top) {
-          $('.anker_item>a[data-href="#anker3"]').parent('li').addClass('is_active');
-        } else if (sct >= fourth_top && sct < fifth_top) {
-          $('.anker_item>a[data-href="#anker4"]').parent('li').addClass('is_active');
-        } else if (sct >= fifth_top) {
-          $('.anker_item>a[data-href="#anker5"]').parent('li').addClass('is_active');
-        } else {};
+      // click event
+      lnbItem[i].addEventListener('click', function (e) { //lnb클릭시 해당 컨텐츠로 이동
+        e.preventDefault();
+
+        window.scrollTo({
+          top: lnbRectTop + 5,
+          behavior: 'smooth'
+        });
+        for (let j = 0; j < lnbItem.length; j++) {
+          lnbItem[j].classList.remove('is_active');
+        }
+        this.classList.add('is_active');
 
       });
 
+      offsetArr.push(lnbRectTop); // 각 콘텐츠의 offset y값을 담은 배열 생성
 
-      // 클릭 이벤트 
-      $(".anker_item>a").click(function () {
+    }
 
-        let anker_data = $(this).attr('data-href'),
-            anker_offset = $(anker_data).offset().top - 80;
 
-        // ankerItem.removeClass('is_active');
 
-        // $('.anker_item>a[data-href="' + anker_data + '"]').parent('li').addClass('is_active');
-        $(this).parent('li').addClass('is_active');
-        $("body,html").animate({
-          scrollTop: anker_offset + 5
-        }, 300);
-      });
+    window.addEventListener('scroll', function () {
+
+      let sct = window.scrollY;
+
+      for (let i = 0; i < lnbItem.length; i++) {
+        lnbItem[i].classList.remove('is_active')
+      }
+
+      if (sct >= offsetArr[0] - 300) {
+        lnbFixedBox.style.display = 'block';
+      } else {
+        lnbFixedBox.style.display = 'none';
+      }
+
+      if (sct >= offsetArr[0] - 300 && sct < offsetArr[1]) {
+        lnbItem[0].classList.add('is_active');
+      } else if (sct >= offsetArr[1] && sct < offsetArr[2]) {
+        lnbItem[1].classList.add('is_active');
+      } else if (sct >= offsetArr[2] && sct < offsetArr[3]) {
+        lnbItem[2].classList.add('is_active');
+      } else if (sct >= offsetArr[3] && sct < offsetArr[4]) {
+        lnbItem[3].classList.add('is_active');
+      } else if (sct >= offsetArr[4]) {
+        lnbItem[4].classList.add('is_active');
+      } else {}
+
+      return false;
 
     });
   </script>
+
+
+
 </body>
 
 </html>
