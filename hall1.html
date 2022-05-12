@@ -78,7 +78,7 @@
     </div>
     
     <!-- modal -->
-    <div class="wrap_modal">
+    <div class="wrap_modal" id="popup_modal">
       <h2 class="ir_text">대메뉴</h2>
       <button class="btn_close type4">
         <span class="ir_text">닫기</span>
@@ -191,13 +191,54 @@
   </div>
   <!-- //container -->
 
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
   <script>
-    var hasTodayCookie = false;
 
     $(function(){
 
+      var hasTodayCookie = false;
+      // init
+      //hasTodayCookie = readCookie('todayCloseModal_zr042') ? true : false;
+      var currentTime = (new Date()).getTime();
+      var dateOffset = (24 * 60 * 60 * 1000) * 1;
+      var todayCookie = localStorage.getItem('todayCloseModal_mtplanet');
+
+      if (todayCookie) {
+        if (currentTime - todayCookie > dateOffset) {
+          localStorage.removeItem('todayCloseModal_mtplanet');
+        }
+      }
+
+      if (hasTodayCookie) {
+        $('.btn_modal_next').addClass('btn_cookie');
+        // $('.btn_modal_next span').text('Close');
+        $('.btn_modal_next').click(function (e) {
+          closeModal();
+        });
+        $('.modal').hide();
+        $('.modal_bg').hide();
+      }
+
+      // modal_close
+      function close_modal() {
+        // $('#tutorial_video').get(0).pause();
+        // $('#tutorial_video').prop('muted', true);
+        $('.modal').fadeOut(200);
+        $('.modal_bg').fadeOut(200);
+
+        if (!hasTodayCookie) {
+          checkedCookieBox = $('#not_today').is(':checked');
+          if (checkedCookieBox) {
+            localStorage.setItem('todayCloseModal_mtplanet', (new Date()).getTime());
+            //writeCookie('todayCloseModal_zr042',true,1);
+          } else {
+            localStorage.removeItem('todayCloseModal_mtplanet');
+            //deleteCookie('todayCloseModal_zr042');
+          }
+        }
+      }
+
       $(document).ready(function() {
-        
         var params = getUrlParams();
         var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
 
@@ -208,14 +249,10 @@
         
         $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
       });
+
+
     });
 
-    // modal_close
-    function close_modal() {
-      $('.modal').fadeOut(200);
-      $('.modal_bg').fadeOut(200);
-    }
-    
     //audio mute/unmute
     const bgSound = document.querySelector(".bg-sound");
     const soundOn = document.querySelector(".sound-on");

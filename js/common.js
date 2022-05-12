@@ -72,6 +72,7 @@ function writeCookie(name, value, days) {
   var expires = "";
   if (days) {
     var date = new Date();
+    console.log(date);
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     expires = "; expires=" + date.toUTCString();
   }

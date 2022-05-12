@@ -9,8 +9,8 @@ $(function () {
 $(window).on("load", function () {
   // $(function)이 실행된 이후 실행할 함수
 
+  //cache 가 있을 경우, 인트로 영상 재생 X / 로비 화면으로 떨어지도록 설정.
   var params = getUrlParams();
-  // console.log(params);
   if (params.cache == "true") {
     $(".intro").css("display", "none");
     $(".intro_video").css("display", "none");
@@ -18,7 +18,7 @@ $(window).on("load", function () {
     $(".lobby_bg").css("display", "block");
   }
 
-  //pre video event
+  //인트로 비디오 끝날 때, intro box+intro video+skip button 숨김+로비이미지 노출
   $(".intro_video video").on({
     ended: function (e) {
       $(".intro").css("display", "none");
@@ -28,6 +28,7 @@ $(window).on("load", function () {
     },
   });
 
+  //skip button 클릭 시, intro box+intro video+skip button 숨김+로비이미지 노출
   $(".main-title_box .skip-btn button").click(function () {
     $(".intro").fadeOut(200);
     $(".intro_video").fadeOut(200);
@@ -66,7 +67,9 @@ function getUrlParams() {
 function resizeBg() {
   var windowWidth = $(window).width();
   var introSwipeModal = $(".mobile-modal");
+  //intro start button
   var enterBtn = $(".afterPlay .btn");
+  var preVideoWrap = $(".pre_video_wrap");
 
   $("body").css("width", windowWidth);
 
@@ -75,9 +78,12 @@ function resizeBg() {
 
     //intro&entry 스와이프 기능
     introSwipeModal.css("display", "none");
+
+    //start button 클릭 시 기능 제어
     enterBtn.click(function () {
       $(".start-modal").fadeOut(200);
       $(".main-title_box").css("display", "block");
+      $(".left .site_logo h1").css("display","block");
       $(".main_video").trigger("play");
     });
   } else {
@@ -91,11 +97,16 @@ function resizeBg() {
     });
 
     // 스와이프 모달 off 기능
-    $(".pre_video_wrap").on("scroll", function () {
-      var left = $(this).scrollLeft();
-      if (left > 0) {
-        introSwipeModal.css("display", "none");
-      }
+    // $(".pre_video_wrap").on("scroll", function () {
+    //   var left = $(this).scrollLeft();
+    //   if (left > 0) {
+    //     introSwipeModal.css("display", "none");
+    //   }
+    // });
+    
+    // touch 시작 시 스와이프 모달 off 기능
+    preVideoWrap.on('touchstart', function(e){
+      introSwipeModal.css("display", "none");
     });
 
     // 좌우 스크롤 중앙 배치
