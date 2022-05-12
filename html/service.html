@@ -559,10 +559,6 @@
       let lnbRect = lnbContents[i].getBoundingClientRect(),
         lnbRectTop = lnbRect.top - bodyRect.top - 80; // 각 콘텐츠의 offset y값 - header 높이만큼 빼주기
 
-      console.log(lnbRectTop + 80);
-      console.log(lnbContents[i].clientTop);
-
-
       // click event
       lnbItem[i].addEventListener('click', function (e) { //lnb클릭시 해당 컨텐츠로 이동
         e.preventDefault();
@@ -571,10 +567,17 @@
           top: lnbRectTop + 5,
           behavior: 'smooth'
         });
+
         for (let j = 0; j < lnbItem.length; j++) {
           lnbItem[j].classList.remove('is_active');
         }
-        this.classList.add('is_active');
+
+        setInterval(function () {
+          let sct = window.scrollY;
+          if (sct >= lnbRectTop) {
+            this.classList.add('is_active');
+          }
+        }, 100)
 
       });
 
