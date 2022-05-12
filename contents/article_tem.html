@@ -1,0 +1,96 @@
+<html lang="ko"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="전시 핫스팟">
+    <meta name="description" content="전시 핫스팟">
+    <meta name="robots" content="all">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:title" content="전시 핫스팟">
+    
+    <!-- 필수: babel -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js"></script>
+    <script src="https://unpkg.com/core-js-bundle@3.8.1/index.js"></script>
+    <script src="https://unpkg.com/regenerator-runtime@0.13.7/runtime.js"></script>
+
+    <!-- Style include -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <!-- library -->
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <script src="../js/owl.carousel.min.js"></script>
+  
+    <!-- general style -->
+    <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/olim_general.css">
+    <script src="../js/olim_general.js"></script>
+  
+    <!-- project -->
+    <link rel="stylesheet" type="text/css" href="../css/sub_common.css">
+    <script src="../js/sub_common.js"></script>
+  
+    <!-- 필수: VUE 삽입 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+    <!-- 필수: VUE BASE TEMPLATE SCRIPT  -->
+    <script src="//cdn.zipview.kr/cdms/engine/main.js"></script>
+
+    <title></title>
+  </head>
+  
+  <!-- [P][D] body의 클래스를 통해 스타일을 지정할 수 있습니다.
+  type은 구조가 다르므로 group/single 폴더를 각각 참고해주세요. 모든 클래스는 중첩해 사용할 수 있습니다.
+  
+  아무것도 입력하지 않음 : 모든 페이지에 여백이 있는 기본 스타일로 지정됩니다.
+  style_thin : 여백이 최소화됩니다.
+  style_column : 사이드 메뉴(2depth)에 구분선이 생성되며, 세미나 홀의 경우 타이틀에 배경 색상이 추가됩니다.
+  style_dropdown : 1depth 메뉴가 모바일에서 드롭다운 형태로 변경됩니다. -->
+  <body class="type_single style_thin style_column style_dropdown">
+    <div id="app" style="display: none">
+      <!-- contents/본문 -->
+      <div class="article_cont full">
+        <div class="tabpanel_wrap">
+            <div id="0" class="tabpanel" style="display: block;">
+              <div class="iframe_wrap with_chat">
+                <iframe :src="articleURL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; camera *;microphone *" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- //contents/본문 -->  
+    </div>
+    
+  </body></html>
+
+
+<script type="text/babel" data-presets="es2015, stage-3">
+  const vm = new Engine();
+  vm.getContents().then(function () {
+    new Vue({
+      el: '#app',
+      data: {
+        vm,
+        contents: vm.contents[0].contents,
+        articleURL: '',
+      },
+      created: function () {
+
+        this.$nextTick(() => {
+          if(window.location.hash){
+            var hashs = window.location.hash.slice(1).split('#');
+            let tabNumber = hashs.find((v)=>{ return typeof(v*1) == "number"});
+
+            let key = this.contents[tabNumber].responses[0].data;
+            this.articleURL =  key;
+          }
+        });
+
+        document.getElementById('app').style.display = 'block';
+      },
+      methods: {
+      },
+    });
+  });
+</script>

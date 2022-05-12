@@ -1,0 +1,51 @@
+.image_cont{
+  position: relative;
+  height:90%;
+  .tabpanel_wrap, .tabpanel{
+    position: relative;
+    height:100%;
+  }
+  .img_wrap{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    text-align:center;
+    
+    img{
+      height:100%;
+      // 210610 추가
+      object-fit:contain;
+      border:1px solid #bbb;
+    }
+  }
+  
+  .with_link{
+    height:90%;
+
+    &+.btn_wrap{
+      margin-top:1.5%;
+      text-align:center;
+
+      .btn_site{
+        @extend %gradient_btn;
+      }
+    }
+  }
+
+  @include media('tablet'){
+    height:77%;
+    .img_wrap{
+      height:0;
+      padding-top:56.25%;
+      img{
+        position:absolute;
+        top:0;
+        left:50%;
+        width:auto;
+        height:100%;
+        transform:translateX(-50%);
+      }
+    }
+  }
+}
