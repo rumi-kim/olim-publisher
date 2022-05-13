@@ -84,6 +84,7 @@ function resizeBg() {
       $(".start-modal").fadeOut(200);
       $(".main-title_box").css("display", "block");
       $(".left .site_logo h1").css("display","block");
+      $(".intro_video_dim").css("display","none");
       $(".main_video.is_pc").trigger("play");
     });
   } else {
@@ -97,6 +98,7 @@ function resizeBg() {
       $(".start-modal").fadeOut(200);
       introSwipeModal.css("display", "block");
       $(".main-title_box").css("display", "block");
+      $(".intro_video_dim").css("display","none");
       $(".main_video.is_mobile").trigger("play");
     });
 
