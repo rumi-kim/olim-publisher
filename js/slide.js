@@ -4,9 +4,7 @@ $(window).on("load",function(){
 });
 
 function mobileFunc() {
-  console.log("ok");
   let innerMenuItem = $(".wrap_modal .slide_wrapper>li");
-  console.log(innerMenuItem);
   const menuBtn = $(".btn_menu");
 
   menuBtn.on("click", function () {

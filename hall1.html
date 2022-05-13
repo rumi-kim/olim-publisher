@@ -58,7 +58,7 @@
     <div class="header-wrap">
       <div class="left">
         <a class="site_logo" href="index.html?cache=true">
-          <h1><img src="img/h1_logo.png" alt="매타플래닛"></h1>
+          <h1 style="display: block;"><img src="img/h1_logo.png" alt="매타플래닛"></h1>
         </a>
       </div>
       <div class="right">
@@ -87,8 +87,6 @@
         <i></i>
       </button>
       <div class="wrap_menu">
-        <!-- <button tyle="button" class="btn_slide next swiper-button-next"><span class="ir_text">다음 슬라이드</span></button>
-        <button tyle="button" class="btn_slide prev swiper-button-prev"><span class="ir_text">이전 슬라이드</span></button> -->
         <div class="slide_menu slide_container swiper-container">
           <ul class="slide_wrapper swiper-wrapper">
             <li class="intro_page swiper-slide">
@@ -156,7 +154,7 @@
                 <label for="not_today">Do not open today</label>
               </div>
               <div class="btn_wrap">
-                <button type="button" class="btn btn_modal_close" onclick="close_modal()"><span>Start</span></button>
+                <button type="button" class="btn btn_modal_close"><span>Start</span></button>
               </div>
             </div>
           </div>
@@ -188,46 +186,56 @@
       <!-- //vr player -->
     </div>
     <!-- //contents/본문 -->
+
+    <!-- audio tag -->
+    <audio src="assets/video/Progress.wav" class="bg-sound" loop>
+    </audio>
+    <!-- // audio tag -->
+
   </div>
   <!-- //container -->
 
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
   <script>
-
     $(function(){
 
+      //모달 일주일동안 보지 않기 code
       var hasTodayCookie = false;
       // init
-      //hasTodayCookie = readCookie('todayCloseModal_zr042') ? true : false;
       var currentTime = (new Date()).getTime();
-      var dateOffset = (24 * 60 * 60 * 1000) * 1;
+
+      //일주일 값 변수
+      var dateOffset = (24 * 60 * 60 * 1000) * 7;
       var todayCookie = localStorage.getItem('todayCloseModal_mtplanet');
 
+      //일정 기간 지나면 쿠키 삭제
       if (todayCookie) {
         if (currentTime - todayCookie > dateOffset) {
           localStorage.removeItem('todayCloseModal_mtplanet');
         }
       }
 
+      // hasTodayCookie true, false 갱신 (true면 모달창 자동 display:none)
+      hasTodayCookie = localStorage.getItem('todayCloseModal_mtplanet') ? true : false;
+
       if (hasTodayCookie) {
         $('.btn_modal_next').addClass('btn_cookie');
         // $('.btn_modal_next span').text('Close');
-        $('.btn_modal_next').click(function (e) {
-          closeModal();
-        });
+        // $('.btn_modal_next').click(function (e) {
+        //   closeModal();
+        // });
         $('.modal').hide();
         $('.modal_bg').hide();
       }
 
       // modal_close
-      function close_modal() {
-        // $('#tutorial_video').get(0).pause();
-        // $('#tutorial_video').prop('muted', true);
+      $(".btn_modal_close").click(function(){
+        console.log('ok');
         $('.modal').fadeOut(200);
         $('.modal_bg').fadeOut(200);
 
         if (!hasTodayCookie) {
           checkedCookieBox = $('#not_today').is(':checked');
+          console.log(checkedCookieBox);
           if (checkedCookieBox) {
             localStorage.setItem('todayCloseModal_mtplanet', (new Date()).getTime());
             //writeCookie('todayCloseModal_zr042',true,1);
@@ -236,8 +244,10 @@
             //deleteCookie('todayCloseModal_zr042');
           }
         }
-      }
+      });
+      //-----------------------------------------------------------------------------------------
 
+      //투어 iframe 추가
       $(document).ready(function() {
         var params = getUrlParams();
         var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
@@ -249,8 +259,13 @@
         
         $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
       });
+      //-----------------------------------------------------------------------------------------
 
-
+      function getUrlParams() {
+        var params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+        return params;
+      }
     });
 
     //audio mute/unmute
@@ -268,12 +283,6 @@
       bgSound.pause();
       soundOn.style.display = "none";
       soundOff.style.display = "block";
-    }
-
-    function getUrlParams() {
-      var params = {};
-      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-      return params;
     }
 
   </script>

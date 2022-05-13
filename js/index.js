@@ -84,16 +84,20 @@ function resizeBg() {
       $(".start-modal").fadeOut(200);
       $(".main-title_box").css("display", "block");
       $(".left .site_logo h1").css("display","block");
-      $(".main_video").trigger("play");
+      $(".main_video.is_pc").trigger("play");
     });
   } else {
+    
+    //intro video display none,block
+    $(".main_video.is_pc").css("display","none");
+    $(".main_video.is_mobile").css("display","block");
     //
     introSwipeModal.css("display", "none");
     enterBtn.click(function () {
       $(".start-modal").fadeOut(200);
       introSwipeModal.css("display", "block");
       $(".main-title_box").css("display", "block");
-      $(".main_video").trigger("play");
+      $(".main_video.is_mobile").trigger("play");
     });
 
     // 스와이프 모달 off 기능

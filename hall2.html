@@ -58,7 +58,7 @@
     <div class="header-wrap">
       <div class="left">
         <a class="site_logo" href="index.html?cache=true">
-          <h1><img src="img/h1_logo.png" alt="매타플래닛"></h1>
+          <h1 style="display: block;"><img src="img/h1_logo.png" alt="매타플래닛"></h1>
         </a>
         <!-- <div class="quick_nav">
           <a href="hall1.html">Media Island</a>
@@ -211,17 +211,24 @@
       <!-- //vr player -->
     </div>
     <!-- //contents/본문 -->
+
+  <!-- audio tag -->
+  <audio src="assets/video/Progress.wav" class="bg-sound" loop>
+  </audio>
+  <!-- // audio tag -->
+  
   </div>
   <!-- //container -->
 
 
   <script>
+    //모달 일주일동안 보지 않기 code
     var hasTodayCookie = false;
 
     $(function(){
 
       var referPage = document.referrer;
-      console.log(referPage);
+      // console.log(referPage);
       
       $('.back-page').click(function(){
         var check = referPage.substring(26);
@@ -234,28 +241,66 @@
         }
       });
 
-      //hasTodayCookie = readCookie('todayCloseModal_zr050') ? true : false;
+      // init
       var currentTime = (new Date()).getTime();
-      var dateOffset = (24 * 60 * 60 * 1000) * 1;
-      var todayCookie = localStorage.getItem('todayCloseModal_zr050');
 
+      //일주일 값 변수
+      var dateOffset = (24 * 60 * 60 * 1000) * 7;
+      var todayCookie = localStorage.getItem('todayCloseModal_mtplanet');
+
+      //일정 기간 지나면 쿠키 삭제
       if (todayCookie) {
         if (currentTime - todayCookie > dateOffset) {
-          localStorage.removeItem('todayCloseModal_zr050');
+          localStorage.removeItem('todayCloseModal_mtplanet');
         }
       }
 
-      hasTodayCookie = localStorage.getItem('todayCloseModal_zr050') ? true : false;
+      // hasTodayCookie true, false 갱신 (true면 모달창 자동 display:none)
+      hasTodayCookie = localStorage.getItem('todayCloseModal_mtplanet') ? true : false;
 
       if (hasTodayCookie) {
         $('.btn_modal_next').addClass('btn_cookie');
-        $('.btn_modal_next span').text('Close');
-        $('.btn_modal_next').click(function (e) {
-          closeModal();
-        });
+        // $('.btn_modal_next span').text('Close');
+        // $('.btn_modal_next').click(function (e) {
+        //   closeModal();
+        // });
         $('.modal').hide();
         $('.modal_bg').hide();
       }
+
+      // modal_close
+      $(".btn_modal_close").click(function(){
+        console.log('ok');
+        $('.modal').fadeOut(200);
+        $('.modal_bg').fadeOut(200);
+
+        if (!hasTodayCookie) {
+          checkedCookieBox = $('#not_today').is(':checked');
+          console.log(checkedCookieBox);
+          if (checkedCookieBox) {
+            localStorage.setItem('todayCloseModal_mtplanet', (new Date()).getTime());
+            //writeCookie('todayCloseModal_zr042',true,1);
+          } else {
+            localStorage.removeItem('todayCloseModal_mtplanet');
+            //deleteCookie('todayCloseModal_zr042');
+          }
+        }
+      });
+      //-----------------------------------------------------------------------------------------
+
+      //투어 iframe 추가
+      $(document).ready(function() {
+        var params = getUrlParams();
+        var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
+
+        $('.vr-player').html('');
+        if (params.startID){
+          url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?startID='+ params.startID + '&mode=embed';
+        }
+        
+        $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
+      });
+      //-----------------------------------------------------------------------------------------
 
       $(document).ready(function() {
         var params = getUrlParams();
