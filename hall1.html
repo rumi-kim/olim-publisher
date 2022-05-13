@@ -30,8 +30,8 @@
   <!-- library -->
   <link href="css/owl.carousel.min.css" rel="stylesheet">
   <script src="js/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
 
   <!-- general style -->
   <link href="https://cdn.zipview.kr/public/fonts/common.css" rel="stylesheet">
@@ -113,15 +113,20 @@
             </li>
             <li class="network swiper-slide">
               <div>
-                <p><span>MCN</span></p>
-                <ul class="menu_2dep">
+                <p>
+                  <span>MCN</span>
+                  <span>comming soon</span>
+                </p>
+                <!-- <ul class="menu_2dep">
                   <li><a href="hall2.html">MCN</a></li>
-                </ul>
+                </ul> -->
               </div>
             </li>
             <li class="swiper-slide">
               <div>
-                <p><span>coming soon</span></p>
+                <p>
+                  <span>coming soon</span>
+                </p>
               </div>
             </li>
           </ul>
@@ -232,7 +237,6 @@
 
       // modal_close
       $(".btn_modal_close").click(function(){
-        console.log('ok');
         $('.modal').fadeOut(200);
         $('.modal_bg').fadeOut(200);
 
@@ -252,13 +256,17 @@
 
       //투어 iframe 추가
       $(document).ready(function() {
+        
+        // slide.js mobile function load
+        mobileFunc();
+
         var params = getUrlParams();
-        var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
+        var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01';
 
         $('.vr-player').html('');
-        if (params.startID){
-          url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?startID='+ params.startID + '&mode=embed';
-        }
+        // if (params.startID){
+        //   url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?startID='+ params.startID + '&mode=embed';
+        // }
         
         $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
       });

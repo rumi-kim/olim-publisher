@@ -252,12 +252,10 @@ html body {
     height: 100%;
   }
 }
-@media screen and (max-width: 1024px)  and (orientation: landscape){
-  .warning {
-    display: block;
-  }
-  
-}
+
+/* @media screen and (max-width: 900px) and (orientation: landscape){
+  .warning {display: block;}
+} */
 
 #app {
   width: 100%;
@@ -375,7 +373,7 @@ html body {
 @media screen and (max-width: 1024px) {
   .start-modal .start-bg .modal-contents {
     position: fixed;
-    top: 10%;
+    top: 22%;
     left: 50%;
     align-items: center;
     transform: translateX(-50%) translateY(0);

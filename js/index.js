@@ -65,6 +65,8 @@ function getUrlParams() {
 }
 
 function resizeBg() {
+  // alert(window.innerWidth);
+  // alert(window.innerHeight);
   var windowWidth = $(window).width();
   var introSwipeModal = $(".mobile-modal");
   //intro start button
@@ -88,7 +90,7 @@ function resizeBg() {
       $(".main_video.is_pc").trigger("play");
     });
   } else {
-    
+
     //intro video display none,block
     $(".main_video.is_pc").css("display","none");
     $(".main_video.is_mobile").css("display","block");
@@ -125,7 +127,18 @@ function resizeBg() {
     // 현재 디바이스 길이의 반
     let halfDeviceWidth = $(window).width() / 2;
     videoWrapper.scrollLeft(halfWrapperWidth - halfDeviceWidth);
+
+    if(window.innerWidth >= window.innerHeight) {
+      if(window.innerHeight <= 550) {
+        $(".warning").css("display","block");
+      } else {
+        $(".warning").css("display","none");
+      }
+    } else {
+      $(".warning").css("display","none");
+    }
   }
+
 }
 
 //entry script

@@ -224,6 +224,20 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.wrap_modal .slide_wrapper > li:nth-child(3) div:hover {
+  background: rgba(255,255,255,.1);
+}
+.wrap_modal .slide_wrapper > li:nth-child(3) div span:nth-child(2) {
+  display: none;
+}
+.wrap_modal .slide_wrapper > li:nth-child(3) div:hover span:nth-child(1) {
+  display: none;
+}
+.wrap_modal .slide_wrapper > li:nth-child(3) div:hover span:nth-child(2) {
+  display: block;
+}
+
+
 .wrap_modal .slide_wrapper > li > div {
   position: relative;
   display: -webkit-flex;
@@ -308,7 +322,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   /* display: block; */
   max-height: 0%;
   margin: 0 auto;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: 90%;
   font-weight: 300;
   font-size: 18px;
@@ -322,6 +336,15 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   /* display: block; */
   max-height: 50%;
 }
+
+.wrap_modal .slide_wrapper > li > div:hover .menu_2dep >div > div > li {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* .wrap_modal .slide_wrapper > li > div:hover .menu_2dep >div > div > li:nth-child(1) {
+  margin-top: 20px;
+} */
 
 .wrap_modal .slide_wrapper > li ul::-webkit-scrollbar {
   padding: 3px;
