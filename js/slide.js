@@ -12,17 +12,20 @@ function mobileFunc() {
     if ($(this).hasClass("is-active")) {
       $(".wrap_modal").addClass("active");
       $("body").addClass("fixed");
-      innerMenuItem.on("click", function () {
-        $(this).toggleClass("open");
-        // $(this).siblings("li").removeClass("open");
-      });
     } else {
       $(".wrap_modal").removeClass("active");
       $("body").removeClass("fixed");
-      $(this).removeClass("open");
-      // innerMenuItem.removeClass("open");
+      innerMenuItem.removeClass("open");
     }
   });
+
+  innerMenuItem.on("click", function () {
+    $(this).toggleClass("open");
+    if($(this).hasClass("open")){
+      $(this).siblings("li").removeClass("open");
+    }
+  });
+
 }
 
 

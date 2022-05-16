@@ -319,6 +319,10 @@
       soundOff.style.display = "block";
     }
 
+    $(document).ready(function(){
+      mobileFunc();
+    });
+
     // 브라우저 감지 코드
     var bgOverlay = document.querySelector(".bg_overlay");
     let userAgent = navigator.userAgent;
@@ -499,6 +503,7 @@
     });
 
     window.addEventListener('resize', function () {
+
 
       let innerW = window.innerWidth;
       let innerH = window.innerHeight;

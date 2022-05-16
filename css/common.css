@@ -310,6 +310,7 @@ html body {
   color: #fff;
   font-weight: 500;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  word-break: keep-all;
 }
 
 .modal-contents .main-title p:nth-child(1) {
@@ -378,6 +379,9 @@ html body {
     left: 50%;
     align-items: center;
     transform: translateX(-50%) translateY(0);
+  }
+  .modal-contents .main-title {
+    text-align: center;
   }
 }
 
