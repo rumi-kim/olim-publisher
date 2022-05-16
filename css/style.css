@@ -163,10 +163,10 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 .wrap_modal .slide_container {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   width: 75vw;
-  max-height: 75vh;
+  max-height: 70vh;
 }
 
 .wrap_modal .btn_slide {
@@ -325,28 +325,27 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   /* margin-top: 30px; */
   width: 90%;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
   text-transform: capitalize;
   overflow: auto;
-  transition: max-height .3s;
+  transition: max-height .5s;
 }
 
 .wrap_modal .slide_wrapper > li > div:hover .menu_2dep {
   /* display: block; */
-  max-height: 50%;
+  max-height: 30%;
 }
 
-.wrap_modal .slide_wrapper > li > div:hover .menu_2dep >div > div > li {
+.wrap_modal .slide_wrapper > li > div .menu_2dep > li {
   margin-top: 10px;
-  font-size: 16px;
 }
 
-/* .wrap_modal .slide_wrapper > li > div:hover .menu_2dep >div > div > li:nth-child(1) {
+.wrap_modal .slide_wrapper > li > div .menu_2dep > li:nth-child(1) {
   margin-top: 20px;
-} */
+}
 
-.wrap_modal .slide_wrapper > li ul::-webkit-scrollbar {
+/* .wrap_modal .slide_wrapper > li ul::-webkit-scrollbar {
   padding: 3px;
   width: 5px;
 }
@@ -355,8 +354,8 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 }
 .wrap_modal .slide_wrapper > li ul::-webkit-scrollbar-thumb {
   width: 5px;
-  background: rgba(255, 255, 255, 0.5);
-}
+  background: rgba(255, 255, 255, 0.3);
+} */
 
 .wrap_modal .slide_wrapper > li ul > li ~ li {
   padding-top: 5px;
@@ -364,7 +363,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 .wrap_modal .slide_wrapper > li ul > li a {
   display: inline-block;
-  padding: 8px 10px;
+  /* padding: 8px 10px; */
   opacity: 0.7;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -411,27 +410,27 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 }
 
 @media screen and (max-width: 1024px) {
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     width: 5px;
   }
   .btn_menu i {
     margin: 4px auto;
-  }
+  } */
 
   /* type4 ==================================== */
 
   .btn_menu.type4.is-active i:nth-of-type(1) {
-    -webkit-transform: translateY(6px) rotate(45deg);
-    -ms-transform: translateY(6px) rotate(45deg);
-    -o-transform: translateY(6px) rotate(45deg);
-    transform: translateY(6px) rotate(45deg);
+    -webkit-transform: translateY(7px) rotate(45deg);
+    -ms-transform: translateY(7px) rotate(45deg);
+    -o-transform: translateY(7px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .btn_menu.type4.is-active i:nth-of-type(3) {
-    -webkit-transform: translateY(-6px) rotate(-45deg);
-    -ms-transform: translateY(-6px) rotate(-45deg);
-    -o-transform: translateY(-6px) rotate(-45deg);
-    transform: translateY(-6px) rotate(-45deg);
+    -webkit-transform: translateY(-7px) rotate(-45deg);
+    -ms-transform: translateY(-7px) rotate(-45deg);
+    -o-transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .wrap_modal .slide_container {
@@ -500,13 +499,27 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
     font-size: 16px;
     margin: 20px 0 0 30px;
     transition: none;
+    overflow: hidden;
   }
 
   .wrap_modal .slide_wrapper > li ul > li a {
     display: block;
   }
 
+  .wrap_modal .slide_wrapper > li.open .menu_2dep {
+    max-height: 100% ;  
+  }
+
   .wrap_modal .btn_slide {
     display: none;
   }
 }
+
+@media screen and (max-height: 768px) {
+  .wrap_modal .slide_container {
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+    max-height: 50vh!important;
+  }
+}
+

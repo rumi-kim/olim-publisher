@@ -201,7 +201,7 @@ function playVideo(param) {
     skipBtnWrap.addClass("active");
   }, 3000);
 
-  if (param == "hall1.html?startID=44892") {
+  if (param == "hall1.html") {
     MediaIslandVid.fadeIn(2000);
     MediaIslandVid.prop("muted", false);
     MediaIslandVid.trigger("play");
