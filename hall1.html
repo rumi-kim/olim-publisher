@@ -153,35 +153,88 @@
                 <p>손가락이나 마우스를 활용해 체험존을 둘러볼 수 있습니다.</p>
                 <p>관람을 하기에 가장 편안한 장소를 찾으세요, 찾으셨다면 이제 관람을 시작해 볼까요?</p>
               </div>
+              <!-- 마우스 탐색 전체 박스 -->
+              <div class="modal_inner-desc">
+                <div class="inner_title">
+                  <div class="inner_title-text">
+                    <span>마우스로 탐색하기</span>
+                  </div>
+                </div>
+
+                <div class="inner_mouse-box">
+
+                  <div class="inner_each_mouse">
+                    <div class="mouse_img">
+                      <img src="img/ico_mouse1.png" alt="">
+                    </div>
+                    <div class="mouse_desc">
+                      <p>이동</p><p>바닥 클릭</p>
+                    </div>
+                  </div>
+                  <div class="inner_each_mouse">
+                    <div class="mouse_img">
+                      <img src="img/ico_mouse2.png" alt="">
+                    </div>
+                    <div class="mouse_desc">
+                      <p>회전</p><p>클릭+드래그</p>
+                    </div>
+                  </div>
+                  <div class="inner_each_mouse">
+                    <div class="mouse_img">
+                      <img src="img/ico_mouse3.png" alt="">
+                    </div>
+                    <div class="mouse_desc">
+                      <p>선택</p><p>클릭</p>
+                    </div>
+                  </div>
+                  <div class="inner_each_mouse">
+                    <div class="mouse_img">
+                      <img src="img/ico_mouse4.png" alt="">
+                    </div>
+                    <div class="mouse_desc">
+                      <p>확대/축소</p><p>스크롤</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
+
           
             <div class="modal_help-btn_unit">
               <!-- [D 오늘 하루 그만 보기 팝업 -->
               <div class="inp_chk_wrap inp_custom chk_wrap-not_today">
                 <input type="checkbox" id="not_today" class="inp_chk">
-                <label for="not_today">Do not open today</label>
+                <label for="not_today">일주일 그만 보기</label>
               </div>
               <div class="btn_wrap">
                 <button type="button" class="btn btn_modal_close"><span>Start</span></button>
               </div>
             </div>
           </div>
+
+           <!-- 안내문 전체 멘트, arrow, border 박스 -->
+          <!-- 좌상단 박스 -->
           <div class="modal_help-gnb">
             <span class="ico_gnb-btn"><span class="ir_text">Main menu</span></span>
-            <!-- <p class="help_desc gnb_desc">You can move the hall and search for participating companies.</p> -->
+            <p class="help_desc gnb_desc">메인 시티로 이동해 보세요.</p>
           </div>
-          <!-- <div class="modal_help-tutorial">
+
+           <!-- 우상단 박스 -->
+          <div class="modal_help-tutorial">
             <span class="ico_tutorial-btn"><span class="ir_text">View the full screen</span></span>
-            <p class="help_desc tutorial_desc">Appreciation of the exhibition with full screen.</p>
-          </div> -->
+            <p class="help_desc tutorial_desc">도움말 및 다른 관으로 이동해 보세요.</p>
+          </div>
+
+          <!-- 좌하단 박스 -->
           <div class="modal_help-innav">
-            <p class="help_desc innav_desc">You can move to a specific booth or check your current location.</p>
+            <p class="help_desc innav_desc">다양한 투어 기능을 사용해 보세요.</p>
             <ul class="help-innav">
-              <li class="help-innav-type tour_list"><p>Theme</p></li>
-              <li class="help-innav-type tour_important"><p>Highlight</p></li>
-              <li class="help-innav-type tour_minimap"><p>Maps</p></li>
-              <li class="help-innav-type tour_play"><p>Auto</p></li>
-              <li class="help-innav-type fullscreen"><p>Full</p></li>
+              <li class="help-innav-type tour_important"><p>주요위치</p></li>
+              <li class="help-innav-type tour_minimap"><p>미니맵</p></li>
+              <li class="help-innav-type tour_play"><p>자동투어</p></li>
+              <li class="help-innav-type fullscreen"><p>전체화면</p></li>
             </ul>
           </div>
         </div>
@@ -257,7 +310,7 @@
       //투어 iframe 추가
       $(document).ready(function() {
         
-        // slide.js mobile function load
+        // menu function load
         mobileFunc();
 
         var params = getUrlParams();

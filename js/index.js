@@ -137,6 +137,7 @@ function resizeBg() {
     } else {
       $(".warning").css("display","none");
     }
+    
   }
 
 }

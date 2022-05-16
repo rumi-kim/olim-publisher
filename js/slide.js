@@ -1,12 +1,7 @@
 
-// $(window).on("load",function(){
-//   setTimeout(mobileFunc, 500);
-// });
-
 function mobileFunc() {
   let innerMenuItem = $(".wrap_modal .slide_wrapper>li");
   const menuBtn = $(".btn_menu");
-
   menuBtn.on("click", function () {
     $(this).toggleClass("is-active");
     if ($(this).hasClass("is-active")) {
@@ -18,6 +13,7 @@ function mobileFunc() {
       innerMenuItem.removeClass("open");
     }
   });
+  // pcFunc ();
 
   innerMenuItem.on("click", function () {
     $(this).toggleClass("open");
@@ -25,7 +21,6 @@ function mobileFunc() {
       $(this).siblings("li").removeClass("open");
     }
   });
-
 }
 
 

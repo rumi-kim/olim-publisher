@@ -279,7 +279,6 @@
 
       // modal_close
       $(".btn_modal_close").click(function(){
-        console.log('ok');
         $('.modal').fadeOut(200);
         $('.modal_bg').fadeOut(200);
 
@@ -297,8 +296,11 @@
       });
       //-----------------------------------------------------------------------------------------
 
-      //투어 iframe 추가
       $(document).ready(function() {
+        //menu function load
+        mobileFunc();
+
+        //투어 iframe 추가
         var params = getUrlParams();
         var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
 
@@ -310,18 +312,6 @@
         $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
       });
       //-----------------------------------------------------------------------------------------
-
-      $(document).ready(function() {
-        var params = getUrlParams();
-        var url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?mode=embed&startID=44892';
-
-        $('.vr-player').html('');
-        if (params.startID){
-          url = 'https://player.olimcloud.com/vr-player/fdpp5qgtect84n01?startID='+ params.startID + '&mode=embed';
-        }
-        
-        $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
-      });
     });
    
     // modal_close

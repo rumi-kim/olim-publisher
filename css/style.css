@@ -517,9 +517,10 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 @media screen and (max-height: 768px) {
   .wrap_modal .slide_container {
-    top: 50%;
+    /* top: 50%; */
     /* transform: translate(-50%, -50%); */
-    max-height: 50vh!important;
+    max-height: 60vh!important;
+    overflow-x: hidden;
   }
 }
 

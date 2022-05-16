@@ -302,6 +302,10 @@
   <!-- // audio tag -->
 
   <script>
+    $(document).ready(function(){
+      mobileFunc();
+    });
+
     //audio mute/unmute
     const bgSound = document.querySelector(".bg-sound");
     const soundOn = document.querySelector(".sound-on");
@@ -319,9 +323,7 @@
       soundOff.style.display = "block";
     }
 
-    $(document).ready(function(){
-      mobileFunc();
-    });
+
 
     // 브라우저 감지 코드
     var bgOverlay = document.querySelector(".bg_overlay");

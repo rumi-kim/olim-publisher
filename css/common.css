@@ -2509,9 +2509,83 @@ html body {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 50px 40px;
-  max-height: 50vh;
+  /* max-height: 50vh; */
+  max-height: 60vh;
   overflow: auto;
 }
+
+/* 마우스 관람 안내문 style code*/
+.modal_inner .modal_inner-desc {
+  padding: 40px 0 20px 0;
+}
+
+.modal_inner .modal_inner-desc .inner_title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.modal_inner .modal_inner-desc .inner_title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border: 2px solid #3496fa;
+}
+
+.modal_inner .modal_inner-desc .inner_title .inner_title-text {
+  display: inline-block;
+  position: relative;
+  padding: 5px 20px;
+  background: #3496fa;
+  border-radius: 25px;
+}
+
+.modal_inner .inner_mouse-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse {
+  width: 25%;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse .mouse_img {
+  width: 80%;
+  margin: auto;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc {
+  text-align: center;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc p {
+  font-size: 14px;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(1) {
+  padding-top: 10px;
+}
+
+.modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(2) {
+  font-weight: 200;
+}
+
+@media screen and (max-width: 690px) {
+  .modal_inner .modal_inner-desc .inner_title .inner_title-text {
+    font-size: 13px;
+  }
+
+  .modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc span {
+    font-size: 13px;
+  }
+}
+
+/* ---------------------------------------------------------*/
+
 
 .modal .modal_inner .modal_help-center .tutorial_video {
   outline: 0;
@@ -2640,23 +2714,23 @@ html body {
 }
 
 .modal .modal_inner .modal_help-gnb {
-  display: none;
   position: absolute;
-  top: 0;
-  left: -5px;
-  padding: 8px 16px;
+  top: 23px;
+  left: 60px;
+  padding-top: 70px;
+  padding-left: 40px;
 }
 
-/* .modal .modal_inner .modal_help-gnb:before {
+.modal .modal_inner .modal_help-gnb:before {
   position: absolute;
-  top: 32px;
+  top: -1px;
   left: 0;
-  width: 36px;
-  height: 51px;
-  background: url(../img/help_arrow2.png) no-repeat 0 0;
-  background-size: 100% auto;
+  width: 174px;
+  height: 50px;
+  border: 2px solid #3496fa;
+  border-radius: 36px;
   content: "";
-} */
+}
 
 .modal .modal_inner .modal_help-gnb .gnb_desc {
   margin-top: 28px;
@@ -2665,10 +2739,9 @@ html body {
 
 .modal .modal_inner .ico_gnb-btn {
   display: block;
-  width: 19px;
-  height: 24px;
-  z-index: 10;
-  background: url(../img/ico_menu.png) no-repeat 0 50%;
+  /* width: 19px; */
+  /* height: 24px; */
+  /* z-index: 10; */
   background-size: 18px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -2688,20 +2761,22 @@ html body {
 
 .modal .modal_inner .modal_help-tutorial {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px 16px;
+  top: 16px;
+  right: 60px;
+  padding-right: 58px;
+  padding-top: 10px;
 }
 
 .modal .modal_inner .modal_help-tutorial:before {
   position: absolute;
-  top: 46px;
-  right: 0;
+  top: 57px;
+  right: 35px;
   width: 36px;
   height: 51px;
   background: url(../img/help_arrow3.png) no-repeat 0 0;
   background-size: 100% auto;
   content: "";
+  transform: rotate(45deg);
 }
 
 .modal .modal_inner .modal_help-tutorial .tutorial_desc {
@@ -2715,7 +2790,7 @@ html body {
   }
 }
 
-.modal .modal_inner .ico_tutorial-btn {
+/* .modal .modal_inner .ico_tutorial-btn {
   position: absolute;
   top: 11px;
   right: 11px;
@@ -2727,6 +2802,38 @@ html body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   outline: 0;
+} */
+
+.modal .modal_inner .ico_tutorial-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: 0;
+}
+
+/* .modal .modal_inner .ico_tutorial-btn::before {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 124px;
+  height: 56px;
+  border: 2px solid #3496fa;
+  border-radius: 60px;
+  content: "";
+} */
+
+.modal .modal_inner .ico_tutorial-btn::before {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  width: 124px;
+  height: 57px;
+  border: 2px solid #3496fa;
+  border-radius: 60px;
+  content: "";
 }
 
 .modal .modal_inner .modal_help-global {
@@ -2886,6 +2993,14 @@ html body {
   .modal .btn_wrap {
     margin-top: 16px;
   }
+
+  .modal .modal_inner .ico_tutorial-btn::before {
+    width: 120px;
+    height: 55px;
+  }
+  .modal .modal_inner .modal_help-tutorial:before {
+    top: 47px;
+  }
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -3013,6 +3128,17 @@ html body {
 
   .modal .modal_inner .modal_help-innav .innav_desc {
     margin-left: 58px;
+  }
+
+  .modal .modal_inner .ico_tutorial-btn::before {
+    width: 98px;
+    height: 45px;
+  }
+
+  .modal .modal_inner .modal_help-tutorial:before {
+    top: 36px;
+    right: -5px;
+    transform: rotate(10deg);
   }
 }
 
