@@ -154,12 +154,16 @@ const isMobile = Mobile();
 
 function lobbyModalFunc() {
   const modalBtn = $(".each_btn");
+  const doubleMBtn = $(".mediaisland .each_btn")
 
 
   // 로비 모달 클릭시
   if (isMobile || window.devicePixelRatio > 1) {
     // 모바일 디바이스
-    $(".info_desc").append(
+    // $(".info_desc").append(
+    //   "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
+    // );
+    $(".mediaisland .info_desc").append(
       "<div class='enter-btn'><a href='' class='link'>들어가기</a></div>"
     );
     modalBtn.on("click", function (e) {
@@ -174,6 +178,7 @@ function lobbyModalFunc() {
         playVideo(url);
       });
     });
+
   } else {
     // mousehover event - pc(hover)
     modalBtn
@@ -182,8 +187,15 @@ function lobbyModalFunc() {
       })
       .on("mouseout", function () {
         $(this).next(".info_box").removeClass("active");
-      })
-      .on("click", function (e) {
+      });
+      // .on("click", function (e) {
+      //   e.preventDefault();
+      //   //noevent 클래스가 없을 시에만 실행
+      //   let url = $(this).attr("href");
+      //   playVideo(url);
+      // });
+
+      doubleMBtn.on("click", function (e) {
         e.preventDefault();
         //noevent 클래스가 없을 시에만 실행
         let url = $(this).attr("href");

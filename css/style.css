@@ -163,10 +163,10 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 .wrap_modal .slide_container {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
-  max-height: 70vh;
+  max-height: 65vh;
 }
 
 .wrap_modal .btn_slide {
@@ -316,13 +316,8 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 }
 
 .wrap_modal .slide_wrapper > li ul {
-  /* display: none; */
-  /* max-height: 30%; */
-  /* max-height: 50%; */
-  /* display: block; */
   max-height: 0%;
   margin: 0 auto;
-  /* margin-top: 30px; */
   width: 90%;
   font-weight: 300;
   font-size: 16px;
@@ -341,9 +336,9 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   margin-top: 10px;
 }
 
-.wrap_modal .slide_wrapper > li > div .menu_2dep > li:nth-child(1) {
+/* .wrap_modal .slide_wrapper > li > div .menu_2dep > li:nth-child(1) {
   margin-top: 20px;
-}
+} */
 
 /* .wrap_modal .slide_wrapper > li ul::-webkit-scrollbar {
   padding: 3px;
@@ -379,6 +374,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 /* mobile menu style code */
 .wrap_modal .slide_wrapper > li.open .menu_2dep{
   display: block;
+  margin-top: 14px;
   max-height: 50%;
 }
 
@@ -396,7 +392,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .btn_menu {
     min-width: 36px;
     min-height: 36px;
@@ -528,6 +524,12 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
   }
 }
 
+@media screen and (max-width: 690px) {
+  .wrap_modal .slide_container {
+    max-width: 60vw;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .btn_menu.type4.is-active i:nth-of-type(1) {
     -webkit-transform: translateY(6px) rotate(45deg);
@@ -543,6 +545,10 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
     transform: translateY(-6px) rotate(-45deg);
   }
 
+  .wrap_modal .slide_container {
+    max-width: 80vw;
+    top: 55%;
+  }
 }
 
 
