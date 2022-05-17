@@ -398,8 +398,12 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
 
 @media screen and (max-width: 450px) {
   .btn_menu {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .btn_menu i {
+    width: 18px;
+    margin: 4px auto
   }
 }
 
@@ -497,7 +501,7 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
     /* max-height: none; */
     max-height: 0%;
     font-size: 16px;
-    margin: 20px 0 0 30px;
+    margin: 0 0 0 44px;
     transition: none;
     overflow: hidden;
   }
@@ -523,4 +527,24 @@ btn_close animation  type* 클래스 명에 따라 사용 가능
     overflow-x: hidden;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .btn_menu.type4.is-active i:nth-of-type(1) {
+    -webkit-transform: translateY(6px) rotate(45deg);
+    -ms-transform: translateY(6px) rotate(45deg);
+    -o-transform: translateY(6px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .btn_menu.type4.is-active i:nth-of-type(3) {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+    -ms-transform: translateY(-6px) rotate(-45deg);
+    -o-transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+}
+
+
+
 
