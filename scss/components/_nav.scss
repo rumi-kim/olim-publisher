@@ -1,0 +1,269 @@
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:120;
+  width:100%;
+  height:60px;
+  box-sizing:border-box;
+  padding:13px 16px;
+  background:#f2f2f2;
+  font-size:0;
+
+  @include media('res'){
+    height:50px;
+    padding:13px 10px;
+  }
+}
+
+.site_logo{
+  position:absolute;
+  top:50%;
+  left:16px;
+  transform:translateY(-50%);
+
+  h1{
+    width:134px;
+    height:38px;
+    background:url(../img/main_logo.png) no-repeat 0 50%;
+    background-size:auto 100%;
+  }
+
+  @include media('s_pc'){
+    h1{width:120px;height:34px;}
+  }
+  @include media('tablet'){
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    h1{
+      background-position:50% 50%;
+    }
+  }
+  @include media('mobile') {
+    h1 {
+      width:110px;
+      height:30px;
+    }
+  }
+}
+
+.header .btn-lobby{
+  position:absolute;
+  top:50%;
+  left:16px;
+  transform:translateY(-50%);
+  @extend %gradient_btn;
+  padding:8px 24px;
+  background:#da9528;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+
+  @include media('tablet'){
+    left:auto;
+    right:10px;
+    padding:6px 24px;
+  }
+}
+
+/* pc nav */
+.gnb.is_pc{
+  text-align:center;
+
+  .gnb-btn{display:none;}
+
+  .gnb-item{
+    display:inline-block;
+    vertical-align:middle;
+
+    &:not(:first-child){
+      margin-left:26px;
+    }
+
+    a, button{
+      display:block;
+      position:relative;
+      font-size:16px;
+      line-height:34px;
+      padding:0;
+      font-weight:700;
+      color:#222;
+      transition:color .4s ease-in-out;
+
+      &:before{
+        position:absolute;
+        left:0;
+        bottom:0px;
+        width:0;
+        height:3px;
+        background:$color_primary;
+        content:'';
+        transition:width .4s ease-in-out;
+      }
+    }
+
+    .menu_btn-open {
+      color: $color_secondary;
+    }
+  }
+
+  /* is_selected */
+  .is_selected.gnb-item a,
+  .is_selected.gnb-item button{
+    color:$color_primary;
+  }
+  
+  .is_selected.gnb-item a:before, .gnb-item a:hover:before,.gnb-item a:focus:before,
+  .is_selected.gnb-item button:before,
+  .gnb-item button:hover:before,
+  .gnb-item button:focus:before {
+    width:100%;
+  }
+
+  @media screen and (max-width:1600px){
+    // padding-left:190px;
+    .gnb-item{
+      &:not(:first-child){
+        margin-left:22px;
+      }
+    }
+  }
+  @include media('s_pc'){
+    // padding-left:130px;
+    .gnb-item{
+      &:not(:first-child){
+        margin-left:14px;
+      }
+      a,button{font-size:14px;}
+    }
+  }
+}
+
+/* res nav */
+.gnb.is_res{
+  .gnb-wrap{
+    position:absolute;
+    top:50px;
+    left:0;
+    width:100%;
+  }
+
+  .gnb-btn{
+    position:absolute;
+    width:30px;
+    height:24px;
+    z-index:10;
+    background:url(../img/ico_menu.png) no-repeat 0 50%;
+    background-size:18px;
+    opacity:.7;
+    transition:all .3s;
+    outline:0;
+  }
+
+  .gnb-list{
+    display:none;
+    width:100%;
+    padding:6px 0 8px;
+    background:#263D4B;
+    box-shadow: 0px 3px 27px rgba(0,0,0,.45);
+  }
+
+  .gnb-item{
+    a,button{
+      display:block;
+      padding:6px 17px;
+      font-size:16px;
+      font-weight:400;
+      line-height:32px;
+      letter-spacing:-.7px;
+      color:$color_white;
+    }
+  }
+
+  .gnb-title{
+    display:block;
+    position:relative;
+  }
+}
+
+.breadcrumbs{
+  display:inline-block;
+  padding-left:30px;
+  vertical-align:middle;
+  opacity:.7;
+
+  &_item{
+    font-size:16px;
+    color:$color_white;
+
+    strong{
+      padding-left:0;
+    }
+  }
+
+  @include media('res'){
+    &_item span:not(.is_now){
+      display:none;
+    }
+  }
+}
+
+.global{
+  position:absolute;
+  top:50%;
+  right:16px;
+  transform:translateY(-50%);
+
+  &-item{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-left:12px;
+    border-radius:24px;
+    box-shadow:0 0 4px rgba(0,0,0,.15);
+    vertical-align:middle;
+
+    &:first-child{margin-left:0;}
+  }
+  .global-link{
+    width:120px;
+    height:24px;
+    border-radius:0;
+    box-shadow:none;
+
+    .btn_link{background-size:contain;}
+  }
+
+  &-btn, .btn_help_pop, .btn_link{
+    display:block;
+    width:100%;
+    height:100%;
+    background:no-repeat 50% 50%;
+    background-size:24px;
+    outline:0;
+  }
+
+  &-btn.ko{
+    background-image:url(../img/ico_ko.png);
+  }
+  &-btn.en{
+    background-image:url(../img/ico_en.png);
+  }
+  .btn_help_pop{
+    background-image:url(../img/ico_help.svg);
+  }
+  .btn_vtower{
+    background-image:url(https://vr.miceview.kr/path/assets/images/immersive-w.png);
+  }
+
+  @include media('tablet'){
+    right:10px;
+    &-item{margin-left:6px;}
+    .global-link{
+      width:20px;height:20px;
+    }
+    .btn_vtower{
+      background-image:url(https://vr.miceview.kr/path/assets/images/immersive-m.png);
+    }
+  }
+}

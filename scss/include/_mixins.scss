@@ -1,0 +1,55 @@
+@mixin clearfix(){
+  &::after{
+    display:block;
+    clear:both;
+    content:'';
+  }
+}
+
+@mixin media($device){
+  @if $device == 'pc'{
+    @media screen and (min-width:1000px){
+      @content;
+    }
+  }
+  @if $device == 's_pc'{
+    @media screen and (max-width:1200px){
+      @content;
+    }
+  }
+  @else if $device == 'land'{
+    @media screen and (max-height:1080px){
+      @content;
+    }
+  }
+  @else if $device == 'tablet'{
+    @media screen and (max-width:1024px){
+      @content;
+    }
+  }
+  @else if $device == 'tablet_land'{
+    @media screen and (max-width:1024px) and (orientation:landscape){
+      @content;
+    }
+  }
+  @if $device == 'res'{
+    @media screen and (max-width:999px){
+      @content;
+    }
+  }
+  @else if $device == 'mobile'{
+    @media screen and (max-width:690px){
+      @content;
+    }
+  }
+  @else if $device == 'orient'{
+    @media screen and (orientation:portrait){
+      @content;
+    }
+  }
+  @else if $device == 'low_height'{
+    @media screen and (max-height:420px){
+      @content;
+    }
+  }
+}
