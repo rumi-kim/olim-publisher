@@ -1,0 +1,61 @@
+/* nav */
+.header {display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; left: 0; z-index: 120; width: 100%; height: 60px; -webkit-box-sizing: border-box; box-sizing: border-box; background: #f2f2f2; font-size: 0; }
+
+.site_logo {width: 100px; height: 60%; margin-left: 20px;}
+.site_logo h1 {height: 100%; background: url(../img/brand-logo.png) no-repeat center center; background-size: cover;}
+
+@media screen and (max-width: 1024px) {
+  .site_logo {margin-left: 0; order: 1;}
+}
+
+@media screen and (max-width: 690px) {
+  .site_logo{width: 80px;}
+}
+
+/* pc nav */
+.gnb.is_pc { text-align: center;}
+.gnb.is_pc .gnb-btn { display: none; }
+.gnb.is_pc .gnb-item { display: inline-block; vertical-align: middle; }
+.gnb.is_pc .gnb-item:not(:first-child) { margin-left: 26px; }
+.gnb.is_pc .gnb-item a, .gnb.is_pc .gnb-item button { display: block; position: relative; font-size: 16px; line-height: 34px; padding: 0; font-weight: 700; color: #222; -webkit-transition: color .4s ease-in-out; transition: color .4s ease-in-out; }
+.gnb.is_pc .gnb-item a:before, .gnb.is_pc .gnb-item button:before { position: absolute; left: 0; bottom: 0px; width: 0; height: 3px; background: #009eb4; content: ''; -webkit-transition: width .4s ease-in-out; transition: width .4s ease-in-out; }
+.gnb.is_pc .gnb-item .menu_btn-open { color: #0063c3; }
+.gnb.is_pc .is_selected.gnb-item a, .gnb.is_pc .is_selected.gnb-item button { color: #009eb4; }
+.gnb.is_pc .is_selected.gnb-item a:before, .gnb.is_pc .gnb-item a:hover:before, .gnb.is_pc .gnb-item a:focus:before, .gnb.is_pc .is_selected.gnb-item button:before, .gnb.is_pc .gnb-item button:hover:before, .gnb.is_pc .gnb-item button:focus:before { width: 100%; }
+
+/* @media screen and (max-width: 1600px) { .gnb.is_pc .gnb-item:not(:first-child) { margin-left: 22px; } } */
+
+@media screen and (max-width: 1200px) {
+  .gnb.is_pc .gnb-item:not(:first-child) { margin-left: 14px; }
+  /* .gnb.is_pc .gnb-item a, .gnb.is_pc .gnb-item button { font-size: 14px; } */
+}
+
+/* res nav */
+.gnb.is_res{order: 0; margin-left: 20px;}
+.gnb.is_res .gnb-wrap { position: absolute; top: 60px; left: 0; width: 100%; }
+.gnb.is_res .gnb-btn {width: 30px; height: 24px; z-index: 10; background: url(../img/ico_menu.png) no-repeat 0 50%; background-size: 18px; opacity: .7; -webkit-transition: all .3s; transition: all .3s; outline: 0; }
+.gnb.is_res .gnb-list { display: none; width: 100%; padding: 6px 0 8px; background: #263D4B; -webkit-box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.45); box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.45); }
+.gnb.is_res .gnb-item a, .gnb.is_res .gnb-item button { display: block; padding: 6px 17px; font-size: 16px; font-weight: 400; line-height: 32px; letter-spacing: -.7px; color: #fff; }
+.gnb.is_res .gnb-title { display: block; position: relative; }
+.breadcrumbs { display: inline-block; padding-left: 30px; vertical-align: middle; opacity: .7; }
+.breadcrumbs_item { font-size: 16px; color: #fff; }
+.breadcrumbs_item strong { padding-left: 0; }
+
+@media screen and (max-width: 999px) { .breadcrumbs_item span:not(.is_now) { display: none; } }
+
+.global {margin-right: 20px; }
+.global-item { display: inline-block; width: 24px; height: 24px; margin-left: 12px; border-radius: 24px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); vertical-align: middle; }
+.global-item:first-child { margin-left: 0; }
+.global .global-link { width: 120px; height: 24px; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; }
+.global .global-link .btn_link { background-size: contain; }
+.global-btn, .global .btn_help_pop, .global .btn_link { display: block; width: 100%; height: 100%; background: no-repeat 50% 50%; background-size: 24px; outline: 0; }
+.global-btn.ko { background-image: url(../img/ico_ko.png); }
+.global-btn.en { background-image: url(../img/ico_en.png); }
+.global .btn_help_pop { background-image: url(../img/ico_help.svg); }
+.global .btn_vtower { background-image: url(https://vr.miceview.kr/path/assets/images/immersive-w.png); }
+
+@media screen and (max-width: 1024px) { .global {order: 2;}
+  .global-item { margin-left: 6px; }
+  .global .global-link { width: 20px; height: 20px; }
+  .global .btn_vtower { background-image: url(https://vr.miceview.kr/path/assets/images/immersive-m.png); } 
+}
