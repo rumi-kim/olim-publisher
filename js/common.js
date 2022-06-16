@@ -21,4 +21,7 @@ $(function(){
   window.addEventListener("scroll",function(){
     textScrollFunc();
   });
+
 });
+
+
