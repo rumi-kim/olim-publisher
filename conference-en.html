@@ -86,8 +86,9 @@
 
   <!-- container / add page class -->
   <div class="container hall">
-    <strong class="miceview_logo">
-      <img src="img/logo_miceview-w.png" alt="miceview">
+    <!-- Elypecs 로고 : 퍼블리싱 페이지 내부에 추가 요청시 주석 해제 -->
+    <strong class="elypecs_logo">
+      <img src="img/logo_elypecs.png" alt="elypecs">
     </strong>
 
     <!-- contents/본문 -->
@@ -99,7 +100,7 @@
             <p>Hello. Welcome to a virtual exhibition hall of 2021 Foreing Company Day.</p>
           </div>
           <div class="btn_wrap">
-            <button class="btn btn_modal_next" type="button"><span>Next</span></button>
+            <button class="default_btn btn_modal_next" type="button"><span>Next</span></button>
           </div>
         </div>
         <div class="modal_inner modal_inner2 modal_inner_help" onclick="close_modal()">
@@ -112,53 +113,33 @@
                     <span class="img_desc">Check company information.</span>
                   </span>
                 </li>
-                <!-- <li class="modal_help-control-item control-image_item">
-                  <span class="item_wrap">
-                    <span class="img_wrap"><img src="img/help_image.png" alt></span>
-                    <span class="img_desc">View related images.</span>
-                  </span>
-                </li> -->
-                <!-- <li class="modal_help-control-item control-video_item">
-                  <span class="item_wrap">
-                    <span class="img_wrap"><img src="img/help_video.png" alt></span>
-                    <span class="img_desc">Watch related videos.</span>
-                  </span>
-                </li> -->
                 <li class="modal_help-control-item control-pdf_item">
                   <span class="item_wrap">
                     <span class="img_wrap"><img src="img/help_pdf.png" alt></span>
                     <span class="img_desc">Read the related brochure.</span>
                   </span>
                 </li>
-                <!-- <li class="modal_help-control-item control-form_item">
-                  <span class="item_wrap">
-                    <span class="img_wrap"><img src="img/help_chat.png" alt></span>
-                    <span class="img_desc">Contact the company.</span>
-                  </span>
-                </li> -->
               </ul>
             </div>
             <div class="modal_help-btn_unit">
+              <!-- [D 오늘 하루 그만 보기 팝업 -->
                <div class="inp_chk_wrap inp_custom chk_wrap-not_today">
                 <input type="checkbox" id="not_today" class="inp_chk">
                 <label for="not_today">Do not open today</label>
               </div>
               <div class="btn_wrap">
-                <button type="button" class="btn btn_modal_close" onclick="close_modal()"><span>Start</span></button>
+                <button type="button" class="default_btn btn_modal_close" onclick="close_modal()"><span>Start</span></button>
               </div>
-              <!-- <div class="btn_wrap">
-                <button type="button" class="btn btn_modal_close" onclick="close_modal()"><span>Start</span></button>
-              </div> -->
             </div>
           </div>
           <div class="modal_help-gnb">
             <span class="ico_gnb-btn"><span class="ir_text">Main menu</span></span>
             <p class="help_desc gnb_desc">You can move the hall and search for participating companies.</p>
           </div>
-          <!-- <div class="modal_help-tutorial">
+          <div class="modal_help-tutorial">
             <span class="ico_tutorial-btn"><span class="ir_text">View the full screen</span></span>
             <p class="help_desc tutorial_desc">Appreciation of the exhibition with full screen.</p>
-          </div> -->
+          </div>
           <div class="modal_help-innav">
             <p class="help_desc innav_desc">You can move to a specific booth or check your current location.</p>
             <ul class="help-innav">
