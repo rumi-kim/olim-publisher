@@ -1,18 +1,6 @@
 /* common */
-/* default btn */
-.default_btn { display: inline-block; padding: 12px 24px; background: #009eb4; background: -webkit-gradient(linear, left top, right top, color-stop(1%, #009eb4), to(#015aaa)); background: linear-gradient(to right, #009eb4 1%, #015aaa 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$btn_color1', endColorstr='$btn_color2',GradientType=1 ); border-radius: 52px; color: #fff; -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3); box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3); font-size: 0; vertical-align: middle; outline: 0; }
-
-.default_btn > span { display: inline-block; font-size: 16px; font-weight: 700; letter-spacing: -.9px; line-height: 1.7; }
-
-.default_btn > span.has_ico{ position: relative; padding-right: 14px; }
-
-.default_btn > span.has_ico:before{ position: absolute; top: 50%; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 7px; height: 12px; background: url(../img/arrow-right.png) no-repeat 0 50%; background-size: auto 12px; content: ''; }
-
-.btn_wrap .search_btn {position: fixed; left: 16px; bottom: 20px; padding: 12px 24px; background: #000; border-radius: 52px; color: #fff; -webkit-box-shadow: 0 1px 10px 0 rgba(255, 255, 255, 0.3); box-shadow: 0 1px 10px 0 rgba(255, 255, 255, 0.3); outline: 0;}
-
-.btn_wrap .search_btn > span {position: relative; padding-left: 28px; font-size: 18px; font-weight: 700; letter-spacing: -.9px; line-height: 1.5;}
-
-.btn_wrap .search_btn > span:before {position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 19px; height: 19px; background: url(../img/ico_gnb_search.png) no-repeat 50% 50%; background-size: auto 19px; content: '';}
+/* default btn style */
+.btn_style {background: #009eb4; background: -webkit-gradient(linear, left top, right top, color-stop(1%, #009eb4), to(#015aaa)); background: linear-gradient(to right, #009eb4 1%, #015aaa 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$btn_color1', endColorstr='$btn_color2',GradientType=1);}
 
 /* base ------------------------------------------------------------------------------------------------------------ */
 /* scroll bar */
@@ -178,8 +166,8 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal .modal_inner .modal_help-center .inp_chk_wrap.inp_custom .inp_chk:checked + label:before { background-image: url(../img/ico_check_activated.svg); }
 
 .modal .modal_inner .modal_help-center .btn_wrap { display: inline-block; margin-top: 0; vertical-align: middle; }
-.modal .modal_inner .modal_help-center .btn_wrap .default_btn { padding: 12px 72px; background: #8200FF; opacity: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
-.modal .modal_inner .modal_help-center .btn_wrap .default_btn:hover, .modal .modal_inner .modal_help-center .btn_wrap .btn:focus { opacity: .75; }
+.modal .modal_inner .modal_help-center .btn_wrap .start_btn_style { padding: 12px 72px; background: #8200FF; opacity: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
+.modal .modal_inner .modal_help-center .btn_wrap .start_btn_style:hover, .modal .modal_inner .modal_help-center .btn_wrap .btn:focus { opacity: .75; }
 
 .modal .modal_inner.modal_inner_help .help_desc { line-height: 1.5; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); }
 .modal .modal_inner .modal_help-gnb { display: none; position: absolute; bottom: 100%; left: 0; padding: 8px 20px; margin-bottom: -40px; margin-left: 0px;}
@@ -236,8 +224,8 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 
 @media screen and (max-width: 1024px) {
   /* default btn */
-  .default_btn { padding: 6px 14px; }
-  .default_btn > span { font-size: 14px; }
+  .common_btn { padding: 6px 14px; }
+  .common_btn > span { font-size: 14px; }
 
   /* base */
   /* scroll bar */
@@ -279,8 +267,8 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   /* default btn */
-  .default_btn { padding: 6px 14px; }
-  .default_btn > span { font-size: 14px; }
+  .common_btn { padding: 6px 14px; }
+  .common_btn > span { font-size: 14px; }
   .btn_wrap .search_btn { padding: 6px 14px; }
   .btn_wrap .search_btn > span { padding-left: 20px; font-size: 14px; }
   .btn_wrap .search_btn > span:before { width: 14px; height: 14px; background-size: auto 14px; }
@@ -361,7 +349,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc { padding-left: 8px; font-size: 13px; }
   .modal .modal_inner .modal_help-center .chk_wrap-not_today { margin-right: 20px; }
   .modal .modal_inner .modal_help-center .inp_chk_wrap.inp_custom .inp_chk + label { font-size: 13px; }
-  .modal .modal_inner .modal_help-center .btn_wrap .default_btn { padding: 8px 48px; font-size: 14px; }
+  .modal .modal_inner .modal_help-center .btn_wrap .common_btn { padding: 8px 48px; font-size: 14px; }
   .modal .modal_inner .modal_help-gnb:before { width: 32px; height: 40px; }
   .modal .modal_inner .modal_help-gnb .gnb_desc { margin-left: 20px; max-width: 240px; }
   .modal .modal_inner .modal_help-innav:before { width: 32px; height: 34px; }
@@ -377,7 +365,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal .modal_inner .modal_help-center .modal_help-control-item:not(:first-child) { margin-top: 8px; padding-top: 8px; }
   .modal .modal_inner .modal_help-center .modal_help-control-item .img_wrap { width: 44px; height: 44px; }
   .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc { padding-left: 8px; font-size: 13px; line-height: 1.5; }
-  .modal .modal_inner .modal_help-center .btn_wrap .btn { padding: 8px 48px; font-size: 14px; }
+  .modal .modal_inner .modal_help-center .btn_wrap .start_btn_style { padding: 8px 48px; font-size: 14px; }
   .modal .modal_inner .modal_help-gnb:before { width: 32px; height: 40px; }
   .modal .modal_inner .modal_help-gnb .gnb_desc {margin-bottom: -36px; max-width: 50%; }
   .modal .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 50%; margin-bottom: -31px; margin-left: auto; margin-right: 30px; text-align: right;}
@@ -413,7 +401,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal .modal_inner .modal_help-center .modal_help-control-item .img_desc { font-size: 10px; }
   .modal .modal_inner .modal_help-center .modal_help-btn_unit { margin-top: 8px; }
   .modal .modal_inner .modal_help-center .chk_wrap-not_today { margin-right: 10px; }
-  .modal .modal_inner .modal_help-center .btn_wrap .btn { padding: 4px 48px; font-size: 11px; }
+  .modal .modal_inner .modal_help-center .btn_wrap .start_btn_style { padding: 4px 48px; font-size: 11px; }
   .modal .modal_inner .modal_help-global:before { top: 26px; width: 26px; height: 32px; }
   .modal .modal_inner .modal_help-global .global_desc { margin-right: 16px; margin-top: 16px; }
   .modal .modal_inner .modal_help-innav:before { width: 20px; height: 24px; }
