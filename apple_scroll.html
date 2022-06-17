@@ -25,10 +25,8 @@
   <!-- <script src="js/video_scroll.js"></script> -->
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
+      scroll-behavior: smooth;
       margin: 0;
       background: #000;
       touch-action: pan-y;
@@ -45,7 +43,7 @@
       max-width: 100%;
     }
     .scroll-dummy {
-      height: 5000px;
+      height: 2000px;
       max-width: 998px;
       padding: 20px;
       z-index: 1;
@@ -78,8 +76,9 @@
 </head>
 <body>
   <div>
-    <video id="video" width="998" height="560" playsinline poster="static/mov/bg_visual05.jpg">
+    <video id="video" width="900" height="560" playsinline poster="static/mov/bg_visual05.jpg">
       <source src="static/mov/mov_visual05.mp4" type="video/mp4">
+      <!-- <source src="https://lqez.github.io/js/airpodsvf/video.mp4" type="video/mp4"> -->
       Your browser does not support the video tag.
     </video>
     <div class="scroll-dummy">
@@ -96,12 +95,15 @@
   </div>
   
   <script>
+
     var FRAMES = 148;
     var FPS = 30;
     var video = document.getElementById('video');
 
     window.addEventListener('scroll', function (e) {
+      // 재생시간 연산
       var time = (window.scrollY / 1000) * FRAMES / FPS;
+      // console.log(time);
       video.currentTime = time;
     });
 
@@ -109,5 +111,7 @@
       video.pause();
       video.currentTime = 0;
     });
+    
   </script>
+
 </body>
