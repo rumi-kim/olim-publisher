@@ -1,0 +1,198 @@
+#iso img {
+  max-width: 100%;
+}
+
+#iso * {
+  margin: 0;
+  padding: 0;
+}
+
+#iso .circle__close {
+  top: 42px;
+  right: 10px;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fefefe;
+  position: absolute;
+  border-radius: 100px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+  z-index: 9;
+  transition: .2s ease;
+  cursor: pointer;
+  pointer-events: all;
+  font-size: 0;
+}
+
+#iso .circle__close img {
+  width: 60%;
+  margin: 0 auto;
+  transform: rotate(45deg);
+}
+
+#iso.detail-view {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#iso .detail-view__iso--wrap {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  position: relative;
+  /* padding-bottom: 56.25%; */
+  height: 56.25vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#iso .iso__buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0;
+  display: flex;
+}
+
+#iso .iso__button {
+  margin-left: 8px;
+  border-radius: 4px;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+}
+
+#iso .iso__buttons .icon__map {
+  /* margin-right: 8px; */
+}
+
+#iso .iso__buttons .icon__fullscreen {
+
+}
+
+#iso .iso__buttons .icon__dp {
+  color: #000;
+  padding: 0 2px;
+}
+
+#iso .iso__buttons .icon__dp--title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#iso .iso__buttons .icon__dp--desc {
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+}
+
+#iso .detail-view__iso {
+  width: 100%;
+}
+
+#iso .fullscreen .detail-view__iso {
+  max-width: 100%;
+  width: 100%;
+  max-height: none;
+  height: calc(100vh - 240px);
+  margin: 120px 0;
+  overflow: hidden;
+}
+
+#iso .iso--pan__wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#iso .iso--pan__wrap .circle__close {
+  z-index: 10000;
+}
+
+#iso .iso--pan__wrap .icon__fullscreen {
+  z-index: 10000;
+}
+
+#iso .iso--pan {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#iso .iso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+#iso .iso__intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+#iso .iso__intro p {
+  font-size: 14px;
+  color: #000;
+}
+
+#iso .iso__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  /* display: none; */
+}
+
+#iso .iso__desc img {
+  display: inline-block;
+  width: 72px;
+}
+
+#iso .iso__desc p {
+  font-size: 14px;
+  color: #000;
+}
+
+#iso .iso__map {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 1px);
+  top: -1px;
+  left: 0;
+  background-color: #000;
+  z-index: 100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#iso .fade-enter-active,
+#iso .fade-leave-active {
+  transition: opacity 0.2s;
+}
+#iso .fade-enter, #iso .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

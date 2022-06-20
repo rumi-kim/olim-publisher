@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- iso -->
+  <div class="container" id="app">
+    <iso-component></iso-component>
+  </div>
+  <!-- //iso -->
+
+</body>
+
+<!-- iso start -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js"></script>
+<script src="https://unpkg.com/core-js-bundle@3.8.1/index.js"></script>
+<script src="https://unpkg.com/regenerator-runtime@0.13.7/runtime.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://naver.github.io/egjs-view360/release/latest/dist/SpinViewer/view360.spinviewer.pkgd.min.js"></script>
+<script src="js/panzoom.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+<link rel="stylesheet" type="text/css" href="style/iso.css">
+<script type="text/babel" data-presets="es2015, stage-3">
+  const PREFIX_URL = 'https://cdn.zipview.kr/webvr/service/ZE095/interior/08_84OC/data.json';
+</script>
+<script type="text/babel" data-presets="es2015, stage-3" src="js/iso.js"></script>
+<!-- //iso end -->
+
+</html>

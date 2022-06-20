@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - |
+        IFS="/" read -ra BRANCH <<< "$CODEBUILD_WEBHOOK_HEAD_REF"
+        PREFIX=${BRANCH[3]}
+        case ${BRANCH[2]} in
+          miceview)
+            BUCKET=vr.miceview.kr
+            DISTRIBUTION=E1FSG7LLVVAB1H;;
+          shopview)
+            BUCKET=vr.shopview.co.kr
+            DISTRIBUTION=EBYO0QGMEL1S4;;
+          zipview)
+            BUCKET=vmh.zipview.kr
+            DISTRIBUTION=E3QCMA16WPHF7;;
+          sample)
+            BUCKET=cdn.zipview.kr
+            PREFIX=cdms/sample
+            DISTRIBUTION=E2I29C5P9BC1MK;;
+        esac
+        aws s3 sync ./ s3://$BUCKET/$PREFIX --exclude ".gitignore" --exclude ".git/*" --exclude "buildspec.yml" --exclude "readme.md"
+        aws cloudfront create-invalidation --distribution-id $DISTRIBUTION --paths /$PREFIX/*
+      - |

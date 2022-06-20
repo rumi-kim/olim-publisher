@@ -1,0 +1,75 @@
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:#161616;}
+::-webkit-scrollbar-thumb{background:#535353;border:2px solid #161616;border-radius:20px;}
+
+body,button,input,select,table,textarea{color:$color_white;}
+
+html {
+	width: 100%;
+  height: 100%;
+	background:$color_black;
+	
+	@include media('tablet'){
+		height:auto;
+	}
+}
+body {
+	width: 100%;
+	height: 100%;
+	
+	@include media('tablet'){
+		height:auto;
+	}
+}
+
+/* container */
+.container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	.contents {
+		width:896px;
+		margin: 140px auto 40px;
+	}
+	@include media('small_pc'){
+		.contents {
+			margin: 90px auto 40px;
+		}
+	}
+
+	@include media('tablet'){
+		overflow-y: visible;
+		height: auto;
+		
+		.contents {
+			position: static;
+			transform: none;
+			min-width: 0;
+			width:auto;
+			max-width: 400px;
+			margin: 90px auto 40px;
+			padding: 0 24px;
+		}
+	}
+}
+.touch-block {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 101;
+	background-color: rgba(0,0,0,0);
+}
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: 300px;
+	background: $color_white;
+	z-index: 500;
+	color: $color_black;
+	display: none;
+}

@@ -1,0 +1,50 @@
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 45px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  .disclaimer1 {
+    display: block;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.7px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px $color_black,-.5px -.5px 1px #333;
+    word-break: keep-all;
+  }
+
+  @include media('tablet'){
+    padding: 0 15px;
+    .disclaimer1 {
+      position: relative;
+      font-size: 1.2rem;
+    }
+  }
+}
+.footer.left {
+  padding: 0 15px;
+  text-align: left;
+  .disclaimer1 {
+    max-width: none;
+    margin: 0;
+  }
+
+  @include media('tablet'){
+    bottom: 30px;
+    text-align: left;
+  }
+
+  @include media('mobile'){
+    .disclaimer1 {
+      width: 214px;
+      margin: 0;
+    }
+  }
+}

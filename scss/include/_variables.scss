@@ -1,0 +1,74 @@
+$color_white:#fff;
+$color_black:#000;
+$color_bg_popup:rgb(38,38,38);
+$color_primary:#FC671A;
+$color_secondary:#ff3101;
+$btn_color1:#ff671d;
+$btn_color2:#ff671d;
+
+
+%gradient_btn{
+  display:inline-block;
+  padding: 10px 18px;
+  background: $color_primary;
+  background: -moz-linear-gradient(left, $color_primary 1%,$color_secondary 100%);
+  background: -webkit-linear-gradient(left, $color_primary 1%,$color_secondary 100%);
+  background: linear-gradient(to right, $color_primary 1%,$color_secondary 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_primary', endColorstr='$color_secondary',GradientType=1 );
+  border-radius: 52px;
+  color: $color_white;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+  line-height:1.7;
+  vertical-align:middle;
+  outline:0;
+  
+  >span {
+    position: relative;
+    padding-right: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.9px;
+    line-height: 1.5;
+    
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 12px;
+      background: url(../img/material-keyboard-arrow-right.png) no-repeat 0 50%;
+      background-size: auto 12px;
+      content: '';
+    }
+  }
+
+  @include media('tablet'){
+    padding: 6px 16px;
+    bottom: 10px;
+    left: auto;
+    right: 8px;
+    transform: none;
+    >span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @include media('mobile'){
+    >span {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @include media('tablet_land'){
+    padding: 6px 16px;
+    bottom: 10px;
+    left: auto;
+    right: 8px;
+    transform: none;
+    >span {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+.company{
+  padding:40px;
+  max-width:680px;
+  margin:0 auto;
+
+  &_visual{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    overflow:hidden;
+    border:1px solid #C4C4C4;
+    border-radius:5px;
+    
+    img{
+      position:absolute;
+      top:50%;
+      left:50%;
+      height:auto;
+      max-width:100%;
+      transform:translate(-50%,-50%);
+      vertical-align:top;
+    }
+  }
+
+  &_main{
+    margin-top:25px;
+    font-size:0;
+  }
+
+  &_logo{
+    display:inline-block;
+    width:200px;
+    height:150px;
+    border:1px solid #C4C4C4;
+    border-radius:5px;
+    text-align:center;
+    overflow: hidden;
+    vertical-align:middle;
+    box-sizing:border-box;
+    
+    img{
+      max-width:100%;
+    }
+  }
+  &_name{
+    display:inline-block;
+    width:380px;
+    margin-left:20px;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:-1.2px;
+    vertical-align:middle;
+
+    .eng{
+      display:block;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:-.5px;
+    }
+  }
+
+  &_contact{
+    .contact_item{
+      position:relative;
+      min-height:1em;
+      padding-left:30px;
+      margin-top:22px;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:-.7px;
+
+      &:first-child{
+        margin-top:16px;
+      }
+      
+      &:before{
+        position:absolute;
+        top:50%;
+        left:0;
+        transform:translateY(-50%);
+        width:18px;
+        height:16px;
+        background:no-repeat 50% 50%;
+        content:'';
+      }
+
+      &.home:before{
+        background-image:url(../../img/ico_home.png);
+        background-size:19px auto;
+      }
+      &.mail:before{
+        background-image:url(../../img/ico_email.png);
+        background-size:18px auto;
+      }
+    }
+  }
+
+  &_body dt{
+    display:block;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:-.8px;
+    line-height:1.5;
+    color:#515151;
+
+    &:not(:first-of-type){
+      margin-top:24px;
+    }
+  }
+  &_body dd{
+    margin-top:16px;
+    font-size:14px;
+    letter-spacing:-.7px;
+    line-height:1.5;
+    color:#515151;
+
+    >ul>li:not(:first-child){
+      margin-top:10px;
+    }
+  }
+  &_info,&_prod,&_cert{
+    margin-top:42px;
+  }
+
+  &_cert-cont img{max-width:280px;width:80%;}
+
+  @include media('tablet'){
+    padding:20px 20px 30px;
+
+    &_main{
+      text-align:center;
+    }
+    &_logo{
+      width:120px;
+      height:90px;
+    }
+    &_name{
+      width:100%;
+      margin-left:0;
+      margin-top:14px;
+      font-size:20px;
+      .eng{
+        font-size:14px;
+      }
+    }
+
+    &_contact{
+      margin-top:24px;
+
+      .contact_item{
+        margin-top:16px;
+      }
+    }
+  }
+}
+
+.company_pdf{
+  height:90%;
+
+  .tabpanel_wrap, .tabpanel{
+    height:100%;
+  }
+  iframe{
+    width:100%;
+    height:100%;
+    border:1px solid #bbb;
+  }
+}
+
+.company_site{
+  padding:40px 20px;
+  width:100%;
+  height:90%;
+  
+  iframe{
+    width:100%;
+    height:100%;
+    border:1px solid #bbb;
+  }
+
+  .site_embed_noti{
+    width:60%;
+    margin:120px auto 0;
+    font-size:24px;
+    text-align:center;
+    word-break:keep-all;
+    .btn_wrap{
+      margin-top:60px;
+      text-align:center;
+
+      .btn_site{
+        @extend %gradient_btn;
+      }
+    }
+
+    @include media('tablet'){
+      margin:0 auto;
+      font-size:20px;
+      
+      .btn_wrap{
+        margin-top:30px;
+      }
+    }
+    @include media('mobile'){
+      width:90%;
+      font-size:1.8rem;
+      
+      .btn_wrap{
+        margin-top:20px;
+      }
+    }
+  }
+}
