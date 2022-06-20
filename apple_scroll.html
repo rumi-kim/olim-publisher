@@ -43,7 +43,7 @@
       max-width: 100%;
     }
     .scroll-dummy {
-      height: 2000px;
+      height: 15000px;
       max-width: 998px;
       padding: 20px;
       z-index: 1;
@@ -76,11 +76,13 @@
 </head>
 <body>
   <div>
+
     <video id="video" width="900" height="560" playsinline poster="static/mov/bg_visual05.jpg">
-      <source src="static/mov/mov_visual05.mp4" type="video/mp4">
+      <source src="static/mov/mov_visual02.mp4" type="video/mp4">
       <!-- <source src="https://lqez.github.io/js/airpodsvf/video.mp4" type="video/mp4"> -->
       Your browser does not support the video tag.
     </video>
+
     <div class="scroll-dummy">
       <h1>AirPods Pro page is TOO BIG</h1>
       <p>
@@ -96,14 +98,14 @@
   
   <script>
 
-    var FRAMES = 148;
+    var FRAMES = 476;
     var FPS = 30;
     var video = document.getElementById('video');
 
     window.addEventListener('scroll', function (e) {
       // 재생시간 연산
-      var time = (window.scrollY / 1000) * FRAMES / FPS;
-      // console.log(time);
+      var time = (window.scrollY / 5000) * FRAMES / FPS;
+      console.log(time);
       video.currentTime = time;
     });
 
