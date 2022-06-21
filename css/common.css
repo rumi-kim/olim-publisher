@@ -45,11 +45,11 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 
 /* help icon */
 .global {margin-right: 20px; }
-.global-item { display: inline-block; width: 24px; height: 24px; margin-left: 12px; border-radius: 24px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); vertical-align: middle; }
+.global-item { display: inline-block; position: relative; width: 24px; height: 24px; margin-left: 12px; border-radius: 24px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); vertical-align: middle; }
 .global-item:first-child { margin-left: 0; }
 .global .global-link { width: 120px; height: 24px; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; }
 .global .global-link .btn_link { background-size: contain; }
-.global-btn, .global .btn_help_pop, .global .btn_link { display: block; width: 100%; height: 100%; background: no-repeat 50% 50%; background-size: 24px; outline: 0; }
+.global-btn, .global .btn_help_pop, .global .btn_link { display: block; width: 100%; height: 100%; background: no-repeat 50% 50%; background-size: cover; outline: 0; }
 .global-btn.ko { background-image: url(../img/ico_ko.png); }
 .global-btn.en { background-image: url(../img/ico_en.png); }
 .global .btn_help_pop { background-image: url(../img/ico_help.svg); }
@@ -176,11 +176,12 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal .modal_inner .ico_gnb-btn:after {position: absolute; top: 0; left: 0; width: 36px; height: 51px; background: url(../img/help_arrow2.png) no-repeat 0 0; background-size: 100% auto; content: ''; margin-top: 20px; margin-left: -14px;}
 .modal .modal_inner .modal_help-gnb .gnb_desc {margin-bottom: -20px; margin-left: 24px; max-width: 60%;}
 
-.modal .modal_inner .modal_help-tutorial { position: absolute; bottom:100%; margin-bottom: -45px; right: 0; padding: 8px 16px; }
-.modal .modal_inner .ico_tutorial-btn { position: fixed; top: 0; right: 20px; margin-top: -42px; z-index: 10; background: url(../img/ico_help.svg) no-repeat center center ; background-size: cover; -webkit-transition: all .3s; transition: all .3s; outline: 0; }
-.modal .modal_inner .ico_tutorial-btn:before{content: ''; position: absolute; top: 50%; left: 50%; width:120%; height: 120%; border-radius: 100%; border: 2px solid #8200FF; transform: translate(-50%,-50%);}
-.modal .modal_inner .ico_tutorial-btn:after { position: absolute; top: 0; left: 0; width: 36px; height: 51px; margin-top: 24px; background: url(../img/help_arrow3.png) no-repeat 0 0; background-size: 100% auto; content: ''; }
-.modal .modal_inner .modal_help-tutorial .tutorial_desc {max-width: 80%; margin-bottom: -15px; margin-left: 17px; text-align: right;}
+.modal .modal_inner .modal_help-tutorial {position: absolute; top: 0; right: -6px; margin-top: -48px; line-height: 0;}
+.modal .modal_inner .modal_help-tutorial .global-list{border: 2px solid #8200FF; border-radius: 100%; padding: 4px;}
+.modal_help-tutorial.global .global-item .btn_help_pop {background: url(../img/ico_help.svg) no-repeat center center ; background-size: cover; -webkit-transition: all .3s; transition: all .3s; outline: 0; }
+.modal_help-tutorial.global .global-item .global-guide-arrow-box{position: relative;}
+.modal_help-tutorial.global .global-item .global-guide-arrow-img {width: 36px; height: 51px; background: url(../img/help_arrow3.png) no-repeat 0 0; background-size: 100% auto;}
+.modal .modal_inner .modal_help-tutorial .tutorial_desc {position: absolute; right: 28px; bottom: 0; width: 500px; text-align: right;}
 
 .modal .modal_inner .modal_help-innav { position: absolute; bottom: 7px; left: 6px; }
 .modal .modal_inner .modal_help-innav:before { position: absolute; bottom: 56px; left: 20px; width: 42px; height: 44px; background: url(../img/help_arrow1.png) no-repeat 0 100%; background-size: 100% auto; content: ''; }
@@ -282,6 +283,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   /* nav */
   .breadcrumbs_item span:not(.is_now) {display: none;}
 
+  /* modal_inner2 */
+  .modal .modal_inner .modal_help-tutorial .tutorial_desc{bottom: -22px; max-width: 300px;}
+
   /* html-modal */
   .ly_pop .html-modal-container {overflow-y: visible;}
   .ly_inner {height: calc(100% - 50px); margin-top: 50px;}
@@ -343,6 +347,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal .modal_inner .modal_help-gnb .gnb_desc { margin-left: 20px; max-width: 240px; }
   .modal .modal_inner .modal_help-innav:before { width: 32px; height: 34px; }
   .modal .modal_inner .modal_help-innav .innav_desc { margin-left: 58px; }
+
+    /* modal_inner2 */
+    .modal .modal_inner .modal_help-tutorial .tutorial_desc{max-width: 200px;}
 }
 
 @media screen and (max-width: 480px) {
@@ -357,7 +364,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal .modal_inner .modal_help-center .btn_wrap .start_btn_style { padding: 8px 48px; font-size: 14px; }
   .modal .modal_inner .modal_help-gnb:before { width: 32px; height: 40px; }
   .modal .modal_inner .modal_help-gnb .gnb_desc {margin-bottom: -36px; max-width: 50%; }
-  .modal .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 50%; margin-bottom: -31px; margin-left: auto; margin-right: 30px; text-align: right;}
+  .modal .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 150px; bottom: -36px;}
   .modal .modal_inner .modal_help-innav { left: 0; bottom: 0; width: 100%; }
   .modal .modal_inner .modal_help-innav:before { width: 32px; height: 34px; }
   .modal .modal_inner .modal_help-innav .help-innav { display: block; position: relative; width: 100%; height: 54px; border: 0; }
@@ -382,7 +389,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 @media screen and (max-width: 340px) {
   /* modal */
   .modal .modal_inner .modal_help-gnb .gnb_desc{max-width: 40%; margin-bottom:-26px;}
-  .modal .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 40%; margin-bottom: -20px;}
+  .modal .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 100px; bottom: -26px;}
   .modal .help_desc { font-size: 10px; }
   .modal_inner-text > p { font-size: 12px; }
   .modal .modal_inner .modal_help-center .modal_help-control-item:not(:first-child) { margin-top: 4px; padding-top: 4px; }
