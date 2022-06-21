@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../lib/js/jquery.fullpage.min.css" />
+	<link rel="stylesheet" type="text/css" href="../lib/css/elypecsSummit.css" />
+  <link rel="stylesheet" type="text/css" href="../lib/css/style.css" />
+  <script type="text/javascript" src="../lib/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="../lib/js/jquery.fullpage.min.js"></script>
+
+  <title>fullpage.js demo</title>
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+        anchors: ['anchor1', 'anchor2', 'anchor3', 'anchor4'],
+        menu: '#menu',
+				// sectionsColor: ['#C63D0F', '#eb3636', '#a80f97', '#001c4e'],
+				css3: true,
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['CONFERENCE', 'PROGRAM', 'SPEAKER', 'REGISTER NOW'],
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header" class="header">
+    <div class="inner">
+      <h1 class="logo">ELYPECS summit 로고</h1>
+      <ul id="menu" class="hd_nav">
+        <li data-menuanchor="anchor1" class="active"><a href="#anchor1">CONFERENCE</a></li>
+        <li data-menuanchor="anchor2" class=""><a href="#anchor2">PROGRAM</a></li>
+        <li data-menuanchor="anchor3" class=""><a href="#anchor3">SPEAKER</a></li>
+        <li data-menuanchor="anchor4" class=""><a href="#anchor4">REGISTER NOW</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- header -->
+
+  <!-- fullpage contents -->
+  <div id="fullpage">
+
+    <!-- section#0 CONFERENCE -->
+    <div class="section conference active sec1" id="section0" data-anchor="anchor1">
+      <div class="inner pos_relative">
+
+        <div class="main_txt_box top">
+
+          <div class="main_title_img"><img src="../static/images/elypecsSummit/main_txt.svg"></div>
+          <h2 class="main_title">메타버스 트렌드와 브랜딩의 모든 것</h2>
+          <p class="txt main_txt only_pc">
+            엘리펙스 써밋 2022<br>
+            Theme : Build a Brand Universe!
+          </p>
+          <div class="txt main_txt only_mobile">
+            <p>엘리펙스 써밋 2022</p>
+            <p>Build a Brand Universe!</p>
+          </div>
+        </div>
+        <p class="txt main_sub_txt">
+          엔데믹 시대, 브랜드 경험은 어떻게 확장되어야 하는가.<br>
+          ELYPECS SUMMIT 2022에서 앞서가는 브랜드들의<br>
+          최신 메타버스 브랜딩 사례를 통해 Brand Universe에 대한<br>
+          인사이트를 만나보시길 바랍니다.
+        </p>
+        <div class="main_txt_box bottom">
+          <p class="txt date_txt">
+            <b>2022. 7. 1. FRI 10:10 ~ 16:20</b>
+            그랜드 인터컨티넨탈 서울 파르나스 국화룸 2층
+          </p>
+
+          <a href="https://event-us.kr/ELYPECS/event/45115" target="_blank" class="btn_outlink">
+            무료 참가신청
+          </a>
+        </div>
+
+      </div>
+      <div class="circle_animation">
+        <img src="../static/images/elypecsSummit/img-circle-2x.png" alt="">
+      </div>
+    </div>
+    <!-- //section#0 CONFERENCE -->
+
+    <!-- section#1 program -->
+    <div class="section program sec2" id="section1" data-anchor="anchor2">
+      <div class="inner">
+
+        <div class="title_box">
+          <h2 class="section_title">Program</h2>
+        </div>
+
+        <!-- table -->
+        <div class="box">
+
+          <div class="table_box">
+            <table>
+              <thead>
+                <tr class="only_pc">
+                  <th><span>시간</span></th>
+                  <th><span>내용</span></th>
+                  <th><span>강연자</span></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="table_normal">
+                  <td><span>10:10 - 10:20</span></td>
+                  <td><span>행사소개 및 오프닝</span></td>
+                  <td><span></span></td>
+                </tr>
+                <tr>
+                  <td><span>10:20 - 11:00</span></td>
+                  <td class="table_desc">
+                    <span>Session 1 _ 메타버스는 결국 공간이다</span>
+                    <span>Session 1</span>
+                    <span>메타버스는 결국 공간이다</span>
+                    <span>김상균 교수(경희대 경영대학원)</span>
+                  </td>
+                  <td><span>김상균 교수(경희대 경영대학원)</span></td>
+                </tr>
+                <tr>
+                  <td><span>11:00 - 11:40</span></td>
+                  <td class="table_desc">
+                    <span>Session 2 _ 메타버스 시대, 미디어의 미래</span>
+                    <span>Session 2</span>
+                    <span>메타버스 시대, 미디어의 미래</span>
+                    <span>최용호 대표(갤럭시코퍼레이션)</span>
+                  </td>
+                  <td><span>최용호 대표(갤럭시코퍼레이션)</span></td>
+                </tr>
+                <tr class="table_normal">
+                  <td><span>Lunch Time</span></td>
+                  <td><span>식사 제공</span></td>
+                  <td><span></span></td>
+                </tr>
+                <tr>
+                  <td><span>13:00 - 13:40</span></td>
+                  <td class="table_desc">
+                    <span>Session 3 _ 브랜드, 메타버스에서 무엇을 할 것인가</span>
+                    <span>Session 3</span>
+                    <span>브랜드, 메타버스에서 무엇을 할 것인가</span>
+                    <span>안호준 부사장(올림플래닛)</span>
+                  </td>
+                  <td><span>안호준 부사장(올림플래닛)</span></td>
+                </tr>
+                <tr>
+                  <td><span>13:40 - 14:20</span></td>
+                  <td class="table_desc">
+                    <span>Session 4 _ 삼성전자 비스포크, 어떻게 메타버스를 활용했나?</span>
+                    <span>Session 4</span>
+                    <span>삼성전자 비스포크, 어떻게 메타버스를 활용했나?</span>
+                    <span>윤주명 프로(삼성전자)</span>
+                  </td>
+                  <td><span>윤주명 프로(삼성전자)</span></td>
+                </tr>
+                <tr class="table_normal">
+                  <td><span>Break Time</span></td>
+                  <td><span>Tea Time _ Coffee</span></td>
+                  <td><span></span></td>
+                </tr>
+                <tr>
+                  <td><span>14:40 - 15:20</span></td>
+                  <td class="table_desc">
+                    <span>Session 5 _ 브랜드 유니버스의 성공사례</span>
+                    <span>Session 5</span>
+                    <span>브랜드 유니버스의 성공사례</span>
+                    <span>금정현 대표(YGP 스튜디오)</span>
+                  </td>
+                  <td><span>금정현 대표(YGP 스튜디오)</span></td>
+                </tr>
+                <tr>
+                  <td><span>15:20 - 16:00</span></td>
+                  <td class="table_desc">
+                    <span>Session 6 _ 브랜드 공간의 성공적인 경험 설계</span>
+                    <span>Session 6</span>
+                    <span>브랜드 공간의 성공적인 경험 설계</span>
+                    <span>이장우 대표(한국인공지능포럼)</span>
+                  </td>
+                  <td><span>이장우 대표(한국인공지능포럼)</span></td>
+                </tr>
+                <tr class="table_normal">
+                  <td><span>16:00 - 16:20</span></td>
+                  <td><span>Event _ 경품추첨</span></td>
+                  <td><span></span></td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="3">&ast; 컨퍼런스 내용 및 일정은 강연자 및 주최사의 사정으로 변경 될 수 있습니다.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+        </div>
+        <!-- table -->
+
+      </div>
+      <div class="circle_animation">
+        <img src="../static/images/elypecsSummit/img-circle-2x.png" alt="">
+      </div>
+    </div>
+    <!-- //section#1 program -->
+
+    <!-- section#2 speaker -->
+    <div class="section speaker sec3" id="section2" data-anchor="anchor3">
+      <div class="inner">
+        <div class="title_box">
+          <h2 class="section_title">speaker</h2>
+        </div>
+        <div class="box">
+
+          <ul class="speaker_list">
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/01_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>김상균 교수</b>
+                <span>경희대 경영대학원</span>
+              </p>
+            </li>
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/02_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>안호준 부사장</b>
+                <span>올림플래닛</span>
+              </p>
+            </li>
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/03_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>최용호 대표</b>
+                <span>갤럭시코퍼레이션</span>
+              </p>
+            </li>
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/04_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>윤주명 프로</b>
+                <span>삼성전자</span>
+              </p>
+            </li>
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/05_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>금정현 대표</b>
+                <span>YGP 스튜디오</span>
+              </p>
+            </li>
+            <li class="speaker_item">
+              <div class="img_frame">
+                <img src="../static/images/elypecsSummit/06_2x.png" alt="">
+              </div>
+              <p class="speaker_txt">
+                <b>이장우 대표</b>
+                <span>한국인공지능포럼</span>
+              </p>
+            </li>
+          </ul>
+
+          <div class="sponser_box">
+
+            <div class="box left_box">
+              <p class="sponser_title">주최/주관</p>
+              <div class="logo_item olimplanet"><img src="../static/images/elypecsSummit/logo_item_olimplanet.svg"
+                  alt=""></div>
+            </div>
+            <div class="box right_box">
+              <p class="sponser_title">후원</p>
+              <div class="logo_item economyTV"><img src="../static/images/elypecsSummit/logo_item_EconomyTV.svg" alt="">
+              </div>
+              <div class="logo_item metaplanet"><img src="../static/images/elypecsSummit/logo_item_metaplanet.png"
+                  alt=""></div>
+              <div class="logo_item galaxycorp"><img src="../static/images/elypecsSummit/logo_item_galaxycorp.png"
+                  alt=""></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="circle_animation">
+        <img src="../static/images/elypecsSummit/img-circle-2x.png" alt="">
+      </div>
+    </div>
+    <!-- //section#2 speaker -->
+
+    <!-- section#3 register -->
+    <div class="section register sec4" id="section3" data-anchor="anchor4">
+      <div class="inner">
+        <div class="title_box">
+          <h2 class="section_title">register now</h2>
+        </div>
+        <div class="box">
+          <p class="txt">
+            대한민국 유일의 메타버스 브랜딩 컨퍼런스에 참석하시고,<br>
+            추가로 주어지는 엘리펙스 써밋 멤버십 커뮤니티에서<br>
+            비즈니스 네트워킹의 기회도 발견하십시오.
+          </p>
+          <p class="txt acc">
+            <b>2022. 7. 1. FRI 10:10 ~ 16:20</b>
+            그랜드 인터컨티넨탈 서울 파르나스 국화룸 2층
+          </p>
+          <div class="register_box">
+            <div class="item">
+              <i class="ico"><img src="../static/images/elypecsSummit/ico_pin.svg" alt=""></i>
+              <p>현장 VIP 멤버십 초청</p>
+            </div>
+            <div class="item">
+              <i class="ico"><img src="../static/images/elypecsSummit/ico_online.svg" alt=""></i>
+              <p>온라인 메타버스 현장 생중계</p>
+            </div>
+          </div>
+          <p class="txt sub_acc">
+            참가비 무료<br>
+            런치 및 사은품 제공 (오프라인 행사)<br>
+            추후 네트워킹 커뮤니티 무료가입 권한 제공<br>
+            분기별 컨퍼런스 우선 초대
+          </p>
+          <p class="txt desc">
+            오프라인 행사는 한정된 공간으로 인해, 신청하신 모든 분들에 대한 초대가 어렵습니다.<br>
+            메타버스 컨퍼런스로 참석 신청해주시면 선정되신 분에 한해 별도로 안내 드리겠습니다.
+          </p>
+          <p class="txt desc sub_desc">
+            행사당일 시청가능한 접속주소를 SMS로 발송해드립니다.
+          </p>
+        </div>
+        <a href="https://event-us.kr/ELYPECS/event/45115" target="_blank" class="btn_outlink">
+          무료 참가신청
+        </a>
+      </div>
+    </div>
+    <!-- //section#3 register -->
+
+  </div>
+  <!-- //fullpage contents -->
+</body>
+
+</html>

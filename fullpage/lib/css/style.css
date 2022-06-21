@@ -1,0 +1,7 @@
+.section{background: #222 !important;}
+.section > .fp-tableCell{transform: scale(0.88) translateY(0%); transition: 0.3s;}
+.section.active > .fp-tableCell {transform: scale(1) translateY(0%); border-radius: 0; transition: 1s 0.8s;}
+.section.sec1 > .fp-tableCell{background: url("../../static/images/elypecsSummit/bg_confernce.jpg") no-repeat 100% 100% / 100% 100%;}
+.section.sec2 > .fp-tableCell{background-color: #eb3636;}
+.section.sec3 > .fp-tableCell{background-color: #a80f97;}
+.section.sec4 > .fp-tableCell{background-color: #001c4e;}
