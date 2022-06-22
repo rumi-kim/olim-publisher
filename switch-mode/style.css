@@ -1,0 +1,39 @@
+
+:root {
+  --brand-color-black: #212121;
+  --brand-color-low: #676767;
+  --brand-color-gray: #979797;
+  --brand-color-border: #d1d1d1;
+  --brand-color-border-light: #ededed;
+  --brand-color-white: #f7f7f7;
+  --brand-color: #9450e7;
+  --brand-color-deep: #6824d3;
+  --brand-color-purple: #f61cd5;
+  --brand-color-red: #f70;
+  --brand-color-orange: #ffb647;
+  --brand-color-green: #6ea126;
+  --white-color08: hsla(0,0%,100%,0.8);
+  --white-color06: hsla(0,0%,100%,0.6);
+  --white-color05: hsla(0,0%,100%,0.5);
+  --white-color04: hsla(0,0%,100%,0.4);
+  --white-color03: hsla(0,0%,100%,0.3);
+  --white-color02: hsla(0,0%,100%,0.2);
+  --white-color015: hsla(0,0%,100%,0.15);
+  --white-color005: hsla(0,0%,100%,0.05);
+}
+body { padding: 0; margin: 0; }
+.wrap{display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; background:#fff; }
+.inner { width: 90%; height: 80%; overflow: hidden;}
+.btn{position: fixed; right: 2%; bottom: 2%; padding:10px 15px; font-size: 20px; border: none; border-radius: 5px; background: #222; color: #fff;}
+g:hover path[fill*=black], g:hover path[fill*=white]{fill: var(--brand-color);}
+g:hover path[fill="var(--brand-color)"]{fill: var(--brand-color-white);}
+
+/* dark mode */
+.wrap.darkmode{background: #222;}
+.wrap.darkmode path[fill*=black]{fill: var(--brand-color-white)!important;}
+.wrap.darkmode path[fill*=white]{fill: var(--brand-color-black)!important;}
+/* .wrap.darkmode path[fill*=black]{fill: var(--brand-color-white);}
+.wrap.darkmode path[fill*=white]{} */
+.wrap.darkmode g:hover path[fill*=black], .wrap.darkmode g:hover path[fill*=white]{fill: var(--brand-color)!important;}
+
+
