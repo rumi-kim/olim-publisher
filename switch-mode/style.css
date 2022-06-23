@@ -23,7 +23,10 @@
 }
 body { padding: 0; margin: 0; }
 .wrap{display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; background:#fff; }
-.inner { width: 90%; height: 80%; overflow: hidden;}
+.inner {position:relative; width: 90%; height: 80%; overflow: hidden;}
+.inner:after{content:""; display:block; position:absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; background: #222;}
+svg{position: relative; z-index: 10;}
+
 .btn{position: fixed; right: 2%; bottom: 2%; padding:10px 15px; font-size: 20px; border: none; border-radius: 5px; background: #222; color: #fff;}
 g:hover path[fill*=black], g:hover path[fill*=white]{fill: var(--brand-color);}
 g:hover path[fill="var(--brand-color)"]{fill: var(--brand-color-white);}
