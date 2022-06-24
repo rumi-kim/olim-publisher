@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>canvas API</title>
+
+	<style>
+		body,html{padding: 0; margin: 0;}
+		/* canvas{border: 2px solid red;} */
+	</style>
+ </head>
+
+ <body>
+ 	<div>
+		<ul>
+			<li>
+				<h2>canvas1 - base </h2>
+				<canvas id="canvas1">
+				</canvas>
+			</li>
+			<li>
+				<h2>canvas2 - 대체 콘텐츠</h2>
+				<canvas id="canvas2" width="500" height="300">
+					<img src="./img_sample.jpg" alt="">
+				</canvas>
+			</li>
+			<li>
+
+			</li>
+		</ul>
+ 		
+ 	</div>
+
+ 	<script>
+ 		const canvas1 = document.getElementById('canvas1');
+ 		const ctx1 = canvas1.getContext('2d'); //컨텍스트(렌더링될 그리기의 대상)를 얻기 
+ 		ctx1.fillStyle = 'green'; //색상 입히기
+ 		ctx1.fillRect(0, 0, 150, 100); //fillRect(좌,상,너비,높이)
+
+
+
+		const canvas2 = document.getElementById('canvas2');
+		const ctx2 = canvas2.getContext('2d'); //getContext 메소드를 사용하여 드로잉 컨텍스트에 엑세스
+		ctx2.fillStyle = 'pink'; //색상 입히기
+ 		ctx2.fillRect(0, 0, 150, 100); //fillRect(좌,상,너비,높이)
+
+		 
+		//  ✅ <canvas>요소의 브라우저 지원여부 검사하기 => getContext()메소드의 존재 여부를 테스트
+		if(canvas1.getContext){ //만약 canvas를 지원한다면 
+			var ctx_ = canvas1.getContext('2d');
+			console.log(ctx_)
+		}else{
+			console.log('none')
+		}
+		
+
+
+		
+
+
+
+
+ 	</script>
+
+
+ </body>
+
+ </html>
+
+
+ <!-- memo -->
+ <!-- 
+	<canvas> 요소는 오래된 브라우저들을 위한 대체 컨텐츠를 정의하기 쉽다. (ex: 캔버스 내용에 대한 텍스트 설명 )
+	<canvas>태그 안에  대체 컨텐츠를 삽입하면 되는데, <canvas>태그 를 지원하지 않는 브라우저는 컨테이너를 무시하고 컨테이너 내부의 대체 콘텐츠를 렌더링 한다.
+		
+	고정 크기의 드로잉 영역 생성 -> 하나 이상의 렌더링 컨텍스트(rendering contexts)를 노출 (2D렌더링 컨텍스트를 집중적으로 다룸. )
+
+
+
+
+
+
+
+		
+
+  -->
