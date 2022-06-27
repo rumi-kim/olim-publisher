@@ -8,25 +8,104 @@
 	<title>canvas tutorial - 03</title>
 
 	<style>
-		h3 {
+		h3,
+		h4 {
 			color: darkblue
 		}
 	</style>
 
 	<script type="text/javascript">
 		function draw() {
+
+			// 직사각형 그리기
 			var canvas = document.getElementById('canvas');
+
 			if (canvas.getContext) {
 				var ctx = canvas.getContext('2d');
-
-				ctx.fillRect(25, 25, 100, 100);
+				ctx.fillStyle = 'pink'; //색상 입히기
+				ctx.strokeStyle = 'blue'; //테두리 색상 입히기
+				ctx.fillRect(0, 0, 200, 200);
+				ctx.fillStyle = 'gray'; //색상 입히기
+				ctx.fillRect(0, 0, 80, 80);
 				ctx.clearRect(45, 45, 60, 60);
 				ctx.strokeRect(50, 50, 50, 50);
-				ctx.fillRect(65, 65, 20, 20);
-				ctx.fillStyle = 'pink'; //색상 입히기
 
+				ctx.fillStyle = 'red'; //색상 바꾸기
+				ctx.fillRect(65, 65, 20, 20);
+
+				//  삼각형 그리기 
+				ctx.fillStyle = 'green'; //색상 바꾸기
+				ctx.beginPath(); //캔버스 초기화
+				ctx.moveTo(0, 0); //펜을 지정된 좌표(75,50)로 옮기기
+				ctx.lineTo(80, 40);
+				ctx.lineTo(0, 80);
+				ctx.fill();
+			}
+
+
+			// canvas2 - 스마일 그리기
+			var canvas2 = document.getElementById('canvas2');
+			if (canvas2.getContext) {
+				var ctx2 = canvas2.getContext('2d');
+				ctx2.beginPath();
+
+				ctx2.fillStyle = 'gray'; //gray bg
+				ctx2.fillRect(0, 0, 100, 100);
+
+
+				ctx2.fillStyle = 'yellow'; //색상 바꾸기
+				// ctx2.fillRect(0, 0, 100, 100);
+
+				// arc()메소드 => arc(x, y, radius, startAngle, endAngle, anticlockwise)
+
+				// x:50 , y:50 의 위치에 원점을 두면서 반지름 50을 가지고(지름이 100) 반시계방향(false일 때는 반시계 방향)으로 향하는 원을 그리기(스마일 얼굴)
+				ctx2.arc(50, 50, 50, 50, Math.PI * 2, true); // Outer circle Math.PI * 2 => 360도
+				ctx2.fill();
+
+				// 스마일 마우스 그리기
+				ctx2.moveTo(100, 55);
+				ctx2.arc(50, 55, 30, 0, Math.PI, false); // Mouth (clockwise)
+
+				ctx2.moveTo(30, 35);
+				ctx2.arc(30, 35, 5, 0, Math.PI * 2, true); // Left eye
+
+				ctx2.moveTo(30, 35);
+				ctx2.arc(70, 35, 5, 0, Math.PI * 2, true); // right eye
+
+				// ctx2.fillStyle = 'yellow'; //색상 바꾸기
+				ctx2.strokeStyle = 'green'; //색상 바꾸기
+				ctx2.stroke();
+				// ctx2.fill();
 
 			}
+
+			// canvas3 - 선 그리기
+			var canvas3 = document.getElementById('canvas3');
+			var ctx3 = canvas3.getContext('2d');
+
+			if (canvas3.getContext) {
+				var ctx3 = canvas3.getContext('2d');
+
+				// Filled triangle
+				ctx3.beginPath();
+				ctx3.moveTo(25, 25);
+				ctx3.lineTo(105, 25);
+				ctx3.lineTo(25, 105);
+				ctx3.fill();
+
+			}
+
+
+
+
+
+
+
+
+
+
+
+
 		}
 	</script>
 </head>
@@ -37,6 +116,7 @@
 		<h2>사각형, 삼각형, 선, 아치, 곡선 등 의 기본적인 도형을 그리기</h2>
 		<p>캔버스 위에 물체를 그릴 때에는 path를 사용한다.</p>
 		<ul>
+			<!-- 직사각형 그리기 -->
 			<li>
 				<h3>직사각형 그리기</h3>
 				<p>직사각형을 그리는데에는 세가지 함수(function)가 있다.</p>
@@ -55,17 +135,82 @@
 					</li>
 				</ol>
 				<p>각각의 세 함수는 모두 같은 변수를 가진다. x,y는 캔버스 좌상단 원점으로부터 상대적인 위치를 뜻하며, width height 는 사각형의 크기를 뜻한다.</p>
-				<canvas id="canvas" width="150" height="150"></canvas>
+				<canvas id="canvas"></canvas>
 			</li>
+
+			<!-- 경로 그리기 -->
 			<li>
-				<h3>경로 그리기</h3>
+				<h3>경로 그리기(path)</h3>
 				<ol>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>경로를 생성</li>
+					<li>CanvasRenderingContext2D를 사용하여 경로상에 그림</li>
+					<li>경로가 한번 만들어졌다면, 경로를 렌더링 하기 위해서 윤곽선을 그리거나 도형 내부를 채울수 있다.</li>
 				</ol>
+				<div>
+					<h4>경로를 그리는데 쓰이는 함수들</h4>
+					<ul>
+						<li>
+							<p><strong>beginPath()</strong></p>
+							<div>새로운 경로 생성</div>
+						</li>
+						<li>
+							<p><strong>closePath()</strong></p>
+							<div>현재 하위 경로의 시작 부분과 연결된 직선을 추가</div>
+						</li>
+						<li>
+							<p><strong>stroke()</strong></p>
+							<div>윤곽선을 이용하여 도형을 그림</div>
+						</li>
+						<li>
+							<p><strong>fill()</strong></p>
+							<div>경로의 내부를 채워서 내부가 채워진 도형을 그림</div>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>경로를 그리는 프로세스</h4>
+					<ol>
+						<li>beginPath() 메소드를 사용 ( paths are stored as a list of sub-paths (lines, arcs, etc) which together form a
+							shape. ) <br> 이 메소드가 호출될 때 마다, 하위 경로의 모음은 초기화되며, 새로운 도형을 그릴 수 있다. <br>경로를 초기화한 직후에는 항상 명확하게 시작 위치를 설정해
+							두는것이 좋다.
+						</li>
+						<li>실제로 경로가 그려지는 위치를 설정하는 메소드를 호출</li>
+						<li>closePath() 메소드를 호출(optional step) - close the shape by drawing a straight line from the current point
+							to the start
+							<br>fill()메소드를 호출하면, 열려있는 모든 도형들은 자동으로 닫히므로 closePath() 메소드를 호출할 필요가 없다.
+						</li>
+					</ol>
+				</div>
 
 			</li>
+
+			<li>
+				<h3>펜(pen) 이동하기 - <strong>moveTo()메소드</strong></h3>
+				<p>moveTo(x, y) - 펜을 x와 y 로 지정된 좌표로 옮긴다.</p>
+				<div>
+					캔버스가 초기화 또는 beginPath() 메소드가 호출되었을 때, 특정 시작점 설정을 위해 moveTo() 함수를 사용하는것이 좋다.
+					또한 moveTo() 함수는 연결되지 않은 경로를 그리는데에도 사용 할 수 있다.
+					<div>
+						<canvas id="canvas2"></canvas>
+					</div>
+				</div>
+			</li>
+
+			<!-- 선 그리기 -->
+			<li>
+				<h3>선 그리기로 삼각형 완성하기 - <strong>lineTo() 메소드</strong></h3>
+				<p>lineTo(x, y) - <strong>현재의 드로잉 위치에서</strong> x와 y로 지정된 위치까지 선을 그림</p>
+				<div>
+					선의 끝점의 좌표가 되는 x와 y의 두개의 인자가 필요하며, 이전 경로의 끝점이 다음 그려지는 경로의 시작점.
+					<br>시작점은 moveTo() 메소드를 통해 변경될 수 있다.
+					<div>
+						<canvas id="canvas3"></canvas>
+					</div>
+				</div>
+			</li>
+
+
+
 		</ul>
 	</div>
 
