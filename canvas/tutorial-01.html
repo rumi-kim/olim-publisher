@@ -7,23 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>canvas tutorial - 01</title>
 	<style type="text/css">
-		canvas { border: 1px solid black; }
-	  </style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 
-<body>
+<body onload="draw();">
 
-	<body onload="draw();">
+	<div >
+		<div>
+			<h2>2D렌더링 컨텍스트</h2>
+			<p>다른 컨텍스트는 다른 레더링 타입을 제공한다. ex: WebGL은 OpenGL ES 을 기반으로 하는 3D 컨텍스트를 사용</p>
+			<h3>콘솔로 지원여부 검사하기</h3>
+		</div>
+
 		<canvas id="tutorial" width="150" height="150"></canvas>
-	  </body>
+	</div>
 
 	<script>
-		 function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
-        }
-      }
+		function draw() {
+			var canvas = document.getElementById('tutorial');
+			if (canvas.getContext) {
+				var ctx = canvas.getContext('2d'); //getContext()메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라미터를 가진다. 본 튠토리얼에서는 CanvasRenderingContext2D를 얻기위해 '2d'로 파라미터를 지정한다.
+				console.log(ctx) //=> CanvasRenderingContext2D
+			}else{
+				console.log('no')
+			}
+		}
 	</script>
 
 </body>
