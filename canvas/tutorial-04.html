@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial - 04</title>
+
+  <style>
+    h2,
+    h3,
+    h4 {
+      color: darkblue
+    }
+  </style>
+
+  <script type="text/javascript">
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        // Quadratric curves example
+        ctx.fillStyle = 'gray'; //색상 입히기
+        ctx.fillRect(0, 0, 100, 100);
+
+        ctx.beginPath();
+        ctx.fillStyle = '#fff'; //색상 입히기
+
+
+
+        ctx.fillStyle = '#fff'; //색상 입히기
+        ctx.strokeStyle = 'red'; //stroke 색상 입히기
+
+        ctx.moveTo(75, 25);
+        ctx.quadraticCurveTo(25, 25, 25, 50);
+        ctx.quadraticCurveTo(25, 80, 60, 100);
+        ctx.quadraticCurveTo(50, 120, 30, 125);
+        ctx.quadraticCurveTo(60, 120, 65, 100);
+        ctx.quadraticCurveTo(125, 100, 125, 62.5);
+        ctx.quadraticCurveTo(125, 25, 75, 25);
+        ctx.stroke();
+        ctx.fill(); //색상 입히기
+      }
+
+
+      var canvas2 = document.getElementById('canvas2');
+      if (canvas2.getContext) {
+        var ctx2 = canvas2.getContext('2d');
+
+
+         // Quadratric curves example
+        ctx2.fillStyle = 'gray'; //색상 입히기
+        ctx2.fillRect(0, 0, 100, 100);
+
+        ctx2.beginPath();
+        ctx2.fillStyle = '#000'; //색상 입히기
+
+        // Cubic curves example
+        ctx2.beginPath();
+        ctx2.moveTo(75, 40);
+        ctx2.bezierCurveTo(75, 40, 70, 25, 50, 25);
+        ctx2.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+        ctx2.bezierCurveTo(20, 80, 40, 102, 75, 120);
+        ctx2.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+        ctx2.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+        ctx2.bezierCurveTo(85, 25, 75, 37, 75, 40);
+        ctx2.fill();
+      }
+    }
+  </script>
+</head>
+
+<body onload="draw();">
+  <h1>캔버스(canvas)를 이용한 곡선 그리기</h1>
+  <div>
+    <h2>베지어(Bezier) 곡선</h2>
+    <p>삼차(cubic)와 이차(quadric) 변수가 모두 가능하며, 대게 복잡한 유기체적 형태(organic shape)를 그리는데 사용된다.</p>
+    <ul>
+      <li>
+        <p><strong>quadraticCurveTo(cp1x, cp1y, x, y)</strong></p>
+        <div>
+          cp1x, cp1y => 첫번째 제어점<br>
+          x, y => 끝점
+        </div>
+        <div>
+          <canvas id="canvas"></canvas>
+        </div>
+      </li>
+      <li>
+        <p><strong>bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</strong></p>
+        <div>
+          cp1x, cp1y => 첫번째 제어점<br>
+          cp2x, cp2y => 두번째 제어점<br>
+          x, y => 끝점<br>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>삼차 베지어 곡선 (Cubic Bezier curves)</h2>
+    <div>
+      <canvas id="canvas2"></canvas>
+    </div>
+  </div>
+
+</body>
+
+</html>

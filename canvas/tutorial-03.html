@@ -46,59 +46,82 @@
 			// canvas2 - 스마일 그리기
 			var canvas2 = document.getElementById('canvas2');
 			if (canvas2.getContext) {
+
 				var ctx2 = canvas2.getContext('2d');
+
+				ctx2.strokeStyle = 'gray';
+				ctx2.strokeRect(0, 0, 100, 100);
+
+
 				ctx2.beginPath();
+				ctx2.arc(50, 50, 50, 0, Math.PI * 2, true); // Outer circle
 
-				ctx2.fillStyle = 'gray'; //gray bg
-				ctx2.fillRect(0, 0, 100, 100);
-
-
-				ctx2.fillStyle = 'yellow'; //색상 바꾸기
-				// ctx2.fillRect(0, 0, 100, 100);
-
-				// arc()메소드 => arc(x, y, radius, startAngle, endAngle, anticlockwise)
-
-				// x:50 , y:50 의 위치에 원점을 두면서 반지름 50을 가지고(지름이 100) 반시계방향(false일 때는 반시계 방향)으로 향하는 원을 그리기(스마일 얼굴)
-				ctx2.arc(50, 50, 50, 50, Math.PI * 2, true); // Outer circle Math.PI * 2 => 360도
+				// 얼굴 색 
+				ctx2.fillStyle = 'yellow';
 				ctx2.fill();
 
-				// 스마일 마우스 그리기
-				ctx2.moveTo(100, 55);
-				ctx2.arc(50, 55, 30, 0, Math.PI, false); // Mouth (clockwise)
+				ctx2.moveTo(90, 50);
+				ctx2.arc(53, 50, 35, 0, Math.PI, false); // Mouth (clockwise)
 
-				ctx2.moveTo(30, 35);
-				ctx2.arc(30, 35, 5, 0, Math.PI * 2, true); // Left eye
-
-				ctx2.moveTo(30, 35);
-				ctx2.arc(70, 35, 5, 0, Math.PI * 2, true); // right eye
-
-				// ctx2.fillStyle = 'yellow'; //색상 바꾸기
-				ctx2.strokeStyle = 'green'; //색상 바꾸기
+				ctx2.moveTo(65, 65);
+				ctx2.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+				ctx2.moveTo(95, 65);
+				ctx2.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
 				ctx2.stroke();
-				// ctx2.fill();
+
 
 			}
 
 			// canvas3 - 선 그리기
 			var canvas3 = document.getElementById('canvas3');
 			var ctx3 = canvas3.getContext('2d');
-
 			if (canvas3.getContext) {
 				var ctx3 = canvas3.getContext('2d');
 
 				// Filled triangle
 				ctx3.beginPath();
-				ctx3.moveTo(25, 25);
-				ctx3.lineTo(105, 25);
-				ctx3.lineTo(25, 105);
-				ctx3.fill();
+				ctx3.moveTo(0, 0);
+				ctx3.lineTo(100, 0);
+				ctx3.lineTo(0, 105);
 
+				ctx3.fillStyle = 'purple';
+				ctx3.fill();
 			}
 
 
+			// canvas4 - 타원 그리기
+			var canvas4 = document.getElementById('canvas4');
+			if (canvas4.getContext) {
+				var ctx4 = canvas4.getContext('2d');
+
+				ctx4.fillStyle = 'gray';
+				ctx4.fillRect(0, 0, 1000, 1000)
+
+				ctx4.fillStyle = '#000';
+				for (var i = 0; i < 4; i++) {
+					for (var j = 0; j < 4; j++) {
+						ctx4.beginPath();
+						var x = 70 + j * 70; // x coordinate     
+						var y = 70 + i * 70; // y coordinate
+
+						// ====> 1. 70, 70   2. 140,140 	3. 210,210 ... 
 
 
+						var radius = 35; // Arc radius
+						var startAngle = 0; // Starting point on circle
+						var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+						var anticlockwise = i % 2 == 0 ? false : true; // clockwise or anticlockwise
 
+						ctx4.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+
+						if (i > 1) {
+							ctx4.fill();
+						} else {
+							ctx4.stroke();
+						}
+					}
+				}
+			}
 
 
 
@@ -208,6 +231,18 @@
 					</div>
 				</div>
 			</li>
+
+			<!-- arc() -->
+			<li>
+				<h3><strong>arc() 메소드</strong></h3>
+				<p>arc(x, y, radius, startAngle, endAngle, anticlockwise)</p>
+				<div>
+					<div>
+						<canvas id="canvas4" width="1000" height="1000"></canvas>
+					</div>
+				</div>
+			</li>
+
 
 
 

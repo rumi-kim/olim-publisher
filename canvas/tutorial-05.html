@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial - 05</title>
+
+  <style>
+    h2,
+    h3,
+    h4 {
+      color: darkblue
+    }
+  </style>
+
+  <script>
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'pink'
+        ctx.fillRect(0,0,200,200);
+        roundedRect(ctx, 12, 12, 150, 150, 15);
+      
+      }
+    }
+
+
+    function roundedRect(ctx, x, y, width, height, radius) {
+      ctx.beginPath(); 
+      ctx.moveTo(x, y + radius); //
+      ctx.lineTo(x, y + height - radius);
+      ctx.arcTo(x, y + height, x + radius, y + height, radius);
+      ctx.lineTo(x + width - radius, y + height);
+      ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+      ctx.lineTo(x + width, y + radius);
+      ctx.arcTo(x + width, y, x + width - radius, y, radius);
+      ctx.lineTo(x + radius, y);
+      ctx.arcTo(x, y, x, y + radius, radius);
+      ctx.stroke();
+    }
+  </script>
+
+
+</head>
+
+<body onload="draw();">
+  <h1>직사각형</h1>
+  <p><strong> rect(x, y, width, height)</strong></p>
+  <div>
+    <p>현재 열린 패스에 직사각형 경로를 추가한다. </p>
+    <p>좌측 상단이 x,y이고 폭의 넓이가 width와 height인 직사각형을 그린다. </p>
+    <p>이 메소드가 실행되기 전에, x,y 매개변수를 가진 moveTo 메소드가 자동으로 호출 즉, 현재의 펜위치가 자동으로 기본 좌표로 초기화</p>
+  </div>
+
+  <canvas id="canvas" width="1000" height="800"></canvas>
+
+
+</body>
+
+</html>
