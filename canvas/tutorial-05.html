@@ -23,17 +23,19 @@
 
         ctx.fillStyle = 'pink'
         ctx.fillRect(0,0,200,200);
-        roundedRect(ctx, 12, 12, 150, 150, 15);
+        roundedRect(ctx, 12, 12, 150, 150, 30);
       
       }
     }
 
-
+      // lineTo - 현재의 드로잉 위치로부터 시작
     function roundedRect(ctx, x, y, width, height, radius) {
       ctx.beginPath(); 
-      ctx.moveTo(x, y + radius); //
-      ctx.lineTo(x, y + height - radius);
-      ctx.arcTo(x, y + height, x + radius, y + height, radius);
+      ctx.moveTo(x, y + radius); //12,27
+      ctx.lineTo(x, y + height - radius); //147
+      ctx.arcTo(x, y + height, x + radius, y + height, radius);  // 12, 162, 27,162, 15
+
+
       ctx.lineTo(x + width - radius, y + height);
       ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
       ctx.lineTo(x + width, y + radius);

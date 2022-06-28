@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial - 06</title>
+
+  <style>
+    h2,
+    h3,
+    h4 {
+      color: darkblue
+    }
+  </style>
+
+  <script>
+    function draw() {
+
+
+      // fillStyle
+      var ctx = document.getElementById('canvas').getContext('2d');
+      for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < 6; j++) {
+          ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+            Math.floor(255 - 42.5 * j) + ', 0)';
+          ctx.fillRect(j * 25, i * 25, 30, 30);
+        }
+      }
+
+
+      // strokeStyle
+      var ctx2 = document.getElementById('canvas2').getContext('2d');
+      for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < 6; j++) {
+          ctx2.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
+            Math.floor(255 - 42.5 * j) + ')';
+          ctx2.beginPath();
+          ctx2.arc(12.5 + j * 30, 12.5 + i * 30, 10, 0, Math.PI * 2, true); //arc(12.5, 12.5, 5, 0, Math.PI * 2, true)
+          ctx2.stroke();
+        }
+      }
+
+
+      // transparent
+
+      var ctx3 = document.getElementById('canvas3').getContext('2d');
+      // 배경을 그린다
+      ctx3.fillStyle = '#FD0';
+      ctx3.fillRect(0, 0, 75, 75);
+      ctx3.fillStyle = '#6C0';
+      ctx3.fillRect(75, 0, 75, 75);
+      ctx3.fillStyle = '#09F';
+      ctx3.fillRect(0, 75, 75, 75);
+      ctx3.fillStyle = '#F30';
+      ctx3.fillRect(75, 75, 75, 75);
+      ctx3.fillStyle = '#FFF';
+
+      // 투명값을 설정한다
+      ctx3.globalAlpha = 0.2;
+
+      // 반투명한 원을 그린다
+      for (var i = 0; i < 7; i++) {
+        ctx3.beginPath();
+        ctx3.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+        ctx3.fill();
+      }
+
+
+
+
+    }
+  </script>
+
+
+
+
+
+
+</head>
+
+<body onload="draw();">
+  <h1>스타일과 색 적용하기</h1>
+  <ul>
+    <li>
+      <p>
+        <h2>색상 적용하기</h2>
+      </p>
+      <small>윤곽선과 채움 색의 초기 설정값은 검은색</small>
+      <div>
+        <ul>
+          <li>
+            <p><strong>fillStyle = color</strong></p>
+            <div>도형을 채우는 색을 설정</div>
+          </li>
+          <li>
+            <p><strong>strokeStyle = color</strong></p>
+            <div>도형의 윤곽선 색을 설정</div>
+          </li>
+        </ul>
+      </div>
+      <p>fillstyle</p>
+      <div>
+        <canvas id="canvas"></canvas>
+      </div>
+      <p>strokeStyle</p>
+      <div>
+        <canvas id="canvas2"></canvas>
+      </div>
+    </li>
+
+    <li>
+      <p>
+        <h2>투명도</h2>
+      </p>
+      <p>globalAlpha 값을 설정하거나 fillStyle 또는 strokeStyle에 반투명 색을 적용 ( globalAlpha = transparencyValue )</p>
+      <div>
+        <canvas id="canvas3"></canvas>
+      </div>
+    </li>
+
+  </ul>
+
+
+
+
+
+</body>
+
+</html>
