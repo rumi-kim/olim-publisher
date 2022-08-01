@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas animation 01</title>
+
+  <script>
+    var sun = new Image();
+    var moon = new Image();
+    var earth = new Image();
+
+    function init() {
+      sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
+      moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
+      earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+      setInterval(draw, 100);
+    }
+
+    function draw() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+
+      ctx.globalCompositeOperation = 'destination-over';
+      ctx.clearRect(0, 0, 300, 300); // 캔버스를 비운다
+
+      ctx.fillStyle = 'rgba(0,0,0,0.4)';
+      ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+      ctx.save();
+      ctx.translate(150, 150);
+
+      // 지구
+      var time = new Date();
+      ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+      ctx.translate(105, 0);
+      ctx.fillRect(0, -20, 50, 24); // Shadow
+      ctx.drawImage(earth, -12, -12);
+
+      // 달
+      ctx.save();
+      ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+      ctx.translate(0, 28.5);
+      ctx.drawImage(moon, -3.5, -3.5);
+      ctx.restore();
+
+      ctx.restore();
+
+      ctx.beginPath();
+      ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // 지구 궤도
+      ctx.stroke();
+
+      ctx.drawImage(sun, 0, 0, 300, 300);
+    }
+  </script>
+</head>
+
+<body onload="init(); draw();">
+
+  <h1>canvas basic animations </h1>
+  <div>
+    <h2>기본 애니메이션 단계</h2>
+    <ol>
+      <li>
+        <p><strong>캔버스 비우기</strong></p>
+        <div>그리려는 도형이 (배경 이미지를 만들 때처럼) 캔버스를 가득 채우는 것이 아니라면, 이전에 그려진 모든 도형을 지울 필요가 있다. clearRect() 메소드를 사용</div>
+      </li>
+      <li>
+        <p><strong>캔버스 상태를 저장</strong></p>
+        <div></div>
+      </li>
+      <li>
+        <p><strong>애니메이션할 도형을 그림</strong></p>
+        <div>실제 장면을 그리는 단계</div>
+      </li>
+      <li>
+        <p><strong>캔버스 상태를 복원</strong></p>
+        <div>새로운 장면을 그리기 전에 저장된 상태를 복원</div>
+      </li>
+    </ol>
+  </div>
+  <div>
+    <h2>애니메이션 제어하기</h2>
+    <p>canvas methods를 사용하거나 custom functions를 사용하여 애니메이션을 제어할 수 있다.</p>
+    <p>for 반복문 안에서 애니메이션을 실행하는 것은 불가능하며, 정해진 시간마다 특정 함수를 부를 때 사용할 수 있는 기타 함수를 사용해야한다. </p>
+    <ul>
+      <li>setInterval(function, delay)</li>
+      <li>setTimeout(function, delay)</li>
+      <li>requestAnimationFrame(callback) <strong>권장</strong></li>
+    </ul>
+
+  </div>
+
+  <h3>example : solar system</h3>
+  <div style="border:2px solid red">
+    <canvas id="canvas" width="300" height="300"></canvas>
+  </div>
+
+
+</body>
+
+</html>

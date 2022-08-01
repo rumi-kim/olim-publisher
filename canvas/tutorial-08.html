@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial - 08</title>
+
+  <style>
+    h2,
+    h3,
+    h4 {
+      color: darkblue
+    }
+  </style>
+
+  <script>
+    function draw() {
+
+      var ctx = document.getElementById('canvas').getContext('2d');
+      for (var i = 0; i < 10; i++) {
+        ctx.lineWidth = 1 + i;
+        ctx.beginPath();
+        ctx.moveTo(5 + i * 15, 5);
+        ctx.lineTo(5 + i * 15, 140);
+        ctx.stroke();
+      }
+
+    }
+  </script>
+
+
+
+
+
+
+</head>
+
+<body onload="draw();">
+  <h1>image 이용하기</h1>
+  <ul>
+    <li>
+      <p><strong>SVGImageElement</strong></p>
+      <div></div>
+    </li>
+    <li>
+      <p><strong>HTMLVideoElement</strong></p>
+      <div></div>
+    </li>
+    <li>
+      <p><strong>HTMLCanvasElement</strong></p>
+      <div></div>
+    </li>
+    <li>
+      <p><strong>ImageBitmap</strong></p>
+      <div></div>
+    </li>
+    <li>
+      <p><strong>OffscreenCanvas</strong></p>
+      <div></div>
+    </li>
+    <li>
+      <p><strong>VideoFrame</strong></p>
+      <div></div>
+    </li>
+  </ul>
+  <div>
+    <canvas id="canvas"></canvas>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>

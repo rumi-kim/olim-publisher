@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial - 07</title>
+
+  <style>
+    h2,
+    h3,
+    h4 {
+      color: darkblue
+    }
+  </style>
+
+  <script>
+    function draw() {
+
+      var ctx = document.getElementById('canvas').getContext('2d');
+      for (var i = 0; i < 10; i++) {
+        ctx.lineWidth = 1 + i;
+        ctx.beginPath();
+        ctx.moveTo(5 + i * 15, 5);
+        ctx.lineTo(5 + i * 15, 140);
+        ctx.stroke();
+      }
+
+    }
+  </script>
+
+
+
+
+
+
+</head>
+
+<body onload="draw();">
+  <h1>선 모양 바꾸기</h1>
+  <ul>
+    <li>
+      <p><strong>lineWidth = value</strong></p>
+      <div>선의 두께를 설정</div>
+    </li>
+    <li>
+      <p><strong>lineCap = type</strong></p>
+      <div>선의 끝 모양을 설정</div>
+    </li>
+    <li>
+      <p><strong>lineJoin = type</strong></p>
+      <div>선들이 만나는 "모서리"의 모양을 설정</div>
+    </li>
+    <li>
+      <p><strong>miterLimit = value</strong></p>
+      <div>두 선이 예각으로 만날 때 접합점의 두께를 제어할 수 있도록, 연결부위의 크기를 제한하는 값을 설정</div>
+    </li>
+    <li>
+      <p><strong>setLineDash(segments)</strong></p>
+      <div>현재 선의 대시 패턴을 설정</div>
+    </li>
+    <li>
+      <p><strong>lineDashOffset = value</strong></p>
+      <div>선의 대시 배열이 어디서 시작될지 지정</div>
+    </li>
+  </ul>
+  <div>
+    <canvas id="canvas"></canvas>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
