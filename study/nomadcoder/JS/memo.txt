@@ -1,0 +1,54 @@
+🔸 변수의 사용 
+* 기본적으로 const를 사용하되, 변수 값을 업데이트 하고싶을 경우에는 let을 사용한다. 
+"항상 cosnt, 가끔 let, var는 절대 사용 금지! 
+
+const amIFat = null;
+let something;
+
+  ◾️ null 
+  그 변수에 아무 것도 없음을 뜻함. (비어있다기 보다는, 아무 것도 없는 상태로 채웠음을 뜻함)
+  null은 자연적으로 생성될 수 없다. 변수 안에 어떠한 값이 없다는 것을 뜻하기 위해 인위적으로 사용하는 것이다. 
+  즉, amIFat은 존재하고, 값이 주어졌으나 그 값은 '비어있음'을 뜻한다. 
+
+  ◾️ undefined 
+  variable이 메모리에 만들어졌지만, 값이 존재하지 않는 것 
+
+
+🔸 Array 
+
+🔸 Objects
+const로 선언된 객체 자체는 수정이 불가하지만 해당 객체의 property의 값은 수정이 가능하다. 
+
+🔸 return
+function 계산의 결과를 얻고 싶을 때 
+어떤 일을 수행하고 그 결과를 알려주는 것?
+
+🔸 conditional
+
+if(condition)
+  condition === true
+}else{
+
+}
+
+✅ || (or)
+false || false (false)
+false || true (true)
+true || false (true)
+true || true (true)
+
+✅ && (and)
+false && false (false)
+false && true (false)
+true && false (false)
+true && true (true)
+
+
+
+ceil() => 올림
+round() => 반올림
+floor() => 버림 
+
+
+JS Object / Array 포함 기타 코드를 string으로 만들어주는 방법
+JSON.stringify()
