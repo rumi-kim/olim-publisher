@@ -23,21 +23,34 @@ canvas.height = 800;
 // ctx.fill();
 
 
-
-
 // ctx.rect(50,50,100,100)
-
 
 // moveTo => 선을 긋지 않으면서 위치 이동
 // lineTo => 선을 그으면서  위치 이동
     
-ctx.moveTo(50,50);
-ctx.lineTo(150,50);
-ctx.lineTo(150,150);
-ctx.lineTo(50,150);
-ctx.lineTo(50,50);
-ctx.fill()
+// ctx.moveTo(50,50);
+// ctx.lineTo(150,50);
+// ctx.lineTo(150,150);
+// ctx.lineTo(50,150);
+// ctx.lineTo(50,50);
+// ctx.fill()
 
+
+// // ** 집만들기
+// ctx.fillRect(200, 200, 50, 200);
+// ctx.fillRect(400, 200, 50, 200);
+// ctx.lineWidth = 2;
+// ctx.strokeRect(300, 300, 50, 100);
+// ctx.fillRect(200, 200, 200, 20);
+
+// // 지붕
+// ctx.moveTo(200,200); // x:200, y:200 좌표로 이동
+// ctx.lineTo(325,100);
+// ctx.lineTo(450,200);
+// ctx.fill()
+
+// 사람그리기
+ctx.fillRect(200,200,15,100);
 
 
 
