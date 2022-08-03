@@ -50,8 +50,13 @@ canvas.height = 800;
 // ctx.fill()
 
 // 사람그리기
-ctx.fillRect(200,200,15,100);
 
+ctx.fillRect(210,200,15,100);
+ctx.fillRect(400,200,15,100);
+ctx.fillRect(260,200,60,200)
+
+ctx.arc(250,0,20,0, 2*Math.PI)
+ctx.fill();
 
 
 
