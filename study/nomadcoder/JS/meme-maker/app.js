@@ -1,62 +1,53 @@
 
+
+// 보드를 클릭할 때마다 선 그리기 구현하기 
+
+
 const canvas = document.querySelector('canvas');
-
-// context => canvas에 그림을 그릴 수 있는 '붓'이라고 할 수 있음 
-
 const ctx = canvas.getContext('2d');
 
 canvas.width = 800;
 canvas.height = 800;
 
-// make rectangle and fill it 
+ctx.lineWidth = 2;
 
-// ctx.fillRect(50,50,100,200) //fillRect => 단축함수 ( stroke + fill)
-// ctx.rect(50,50,100,100)
-// ctx.rect(150,150,100,100)
-// ctx.rect(250,250,100,100)
-// ctx.fill();
+const colors = [
+  "#ff3838",
+  "#ffb8b8",
+  "#c56cf0",
+  "#ff9f1a",
+  "#fff200",
+  "#32ff7e",
+  "#7efff5",
+  "#18dcff",
+  "#7d5fff"
+]
 
-// ctx.beginPath();
-// ctx.rect(350,350,100,100)
-// ctx.rect(450,450,100,100)
-// ctx.fillStyle = "red"
-// ctx.fill();
+// function onMove(event){
+//   ctx.beginPath();
+//   ctx.moveTo(0,0);
+//   const color = colors[Math.floor(Math.random() * colors.length)];
+//   ctx.strokeStyle = color;
+//   ctx.lineTo(event.offsetX, event.offsetY);
+//   ctx.stroke()
+// }
 
+function onMove(event){
+  // const color = colors[Math.floor(Math.random() * colors.length)];
+  // ctx.strokeStyle = color;
+  ctx.lineTo(event.offsetX, event.offsetY);
+  ctx.stroke()
+}
 
-// ctx.rect(50,50,100,100)
+function onCLick(event){
+  ctx.beginPath(); //컬러 바꿔주기위해 리셋
+  // ctx.moveTo(event.offsetX,event.offsetY);
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  ctx.strokeStyle = color;
+  // ctx.lineTo(event.offsetX, event.offsetY);
+  // ctx.stroke()
+}
 
-// moveTo => 선을 긋지 않으면서 위치 이동
-// lineTo => 선을 그으면서  위치 이동
-    
-// ctx.moveTo(50,50);
-// ctx.lineTo(150,50);
-// ctx.lineTo(150,150);
-// ctx.lineTo(50,150);
-// ctx.lineTo(50,50);
-// ctx.fill()
+canvas.addEventListener('mousemove',onMove)
 
-
-// // ** 집만들기
-// ctx.fillRect(200, 200, 50, 200);
-// ctx.fillRect(400, 200, 50, 200);
-// ctx.lineWidth = 2;
-// ctx.strokeRect(300, 300, 50, 100);
-// ctx.fillRect(200, 200, 200, 20);
-
-// // 지붕
-// ctx.moveTo(200,200); // x:200, y:200 좌표로 이동
-// ctx.lineTo(325,100);
-// ctx.lineTo(450,200);
-// ctx.fill()
-
-// 사람그리기
-
-ctx.fillRect(210,200,15,100);
-ctx.fillRect(400,200,15,100);
-ctx.fillRect(260,200,60,200)
-
-ctx.arc(250,0,20,0, 2*Math.PI)
-ctx.fill();
-
-
-
+canvas.addEventListener('click',onCLick)
