@@ -1,0 +1,39 @@
+
+1. import React 
+https://unpkg.com/react@17.0.2/umd/react.production.min.js
+https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js
+react-dom : React Element 를 HTML로 바꾸는 역할을 한다. 
+
+* render
+ React element를 가지고 HTML로 만들어 배치한다 (사용자에게 보여준다.)
+ 
+
+* 
+Javascript와 React JS를 사용하여 element를 생성한다. 
+
+
+vanilla :  HTML => JS 
+React : JS => HTML 
+
+React.createElement "React JS는 업데이트가 필요한 element를 업데이트 할 수 있다. "
+
+"React.createElement(el name, property object(class / id name , event Listener.. ), content of el)"
+
+
+
+❗️ React.createElement 를 대체할 더 편리한 방법
+* JSX 
+  Javascript를 확장한 문법.   
+
+  직접 생성산 컴포넌트의 첫 글자는 반드시 대문자로 작성해야 한다. (기존 HTML요소는 소문자. 소문자로 작성할 경우 HTML문자로 인식)
+
+* Babel 자바스크립트 컴파일러
+JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. 
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+
+
+<script>
+  const root = document.getElementById("root")
+  // const span = React.createElement("span",{id:"sexy-span", style:{color:'red'}},"Hello I'm a span"); // createElement(el, property of el, content of el );
+  const h3 = React.createElement("h3",{id:"title", onMouseEnter: () => console.log('mouse enter')},"Hello I'm a h3"); 
+  const btn = React.createElement("button",
+  {
+    onClick: () => console.log('im clicked'),
+    style: {
+      backgroundColor:"tomato"
+    },} 
+    , "Click me")
+  const container = React.createElement("div",null,[h3, btn]); // span과 button 두개 다 렌더링 시킬 경우
+  
+  ReactDOM.render(container, root) // ReactDOM.render(el, 어디에 위치시킬지)
+  
+</script>
+
+</html>
