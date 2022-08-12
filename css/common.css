@@ -1,6 +1,8 @@
 /* common */
 /* default btn style */
 .btn_style {background: #009eb4; background: -webkit-gradient(linear, left top, right top, color-stop(1%, #009eb4), to(#015aaa)); background: linear-gradient(to right, #009eb4 1%, #015aaa 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$btn_color1', endColorstr='$btn_color2',GradientType=1);}
+.start_btn_style { padding: 12px 72px; background: #8200FF; opacity: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
+.start_btn_style:hover, .start_btn_style:focus { opacity: .75;}
 
 /* base ------------------------------------------------------------------------------------------------------------ */
 /* scroll bar */
@@ -150,8 +152,6 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal_help-center .inp_chk_wrap.inp_custom .inp_chk + label:before { width: 18px; height: 18px; background: url(../img/ico_check_enabled.svg); background-size: 18px; }
 .modal_help-center .inp_chk_wrap.inp_custom .inp_chk:checked + label:before { background-image: url(../img/ico_check_activated.svg); }
 .modal_help-center .btn_wrap { display: inline-block; margin-top: 0; vertical-align: middle; }
-.modal_help-center .btn_wrap .start_btn_style { padding: 12px 72px; background: #8200FF; opacity: 1; -webkit-transition: opacity .4s; transition: opacity .4s; }
-.modal_help-center .btn_wrap .start_btn_style:hover, .modal .modal_inner .modal_help-center .start_btn_style:focus { opacity: .75;}
 
 .modal_inner.modal_inner_help .help_desc { line-height: 1.5; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); }
 .modal_help-gnb {display: none; position: absolute; bottom: 100%; left: 0; padding: 8px 20px; margin-bottom: -40px; margin-left: 0px;}
@@ -166,7 +166,6 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal_help-tutorial.global .global-item .global-guide-arrow-img {width: 36px; height: 51px; background: url(../img/help_arrow3.png) no-repeat 0 0; background-size: 100% auto;}
 .modal_help-tutorial .tutorial_desc {position: absolute; right: 28px; bottom: 0; width: 500px; text-align: right;}
 .modal_help-innav { position: absolute; bottom: 7px; left: 6px; }
-/* .modal_help-innav:before { position: absolute; bottom: 56px; left: 20px; width: 42px; height: 44px; background: url(../img/help_arrow1.png) no-repeat 0 100%; background-size: 100% auto; content: ''; } */
 .modal_help-innav .innav_desc { margin-bottom: 0; margin-left: 68px;}
 .modal_help-innav .help-innav { display: inline-block; border: 2px solid #8200FF; border-radius: 8px; font-size: 0; background: #000;}
 .modal_help-innav .help-innav-type { display: inline-block; width: 64.98px; height: 56px;}
@@ -179,8 +178,7 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal_help-innav .help-innav-type.fullscreen:before { background-image: url(../img/ic_tourmenu_screen.png); }
 .modal_bg { position: fixed; top: 60px; left: 0; bottom: 0; right: 0; z-index: 110; width: 100%; height: 100%; background: #000; opacity: .5; }
 
-
-/* test */
+/* modal 안내문 style */
 .modal_help-tutorial.global .global-item .global-guide-arrow-img{background: none; width:1px; height: 30px; margin-left: auto; border: 1px solid #8200FF;}
 .global-guide-arrow-img::before{content: ''; position: absolute; top: 100%; right: 0; width: 10px; height: 10px; border: 2px solid #8200FF; border-top: none; border-left: none; border-bottom-right-radius: 100%;}
 .global-guide-arrow-img::after{content: ''; position: absolute; bottom: -60%; right: 50%; width: 0; height: 0; border-bottom: 8px solid transparent; border-top: 8px solid transparent; border-left: 8px solid transparent; border-right: 8px solid #8200FF;}
@@ -191,6 +189,28 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .help_innav_list_box .help_innav_arrow:before{content: ''; position: absolute; top: -10px; left: 0px; width: 10px; height: 10px; border: 2px solid #8200FF; border-bottom: none; border-right: none; border-top-left-radius: 100%;}
 .help_innav_list_box .help_innav_arrow:after{content: ''; position: absolute; top: -16px; left: 12px; width: 0; height: 0; border-bottom: 8px solid transparent; border-top: 8px solid transparent; border-left: 8px solid #8200FF; border-right: 8px solid transparent;}
 .modal_help-innav .innav_desc{margin-bottom: auto; margin-left: 24px;}
+
+/* 마우스 관람 안내문 style code*/
+.modal.mouse_tem .modal_help-center {top: 40%;}
+.modal.mouse_tem .modal_help-center-desc {padding: 20px; max-height: 50vh;}
+.modal.mouse_tem .modal_help-btn_unit { margin-top: 0; margin-bottom: 10px; text-align: center;}
+.modal.mouse_tem .modal_inner-desc {padding: 20px 0 20px 0;}
+.modal.mouse_tem .modal_inner-desc .inner_title {position: relative; width: 100%; text-align: center;}
+.modal.mouse_tem .modal_inner-desc .inner_title::before {content: ""; position: absolute; top: 50%; left: 0; width: 100%; border: 2px solid #3496fa;}
+.modal.mouse_tem .modal_inner-desc .inner_title .inner_title-text {display: inline-block; position: relative; padding: 5px 20px; background: #3496fa; border-radius: 25px;}
+.modal.mouse_tem .inner_mouse-box {display: flex; justify-content: space-between; align-items: center; padding-top: 30px;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse {width: 25%;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_img {width: 70%; margin: auto;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc {text-align: center;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p {font-size: 14px; line-height: 1.6;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(1) {padding-top: 10px;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(2) {font-weight: 200;}
+.btn_menu {width: 50px; height: 50px; background: linear-gradient(147deg, #302e42 12%, #0a090d 112%); border-radius: 100%;}
+.btn_menu i {width: 22px; height: 2px; background-color: #fff; display: block; margin: 5px auto; border-radius: 1.5px; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -webkit-box-shadow: 0px 0px 31px -2px rgba(0, 0, 0, 0.22); box-shadow: 0px 0px 31px -2px rgba(0, 0, 0, 0.22);}
+.btn.btn_menu .top {transform: translateY(2px) rotate(45deg);}
+.btn.btn_menu .bottom {transform: translateY(-5px) rotate(-45deg);}
+
+/* ---------------------------------------------------------*/
 
 /* Media Query ------------------------------------------------------------------------------------------------------------------- */
 
@@ -359,9 +379,17 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 
   /* modal_inner2 */
   .modal_help-tutorial .tutorial_desc{max-width: 200px;}
+
+  /* 마우스 관람 안내문 style code*/
+  .btn.btn_menu .top {width: 17px; transform: translateY(3px) rotate(45deg);}
+  .btn.btn_menu .bottom {width: 17px; transform: translateY(-4px) rotate(-45deg); margin: 5px auto;}
+  .modal_inner .modal_inner-desc .inner_title .inner_title-text {font-size: 13px;}
+  .modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc span {font-size: 13px;}
 }
 
 @media screen and (max-width: 480px) {
+  /* default btn */
+  .start_btn_style { padding: 8px 48px; font-size: 14px; }
   /* modal */
   .modal .help_desc { font-size: 13px; }
   .modal_inner-text > p { font-size: 13px; }
@@ -370,7 +398,6 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal_help-center .modal_help-control-item:not(:first-child) { margin-top: 8px; padding-top: 8px; }
   .modal_help-center .modal_help-control-item .img_wrap { width: 44px; height: 44px; }
   .modal_help-center .modal_help-control-item .img_desc { padding-left: 8px; font-size: 13px; line-height: 1.5; }
-  .modal_help-center .btn_wrap .start_btn_style { padding: 8px 48px; font-size: 14px; }
   .modal_help-gnb:before { width: 32px; height: 40px; }
   .modal_help-gnb .gnb_desc {margin-bottom: -36px; max-width: 50%; }
   .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 150px; bottom: -36px;}
@@ -400,6 +427,8 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 }
 
 @media screen and (max-width: 340px) {
+  /* default btn */
+  .start_btn_style { padding: 4px 48px; font-size: 11px; }
   /* modal */
   .modal_help-gnb .gnb_desc{max-width: 40%; margin-bottom:-26px;}
   .modal_inner.modal_inner_help .help_desc.tutorial_desc{max-width: 100px; bottom: -26px;}
@@ -410,7 +439,6 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .modal_help-center .modal_help-control-item .img_desc { font-size: 10px; }
   .modal_help-center .modal_help-btn_unit { margin-top: 8px; }
   .modal_help-center .chk_wrap-not_today { margin-right: 10px; }
-  .modal_help-center .btn_wrap .start_btn_style { padding: 4px 48px; font-size: 11px; }
   .modal_help-global:before { top: 26px; width: 26px; height: 32px; }
   .modal_help-global .global_desc { margin-right: 16px; margin-top: 16px; }
   .modal_help-innav:before { width: 20px; height: 24px; }
