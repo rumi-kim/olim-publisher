@@ -1,8 +1,8 @@
 
 1. import React 
-https://unpkg.com/react@17.0.2/umd/react.production.min.js
-https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js
-react-dom : React Element 를 HTML로 바꾸는 역할을 한다. 
+https://unpkg.com/react@17.0.2/umd/react.production.min.js ==> React JS : 어플리케이션이 interactive하도록 만들어주는 library (엔진과 같은 역할)
+https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js ==> React dom : library, or package로, 모든 React element들을 HTML body에 둘 수
+
 
 * render
  React element를 가지고 HTML로 만들어 배치한다 (사용자에게 보여준다.)
