@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+  const root = document.getElementById("root");
+  
+  function App() {
+
+    const [counter , setCounter] = React.useState(0);
+
+    const onClick = () => {
+      setCounter(counter + 1);
+    }
+
+    console.log("rendered")
+    console.log(counter) 
+
+    return(
+    <div>
+      <h3>Total clicks: {counter}</h3>
+      <button onClick={onClick}>Click me</button>
+   </div>
+   )
+  };
+
+  ReactDOM.render(<App /> , root) 
+
+  //modifier함수를 통해 state가 바뀌면 App 컴포넌트가 리렌더링되는데, 이벤트리스너, 변수 등을 제외하고 변경되는 부분만 변경된다.
+  // 즉 state가 바뀌면, React가 새로운 값을 가지고 컴포넌트를 refresh 해준다.
+
+  
+</script>
+
+
+
+</html>

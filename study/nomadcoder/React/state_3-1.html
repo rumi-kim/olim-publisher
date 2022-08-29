@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+  const root = document.getElementById("root");
+  
+  function App() {
+
+    const data = React.useState(0)
+    const counter = data[0];
+    const modifier = data[1];
+
+
+
+
+    return(
+    <div>
+      <h3>Total clicks: {counter}</h3>
+      <button>Click me</button>
+   </div>
+   )
+  };
+
+  ReactDOM.render(<App /> , root) 
+
+
+  // react.js 어플리케이션 내에 데이터를 저장하고, 자동으로 렌더링 해줄 수 있는 방법이 필요하다 
+
+  
+</script>
+
+<script>
+  const food = ['potato','tomato'];
+  const [food1, food2] = food;
+
+  console.log(food1) //=== console.log(food[0])
+</script>
+
+</html>

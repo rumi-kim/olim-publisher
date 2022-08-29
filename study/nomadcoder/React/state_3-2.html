@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+  const root = document.getElementById("root");
+  
+  function App() {
+
+    const [counter , setCounter] = React.useState(0);
+
+    const onClick = () => {
+    // counter = counter + 1;
+    // ReactDOM.render(<App /> , root) 
+    // 위 코드를 setCounter함수 내에서 모두 실행시켜줌. (자동으로 리렌더링)
+
+      setCounter(counter + 1);
+
+      // const onClick = () =>{
+      //   setCounter()
+      // }
+    }
+
+    return(
+    <div>
+      <h3>Total clicks: {counter}</h3>
+      <button onClick={onClick}>Click me</button>
+   </div>
+   )
+  };
+
+  ReactDOM.render(<App /> , root) 
+
+
+  // react.js 어플리케이션 내에 데이터를 저장하고, 자동으로 렌더링 해줄 수 있는 방법이 필요하다 
+
+  
+</script>
+
+
+
+</html>
