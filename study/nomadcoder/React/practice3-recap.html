@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+
+  function App(){
+    const [minutes, setMinutes] = React.useState(0);
+    const [flipped, setFlipped] = React.useState(false);
+
+    const onChange = (event) => {
+      setMinutes(event.target.value)
+    };
+
+    const reset = () => setMinutes(0);
+    // const onFlip = () => setFlipped(!flipped);
+    const onFlip = () => setFlipped((current) => !current);
+
+    return(
+      <div>
+        <h1 className="hi">Super Converter</h1>
+        <div>
+          <label htmlFor="minutes">Minutes</label>
+          <input 
+            value={minutes} 
+            id="minutes" 
+            placeholder="Minutes" 
+            type="number" 
+            onChange={onChange}
+            />
+      </div>
+
+
+      <div>
+        <label htmlFor="hours">Hours</label>
+        <input 
+        value={Math.round(minutes / 60)} 
+        id="hours" 
+        placeholder="Hours" 
+        type="number" 
+        disabled={flipped === false}
+        />
+      </div>
+      <button onClick={reset}>Reset</button>
+
+      <button onClick={onFlip}>filp</button>
+
+
+     </div>
+    )
+  }
+
+  const root = document.getElementById("root");
+  
+  ReactDOM.render(<App />, root)
+ 
+  
+  /*
+  1. set state => array를 반환. (데이터, 데이터를 수정하기 위한 함수)
+  2. input 의 value를 state로 연결 
+  3. onChange 함수 생성 
+      => 데이터를 업데이트 해주는 역할. 
+         사용자가 입력할때마다 value값을 받아와서 setMinutes통해 minutes값(데이터)를
+          업데이트 해준다. 
+          ❗️ input에 value를 연결해주는 이유 : input값을 외부에서도 수정해주기 위해서
+  
+
+
+  
+  */
+
+  
+  
+  
+</script>
+
+</html> 
