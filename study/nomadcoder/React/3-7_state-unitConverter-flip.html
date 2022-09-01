@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<script type="text/babel">
+
+  const root = document.getElementById("root");
+  
+  function App() {
+    const [amount, setAmount] = React.useState(0);
+    const [inverted, setInverted] = React.useState(false);
+
+    const onChange = (event) => {
+      setAmount(event.target.value);
+    }
+
+    const reset = () => setAmount(0);
+    // => state로 연결한 모든 값이 0으로 바뀜 
+
+    // const onInvert = () => setInverted(!inverted)
+    // => return값이 false 이면 true를 반환, true이면 false를 반환. 현재 state를 바탕으로 새로운 state를 게산해냄. 
+    const onInvert = () => {
+      reset();
+      setInverted((current) => !current);
+    }
+
+    return(
+      <div>
+        <h1 className="hi">Super Converter</h1>
+        <div>
+          <label htmlFor="minutes">Minutes</label>
+          <input 
+            value={inverted ? amount*60 : amount}
+            type="number" 
+            placeholder="Minutes" 
+            id="minutes" 
+            onChange={onChange}
+            disabled={inverted} // disabled={flipped}
+          />
+       </div>
+        <div>
+          <label htmlFor="hours">Hours</label>
+          <input 
+            value={inverted ? amount : Math.round(amount / 60)}
+            type="number" 
+            placeholder="Hours" 
+            id="hours" 
+            onChange={onChange}
+            disabled={!inverted} //===> flipped가 false라면, disabled는 true이다.
+             // disabled={!flipped}
+            />
+            
+        </div>
+        <button onClick={reset}>Reset</button>
+        <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
+      </div>
+   )
+  };
+
+  ReactDOM.render(<App /> , root) 
+
+  // value => uncontrolled
+
+  
+</script>
+
+
+
+</html>
