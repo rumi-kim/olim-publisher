@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    // 컴포넌트 ? => 어떤 JSX를 반환하는 함수
+    function Btn({banana, big}) {
+      console.log(banana, big)
+      return (
+        <button
+          style={{
+            backgroundColor: "tomato",
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: "10px",
+            fontSize: big ? 24 : 16
+          }}
+        >
+          {banana}
+        </button>
+      );
+    }
+    
+
+    function App() {
+      return (
+        <div>
+          <Btn banana="Save Changes" big={false} />
+          <Btn banana="Continue" big={true} />
+        </div>
+      );
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+
+    // App => root에 div를 그려주는 역할 이 컴포넌트 안에서 다른 두개의 컴포넌트를 랜더링하고있다. (MinutesToHours / KmToMiles);
+  </script>
+</html>

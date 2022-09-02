@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    // 컴포넌트 ? => 어떤 JSX를 반환하는 함수
+    function Btn({text, changeValue}) {
+      console.log(text, 'was rendered')
+      return (
+        <button
+          onClick={changeValue}
+          style={{
+            backgroundColor: "tomato",
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: "10px",
+          }}
+        >
+          {text}
+        </button>
+      );
+    }
+    
+
+    function App() {
+      const [value, setValue] = React.useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
+
+      return (
+        <div>
+          <Btn text={value} changeValue={changeValue}/> 
+          <Btn text="Continue" />
+        </div>
+      );
+
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+
+    // App => root에 div를 그려주는 역할 이 컴포넌트 안에서 다른 두개의 컴포넌트를 랜더링하고있다. (MinutesToHours / KmToMiles);
+  </script>
+</html>
