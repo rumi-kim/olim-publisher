@@ -1,28 +1,87 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
-  const [counter, setValue] = useState(0);
-  const [keyword, setKeyword] = useState("");
-  const onClick = () => setValue((prev) => prev + 1)
-  const onChange = (event) => setKeyword(event.target.value);
+
   
-  console.log('I run all the time');
+  
+  
+  const onLoad = () => {
+    
+    let localStorageLength = localStorage.length;
+    if(localStorageLength > 0){
+      for(let i=0; i<localStorageLength; i++){
+        let localKey = localStorage.key(i);
+        let localVal = localStorage.getItem(localKey);
+        // console.log(localKey, localVal);
+      }
+    }
 
-  // useEffect : 코드가 딱 한번만 실행될 수 있도록 보호해준다. 
-  useEffect(() => { 
-    console.log("Call the API...");
-  }, []);
 
-  console.log("SEARCH FOR", keyword )
+    let savedToDos = [];
+
+    for(let i=0; i<localStorage.length; i++){
+      let key = localStorage.key(i);
+      let keyVal = localStorage.getItem(key);
+
+      savedToDos.push(keyVal);
+    }
+    // console.log(savedToDos)
+    return savedToDos;
+  }
+
+
+  const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState(onLoad()); // ==> Array
+  const [keyNumber, setKeyNumber] = useState(0);
+  // console.log(toDos)
+
+  // console.log(keyNumber)
+  const onChange = (event) => setToDo(event.target.value);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo === "") {
+      return false;
+    }
+
+    //현재의 toDos를 받아와서 새로운 toDos Array를 반환
+    setToDos((currentArray) => [toDo, ...currentArray]); 
+
+
+    // save localstorage
+    localStorage.setItem(keyNumber, toDo);
+    setKeyNumber(keyNumber + 1);
+
+
+    //init input value
+    setToDo("");
+
+  };
+
+  const onDelete = (e) => {
+    console.log(e.target)
+  }
 
   return (
     <div>
-      <input value={keyword} onChange={onChange} type="text" placeholder="Search here..." />
-      <h1>{counter}</h1>
-      <button onClick={onClick}>click me</button>
+      <h1>My To Dos ({toDos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onChange}
+          value={toDo}
+          type="text"
+          placeholder="Write your to do..."
+        />
+        <button>Add To Do</button>
+      </form>
+      <hr />
+      <ul>
+        {toDos.map((item, idx) => (
+          <li key={idx} id={idx}>{item} <button onClick={onDelete}>❌</button></li>
+        ))}
+      </ul>
     </div>
   );
-
 }
 
 export default App;

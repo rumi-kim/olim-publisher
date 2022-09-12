@@ -5,7 +5,8 @@ function App() {
   return (
     <div>
       <h1 className={styles.title}>Welcome back!!</h1>
-      <Button text={"Continue"}/>
+      <button className={styles.btn}>button</button>
+      <Button text={"Continue..."}/>
     </div>
   );
 }
