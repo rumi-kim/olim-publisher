@@ -460,6 +460,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .archive-item .btn_wrap { position: static; top: auto; right: auto; -webkit-transform: none; transform: none; margin-top: 10px; }
   .archive-item .btn_wrap .btn { width: 100%; text-align: center; } }
 
+
+
+/* 확인해서 삭제 요망 */
 .archive_view { max-width: 680px; margin: 0 auto; padding: 30px; }
 
 .archive_view_visual { position: relative; width: 100%; padding-top: 56.25%; overflow: hidden; border: 1px solid #C4C4C4; border-radius: 5px; }
@@ -565,6 +568,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .archive_view .archive_info-cont .archive_item { margin-top: 8px; }
   .archive_view .archive_info-cont .archive_item:first-child { margin-top: 8px; }
   .archive_view .archive_body { margin-top: 24px; padding-top: 24px; } }
+
+/*--------------------------------------------------------------------------- 확인해서 삭제 요망 */
+
 
 ::-webkit-scrollbar { width: 8px; }
 
