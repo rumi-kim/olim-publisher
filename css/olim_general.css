@@ -231,66 +231,21 @@ embed,iframe,img,object,video{max-width:100%;-webkit-box-sizing:border-box;-moz-
 }
 
 /* btn group */
-.common_btn_sound {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    border: 1px solid #fff;
-    /* border: 2px solid #FC671A; */
-    border-radius: 6px;
-    font-size: 14px;
-    letter-spacing: -.7px;
-    line-height: 16px;
-    color: #fff;
-    text-align: right;
-    -webkit-transition: .3s;
-    transition: .3s;
-  }
+.common_btn_sound { display: inline-block; vertical-align: middle; margin-left: 20px; border: 1px solid #fff; /* border: 2px solid #FC671A; */ border-radius: 6px; font-size: 14px; letter-spacing: -.7px; line-height: 16px; color: #fff; text-align: right; -webkit-transition: .3s; transition: .3s;}
   
-.common_btn_sound a {
-    display: block;
-    padding: 6px 10px 6px;
-  }
+.common_btn_sound a {display: block; padding: 6px 10px 6px;}
   
-.common_btn_sound span {
-    position: relative;
-    padding-left: 22px;
-  }
+.common_btn_sound span {position: relative; padding-left: 22px;}
   
-.common_btn_sound span:before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 16px;
-    height: 14px;
-    background: url(../img/volume-medium_2x.png) no-repeat 0 50%;
-    background-size: auto 14px;
-    content: '';
-  }
+.common_btn_sound span:before {position: absolute; top: 50%; left: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 16px; height: 14px; background: url(../img/volume-medium_2x.png) no-repeat 0 50%; background-size: auto 14px; content: '';}
   
-.common_btn_sound.unmute {
-    background: transparent;
-    color: #FC671A;
-  }
+.common_btn_sound.unmute {background: transparent; color: #FC671A;}
   
-.common_btn_sound.unmute span:before {
-    background-image: url(../img/volume-mute2_2x.png);
-  }
+.common_btn_sound.unmute span:before {background-image: url(../img/volume-mute2_2x.png);}
   
 @media screen and (max-width: 999px) {
-.common_btn_sound {
-    position: absolute;
-    top: 10px;
-    right: 26px;
-    margin: 0;
-    }
+.common_btn_sound {position: absolute; top: 10px; right: 26px; margin: 0;}
 }
-
-
-
-
 
 /* btn group border */
 .btn_group_wrap{position:relative;}
