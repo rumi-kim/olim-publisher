@@ -124,6 +124,7 @@
     <div class="modal">
       <div class="modal_inner modal_inner2 modal_inner_help">
         <div class="modal_help-center">
+
           <div class="modal_help-center-desc">
             <ul class="modal_help-control">
               <li class="modal_help-control-item control-image_item">
@@ -140,6 +141,7 @@
               </li>
             </ul>
           </div>
+
           <div class="modal_help-btn_unit">
             <div class="inp_chk_wrap inp_custom chk_wrap-not_today">
               <input type="checkbox" id="not_today" class="inp_chk">
@@ -149,26 +151,51 @@
               <button type="button" class="default_btn modal_btn_style btn_modal_close" onclick="close_modal()"><span>관람시작</span></button>
             </div>
           </div>
+          
         </div>
+
         <div class="modal_help-tnb">
-          <span class="ico_tnb-btn"><span class="ir_text">주메뉴</span></span>
-          <p class="help_desc tnb_desc">투어 모드를 선택하실 수 있습니다</p>
+
+          <span class="ico_tnb-btn">
+            <span class="ir_text">주메뉴</span>
+          </span>
+
+          <div class="help-arrow-box">
+            <p class="help_desc tnb_desc tutorial_desc">투어 모드를 선택하실 수 있습니다.</p>
+            <div class="help-arrow-img"></div>
+          </div>
         </div>
+
+        <!-- 우측 상단 전체 안내문 on/off 버튼 안내문 -->
         <div class="modal_help-tutorial">
-          <span class="ico_tutorial-btn"><span class="ir_text">도움말 버튼</span></span>
-          <p class="help_desc tutorial_desc">도움말을 확인하실 수 있습니다.</p>
-        </div>
-        <div class="modal_help-innav">
-          <p class="help_desc innav_desc">다양한 기능을 사용할 수 있습니다.</p>
-          <ul class="help-innav">
-            <li class="help-innav-type tour_important"><p>중요위치</p></li>
-            <li class="help-innav-type tour_minimap"><p>미니맵</p></li>
-            <!-- <li class="help-innav-type tour_more"><p>더보기</p></li> -->
-            <li class="help-innav-type tour_play"><p>자동투어</p></li>
-            <li class="help-innav-type tour_theme"><p>선택품목 VR</p></li>
-            <li class="help-innav-type fullscreen"><p>전체화면</p></li>
+          <ul class="help-tutorial-list">
+            <li class="help-tutorial-item">
+              <button type="button" class="btn_help_pop">
+                <span class="ir_text">도움말 버튼</span>
+              </button>
+              <div class="help-arrow-box">
+                <p class="help_desc tutorial_desc">도움말을 확인하실 수 있습니다.</p>
+                <div class="help-arrow-img"></div>
+              </div>
+            </li>
           </ul>
         </div>
+        
+        <!-- 좌측 하단 투어 메뉴 안내문 -->
+        <div class="modal_help-innav">
+          <p class="help_desc innav_desc">다양한 기능을 사용할 수 있습니다.</p>
+          <div class="help_innav_list_box">
+            <div class="help_innav_arrow"></div>
+            <ul class="help-innav">
+              <li class="help-innav-type tour_important"><p>주요위치</p></li>
+              <li class="help-innav-type tour_minimap"><p>미니맵</p></li>
+              <li class="help-innav-type tour_list"><p>옵션변경</p></li>
+              <li class="help-innav-type tour_origin"><p>원위치</p></li>
+              <li class="help-innav-type fullscreen"><p>전체화면</p></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="modal_bg"></div>
