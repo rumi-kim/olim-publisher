@@ -1,0 +1,5 @@
+create-react-app 은 CSS코드를 JS Object로 변환시켜준다. 
+
+
+App.js - router를 render시켜주는 파일 
+router - URL을 보고있는 component
