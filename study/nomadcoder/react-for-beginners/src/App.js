@@ -1,70 +1,72 @@
 import { useState } from "react";
 
 function App() {
-
-  
-  
-  
-  const onLoad = () => {
-    
-    let localStorageLength = localStorage.length;
-    if(localStorageLength > 0){
-      for(let i=0; i<localStorageLength; i++){
-        let localKey = localStorage.key(i);
-        let localVal = localStorage.getItem(localKey);
-        // console.log(localKey, localVal);
-      }
-    }
-
-
-    let savedToDos = [];
-
-    for(let i=0; i<localStorage.length; i++){
-      let key = localStorage.key(i);
-      let keyVal = localStorage.getItem(key);
-
-      savedToDos.push(keyVal);
-    }
-    // console.log(savedToDos)
-    return savedToDos;
-  }
-
-
+  // const localLeng = 
   const [toDo, setToDo] = useState("");
-  const [toDos, setToDos] = useState(onLoad()); // ==> Array
-  const [keyNumber, setKeyNumber] = useState(0);
-  // console.log(toDos)
-
-  // console.log(keyNumber)
+  const [toDoList, setToDoList] = useState(onLoad());
+  const [localKey, setLocalKey] = useState(0);
   const onChange = (event) => setToDo(event.target.value);
+  const onDelete = (idx) => {
+    const toDoListLength = toDoList.length;
+    const removeItem = toDoList.at(idx);
+
+    localStorage.removeItem(idx);
+
+    // setToDoList([...toDoList.slice(0, idx), ...toDoList.slice(idx + 1, toDoListLength ) ]);
+
+    // setToDoList
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (toDo === "") {
-      return false;
+    if (toDo == "") {
+      return;
     }
 
-    //현재의 toDos를 받아와서 새로운 toDos Array를 반환
-    setToDos((currentArray) => [toDo, ...currentArray]); 
-
+    // react.js는 함수를 보낼때 현재의 state를 첫번째 argument로 보낸다.=> 새로운 state를 만드는데 사용할 수 있다.
+    setToDoList((currentArr) => [toDo, ...currentArr]);
 
     // save localstorage
-    localStorage.setItem(keyNumber, toDo);
-    setKeyNumber(keyNumber + 1);
+    localStorage.setItem(localKey, toDo);
+    setLocalKey(localKey + 1);
 
-
-    //init input value
     setToDo("");
-
   };
 
-  const onDelete = (e) => {
-    console.log(e.target)
+  function onLoad() {
+    //localStorage에서 값 가져오기
+    let localLength = localStorage.length;
+    console.log(localLength)
+    let localValArr = [];
+
+
+    if (localLength > 0){
+      for (let i = 0; i < localLength; i++) {
+        let key = localStorage.key(i);
+        let val = localStorage.getItem(key);
+        // console.log(key,val)
+        localValArr.push(val)
+      }
+    }
+
+    localValArr.sort(function (a, b) {
+      if (a.idx > b.idx) {
+        return 1; 
+      }
+      if (a.idx < b.idx) {
+        return -1;
+      }
+      return 0;
+    });  
+    return localValArr;
   }
 
+  // console.log(toDoList)
+
+    console.log(localKey)
+  
   return (
     <div>
-      <h1>My To Dos ({toDos.length})</h1>
       <form onSubmit={onSubmit}>
         <input
           onChange={onChange}
@@ -76,8 +78,17 @@ function App() {
       </form>
       <hr />
       <ul>
-        {toDos.map((item, idx) => (
-          <li key={idx} id={idx}>{item} <button onClick={onDelete}>❌</button></li>
+        {toDoList.map((toDoItem, index) => (
+          <li key={index} id={index}>
+            {toDoItem}
+            <button
+              onClick={() => {
+                onDelete(index);
+              }}
+            >
+              ❌
+            </button>
+          </li>
         ))}
       </ul>
     </div>
