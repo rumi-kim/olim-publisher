@@ -67,18 +67,22 @@ function App() {
           <li key={index}>
             {!update ? (
               <div>
-                <p onClick={() => setUpdate(true)}>{toDoItem}</p>
+                <span onClick={() => setUpdate(true)}>{toDoItem}</span>
 
                 <button
                   onClick={() => {
                     onDelete(index);
                   }}
                 >
-                  ❌
+                  del
                 </button>
               </div>
             ) : (
-              "ddd"
+              <div>
+                <input defaultValue={toDoItem}></input >
+                <button>update</button>
+                <button>cancel</button>
+              </div>
             )}
           </li>
         ))}
