@@ -1,12 +1,15 @@
 import { useState } from "react";
+// import toDoItem from "c:/users/ahreu/downloads/todolist(bread)/src/components/todoitem";
 
 function App() {
   const locallength = localStorage.length;
   const [update, setUpdate] = useState(false);
+  const [updateVal, setUpdateVal] = useState("");
   const [toDo, setToDo] = useState("");
   const [toDoList, setToDoList] = useState(onLoad());
   const [localKey, setLocalKey] = useState(locallength);
   const onChange = (event) => setToDo(event.target.value);
+
   const onDelete = (idx) => {
     const listLength = toDoList.length;
 
@@ -23,7 +26,7 @@ function App() {
     if (toDo == "") {
       return;
     }
-    // react.js는 함수를 보낼때 현재의 state를 첫번째 argument로 보낸다.=> 새로운 state를 만드는데 사용할 수 있다.
+
     setToDoList((currentArr) => [...currentArr, toDo]);
 
     // save localstorage
@@ -32,6 +35,12 @@ function App() {
 
     setToDo("");
   };
+
+  const onEditVal = (e) => onUpdate(e.target.value);
+
+  const onUpdate = (e) => {
+    console.log(e)
+  }
 
   function onLoad() {
     //localStorage에서 값 가져오기
@@ -64,21 +73,26 @@ function App() {
       <hr />
       <ul>
         {toDoList.map((toDoItem, index) => (
-          <li key={index}>
+          <li key={index} id={index}>
             {!update ? (
               <div>
-                <p onClick={() => setUpdate(true)}>{toDoItem}</p>
-
+                <span onClick={() => setUpdate(true)}>{toDoItem}</span>
                 <button
                   onClick={() => {
                     onDelete(index);
                   }}
                 >
-                  ❌
+                  del
                 </button>
               </div>
             ) : (
-              "ddd"
+              <div>
+                <input defaultValue={updateVal == "" ? toDoItem : updateVal} onChange={onEditVal}></input>
+                <button onClick={() => {
+                  // onUpdate();
+                }}>수정</button>
+                <button>취소</button>
+              </div>
             )}
           </li>
         ))}
