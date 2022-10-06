@@ -73,10 +73,11 @@ function App() {
       <hr />
       <ul>
         {toDoList.map((toDoItem, index) => (
-          <li key={index} id={index}>
+          <li key={index}>
             {!update ? (
               <div>
-                <span onClick={() => setUpdate(true)}>{toDoItem}</span>
+                <p onClick={() => setUpdate(true)}>{toDoItem}</p>
+
                 <button
                   onClick={() => {
                     onDelete(index);
@@ -86,13 +87,7 @@ function App() {
                 </button>
               </div>
             ) : (
-              <div>
-                <input defaultValue={updateVal == "" ? toDoItem : updateVal} onChange={onEditVal}></input>
-                <button onClick={() => {
-                  // onUpdate();
-                }}>수정</button>
-                <button>취소</button>
-              </div>
+              "ddd"
             )}
           </li>
         ))}
