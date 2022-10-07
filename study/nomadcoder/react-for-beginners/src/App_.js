@@ -7,19 +7,10 @@ function App() {
   const [updateVal, setUpdateVal] = useState("");
   const [toDo, setToDo] = useState("");
   const [toDoList, setToDoList] = useState(onLoad());
-
-  // onDelete 실행 후 다시 리세팅된 toDoList를 다시 localStorage에 순서대로 세팅 
-  localStorage.clear();
-
-  for(let i = 0; i < toDoList.length; i++){
-    localStorage.setItem(i,toDoList[i]);
-  }
-
   const [localKey, setLocalKey] = useState(locallength);
   const onChange = (event) => setToDo(event.target.value);
-  
-  const onDelete = (idx) => {
 
+  const onDelete = (idx) => {
     const listLength = toDoList.length;
 
     localStorage.removeItem(idx);
@@ -28,8 +19,6 @@ function App() {
       ...toDoList.slice(0, idx),
       ...toDoList.slice(idx + 1, listLength),
     ]);
-
-    
   };
 
   const onSubmit = (event) => {
@@ -45,15 +34,13 @@ function App() {
     setLocalKey(localKey + 1);
 
     setToDo("");
-
-
   };
 
   const onEditVal = (e) => onUpdate(e.target.value);
 
   const onUpdate = (e) => {
-    console.log(e);
-  };
+    console.log(e)
+  }
 
   function onLoad() {
     //localStorage에서 값 가져오기
@@ -61,31 +48,14 @@ function App() {
     let localValArr = [];
     let localKeyArr = [];
 
-    for (let i = 0; i < localLen; i++) {
-      let key = localStorage.key(i);
-      // let data = localStorage.getItem(key);
-      localKeyArr.push(Number(key));
+    if (localLen > 0) {
+      for (let i = 0; i < localLen; i++) {
+        let key = JSON.parse(localStorage.key(i));
+        let data = localStorage.getItem(key);
+        localValArr.push(data);
+      }
     }
 
-    localKeyArr.sort(function (a, b) {
-      if (a > b) {
-        return 1;
-      }
-      if (a < b) {
-        return -1;
-      }
-      return 0;
-    });
-
-    
-    for (let i = 0; i < localKeyArr.length; i++) {
-      let keyName = `${localKeyArr[i]}`;
-      let data = localStorage.getItem(keyName);
-      localValArr.push(data);
-    }
-
-
-   
     return localValArr;
   }
 
@@ -101,7 +71,7 @@ function App() {
         <button>Add To Do</button>
       </form>
       <hr />
-      <ul className="list">
+      <ul>
         {toDoList.map((toDoItem, index) => (
           <li key={index} id={index}>
             {!update ? (
@@ -112,19 +82,17 @@ function App() {
                     onDelete(index);
                   }}
                 >
-                  delete
+                  del
                 </button>
               </div>
             ) : (
               <div>
-                <input
-                  defaultValue={updateVal == "" ? toDoItem : updateVal}
-                  onChange={onEditVal}
-                ></input>
-                <button onClick={() => {}}>update</button>
-                <button>cancel</button>
+                <input defaultValue={updateVal == "" ? toDoItem : updateVal} onChange={onEditVal}></input>
+                <button onClick={() => {
+                  // onUpdate();
+                }}>수정</button>
+                <button>취소</button>
               </div>
-
             )}
           </li>
         ))}
