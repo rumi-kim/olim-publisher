@@ -3,33 +3,27 @@ import { useState } from "react";
 
 function App() {
   const locallength = localStorage.length;
+
   const [update, setUpdate] = useState(false);
-  const [updateVal, setUpdateVal] = useState("");
+  const [updateVal, setUpdateVal] = useState(""); //새로운 value를 update할때 쓸 변수 
   const [toDo, setToDo] = useState("");
   const [toDoList, setToDoList] = useState(onLoad());
+  const [localKey, setLocalKey] = useState(locallength);
 
   // onDelete 실행 후 다시 리세팅된 toDoList를 다시 localStorage에 순서대로 세팅 
   localStorage.clear();
-
   for(let i = 0; i < toDoList.length; i++){
     localStorage.setItem(i,toDoList[i]);
   }
 
-  const [localKey, setLocalKey] = useState(locallength);
   const onChange = (event) => setToDo(event.target.value);
-  
   const onDelete = (idx) => {
-
     const listLength = toDoList.length;
-
     localStorage.removeItem(idx);
-
     setToDoList([
       ...toDoList.slice(0, idx),
       ...toDoList.slice(idx + 1, listLength),
     ]);
-
-    
   };
 
   const onSubmit = (event) => {
@@ -45,14 +39,16 @@ function App() {
     setLocalKey(localKey + 1);
 
     setToDo("");
-
-
   };
 
-  const onEditVal = (e) => onUpdate(e.target.value);
+  const onEditVal = (e) => setUpdateVal(e.target.value);
 
-  const onUpdate = (e) => {
-    console.log(e);
+  const onUpdate = (idx) => {
+    const newItem = updateVal;
+    
+    localStorage.setItem(`${idx}`, newItem);// 새로운 value값으로 다시 세팅
+
+    // setUpdate(false);
   };
 
   function onLoad() {
@@ -121,7 +117,7 @@ function App() {
                   defaultValue={updateVal == "" ? toDoItem : updateVal}
                   onChange={onEditVal}
                 ></input>
-                <button onClick={() => {}}>update</button>
+                <button onClick={() => {onUpdate(index);}}>update</button>
                 <button>cancel</button>
               </div>
 
