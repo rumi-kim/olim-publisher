@@ -29,8 +29,8 @@
   <script src="js/olim_general.js"></script>
 
   <!-- project -->
-  <link rel="stylesheet" type="text/css" href="css/common.css">
-  <script src="js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common_ep.css">
+  <script src="js/common_ep.js"></script>
 
   <title>2021 FOREIGN COMPANY DAY</title>
 </head>
@@ -149,46 +149,65 @@
               </div>
             </div>
           </div>
-
-          <!-- 모바일 메뉴 안내문 -->
-          <div class="modal_help-gnb"> 
-            <div class="ico_gnb-box">
-              <button class="ico_gnb-btn"><span class="ir_text">Main menu</span></button>
-            </div>
-            <div class="help-arrow-box">
-              <p class="help_desc tutorial_desc">You can move the hall and search for participating companies.</p>
-              <div class="help-arrow-img"></div>
-            </div>
-          </div>
-
-          <!-- 우측 상단 전체 안내문 on/off 버튼 안내문 -->
-          <div class="modal_help-tutorial">
-            <ul class="help-tutorial-list">
-              <li class="help-tutorial-item">
-                <button type="button" class="btn_help_pop">
-                  <span class="ir_text">Control guide</span>
-                </button>
-                <div class="help-arrow-box">
-                  <p class="help_desc tutorial_desc">You can move to a specific booth or check your current location.</p>
-                  <div class="help-arrow-img"></div>
+          
+          <!-- 좌측 하단 투어 메뉴 안내문 -->
+          <div class="modal_help-innav left">
+            <ul class="help-innav">
+              <li class="help-innav-type tour_minimap">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">미니맵</p>
+                  <p class="help-innav_desc">공간 전체를 조망하고 원하는 위치로 바로 이동할 수 있습니다.</p>
+                </div>
+              </li>
+              <li class="help-innav-type tour_important">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">주요위치</p>
+                  <p class="help-innav_desc">공간의 주요한 지점으로 바로 이동할 수 있습니다.</p>  
+                </div>
+              </li>
+              <li class="help-innav-type tour_theme">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">테마</p>
+                  <p class="help-innav_desc">공간을 다양한 스타일로 변경할 수 있습니다.</p>
                 </div>
               </li>
             </ul>
-          </div>
-          
-          <!-- 좌측 하단 투어 메뉴 안내문 -->
-          <div class="modal_help-innav">
-            <p class="help_desc innav_desc">You can move to a specific booth or check your current location.</p>
-            <div class="help_innav_list_box">
-              <div class="help_innav_arrow"></div>
-              <ul class="help-innav">
-                <li class="help-innav-type tour_important"><p>Highlight</p></li>
-                <li class="help-innav-type tour_minimap"><p>Map</p></li>
-                <li class="help-innav-type tour_play"><p>Autoplay</p></li>
-                <li class="help-innav-type tour_origin"><p>Origin</p></li>
-                <!--<li class="help-innav-type fullscreen"><p>Fullscreen</p></li>--> 
-              </ul>
+            <div class="help_mobile_innav">
+              <div class="arrow_box"></div>
+              <div class="help-innav_textbox">
+                <p class="help-innav_title">도구</p>
+                <p class="help-innav_desc">공간탐험을 위한 다양한 도구들이 있습니다.</p>  
+              </div>
             </div>
+          </div>
+
+          <div class="modal_help-innav bottom">
+            <ul class="help-innav">
+              <li class="help-innav-type tour_autoplay">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">자동재생</p>
+                  <p class="help-innav_desc">공간의 탐험을 자동으로 진행합니다. 공간 영역 클릭 시 자동진행이 중단됩니다.</p>
+                </div>
+              </li>
+              <li class="help-innav-type tour_origin">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">원위치</p>
+                  <p class="help-innav_desc">원래의 진출 방향으로 위치를 재설정 합니다.</p>  
+                </div>
+              </li>
+              <li class="help-innav-type tour_fullscreen">
+                <div class="arrow_box"></div>
+                <div class="help-innav_textbox">
+                  <p class="help-innav_title">전체보기</p>
+                  <p class="help-innav_desc">전체화면으로 확대하여 공간을 탐험할 수 있습니다.</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
         </div>
@@ -237,7 +256,14 @@
 
       $(document).ready(function() {
         var params = getUrlParams();
-        var url = 'https://player.olimcloud.com/vr-player/zklkyc1cs0bo8cf8?startID=8778&mode=embed';
+
+        if($(".vr-player").hasClass("mobile")){
+          var url = 'https://player.olimcloud.com/vr-player/zklkyc1cs0bo8cf8?startID=8778&mode=embed';
+
+        } else {
+          var url = 'https://player.olimcloud.com/vr-player/zklkyc1cs0bo8cf8?startID=8778&mode=embed';
+
+        }
 
         $('.vr-player').html('');
         if (params.startID){
