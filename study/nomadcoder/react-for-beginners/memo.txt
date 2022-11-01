@@ -2,4 +2,19 @@ create-react-app 은 CSS코드를 JS Object로 변환시켜준다.
 
 
 App.js - router를 render시켜주는 파일 
-router - URL을 보고있는 component
+
+
+
+* react-router-dom 사용방법 *
+Router - URL을 보고있는 component
+Routes(구 Switch) - Route(URL을 의미)를 찾고 찾으면 컴포넌트를 렌더링한다.
+Link - 브라우저 새로고침 없이 다른 페이지로 이동시켜주는 컴포넌트
+
+BrowserRouter - 보통의 웹사이트 URl (ex:localhost:3000/movie)
+HashRouter - (ex:localhost:3000/#/movie)
+
+다이나믹 URL ? url에 변수를 넣을 수 있다는 의미 
+
+
+* publishing * 
+production ready - 코드가 압축되고 모든게 최적화 된다는 의미

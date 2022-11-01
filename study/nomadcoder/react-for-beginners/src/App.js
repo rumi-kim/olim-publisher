@@ -28,7 +28,7 @@ function App() {
     localStorage.setItem(localKey, toDo);
     setLocalKey(localKey + 1);
 
-    setToDo("");
+    setToDo();
   };
   
   function onLoad() {
