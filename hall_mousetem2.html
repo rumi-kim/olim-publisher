@@ -30,65 +30,25 @@
 
   <!-- project -->
   <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/mousetem.css">
   <script src="js/common.js"></script>
 
-  <title>2021 FOREIGN COMPANY DAY</title>
+  <title>mouse info template sample 02</title>
 </head>
 
 <body>
-  <!-- header -->
-  <header class="header" id="header">
-    <a class="site_logo" href="index.html"><h1>2021 FOREIGN COMPANY DAY</h1></a>
-    <!-- gnb -->
-    <nav class="gnb">
-      <h2 class="ir_text">Main menu</h2>
-      <button type="button" class="gnb-btn"><span class="ir_text">Main menu</span></button>
-      <div class="gnb-wrap">
-        <ul class="gnb-list">
-          <li class="gnb-item is_selected">
-            <a class="each-item" href="#"><span class="gnb-title">Main Entrance</span></a>
-          </li>
-          <li class="gnb-item">
-            <a class="each-item" href="#"><span class="gnb-title">2021FDC</span></a>
-          </li>
-          <li class="gnb-item">
-            <a class="each-item" href="#"><span class="gnb-title">Pavilion</span></a>
-          </li>
-          <li class="gnb-item">
-            <a class="each-item" href="#"><span class="gnb-title">Exhibitor</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- //gnb -->
-    <div class="breadcrumbs ir_text" role="navigation">
-      <ol class="breadcrumbs_list">
-        <li class="breadcrumbs_item">
-          <strong><span>2021 FOREIGN COMPANY DAY - </span><span class="is_now">Entry</span></strong>
-        </li>
-      </ol>
-    </div>
-    <div class="global">
-      <ul class="global-list">
-        <li class="global-item"><button type="button" class="btn_help_pop"><span class="ir_text">Control guide</span></button></li>
-      </ul>
-    </div>
-  </header>
-  <!-- //header -->
 
   <!-- container / add page class -->
   <div class="container hall">
-
-    <!-- Elypecs 로고 : 퍼블리싱 페이지 내부에 추가 요청시 주석 해제 -->
-    <!-- <strong class="elypecs_logo">
-      <img src="img/logo_elypecs.png" alt="elypecs">
-    </strong> -->
-
     <!-- 
       contents/본문
-      mouse_tem : 마우스 관람 안내문 style class.
       modal_inner1 : 아이콘 안내문 전 인사말 안내문. 필요 없을 시 주석처리 or 삭제.
       modal_inner2 : 아이콘 안내문 + 전체 버튼 안내문.
+      
+      마우스 조작 안내문이 필요한 경우 :
+      1.head에 css/mousetem.css import
+      2."modal"에 중첩 class로 "mouse_tem" 추가
+      3.hall_mousetem / hall_mousetem2 중에 원하는 디자인을 선택하여 "modal_help-center" 코드 블럭을 동일한 위치에 교체
     -->
     
     <div class="contents"> 
@@ -193,55 +153,12 @@
           </div>
           <!-- // -->
 
-          <!-- 모바일 메뉴 안내문 -->
-          <div class="modal_help-gnb"> 
-            <div class="ico_gnb-box">
-              <button class="ico_gnb-btn"><span class="ir_text">Main menu</span></button>
-            </div>
-            <p class="help_desc gnb_desc">You can move the hall and search for participating companies.</p>
-          </div>
-
-          <!-- 우측 상단 전체 안내문 on/off 버튼 안내문 -->
-          <div class="modal_help-tutorial global">
-            <ul class="global-list">
-              <li class="global-item">
-                <button type="button" class="btn_help_pop">
-                  <span class="ir_text">Control guide</span>
-                </button>
-                <div class="global-guide-arrow-box">
-                  <p class="help_desc tutorial_desc">You can move to a specific booth or check your current location.</p>
-                  <div class="global-guide-arrow-img"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          
-          <!-- 좌측 하단 투어 메뉴 안내문 -->
-          <div class="modal_help-innav">
-            <p class="help_desc innav_desc">You can move to a specific booth or check your current location.</p>
-            <div class="help_innav_list_box">
-              <div class="help_innav_arrow"></div>
-              <ul class="help-innav">
-                <li class="help-innav-type tour_important"><p>Highlight</p></li>
-                <li class="help-innav-type tour_minimap"><p>Map</p></li>
-                <li class="help-innav-type tour_play"><p>Autoplay</p></li>
-                <li class="help-innav-type tour_origin"><p>Origin</p></li>
-                <!--<li class="help-innav-type fullscreen"><p>Fullscreen</p></li>-->
-              </ul>
-            </div>
-          </div>
-
         </div>
         <!-- // end of modal_inner2 -->
       </div>
       
       <div class="modal_bg"></div>
       <!-- //modal -->
-
-      <!-- vr player -->
-      <div class="vr-player">
-      </div>
-      <!-- //vr player -->
 
     </div>
     <!-- //contents/본문 -->
@@ -274,18 +191,6 @@
         $('.modal').hide();
         $('.modal_bg').hide();
       }
-
-      $(document).ready(function() {
-        var params = getUrlParams();
-        var url = 'https://player.olimcloud.com/vr-player/zklkyc1cs0bo8cf8?startID=8778&mode=embed';
-
-        $('.vr-player').html('');
-        if (params.startID){
-          url = 'https://player.olimcloud.com/vr-player/zklkyc1cs0bo8cf8?startID='+ params.startID + '&mode=embed';
-        }
-        
-        $('.vr-player').append('<iframe id="vr-player" src="'+ url +'" class="vr-iframe" allowfullscreen  allow="camera *;microphone *"></iframe>');
-      });
     });
    
     // modal_close
@@ -301,12 +206,6 @@
           localStorage.removeItem('todayCloseModal_zr050');
         }
       }
-    }
-
-    function getUrlParams() {
-      var params = {};
-      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-      return params;
     }
 
   </script>

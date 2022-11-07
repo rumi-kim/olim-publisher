@@ -1,0 +1,27 @@
+
+/* modal ------------------------------------------------------------------------------------------------------------- */
+
+/* 마우스 관람 안내문 style code (mouse_tem_01)*/
+/* .modal.mouse_tem .modal_help-center {top: 40%;} */
+.modal.mouse_tem .modal_help-center-desc {padding: 20px; max-height: 50vh;}
+.modal.mouse_tem .modal_help-btn_unit { margin-top: 0; margin-bottom: 10px; text-align: center;}
+.modal.mouse_tem .modal_inner-desc {padding: 20px 0 0 0;}
+.modal.mouse_tem .modal_inner-desc .inner_title {position: relative; width: 100%; text-align: center;}
+.modal.mouse_tem .modal_inner-desc .inner_title::before {content: ""; position: absolute; top: 50%; left: 0; width: 100%; border: 2px solid #3496fa;}
+.modal.mouse_tem .modal_inner-desc .inner_title .inner_title-text {display: inline-block; position: relative; padding: 5px 20px; background: #3496fa; border-radius: 25px;}
+.modal.mouse_tem .inner_mouse-box {display: flex; justify-content: space-between; align-items: center; padding-top: 16px;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse {width: 25%;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_img {width: 70%; margin: auto;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc {text-align: center;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p {font-size: 14px; line-height: 1.6;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(1) {padding-top: 6px;}
+.modal.mouse_tem .inner_mouse-box .inner_each_mouse .mouse_desc p:nth-child(2) {font-weight: 200;}
+/* ---------------------------------------------------------*/
+.modal_bg {top: 0;}
+
+/* Media Query ------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 690px) {
+  /* 마우스 관람 안내문 style code*/
+  .modal_inner .modal_inner-desc .inner_title .inner_title-text {font-size: 13px;}
+  .modal_inner .inner_mouse-box .inner_each_mouse .mouse_desc span {font-size: 13px;}
+}
