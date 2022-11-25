@@ -2,15 +2,7 @@ $(function(){
   // gnb
   function gnb(){
     var windowWidth = $(window).width();
-
-    if(windowWidth > 1200) {
-      $(".vr-player").removeClass("mobile");
-      $(".modal_inner_help").removeClass("mobile");
-    } else {
-      $(".vr-player").addClass("mobile");
-      $(".modal_inner_help").addClass("mobile");
-    }
-
+    
     if(windowWidth > 1024){
       $('.gnb').removeClass('is_res');
       $('.gnb').addClass('is_pc');

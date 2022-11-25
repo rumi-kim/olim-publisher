@@ -160,10 +160,10 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 /* 상단 왼쪽 안내문 */
 .modal .modal_inner .modal_help-innav.left {position: absolute; top: 104px; left: 10px;}
 .modal .modal_inner .modal_help-innav.left .help-innav-type {display: block; position: relative; height: 50px;}
-.modal .modal_inner .modal_help-innav.left .help-innav-type .help-innav_textbox {position: absolute; top: 0; left: 104px; width: 150px; margin-top: 40px;}
+.modal .modal_inner .modal_help-innav.left .help-innav-type .help-innav_textbox {position: absolute; top: 0; left: 104px; width: 120px; margin-top: 50px;}
 .modal .modal_inner .modal_help-innav.left .tour_minimap .help-innav_textbox {margin-top: 14px;}
-.modal .modal_inner .modal_help-innav.left .tour_important .help-innav_textbox {margin-top: 26px;}
-.modal .modal_inner .modal_help-innav.left .help-innav-type .help-innav_textbox p{font-size: 11px; color: #fff; line-height: 1.4; text-align: left; word-break: break-word; letter-spacing: -0.5px; padding-top: 4px;}
+.modal .modal_inner .modal_help-innav.left .tour_important .help-innav_textbox {margin-top: 40px;}
+.modal .modal_inner .modal_help-innav.left .help-innav-type .help-innav_textbox p{font-size: 11px; color: #fff; line-height: 1.4; text-align: left; word-break: keep-all; letter-spacing: -0.5px; padding-top: 4px;}
 .modal .modal_inner .modal_help-innav.left .tour_autoplay .help-innav_textbox{margin-right: 120px;}
 .modal .modal_inner .modal_help-innav.left .tour_origin .help-innav_textbox{margin-bottom: 134px; margin-right: 50px;}
 .modal .modal_inner .modal_help-innav.left .tour_fullscreen .help-innav_textbox{margin-right: -140px;}
@@ -180,9 +180,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal .modal_inner .modal_help-innav.left .tour_minimap .arrow_box::before {width : 46px; height: 2px;}
 .modal .modal_inner .modal_help-innav.left .tour_minimap .arrow_box::after {content: none;}
 .modal .modal_inner .modal_help-innav.left .tour_important .arrow_box::before {width: 26px; height: 2px;}
-.modal .modal_inner .modal_help-innav.left .tour_important .arrow_box::after {width: 16px; height: 12px; margin-left: 75px; margin-top: 25px;}
+.modal .modal_inner .modal_help-innav.left .tour_important .arrow_box::after {width: 16px; height: 24px; margin-left: 75px; margin-top: 25px;}
 .modal .modal_inner .modal_help-innav.left .tour_theme .arrow_box::before {width: 24px; height: 2px;}
-.modal .modal_inner .modal_help-innav.left .tour_theme .arrow_box::after {width: 20px; height: 26px; margin-left: 72px; margin-top: 25px;}
+.modal .modal_inner .modal_help-innav.left .tour_theme .arrow_box::after {width: 20px; height: 36px; margin-left: 72px; margin-top: 25px;}
 
 .modal .modal_inner .modal_help-innav.left .help-innav-type.tour_minimap:before {background-image: url(../img/icon_EP/map.png);}
 .modal .modal_inner .modal_help-innav.left .help-innav-type.tour_important:before {background-image: url(../img/icon_EP/spot.png);}
@@ -193,11 +193,11 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal .modal_inner .modal_help-innav.bottom {position: absolute; bottom: 9px; left: 50%; transform: translateX(-50%);}
 .modal .modal_inner .modal_help-innav.bottom .help-innav {font-size: 0;}
 .modal .modal_inner .modal_help-innav.bottom .help-innav-type {display: inline-block; position: relative; width: 40px;}
-.modal .modal_inner .modal_help-innav.bottom .help-innav-type .help-innav_textbox {position: absolute; bottom: 0; right: 0; width: 150px; margin-bottom: 38px;}
+.modal .modal_inner .modal_help-innav.bottom .help-innav-type .help-innav_textbox {position: absolute; bottom: 0; right: 0; width: 126px; margin-bottom: 38px;}
 .modal .modal_inner .modal_help-innav.bottom .help-innav-type .help-innav_textbox p{font-size: 11px; color: #fff; line-height: 1.4; text-align: left; letter-spacing: -0.5px; padding-top: 4px; word-break: keep-all;}
-.modal .modal_inner .modal_help-innav.bottom .tour_autoplay .help-innav_textbox{margin-right: 4px;}
-.modal .modal_inner .modal_help-innav.bottom .tour_origin .help-innav_textbox{margin-bottom: 114px; margin-right: -118px;}
-.modal .modal_inner .modal_help-innav.bottom .tour_fullscreen .help-innav_textbox{margin-right: -150px;}
+.modal .modal_inner .modal_help-innav.bottom .tour_autoplay .help-innav_textbox{margin-right: 30px;}
+.modal .modal_inner .modal_help-innav.bottom .tour_origin .help-innav_textbox{margin-bottom: 114px; margin-right: -92px;}
+.modal .modal_inner .modal_help-innav.bottom .tour_fullscreen .help-innav_textbox{margin-right: -124px;}
 
 .modal .modal_inner .modal_help-innav.bottom .help-innav-type:before {display: block; width: 20px; height: 20px; margin: 0 auto; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; content: "";}
 /* 하단 안내문 지시선 공통 */
@@ -216,18 +216,18 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
 .modal .modal_inner .modal_help-innav.bottom .help-innav-type.tour_origin:before {background-image: url(../img/icon_EP/btn-icon-player-origin-df.png);}
 .modal .modal_inner .modal_help-innav.bottom .help-innav-type.tour_fullscreen:before {background-image: url(../img/icon_EP/btn-icon-player-fullscreen-df.png);}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1023px) {
   /* 좌측 모바일 도구 버튼 안내문*/
   .modal .modal_inner .modal_help-innav.left{top: auto; bottom: 60px; left: 12px;}
   .modal .modal_inner .modal_help-innav.left .help-innav{display: none;}
   .modal .modal_help-innav.left .help_mobile_innav {display: block; width: 40px; height: 40px; background: url(../img/icon_EP/mobile_menu.svg) no-repeat center center; background-size: 100% 100%; margin-left: 8px;}
   .modal .modal_help-innav.left .help_mobile_innav .arrow_box::before {content: ""; width: 12px; height: 2px; background: #21a185; position: absolute; top: 0; margin-left: 25px; margin-top: -64px;}
   .modal .modal_help-innav.left .help_mobile_innav .arrow_box::after {content: ""; width: 2px; height: 60px; background: #21a185; position: absolute; bottom: 0%; left: 50%; margin-bottom: 44px; transform: translateX(-50%); border: none; top: auto;}
-  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .arrow_box::before {width: 40px; left: auto; right: 0; margin-right: -20px; margin-bottom: 152px;}
-  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .arrow_box::after {height: 122px; margin-bottom: 32px;}
-  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .help-innav_textbox {margin-right: -182px; margin-bottom: 96px;}
+  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .arrow_box::before {width: 40px; left: auto; right: 0; margin-right: -20px; margin-bottom: 148px;}
+  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .arrow_box::after {height: 118px; margin-bottom: 32px;}
+  .modal .modal_inner .modal_help-innav.bottom .tour_autoplay .help-innav_textbox {margin-right: -154px; margin-bottom: 90px;}
   .modal .modal_inner .modal_help-innav.bottom .tour_origin .arrow_box::after {height: 48px; margin-bottom: 32px;}
-  .modal .modal_inner .modal_help-innav.bottom .tour_origin .help-innav_textbox {margin-bottom: 34px; margin-right: -136px;}
+  .modal .modal_inner .modal_help-innav.bottom .tour_origin .help-innav_textbox {margin-bottom: 34px; margin-right: -112px;}
   .modal .modal_help-innav.left .help_mobile_innav .help-innav_textbox {position: absolute; bottom: 44px; left: 42px; width: 100px;}
   .modal .modal_help-innav.left .help_mobile_innav .help-innav_textbox p {font-size: 11px; color: #fff; line-height: 1.4; text-align: left; letter-spacing: -0.5px; padding-top: 4px;}
   .modal .modal_inner .modal_help-innav.bottom .help-innav-type{width: 42px;}
@@ -269,9 +269,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .gnb.is_pc .gnb-item a, .gnb.is_pc .gnb-item button {font-size: 14px;}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   /* default btn */
-  .common_btn { padding: 6px 14px; }
+  .common_btn { padding: 10px 24px; }
   .common_btn > span { font-size: 14px; }
 
   /* base */
@@ -326,9 +326,9 @@ html, html body { width: 100%; height: 100%; overflow-y: hidden; }
   .lobby .contents .lobby_bg .bg_img {width: 100%; height: auto;}
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 1023px) and (orientation: landscape) {
   /* default btn */
-  .common_btn { padding: 6px 14px; }
+  .common_btn { padding: 10px 24px; }
   .common_btn > span { font-size: 14px; }
   .btn_wrap .search_btn { padding: 6px 14px; }
   .btn_wrap .search_btn > span { padding-left: 20px; font-size: 14px; }
